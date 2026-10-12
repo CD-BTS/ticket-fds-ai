@@ -1,21 +1,25 @@
 from datetime import datetime, timezone
 from pathlib import Path
 
-import joblib
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import IsolationForest
 from sklearn.metrics import roc_auc_score
 from sklearn.pipeline import Pipeline
 
+from inference import (
+    assess,
+    build_bundle,
+    load_bundle,
+    raw_anomaly_score,
+    save_bundle,
+)
 from preprocessing import (
     CAMEL_TO_SNAKE,
     FEATURE_SPECS,
     PayloadValidationError,
     ScoreNormalizer,
     build_preprocessor,
-    payload_to_frame,
-    validate_payload,
 )
 
 
@@ -127,11 +131,6 @@ def build_model(feature_columns, preprocess=None, random_state=42):
     ])
 
 
-def raw_anomaly_score(model, X):
-    """Isolation Forest 원점수 s = -score_samples (높을수록 이상)."""
-    return -model.score_samples(X)
-
-
 def train_and_score(
     features_df,
     feature_columns,
@@ -211,42 +210,25 @@ def evaluate(results, labels_df):
 
 
 # ========================================
-# 5. 입력/출력 형식 (POST /predict, 명세 7)
+# 5. 번들 생성 / 입력 형식 데모
+#    (저장·로드·예측 로직은 inference.py에 있고, FastAPI 서버와 공용이다)
 # ========================================
 
-def assess(payload, bundle):
-    """Spring Boot 입력 JSON(dict)을 받아 이상도 결과 JSON(dict)을 반환한다.
+def make_bundle(model, normalizer, feature_columns):
+    """학습 결과를 서빙용 번들로 묶는다. 이상치 경계(정규화 점수)도 함께 계산해 둔다."""
+    threshold_raw = -model.named_steps["isolation_forest"].offset_
+    anomaly_threshold = float(normalizer.transform([threshold_raw])[0])
 
-    요청 형식이 잘못되면 PayloadValidationError를 발생시킨다 (API 계층에서 422).
-    """
-    errors = validate_payload(payload)
-    if errors:
-        raise PayloadValidationError(errors)
-
-    user_id = payload["userId"]
-    assessed_at = datetime.now(timezone.utc).isoformat()
-
-    if payload["features"]["bookingCount"] < bundle["min_booking_count"]:
-        # 신규 사용자 등 데이터 부족: 점수를 만들지 않고 별도 상태를 반환한다.
-        return {
-            "userId": user_id,
-            "status": "INSUFFICIENT_DATA",
-            "anomalyScore": None,
-            "modelVersion": bundle["model_version"],
-            "assessedAt": assessed_at,
-        }
-
-    row = payload_to_frame(payload, bundle["feature_columns"])
-    raw = raw_anomaly_score(bundle["model"], row)
-    score = float(bundle["normalizer"].transform(raw)[0])
-
-    return {
-        "userId": user_id,
-        "status": "OK",
-        "anomalyScore": round(score, 4),
-        "modelVersion": bundle["model_version"],
-        "assessedAt": assessed_at,
-    }
+    return build_bundle(
+        model=model,
+        normalizer=normalizer,
+        feature_columns=feature_columns,
+        preprocess=PREPROCESS,
+        score_method=SCORE_METHOD,
+        anomaly_threshold=anomaly_threshold,
+        model_version=MODEL_VERSION,
+        min_booking_count=MIN_BOOKING_COUNT,
+    )
 
 
 def to_payload(row, calculated_at):
@@ -328,27 +310,24 @@ if __name__ == "__main__":
         "anomaly_score", ascending=False, na_position="last"
     ).reset_index(drop=True)
 
-    # 모델이 이상치로 분류하는 경계의 정규화 점수
-    threshold_raw = -model.named_steps["isolation_forest"].offset_
-    anomaly_threshold = float(normalizer.transform([threshold_raw])[0])
-
     # ---- 모델 및 결과 저장 ----
-    MODEL_DIR.mkdir(parents=True, exist_ok=True)
     RESULT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    bundle = {
-        "model": model,
-        "normalizer": normalizer,
-        "feature_columns": feature_columns,
-        "preprocess": {**PREPROCESS},
-        "score_method": SCORE_METHOD,
-        "anomaly_threshold": anomaly_threshold,
-        "model_version": MODEL_VERSION,
-        "min_booking_count": MIN_BOOKING_COUNT,
-        "trained_at": datetime.now(timezone.utc).isoformat(),
-    }
-    joblib.dump(bundle, MODEL_PATH)
+    bundle = make_bundle(model, normalizer, feature_columns)
+    anomaly_threshold = bundle["anomaly_threshold"]
+    save_bundle(bundle, MODEL_PATH)
     results.to_csv(RESULT_PATH, index=False, encoding="utf-8-sig")
+
+    # 저장한 파일을 다시 불러와도 같은 점수가 나오는지 확인한다 (직렬화 검증).
+    reloaded = load_bundle(MODEL_PATH)
+    eligible = features_df[features_df["booking_count"] >= MIN_BOOKING_COUNT]
+    X_check = eligible[feature_columns]
+    before = normalizer.transform(raw_anomaly_score(model, X_check))
+    after = reloaded["normalizer"].transform(raw_anomaly_score(reloaded["model"], X_check))
+    max_diff = float(np.abs(before - after).max())
+    if max_diff > 1e-9:
+        raise RuntimeError(f"저장한 모델이 원본과 다른 점수를 냅니다 (최대 차이 {max_diff})")
+    print(f"\n직렬화 검증 통과: 재로드 후 점수 최대 차이 {max_diff:.1e}")
 
     # ---- 결과 출력 ----
     scored = results[results["status"] == "OK"]

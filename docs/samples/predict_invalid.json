@@ -1,0 +1,12 @@
+{
+  "userId": "bad_user",
+  "calculatedAt": "2026-10-08T15:00:00+09:00",
+  "windowDays": 7,
+  "features": {
+    "bookingCount": 6,
+    "cancelCount": 1,
+    "cancelRate": 1.7,
+    "avgBookingInterval": 80000,
+    "shortIntervalBookingCount": 0
+  }
+}

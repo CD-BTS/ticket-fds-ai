@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ### 2. FastAPI 서버 로컬 실행
 ```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+uvicorn app1.main:app1 --host 0.0.0.0 --port 8000 --reload
 ```
 - API Docs(Swagger): http://localhost:8000/docs
 
