@@ -1,7 +1,7 @@
 """BTS AI 이상 행동 탐지 서빙 API.
 
 실행 (프로젝트 루트에서):
-    uvicorn app1.main:app1 --port 8000
+    uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 모델 파일 경로는 환경 변수 MODEL_PATH로 바꿀 수 있다 (기본 models/behavior_model.joblib).
 """

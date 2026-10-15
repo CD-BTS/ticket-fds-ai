@@ -15,7 +15,12 @@ import joblib
 import pandas as pd
 import sklearn
 
-from preprocessing import PayloadValidationError, payload_to_frame, validate_payload
+from preprocessing import (
+    PayloadValidationError,
+    is_valid_user_id,
+    payload_to_frame,
+    validate_payload,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -139,7 +144,8 @@ def set_inference_threads(bundle, n_jobs=1):
 
 def _result(user_id, status, score, bundle, assessed_at, errors=None):
     result = {
-        "userId": user_id,
+        # 요청에서 숫자로 와도 응답은 항상 문자열로 통일한다.
+        "userId": None if user_id is None else str(user_id),
         "status": status,
         "anomalyScore": score,
         "modelVersion": bundle["model_version"],
@@ -165,7 +171,7 @@ def assess_batch(payloads, bundle):
         if errors:
             user_id = payload.get("userId") if isinstance(payload, dict) else None
             results[position] = _result(
-                user_id if isinstance(user_id, str) else None,
+                user_id if is_valid_user_id(user_id) else None,
                 "INVALID", None, bundle, assessed_at, errors,
             )
             continue

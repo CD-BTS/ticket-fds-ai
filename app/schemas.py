@@ -48,7 +48,9 @@ class Features(BaseModel):
 class PredictRequest(BaseModel):
     model_config = ConfigDict(json_schema_extra={"example": EXAMPLE_REQUEST})
 
-    userId: str
+    userId: str | StrictInt = Field(
+        description="사용자 식별자. 문자열 또는 정수(Long). 응답에는 항상 문자열로 돌려준다"
+    )
     calculatedAt: str = Field(description="ISO-8601, UTC 오프셋 필수")
     windowDays: StrictInt = Field(description="분석 기간(일). 현재 30만 허용")
     features: Features

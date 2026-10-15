@@ -70,6 +70,31 @@ def test_same_request_gives_same_score(client):
     assert first == second
 
 
+# ---------- userId 타입 (Spring의 Long 대응) ----------
+
+def test_numeric_user_id_is_accepted_and_returned_as_string(client):
+    payload = normal_payload()
+    payload["userId"] = 12345
+    response = client.post("/predict", json=payload)
+    assert response.status_code == 200
+    assert response.json()["userId"] == "12345"
+
+
+def test_numeric_user_id_in_batch(client):
+    payload = normal_payload()
+    payload["userId"] = 7
+    body = client.post("/predict/batch", json={"requests": [payload]}).json()
+    assert body["results"][0]["userId"] == "7"
+    assert body["results"][0]["status"] == "OK"
+
+
+@pytest.mark.parametrize("bad_id", [True, 1.5, [], {}, "   "])
+def test_invalid_user_id_types_are_rejected(client, bad_id):
+    payload = normal_payload()
+    payload["userId"] = bad_id
+    assert client.post("/predict", json=payload).status_code == 422
+
+
 # ---------- 422 검증 오류 ----------
 
 def _mutate(path, value):
@@ -152,7 +177,15 @@ def test_batch_item_with_wrong_shape_does_not_fail_whole_batch(client):
         "/predict/batch", json={"requests": [normal_payload("a"), {"userId": 123}]}
     ).json()
     assert [r["status"] for r in body["results"]] == ["OK", "INVALID"]
-    assert body["results"][1]["userId"] is None  # 문자열이 아닌 userId는 돌려주지 않는다
+    assert body["results"][1]["userId"] == "123"  # 오류 항목도 userId는 돌려줘 구분할 수 있다
+
+
+def test_batch_item_without_valid_user_id_returns_null_user_id(client):
+    body = client.post(
+        "/predict/batch", json={"requests": [{"userId": True}, {"userId": ""}, {}]}
+    ).json()
+    assert [r["status"] for r in body["results"]] == ["INVALID"] * 3
+    assert [r["userId"] for r in body["results"]] == [None, None, None]
 
 
 def test_batch_empty_is_rejected(client):

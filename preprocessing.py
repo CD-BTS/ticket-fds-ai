@@ -6,6 +6,8 @@
 - 이상도 점수 0~1 정규화
 """
 
+import re
+
 import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
@@ -72,6 +74,15 @@ class PayloadValidationError(ValueError):
         self.errors = errors
 
 
+def is_valid_user_id(value):
+    """사용자 ID는 비어 있지 않은 문자열 또는 정수(Spring의 Long)를 허용한다. bool은 제외."""
+    if isinstance(value, bool):
+        return False
+    if isinstance(value, int):
+        return True
+    return isinstance(value, str) and value.strip() != ""
+
+
 def validate_payload(payload):
     """오류 메시지 목록을 반환한다. 비어 있으면 유효한 요청이다."""
     if not isinstance(payload, dict):
@@ -79,13 +90,16 @@ def validate_payload(payload):
 
     errors = []
 
-    if not payload.get("userId"):
-        errors.append("userId는 필수입니다.")
+    if not is_valid_user_id(payload.get("userId")):
+        errors.append("userId는 필수이며 비어 있지 않은 문자열 또는 정수여야 합니다.")
 
     calculated_at = payload.get("calculatedAt")
     if not isinstance(calculated_at, str):
         errors.append("calculatedAt은 필수이며 ISO-8601 문자열이어야 합니다.")
     else:
+        # Java ZonedDateTime이 붙이는 지역 이름(예: "+09:00[Asia/Seoul]")은 오프셋이 이미
+        # 있으므로 떼고 해석한다. 오프셋 자체가 없으면 아래에서 그대로 거절된다.
+        calculated_at = re.sub(r"\[[^\]]*\]$", "", calculated_at.strip())
         try:
             ts = pd.Timestamp(calculated_at)
             if pd.isna(ts) or ts.tzinfo is None:

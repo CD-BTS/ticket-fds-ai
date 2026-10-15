@@ -1,0 +1,9 @@
+user_id,booking_count,cancel_count,cancel_rate,avg_booking_interval,short_interval_booking_count,attendance_rate,avg_booking_duration
+G01,3,1,0.3333333333333333,219600.0,0,0.5,70.0
+G02,4,0,0.0,5.333333333333333,2,null,10.0
+G03,2,0,0.0,3600.0,0,null,30.0
+G04,2,1,0.0,600.0,0,0.5,30.0
+G05,1,0,0.0,null,0,1.0,45.0
+G06,1,0,0.0,null,0,0.0,20.0
+G07,0,1,null,null,0,null,null
+G08,3,1,0.3333333333333333,129600.0,0,1.0,30.0
