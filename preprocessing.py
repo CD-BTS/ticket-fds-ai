@@ -20,47 +20,42 @@ WINDOW_DAYS = 30
 
 
 # ========================================
-# 1. Feature 스펙 (명세 3, 4, 7)
+# 1. Feature 스펙 (선행 연구 기반 6개 Feature로 개편)
 # ========================================
 # camel    : POST /predict 요청의 필드명
 # integer  : 정수 여부
 # min, max : 허용 범위 (max=None이면 상한 없음)
-# nullable : null 허용 여부 (명세 3의 결측 처리 기준)
-# log      : 오른쪽으로 긴 꼬리를 가진 값이라 log1p 변환 후보인지 여부
+# nullable : null 허용 여부
+# log      : log1p 변환 후보 여부
 
 FEATURE_SPECS = {
-    "booking_count": dict(
-        camel="bookingCount", integer=True, min=0, max=None,
-        nullable=False, log=True,
+    "avg_booking_interval": dict(
+        camel="avgBookingInterval", integer=False, min=0, max=None,
+        nullable=True, log=True,        # 예매 2건 미만이면 null 허용
     ),
-    "cancel_count": dict(
-        camel="cancelCount", integer=True, min=0, max=None,
-        nullable=False, log=True,
+    "booking_interval_variance": dict(
+        camel="bookingIntervalVariance", integer=False, min=0, max=None,
+        nullable=True, log=True,        # 예매 2건 미만이면 null 허용
     ),
     "cancel_rate": dict(
         camel="cancelRate", integer=False, min=0, max=1,
-        nullable=True, log=False,       # 예매 0건이면 null
+        nullable=True, log=False,       # 예매 0건이면 null 허용
     ),
-    "avg_booking_interval": dict(
-        camel="avgBookingInterval", integer=False, min=0, max=None,
-        nullable=True, log=True,        # 예매 2건 미만이면 null
+    "card_reuse_count": dict(
+        camel="cardReuseCount", integer=True, min=1, max=None,
+        nullable=False, log=False,      # 기본값 1 (자기 자신)
     ),
-    "short_interval_booking_count": dict(
-        camel="shortIntervalBookingCount", integer=True, min=0, max=None,
-        nullable=False, log=True,       # 예매 2건 미만이면 0
+    "ip_booking_density": dict(
+        camel="ipBookingDensity", integer=True, min=1, max=None,
+        nullable=False, log=False,      # 기본값 1
     ),
-    "attendance_rate": dict(
-        camel="attendanceRate", integer=False, min=0, max=1,
-        nullable=True, log=False,       # 확정된 티켓이 없으면 null
-    ),
-    "avg_booking_duration": dict(
-        camel="avgBookingDuration", integer=False, min=0, max=None,
-        nullable=True, log=True,        # 유효 데이터가 없으면 null
+    "booking_count": dict(
+        camel="bookingCount", integer=True, min=0, max=None,
+        nullable=False, log=True,       # 필수 누적 시도 건수
     ),
 }
 
 CAMEL_TO_SNAKE = {spec["camel"]: name for name, spec in FEATURE_SPECS.items()}
-
 
 # ========================================
 # 2. 요청 검증 (POST /predict)
