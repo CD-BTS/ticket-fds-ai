@@ -1,0 +1,14 @@
+{
+  "userId": "user_001",
+  "calculatedAt": "2026-10-08T15:00:00+09:00",
+  "windowDays": 30,
+  "features": {
+    "bookingCount": 20,
+    "cancelCount": 15,
+    "cancelRate": 0.75,
+    "avgBookingInterval": 12.5,
+    "shortIntervalBookingCount": 8,
+    "attendanceRate": 0.25,
+    "avgBookingDuration": 37.45
+  }
+}
