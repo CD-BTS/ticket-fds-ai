@@ -116,3 +116,24 @@ print("\n" + "=" * 65)
 print(f"최적 모델 재저장 완료 (Feature 6개 적용): {model_path}")
 print(f"최종 성능 -> F1: {best_run['F1']:.4f} | FPR: {best_run['FPR']:.4f} (목표 <= 0.05 달성) | ROC-AUC: {best_run['ROC-AUC']:.4f}")
 print("=" * 65)
+
+# --- 추가 검증: 시나리오별 탐지/오탐 상세 분석 ---
+test_indices = X_test.index
+test_df = df.loc[test_indices].copy()
+test_preds = best_model.predict(X_test[best_features])
+test_df["pred_anomaly"] = np.where(test_preds == -1, 1, 0)
+
+print("\n" + "=" * 65)
+print("[추가 검증] 7대 시나리오별 판정 결과 (최적 모델 기준)")
+print(f"{'시나리오':<18} | {'실제 구분':<8} | {'전체 건수':<8} | {'이상 판정 수':<10} | {'탐지/오탐률':<10}")
+print("-" * 65)
+
+for scen in df["scenario"].unique():
+    subset = test_df[test_df["scenario"] == scen]
+    total = len(subset)
+    detected = subset["pred_anomaly"].sum()
+    rate = detected / total if total > 0 else 0.0
+    actual = "이상(1)" if subset["is_anomaly"].iloc[0] == 1 else "정상(0)"
+    label = "탐지율(Recall)" if actual == "이상(1)" else "오탐률(FPR)"
+    print(f"{scen:<18} | {actual:<8} | {total:<8} | {detected:<10} | {rate*100:6.1f}% ({label})")
+print("=" * 65)
