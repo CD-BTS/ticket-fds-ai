@@ -132,9 +132,12 @@ def load_bundle(path):
 
 
 def set_inference_threads(bundle, n_jobs=1):
-    """요청 1건을 처리할 때 스레드를 만드는 비용을 줄이기 위해 예측 병렬도를 낮춘다."""
-    forest = bundle["model"].named_steps["isolation_forest"]
-    forest.n_jobs = n_jobs
+    """요청 1건을 처리할 때 스레드를 만드는 비용을 줄이기 위해 예측 병렬도를 낮춤. Isolation Forest는 학습 시점 n_jobs와 다르게 설정해도 됨."""
+    model = bundle["model"]
+    if hasattr(model, "named_steps") and "isolation_forest" in model.named_steps:
+        model.named_steps["isolation_forest"].n_jobs = n_jobs
+    elif hasattr(model, "n_jobs"):
+        model.n_jobs = n_jobs
     return bundle
 
 
