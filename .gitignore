@@ -1,6 +1,11 @@
 .idea/
 .venv/
 __pycache__/
+
 data/
+!ml_experiment/data/fairticket_synthetic_features.csv
+
 models/
+!ml_experiment/models/best_isolation_forest.joblib
+
 .pytest_cache/
