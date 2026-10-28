@@ -19,11 +19,12 @@ EXAMPLE_REQUEST = {
     "windowDays": 30,
     "features": {
         "bookingCount": 20,
-        "avgBookingInterval": 12.5,
-        "bookingIntervalVariance": 1.25,
+        "cancelCount": 15,
         "cancelRate": 0.75,
-        "cardReuseCount": 1,
-        "ipBookingDensity": 2,
+        "avgBookingInterval": 12.5,
+        "shortIntervalBookingCount": 8,
+        "attendanceRate": 0.25,
+        "avgBookingDuration": 37.45,
     },
 }
 
@@ -33,13 +34,16 @@ class Features(BaseModel):
 
     model_config = ConfigDict(extra="ignore")
 
-    bookingCount: Number | None = Field(None, description="최근 30일 누적 예매 시도 수 (null 불가)")
-    avgBookingInterval: Number | None = Field(None, description="평균 예매 간격(초). 예매 2건 미만이면 null")
-    bookingIntervalVariance: Number | None = Field(None, description="예매 간격 분산(초^2). 예매 2건 미만이면 null")
-    cancelRate: Number | None = Field(None, description="최근 30일 취소율(0~1). 예매 0건이면 null")
-    cardReuseCount: Number | None = Field(1, description="동일 카드 결제 다계정 공유 수 (기본 1)")
-    ipBookingDensity: Number | None = Field(1, description="동일 IP 내 집중 트랜잭션 수 (기본 1)")
-    
+    bookingCount: Number | None = Field(None, description="최근 30일 고유 예매 건수 (null 불가)")
+    cancelCount: Number | None = Field(None, description="최근 30일 취소 발생 고유 건수 (null 불가)")
+    cancelRate: Number | None = Field(None, description="0~1. 예매 0건이면 null")
+    avgBookingInterval: Number | None = Field(None, description="초. 예매 2건 미만이면 null")
+    shortIntervalBookingCount: Number | None = Field(
+        None, description="간격 5초 이하 예매 횟수 (null 불가, 2건 미만이면 0)"
+    )
+    attendanceRate: Number | None = Field(None, description="0~1. 확정된 티켓이 없으면 null")
+    avgBookingDuration: Number | None = Field(None, description="초. 유효 데이터가 없으면 null")
+
 
 class PredictRequest(BaseModel):
     model_config = ConfigDict(json_schema_extra={"example": EXAMPLE_REQUEST})
