@@ -1,0 +1,67 @@
+{
+  "dummy_file": "model_build\\ml_experiment\\data\\fairticket_synthetic_features.csv",
+  "dummy_sha256": "2e1e27c1ebd434676e8079c7e4a65763be3f4bb2b4a8fe3e788897729fabf416",
+  "matches_build_record_training_data": true,
+  "matches_ai_repo_file": true,
+  "build_record_training_file": "ml_experiment/data/fairticket_synthetic_features.csv (git에 커밋된 파일 그대로, 재생성 안 함)",
+  "build_record_note": "이슈 #14 실측 검증용. 기존 스크립트를 수정 없이 재실행해 만든 모델이며, 팀이 처음 학습한 원본 파일은 아니다.",
+  "dummy_rows": 1000,
+  "dummy_is_anomaly_counts": {
+    "0": 801,
+    "1": 199
+  },
+  "dummy_scenario_counts": {
+    "normal": 527,
+    "fast_normal": 122,
+    "shared_ip": 110,
+    "macro": 87,
+    "hold_cancel": 56,
+    "multi_account": 56,
+    "frequent_cancel": 42
+  },
+  "model_features": [
+    "avg_booking_interval",
+    "booking_interval_variance",
+    "cancel_rate",
+    "card_reuse_count",
+    "ip_booking_density",
+    "booking_count"
+  ],
+  "real_features_file": "data/count/real_features.csv",
+  "real_features_sha256": "bd0b581ee6c5fe85d5ed8075f7e94fca6cce12d6e7ad13afec38a3c1fd3e47e4",
+  "real_events_sha256": "a852ee91dd5d8a758f0d2d811b484647bf51cadf22a5214eec20a54543baffde",
+  "real_accounts": {
+    "human-01": {
+      "booking_attempt_events": 15,
+      "booking_events": 3,
+      "booking_count_feature": 3
+    },
+    "human-02": {
+      "booking_attempt_events": 15,
+      "booking_events": 3,
+      "booking_count_feature": 3
+    },
+    "macro-fast-01": {
+      "booking_attempt_events": 15,
+      "booking_events": 3,
+      "booking_count_feature": 3
+    },
+    "macro-fast-02": {
+      "booking_attempt_events": 100,
+      "booking_events": 20,
+      "booking_count_feature": 20
+    },
+    "macro-jitter-01": {
+      "booking_attempt_events": 100,
+      "booking_events": 20,
+      "booking_count_feature": 20
+    },
+    "macro-human-01": {
+      "booking_attempt_events": 100,
+      "booking_events": 20,
+      "booking_count_feature": 20
+    }
+  },
+  "card_env_distorted": true,
+  "ip_env_distorted": true
+}

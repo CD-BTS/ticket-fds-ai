@@ -1,0 +1,25 @@
+﻿feature,external_user_id,group,value,comparable,percentile_in_dummy_normal,percentile_in_dummy_macro,below_dummy_normal_min,above_dummy_normal_max
+booking_count,human-01,human,3.0,비교 가능,0.3333,0.0,False,False
+booking_count,macro-fast-01,macro_fast,3.0,비교 가능,0.3333,0.0,False,False
+booking_count,human-02,human,3.0,비교 가능,0.3333,0.0,False,False
+cancel_rate,human-01,human,0.0,비교 가능,0.0,0.0,True,False
+cancel_rate,macro-fast-01,macro_fast,0.0,비교 가능,0.0,0.0,True,False
+cancel_rate,human-02,human,0.0,비교 가능,0.0,0.0,True,False
+avg_booking_interval [30일 기준],human-01,human,58.865,비교 가능,0.5868,1.0,False,False
+avg_booking_interval [30일 기준],macro-fast-01,macro_fast,4.924,비교 가능,0.0,1.0,True,False
+avg_booking_interval [30일 기준],human-02,human,10.4755,비교 가능,0.0,1.0,True,False
+avg_booking_interval [세션 기준],human-01,human,58.865,비교 가능,0.5868,1.0,False,False
+avg_booking_interval [세션 기준],macro-fast-01,macro_fast,4.924,비교 가능,0.0,1.0,True,False
+avg_booking_interval [세션 기준],human-02,human,10.4755,비교 가능,0.0,1.0,True,False
+booking_interval_variance [30일 기준],human-01,human,53.6117,비교 가능,1.0,1.0,False,True
+booking_interval_variance [30일 기준],macro-fast-01,macro_fast,0.0713,비교 가능,0.0,0.1264,True,False
+booking_interval_variance [30일 기준],human-02,human,0.0452,비교 가능,0.0,0.046,True,False
+booking_interval_variance [세션 기준],human-01,human,107.2234,비교 가능,1.0,1.0,False,True
+booking_interval_variance [세션 기준],macro-fast-01,macro_fast,0.1426,비교 가능,0.0,0.2414,True,False
+booking_interval_variance [세션 기준],human-02,human,0.0903,비교 가능,0.0,0.1494,True,False
+card_reuse_count,human-01,human,3.0,비교 불가(환경 왜곡),1.0,1.0,False,True
+card_reuse_count,macro-fast-01,macro_fast,3.0,비교 불가(환경 왜곡),1.0,1.0,False,True
+card_reuse_count,human-02,human,3.0,비교 불가(환경 왜곡),1.0,1.0,False,True
+ip_booking_density,human-01,human,3.0,비교 불가(환경 왜곡),0.8627,1.0,False,False
+ip_booking_density,macro-fast-01,macro_fast,3.0,비교 불가(환경 왜곡),0.8627,1.0,False,False
+ip_booking_density,human-02,human,3.0,비교 불가(환경 왜곡),0.8627,1.0,False,False

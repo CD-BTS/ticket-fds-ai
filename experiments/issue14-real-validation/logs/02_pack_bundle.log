@@ -1,0 +1,2 @@
+🎉 모델 번들 패키징 및 저장 완료: models/behavior_model.joblib
+- 사용 Feature 목록: ['avg_booking_interval', 'booking_interval_variance', 'cancel_rate', 'card_reuse_count', 'ip_booking_density', 'booking_count']

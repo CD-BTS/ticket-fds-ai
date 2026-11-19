@@ -1,0 +1,10 @@
+﻿kind,n_attempts,scenario,n_intervals_used,long_gaps_seconds,booking_count,avg_booking_interval,booking_interval_variance,score_card_ip_1,delta_vs_observed,model_predict_anomaly
+observed,3,관측값 그대로,2,38.161,3,21.901,264.3876,0.68,0.0,False
+hypothetical,3,긴 간격 제외,1,38.161,3,5.641,0.0,0.565,-0.115,False
+hypothetical,3,긴 간격을 나머지 간격의 중앙값(5.64s)으로 대체,2,38.161,3,5.641,0.0,0.565,-0.115,False
+observed,10,관측값 그대로,9,38.161,10,9.17733,105.13086,0.888,0.0,True
+hypothetical,10,긴 간격 제외,8,38.161,10,5.55438,0.13978,0.686,-0.202,False
+hypothetical,10,긴 간격을 나머지 간격의 중앙값(5.68s)으로 대체,9,38.161,10,5.56833,0.1258,0.686,-0.202,False
+observed,20,관측값 그대로,19,38.161,20,7.50621,52.59941,0.92,0.0,True
+hypothetical,20,긴 간격 제외,18,38.161,20,5.80317,0.41479,0.743,-0.177,False
+hypothetical,20,긴 간격을 나머지 간격의 중앙값(5.78s)으로 대체,19,38.161,20,5.80205,0.39298,0.746,-0.174,False

@@ -1,0 +1,6 @@
+﻿kind,account,group,booking_count,avg_booking_interval,booking_interval_variance,cancel_rate,score_card_ip_1
+observed,macro-jitter-01,macro_jitter,20.0,8.565,0.27595,0.0,0.746
+observed,macro-human-01,macro_human,20.0,23.64711,3.68366,0.0,0.748
+observed,macro-fast-01,macro_fast,3.0,4.924,0.07129,0.0,0.555
+observed,human-01,human,3.0,58.865,53.61168,0.0,0.565
+observed,human-02,human,3.0,10.4755,0.04516,0.0,0.543

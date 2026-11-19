@@ -9,3 +9,13 @@ models/
 !ml_experiment/models/best_isolation_forest.joblib
 
 .pytest_cache/
+
+# Python virtual environment
+**/.venv/
+
+# Python cache
+**/__pycache__/
+**/*.pyc
+
+# Local environment
+**/.env

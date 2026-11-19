@@ -1,0 +1,15 @@
+﻿feature,unit,comparison,real_values,n_dummy,n_real,ks_statistic,wasserstein_distance,note
+avg_booking_interval,초,정상끼리,관측,801,2,0.5,25.06963139825219,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다.
+avg_booking_interval,초,매크로끼리,관측,87,4,1.0,10.840464004839685,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다.
+avg_booking_interval,초,매크로끼리,가상: Fast-02 긴 간격을 나머지 중앙값으로 대체,87,4,1.0,10.414424531155472,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다.
+booking_interval_variance,초²,정상끼리,관측,801,2,0.5,16.205047894975024,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다.
+booking_interval_variance,초²,매크로끼리,관측,87,4,0.5,13.891527942138694,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다.
+booking_interval_variance,초²,매크로끼리,가상: Fast-02 긴 간격을 나머지 중앙값으로 대체,87,4,0.25,0.8401316269860226,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다.
+cancel_rate,비율 (0~1),정상끼리,관측,801,2,1.0,0.12793820224719102,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다. 실험에서 취소를 하지 않아 실측값은 모두 0.
+cancel_rate,비율 (0~1),매크로끼리,관측,87,4,1.0,0.2453034482758621,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다. 실험에서 취소를 하지 않아 실측값은 모두 0.
+card_reuse_count,같은 결제 식별자를 쓴 계정 수,정상끼리,관측,801,2,1.0,5.0,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다. 환경 영향: 데모는 테스트 결제 식별자 3개를 전 계정이 공유.
+card_reuse_count,같은 결제 식별자를 쓴 계정 수,매크로끼리,관측,87,4,1.0,4.528735632183908,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다. 환경 영향: 데모는 테스트 결제 식별자 3개를 전 계정이 공유.
+ip_booking_density,같은 IP로 예매한 계정 수,정상끼리,관측,801,2,0.9563046192259675,4.16354556803995,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다. 환경 영향: 모든 계정이 로컬 IP(::1) 하나를 공유.
+ip_booking_density,같은 IP로 예매한 계정 수,매크로끼리,관측,87,4,1.0,4.103448275862069,실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다. 환경 영향: 모든 계정이 로컬 IP(::1) 하나를 공유.
+booking_count,예매 시도 수 (회),정상끼리,관측,801,2,0.6666666666666666,1.8314606741573034,"실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다. 실측 횟수는 실험자가 정한 값(3회, 20회)."
+booking_count,예매 시도 수 (회),매크로끼리,관측,87,4,0.7816091954022989,16.43390804597701,"실측 표본이 매우 작아 탐색적 지표로만 본다. Wasserstein 값은 Feature 단위를 따르므로 Feature 사이에 크기를 비교하지 않는다. 실측 횟수는 실험자가 정한 값(3회, 20회)."

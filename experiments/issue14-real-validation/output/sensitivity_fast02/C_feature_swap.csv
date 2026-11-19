@@ -1,0 +1,10 @@
+﻿kind,from_n,to_n,feature,value_from,value_to,score_from,score_to,total_change,only_this_changed,delta_only_this_changed,all_but_this_changed,delta_when_this_added_last,shapley_share_of_change
+hypothetical,3,10,booking_count,3.0,10.0,0.68,0.888,0.208,0.858,0.178,0.706,0.182,0.18
+hypothetical,3,10,avg_booking_interval,21.901,9.17733,0.68,0.888,0.208,0.706,0.026,0.858,0.03,0.028
+hypothetical,3,10,booking_interval_variance,264.3876,105.13086,0.68,0.888,0.208,0.68,0.0,0.888,0.0,0.0
+hypothetical,10,20,booking_count,10.0,20.0,0.888,0.92,0.032,0.918,0.03,0.894,0.026,0.028
+hypothetical,10,20,avg_booking_interval,9.17733,7.50621,0.888,0.92,0.032,0.894,0.006,0.918,0.002,0.004
+hypothetical,10,20,booking_interval_variance,105.13086,52.59941,0.888,0.92,0.032,0.888,0.0,0.92,0.0,0.0
+hypothetical,3,20,booking_count,3.0,20.0,0.68,0.92,0.24,0.912,0.232,0.724,0.196,0.214
+hypothetical,3,20,avg_booking_interval,21.901,7.50621,0.68,0.92,0.24,0.724,0.044,0.912,0.008,0.026
+hypothetical,3,20,booking_interval_variance,264.3876,52.59941,0.68,0.92,0.24,0.68,0.0,0.92,0.0,0.0
