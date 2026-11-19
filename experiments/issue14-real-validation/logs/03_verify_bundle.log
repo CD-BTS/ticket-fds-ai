@@ -1,0 +1,25 @@
+번들 로드 OK: version=v2.0.0-isolation-forest features=['avg_booking_interval', 'booking_interval_variance', 'cancel_rate', 'card_reuse_count', 'ip_booking_density', 'booking_count']
+assess_batch 상태: {'OK': 1000}, 직접 계산과 최대 차이 0.00e+00 (반올림 4자리 허용 5e-5)
+
+시나리오별 점수(더미 전체 1000건, 학습에 쓰인 700건 포함):
+                   n  score_mean  score_median  predict_rate
+scenario                                                    
+fast_normal      122      0.2198        0.2100        0.0000
+frequent_cancel   42      0.7278        0.7245        0.2619
+hold_cancel       56      0.8250        0.8230        0.6429
+macro             87      0.8362        0.8580        0.7241
+multi_account     56      0.9713        0.9725        1.0000
+normal           527      0.3684        0.3610        0.0361
+shared_ip        110      0.6875        0.6910        0.1273
+
+모델 predict() 경계의 정규화 점수: 0.8010 / 번들 anomaly_threshold: 0.5
+
+Feature 하나를 null로 보냈을 때:
+  avgBookingInterval: {'status': 'OK', 'anomalyScore': 0.333, 'errors': None}
+  bookingIntervalVariance: {'status': 'OK', 'anomalyScore': 0.285, 'errors': None}
+  cancelRate: {'status': 'OK', 'anomalyScore': 0.317, 'errors': None}
+  cardReuseCount: {'status': 'INVALID', 'anomalyScore': None, 'errors': ['features.cardReuseCount은 null일 수 없습니다.']}
+  ipBookingDensity: {'status': 'INVALID', 'anomalyScore': None, 'errors': ['features.ipBookingDensity은 null일 수 없습니다.']}
+  bookingCount: {'status': 'INVALID', 'anomalyScore': None, 'errors': ['features.bookingCount은 null일 수 없습니다.']}
+
+빌드 기록 저장: C:\Users\kimsy\Desktop\CAU\26-2\캡스톤\BTS\experiments\issue14-real-validation\model_build\BUILD_RECORD.json

@@ -1,0 +1,181 @@
+{
+  "purpose": "이슈 #14 실측 검증용. 기존 스크립트를 수정 없이 재실행해 만든 모델이며, 팀이 처음 학습한 원본 파일은 아니다.",
+  "built_at_utc": "2026-11-19T11:00:22.670368+00:00",
+  "ai_repo": {
+    "commit": "66202951859c2625d19148161b679fcceadc5d44",
+    "branch": "test/#14/real-data-validation",
+    "scripts": [
+      "ml_experiment/train_and_evaluate_if.py",
+      "pack_bundle.py"
+    ],
+    "script_sha256": {
+      "ml_experiment/train_and_evaluate_if.py": "6273916deb37e5e22e06462371a17bcb238fd51a0a1ce9af3c6fcc759c0db35b",
+      "pack_bundle.py": "3621469b67af58be5d46be8f65e56ca25233d8d256d4045b603450aeb8d2859e",
+      "inference.py": "e971f8539d8f8fa82d990e12a2029caa5c091c4497906ac40c80e74d8a4dd026",
+      "preprocessing.py": "691c6a14412901e9165f34855cf83f457a3777a41cbd81ff5d7e982814d61325"
+    }
+  },
+  "training_data": {
+    "file": "ml_experiment/data/fairticket_synthetic_features.csv (git에 커밋된 파일 그대로, 재생성 안 함)",
+    "sha256": "2e1e27c1ebd434676e8079c7e4a65763be3f4bb2b4a8fe3e788897729fabf416",
+    "rows": 1000,
+    "is_anomaly_counts": {
+      "0": 801,
+      "1": 199
+    },
+    "scenario_counts": {
+      "normal": 527,
+      "fast_normal": 122,
+      "shared_ip": 110,
+      "macro": 87,
+      "hold_cancel": 56,
+      "multi_account": 56,
+      "frequent_cancel": 42
+    },
+    "split": "train_test_split(test_size=0.3, random_state=42, stratify=is_anomaly) -> 학습 700 / 평가 300"
+  },
+  "features": [
+    "avg_booking_interval",
+    "booking_interval_variance",
+    "cancel_rate",
+    "card_reuse_count",
+    "ip_booking_density",
+    "booking_count"
+  ],
+  "excluded_feature": "seat_selection_latency",
+  "hyperparameters": {
+    "bootstrap": false,
+    "contamination": 0.2,
+    "max_features": 1.0,
+    "max_samples": "auto",
+    "n_estimators": 100,
+    "n_jobs": null,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "fitted": {
+    "n_features_in": 6,
+    "max_samples_": 256,
+    "offset_": -0.5087436660452713,
+    "n_estimators_fitted": 100
+  },
+  "bundle": {
+    "model_version": "v2.0.0-isolation-forest",
+    "score_method": "-score_samples",
+    "normalizer": "ScoreNormalizer(percentile), 더미 1000건 전체의 -score_samples 로 fit",
+    "anomaly_threshold": 0.5,
+    "min_booking_count": 1,
+    "preprocess": {},
+    "predict_boundary_normalized": 0.801
+  },
+  "versions": {
+    "python": "3.11.2",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "joblib": "1.6.0",
+    "scipy": "1.17.1",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "artifacts_sha256": {
+    "best_isolation_forest.joblib": "746070c99d2c94ffd95f87040c61abfebea88d538b5219d8f98663f838872409",
+    "behavior_model.joblib": "f95e142375ea7a240ed4695864425ce1c78ce9cc131efaa79cbc57f6d1b10b09"
+  },
+  "reported_metrics_test300": "logs/01_train_and_evaluate_if.log 참고",
+  "inference_check": {
+    "assess_batch_status": {
+      "OK": 1000
+    },
+    "max_abs_diff_vs_direct": 0.0,
+    "null_feature_behavior": {
+      "avgBookingInterval": {
+        "status": "OK",
+        "anomalyScore": 0.333,
+        "errors": null
+      },
+      "bookingIntervalVariance": {
+        "status": "OK",
+        "anomalyScore": 0.285,
+        "errors": null
+      },
+      "cancelRate": {
+        "status": "OK",
+        "anomalyScore": 0.317,
+        "errors": null
+      },
+      "cardReuseCount": {
+        "status": "INVALID",
+        "anomalyScore": null,
+        "errors": [
+          "features.cardReuseCount은 null일 수 없습니다."
+        ]
+      },
+      "ipBookingDensity": {
+        "status": "INVALID",
+        "anomalyScore": null,
+        "errors": [
+          "features.ipBookingDensity은 null일 수 없습니다."
+        ]
+      },
+      "bookingCount": {
+        "status": "INVALID",
+        "anomalyScore": null,
+        "errors": [
+          "features.bookingCount은 null일 수 없습니다."
+        ]
+      }
+    }
+  },
+  "score_by_scenario_all1000": [
+    {
+      "scenario": "fast_normal",
+      "n": 122,
+      "score_mean": 0.2198,
+      "score_median": 0.21,
+      "predict_rate": 0.0
+    },
+    {
+      "scenario": "frequent_cancel",
+      "n": 42,
+      "score_mean": 0.7278,
+      "score_median": 0.7245,
+      "predict_rate": 0.2619
+    },
+    {
+      "scenario": "hold_cancel",
+      "n": 56,
+      "score_mean": 0.825,
+      "score_median": 0.823,
+      "predict_rate": 0.6429
+    },
+    {
+      "scenario": "macro",
+      "n": 87,
+      "score_mean": 0.8362,
+      "score_median": 0.858,
+      "predict_rate": 0.7241
+    },
+    {
+      "scenario": "multi_account",
+      "n": 56,
+      "score_mean": 0.9713,
+      "score_median": 0.9725,
+      "predict_rate": 1.0
+    },
+    {
+      "scenario": "normal",
+      "n": 527,
+      "score_mean": 0.3684,
+      "score_median": 0.361,
+      "predict_rate": 0.0361
+    },
+    {
+      "scenario": "shared_ip",
+      "n": 110,
+      "score_mean": 0.6875,
+      "score_median": 0.691,
+      "predict_rate": 0.1273
+    }
+  ]
+}

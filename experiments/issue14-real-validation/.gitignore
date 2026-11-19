@@ -1,0 +1,13 @@
+# 이 실험 폴더에서 git 에 올리지 않는 것 (상위 ai/.gitignore 와 겹쳐도 여기서 명시한다)
+
+# 실험 전용 가상환경
+.venv/
+__pycache__/
+
+# 실측 데이터: 내보낸 이벤트, 계산한 Feature, 점수, 매크로 실행 결과
+data/
+
+# 재학습한 모델 파일과 학습 데이터 사본 (BUILD_RECORD.json 과 logs/ 는 올린다)
+*.joblib
+model_build/models/
+model_build/ml_experiment/

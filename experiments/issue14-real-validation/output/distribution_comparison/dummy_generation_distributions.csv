@@ -1,0 +1,8 @@
+﻿scenario,is_anomaly,n,avg_booking_interval_distribution,avg_interval_min,avg_interval_median,avg_interval_max,booking_interval_variance_distribution,variance_min,variance_max,booking_count_distribution,corr_avg_interval_vs_variance,individual_interval_distribution
+normal,0,527,"lognormal(mean=4.1, sigma=0.5)",10.6,61.75,218.26,"uniform(5.0, 50.0)",5.0014,49.9378,poisson(3) + 1,-0.03,없음 (계정 단위 값을 바로 뽑는다)
+fast_normal,0,122,"uniform(15.0, 40.0)",15.14,28.03,39.98,"uniform(3.0, 20.0)",3.282,19.9512,poisson(5) + 1,0.057,없음 (계정 단위 값을 바로 뽑는다)
+shared_ip,0,110,"lognormal(mean=3.8, sigma=0.5)",12.84,46.075,153.26,"uniform(4.0, 30.0)",4.1378,29.8476,poisson(4) + 1,0.077,없음 (계정 단위 값을 바로 뽑는다)
+frequent_cancel,0,42,"lognormal(mean=4.0, sigma=0.5)",19.72,58.435,167.74,"uniform(5.0, 40.0)",5.5038,39.4879,poisson(4) + 1,-0.243,없음 (계정 단위 값을 바로 뽑는다)
+macro,1,87,exponential(scale=0.2) + 0.1,0.1,0.23,1.31,"uniform(0.01, 0.5)",0.012,0.4985,"randint(15, 50)",-0.092,없음 (계정 단위 값을 바로 뽑는다)
+hold_cancel,1,56,"uniform(2.0, 8.0)",2.18,5.05,7.96,"uniform(0.5, 2.0)",0.5827,1.9878,"randint(10, 30)",0.026,없음 (계정 단위 값을 바로 뽑는다)
+multi_account,1,56,"uniform(3.0, 10.0)",3.04,6.8,9.96,"uniform(1.0, 5.0)",1.0086,4.9257,"randint(10, 25)",-0.075,없음 (계정 단위 값을 바로 뽑는다)

@@ -1,0 +1,4 @@
+﻿kind,n_attempts,snapshot_tag,booking_count,avg_booking_interval,booking_interval_variance,cancel_rate,n_intervals,max_gap_seconds,median_gap_seconds,card_reuse_count_actual,ip_booking_density_actual,score_actual_card_ip,score_card_ip_1,model_predict_anomaly_card_ip_1
+observed,3,count__macro-fast-02__n03,3,21.901,264.3876,0.0,2,38.161,21.901,4,4,0.95,0.68,False
+observed,10,count__macro-fast-02__n10,10,9.17733,105.13086,0.0,9,38.161,5.719,4,4,0.968,0.888,True
+observed,20,count__macro-fast-02__n20,20,7.50621,52.59941,0.0,19,38.161,5.845,4,4,0.987,0.92,True
