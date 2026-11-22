@@ -1,0 +1,13 @@
+﻿dataset,group,n_train,avg_booking_interval_median,booking_interval_variance_median
+v1,hold_cancel,36,4.79,1.2431
+v2,hold_cancel,36,4.79,1.2431
+원본,hold_cancel,36,4.79,1.2431
+v1,macro → fast,36,2.6550000000000002,0.0717
+v2,macro → fast,36,3.01,0.0741
+원본,macro → fast,36,0.26,0.22525
+v1,macro → jitter,27,4.35,0.0559
+v2,macro → jitter,27,4.82,0.1239
+원본,macro → jitter,27,0.23,0.2929
+v1,multi_account,40,6.32,2.20495
+v2,multi_account,40,6.32,2.20495
+원본,multi_account,40,6.32,2.20495

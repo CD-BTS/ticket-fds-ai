@@ -1,0 +1,89 @@
+{
+  "run_id": "pilot-01",
+  "started_utc": "2026-11-22T14:22:32.692Z",
+  "plan": [
+    {
+      "account": "pilot-fast-01",
+      "mode": "fast",
+      "runs": 3
+    },
+    {
+      "account": "pilot-jitter-01",
+      "mode": "jitter",
+      "runs": 2
+    },
+    {
+      "account": "pilot-human-01",
+      "mode": "human",
+      "runs": 2
+    }
+  ],
+  "macro_options": {
+    "seats": "1",
+    "concert": "0",
+    "card": "1",
+    "base": "http://localhost:5173",
+    "headless": false,
+    "timeout_s": "60"
+  },
+  "launcher": "python subprocess: 예매 1건마다 `node macro.js` 1회 (#14 는 PowerShell ForEach-Object 반복)",
+  "repos": {
+    "ai": {
+      "path": "C:\\Users\\kimsy\\Desktop\\CAU\\26-2\\캡스톤\\BTS\\ai",
+      "commit": "c9637c5746671098fba01f67e94414a99c87b94b",
+      "branch": "test/#14/real-data-validation",
+      "subject": "test: 실제 예매 데이터 기반 더미데이터 현실성 검증 (#14)",
+      "dirty_files": [
+        "?? experiments/issue16-booking-interval/"
+      ],
+      "origin_dev": "66202951859c2625d19148161b679fcceadc5d44",
+      "tree_equals_origin_dev": false
+    },
+    "demo-ticketing": {
+      "path": "C:\\Users\\kimsy\\Desktop\\CAU\\26-2\\캡스톤\\BTS\\demo-ticketing",
+      "commit": "9dd01465697c1b6eb478c1b0ce669747b1070bd2",
+      "branch": "feat/#56/saved-card-selection",
+      "subject": "feat: 저장된 테스트 카드 선택 및 매크로 결제 흐름 개선 (#56)",
+      "dirty_files": [
+        "?? macro/package-lock.json"
+      ],
+      "origin_dev": "bd4fb54def1f914879b3078d32a46bb152cb8600",
+      "tree_equals_origin_dev": false
+    },
+    "ticket-fds-admin": {
+      "path": "C:\\Users\\kimsy\\Desktop\\CAU\\26-2\\캡스톤\\BTS\\ticket-fds-admin",
+      "commit": "dc8e8adf0c4d02e90d8bc2a062653fa325252b38",
+      "branch": "fix/#57/admin-summary-api-path",
+      "subject": "fix: 관리자 요약 API 경로 불일치 수정 (#57)",
+      "dirty_files": [],
+      "origin_dev": "b4d3d4e81b6e54390cd989327075d0c9e4fffa1c",
+      "tree_equals_origin_dev": true
+    }
+  },
+  "frontend_env": {
+    "VITE_USE_MOCK_TICKETING": "false",
+    "VITE_USE_MOCK_BTS": "false",
+    "VITE_API_BASE_URL": "",
+    "VITE_MOCK_QR": "false",
+    "VITE_USE_MOCK_QUEUE": "true",
+    "VITE_MOCK_QUEUE_START": "",
+    "VITE_USE_MOCK_CARDS": "true"
+  },
+  "macro_js_sha256": "9bd5f82a94704cbc168da73619099b70226958d9acc81c0fbd317a5a67eb7d14",
+  "node": "v24.3.0",
+  "playwright": "1.65.1",
+  "host": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.2"
+  },
+  "bts_db": {
+    "container": "cdbts-e2e-bts-mysql",
+    "database": "fairticket_db",
+    "events_before_run": 0,
+    "existing_events_for_plan_accounts": []
+  },
+  "preflight": {
+    "frontend_status": 200,
+    "demo_api_via_frontend_status": 200
+  }
+}

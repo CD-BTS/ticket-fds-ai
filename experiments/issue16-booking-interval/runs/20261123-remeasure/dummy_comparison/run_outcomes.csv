@@ -1,0 +1,5 @@
+﻿account,mode,attempted,OK,failed_or_not_run,hold_retries
+macro-fast-11,fast,20,20,0,0
+macro-fast-12,fast,20,20,0,0
+macro-jitter-11,jitter,20,20,0,0
+macro-jitter-12,jitter,20,20,0,0

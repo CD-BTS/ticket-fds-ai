@@ -1,0 +1,3 @@
+﻿type,real_pool_variance,real_account_variances,original_median,adjusted_median,adjusted_min,adjusted_max,adjusted_median_minus_real_pool
+fast,0.14034478253375465,"0.004 (2), 0.079 (19), 0.159 (19), 0.063 (19)",0.2784,0.0716,0.0215,0.2244,-0.06874478253375466
+jitter,0.23732725577100647,"0.057 (19), 0.145 (19), 0.217 (19)",0.2784,0.1183,0.0305,0.3442,-0.11902725577100647

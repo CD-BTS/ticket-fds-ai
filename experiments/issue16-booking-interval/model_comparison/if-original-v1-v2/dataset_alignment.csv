@@ -1,0 +1,4 @@
+﻿dataset,rows,user_id_order_identical,is_anomaly_identical,columns_identical,rows_differing_in_model_features,features_differing
+원본,1000,True,True,True,0,-
+v1,1000,True,True,True,87,"avg_booking_interval, booking_interval_variance"
+v2,1000,True,True,True,87,"avg_booking_interval, booking_interval_variance"

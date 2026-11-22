@@ -1,0 +1,7 @@
+﻿scenario,is_anomaly,n,min,median,max,share_within_fast_range,share_within_jitter_range
+hold_cancel,1,56,2.18,5.05,7.96,0.14285714285714285,0.19642857142857142
+multi_account,1,56,3.04,6.8,9.96,0.05357142857142857,0.08928571428571429
+fast_normal,0,122,15.14,28.03,39.98,0.0,0.0
+shared_ip,0,110,12.84,46.075,153.26,0.0,0.0
+frequent_cancel,0,42,19.72,58.435,167.74,0.0,0.0
+normal,0,527,10.6,61.75,218.26,0.0,0.0

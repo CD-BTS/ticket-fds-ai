@@ -1,0 +1,95 @@
+{
+  "run_id": "20261123-remeasure",
+  "started_utc": "2026-11-22T16:42:04.549Z",
+  "plan": [
+    {
+      "account": "macro-fast-11",
+      "mode": "fast",
+      "runs": 20
+    },
+    {
+      "account": "macro-fast-12",
+      "mode": "fast",
+      "runs": 20
+    },
+    {
+      "account": "macro-jitter-11",
+      "mode": "jitter",
+      "runs": 20
+    },
+    {
+      "account": "macro-jitter-12",
+      "mode": "jitter",
+      "runs": 20
+    }
+  ],
+  "macro_options": {
+    "seats": "1",
+    "concert": "0",
+    "card": "1",
+    "base": "http://localhost:5173",
+    "headless": false,
+    "timeout_s": "60"
+  },
+  "continuous": true,
+  "macro_debug": true,
+  "baseline_run": "20261122-continuous",
+  "launcher": "python subprocess: 계정마다 `node macro.js --repeat N` 1회 (브라우저·로그인 유지, 연속 예매)",
+  "repos": {
+    "ai": {
+      "path": "C:\\Users\\kimsy\\Desktop\\CAU\\26-2\\캡스톤\\BTS\\ai",
+      "commit": "90fc1106598881e17cffed01d8a36ecef2e2f33e",
+      "branch": "test/#16/booking-interval-distribution",
+      "subject": "test: 실제 예매 데이터 기반 더미데이터 현실성 검증 (#14)",
+      "dirty_files": [
+        "?? experiments/issue16-booking-interval/"
+      ],
+      "origin_dev": "90fc1106598881e17cffed01d8a36ecef2e2f33e",
+      "tree_equals_origin_dev": true
+    },
+    "demo-ticketing": {
+      "path": "C:\\Users\\kimsy\\Desktop\\CAU\\26-2\\캡스톤\\BTS\\demo-ticketing",
+      "commit": "d07820fe90db43224a80540b39f21c2aac6fab9e",
+      "branch": "feat/#58/macro-test-improvements",
+      "subject": "feat: 공연 좌석 수를 360석에서 700석으로 확대 (#58)",
+      "dirty_files": [],
+      "origin_dev": "899cb25069e8d83ceb65a9a1d306aaa6d09d998e",
+      "tree_equals_origin_dev": true
+    },
+    "ticket-fds-admin": {
+      "path": "C:\\Users\\kimsy\\Desktop\\CAU\\26-2\\캡스톤\\BTS\\ticket-fds-admin",
+      "commit": "dc8e8adf0c4d02e90d8bc2a062653fa325252b38",
+      "branch": "fix/#57/admin-summary-api-path",
+      "subject": "fix: 관리자 요약 API 경로 불일치 수정 (#57)",
+      "dirty_files": [],
+      "origin_dev": "b4d3d4e81b6e54390cd989327075d0c9e4fffa1c",
+      "tree_equals_origin_dev": true
+    }
+  },
+  "frontend_env": {
+    "VITE_USE_MOCK_TICKETING": "false",
+    "VITE_USE_MOCK_BTS": "false",
+    "VITE_API_BASE_URL": "",
+    "VITE_MOCK_QR": "false",
+    "VITE_USE_MOCK_QUEUE": "true",
+    "VITE_MOCK_QUEUE_START": "",
+    "VITE_USE_MOCK_CARDS": "true"
+  },
+  "macro_js_sha256": "328f186d835aa2e4279c875a2df7e02bac4a6bc5890b18346ef13fc503c62ae3",
+  "node": "v24.3.0",
+  "playwright": "1.65.1",
+  "host": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.2"
+  },
+  "bts_db": {
+    "container": "cdbts-e2e-bts-mysql",
+    "database": "fairticket_db",
+    "events_before_run": 43,
+    "existing_events_for_plan_accounts": []
+  },
+  "preflight": {
+    "frontend_status": 200,
+    "demo_api_via_frontend_status": 200
+  }
+}

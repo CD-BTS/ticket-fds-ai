@@ -1,0 +1,162 @@
+{
+  "name": "if-original-v1-v2",
+  "script": "scripts/compare_if_models.py",
+  "command": "python scripts/compare_if_models.py --name if-original-v1-v2 --versions v1 v2",
+  "reference_training_script": "ml_experiment/train_and_evaluate_if.py (수정하지 않음)",
+  "datasets": {
+    "원본": {
+      "path": "ml_experiment/data/fairticket_synthetic_features.csv",
+      "sha256": "2e1e27c1ebd434676e8079c7e4a65763be3f4bb2b4a8fe3e788897729fabf416",
+      "unchanged_after_run": true
+    },
+    "v1": {
+      "path": "experiments/issue16-booking-interval/dummy_adjusted/v1/fairticket_synthetic_features_adjusted.csv",
+      "sha256": "b371a8ccae738f4a5ddd2097953c4280409dfedcbeb4e8aa47e8f047c6d158b1",
+      "unchanged_after_run": true
+    },
+    "v2": {
+      "path": "experiments/issue16-booking-interval/dummy_adjusted/v2/fairticket_synthetic_features_adjusted.csv",
+      "sha256": "426a0967dc59c0fca80f9408820f3454d772c027eac71bc4faee095f514af4a7",
+      "unchanged_after_run": true
+    }
+  },
+  "all_features": [
+    "avg_booking_interval",
+    "booking_interval_variance",
+    "seat_selection_latency",
+    "cancel_rate",
+    "card_reuse_count",
+    "ip_booking_density",
+    "booking_count"
+  ],
+  "primary_features": [
+    "avg_booking_interval",
+    "booking_interval_variance",
+    "cancel_rate",
+    "card_reuse_count",
+    "ip_booking_density",
+    "booking_count"
+  ],
+  "preprocessing": "없음 (원래 값 그대로)",
+  "split": {
+    "test_size": 0.3,
+    "random_state": 42,
+    "stratify": "is_anomaly",
+    "train": 700,
+    "test": 300,
+    "test_anomaly_ratio": 0.2
+  },
+  "model": {
+    "class": "sklearn.ensemble.IsolationForest",
+    "n_estimators": 100,
+    "random_state": 42,
+    "max_samples": "auto (기본값)",
+    "primary_contamination": 0.2
+  },
+  "prediction": "predict == -1 → 이상(1)",
+  "score": "decision_function; 정규화 점수 = (max − s)/(max − min + 1e-9) (test 안에서)",
+  "configs": [
+    {
+      "name": "최적 모델 (Feature 6개, contamination 0.20)",
+      "features": [
+        "avg_booking_interval",
+        "booking_interval_variance",
+        "cancel_rate",
+        "card_reuse_count",
+        "ip_booking_density",
+        "booking_count"
+      ],
+      "contamination": 0.2
+    },
+    {
+      "name": "실험1: Feature 7개, contamination 0.05",
+      "features": [
+        "avg_booking_interval",
+        "booking_interval_variance",
+        "seat_selection_latency",
+        "cancel_rate",
+        "card_reuse_count",
+        "ip_booking_density",
+        "booking_count"
+      ],
+      "contamination": 0.05
+    },
+    {
+      "name": "실험1: Feature 7개, contamination 0.10",
+      "features": [
+        "avg_booking_interval",
+        "booking_interval_variance",
+        "seat_selection_latency",
+        "cancel_rate",
+        "card_reuse_count",
+        "ip_booking_density",
+        "booking_count"
+      ],
+      "contamination": 0.1
+    },
+    {
+      "name": "실험1·2: Feature 7개, contamination 0.20",
+      "features": [
+        "avg_booking_interval",
+        "booking_interval_variance",
+        "seat_selection_latency",
+        "cancel_rate",
+        "card_reuse_count",
+        "ip_booking_density",
+        "booking_count"
+      ],
+      "contamination": 0.2
+    },
+    {
+      "name": "실험2: 시간/분산 제외, contamination 0.20",
+      "features": [
+        "seat_selection_latency",
+        "cancel_rate",
+        "card_reuse_count",
+        "ip_booking_density",
+        "booking_count"
+      ],
+      "contamination": 0.2
+    },
+    {
+      "name": "실험2: 메타 식별자 제외, contamination 0.20",
+      "features": [
+        "avg_booking_interval",
+        "booking_interval_variance",
+        "seat_selection_latency",
+        "cancel_rate",
+        "booking_count"
+      ],
+      "contamination": 0.2
+    }
+  ],
+  "sensitivity_model_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "python": "3.11.2"
+  },
+  "models_saved": false
+}

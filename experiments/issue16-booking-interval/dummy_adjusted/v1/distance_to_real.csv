@@ -1,0 +1,7 @@
+﻿feature,group,reference,mean_diff,median_diff,wasserstein,ks_statistic,share_within_reference_range
+avg_booking_interval,기존 더미 macro,실측 fast (개별 간격),-2.3356945812807886,-2.322,2.3356945812807877,1.0,0.0
+avg_booking_interval,수정 더미 fast,실측 fast (개별 간격),0.005099567099566382,0.11299999999999999,0.17377922077922073,0.4577922077922078,1.0
+avg_booking_interval,기존 더미 macro,실측 jitter (개별 간격),-4.018937689050211,-4.074999999999999,4.018937689050213,1.0,0.0
+avg_booking_interval,수정 더미 jitter,실측 jitter (개별 간격),-0.0013782129742949678,0.03500000000000014,0.17081517747858005,0.42105263157894735,1.0
+avg_booking_interval,기존 더미 macro,실측 fast+jitter 전체 (개별 간격),-3.1352350574712644,-3.0180000000000002,3.1352350574712653,1.0,0.0
+avg_booking_interval,수정 더미 전체,실측 fast+jitter 전체 (개별 간격),0.034305172413792384,-0.43800000000000017,0.1809574712643677,0.2425287356321839,1.0

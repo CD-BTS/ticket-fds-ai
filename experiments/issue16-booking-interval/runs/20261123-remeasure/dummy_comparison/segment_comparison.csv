@@ -1,0 +1,7 @@
+﻿mode,segment,segment_label,median_base,median_new,median_diff
+fast,click_to_hold_s,예매하기 클릭 → 좌석 선점,0.843,0.9655,0.12250000000000005
+fast,payment_step_s,결제 단계,1.426,1.484,0.05800000000000005
+fast,after_paid_to_next_begin_s,결제 완료 → 다음 예매하기 클릭,0.2400000000000002,0.4425000000000001,0.2024999999999999
+jitter,click_to_hold_s,예매하기 클릭 → 좌석 선점,1.296,1.5150000000000001,0.21900000000000008
+jitter,payment_step_s,결제 단계,1.769,1.8565,0.08750000000000013
+jitter,after_paid_to_next_begin_s,결제 완료 → 다음 예매하기 클릭,1.271,1.555,0.28400000000000003
