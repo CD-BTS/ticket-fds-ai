@@ -1,0 +1,4 @@
+﻿mode,account,n_intervals,avg_booking_interval,booking_interval_variance
+fast,macro-fast-01,2,2.7675,0.00366025
+fast,macro-fast-02,19,2.6440526315789477,0.079076891966759
+jitter,macro-jitter-01,19,4.339052631578948,0.057053418282548445
