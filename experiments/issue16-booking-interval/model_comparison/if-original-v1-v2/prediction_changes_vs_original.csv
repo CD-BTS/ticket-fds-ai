@@ -1,0 +1,17 @@
+﻿dataset,group,actual,n_test,flagged_to_not,not_to_flagged
+v1,normal,정상,151,0,0
+v1,fast_normal,정상,45,0,0
+v1,shared_ip,정상,35,2,0
+v1,frequent_cancel,정상,9,0,2
+v1,hold_cancel,이상,20,0,1
+v1,multi_account,이상,16,0,0
+v1,macro → fast,이상,8,0,0
+v1,macro → jitter,이상,16,0,1
+v2,normal,정상,151,0,0
+v2,fast_normal,정상,45,0,0
+v2,shared_ip,정상,35,2,0
+v2,frequent_cancel,정상,9,0,2
+v2,hold_cancel,이상,20,0,1
+v2,multi_account,이상,16,0,0
+v2,macro → fast,이상,8,0,0
+v2,macro → jitter,이상,16,0,0
