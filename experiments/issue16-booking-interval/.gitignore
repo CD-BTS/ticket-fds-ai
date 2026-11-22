@@ -1,0 +1,11 @@
+# 이 실험 폴더에서 git 에 올리지 않는 것 (#14 와 같은 기준: 실측 원본은 올리지 않는다)
+__pycache__/
+
+# 실측 원본: BTS 이벤트 내보내기, 매크로 실행 기록
+runs/*/raw_events.csv
+runs/*/users.csv
+runs/*/macro_runs.csv
+runs/*/macro-results-*.csv
+runs/*/macro_stdout.log
+runs/*/bookings.csv
+runs/*/booking_intervals.csv
