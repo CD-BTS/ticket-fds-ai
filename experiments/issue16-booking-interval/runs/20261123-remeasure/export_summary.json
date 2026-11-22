@@ -1,0 +1,28 @@
+{
+  "finished_utc": "2026-11-22T16:47:51.243Z",
+  "macro_results": {
+    "OK": 80
+  },
+  "macro_runs": 80,
+  "expected_bookings": 80,
+  "bookings_stored_in_bts": 80,
+  "flush_complete": true,
+  "events_total_in_db": 603,
+  "events_for_plan_accounts_by_type": {
+    "BOOKING_ATTEMPT": 480,
+    "BOOKING": 80
+  },
+  "events_by_group_and_type": {
+    "macro_fast/BOOKING": 40,
+    "macro_fast/BOOKING_ATTEMPT": 240,
+    "macro_jitter/BOOKING": 40,
+    "macro_jitter/BOOKING_ATTEMPT": 240,
+    "other/BOOKING": 4,
+    "other/BOOKING_ATTEMPT": 39
+  },
+  "occurred_at_min": "2026-11-22T15:56:17.444000",
+  "occurred_at_max": "2026-11-22T16:47:43.028000",
+  "demo_outbox_by_status": {
+    "SENT": 603
+  }
+}
