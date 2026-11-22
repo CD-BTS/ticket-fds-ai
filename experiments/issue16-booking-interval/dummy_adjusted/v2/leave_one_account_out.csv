@@ -1,0 +1,7 @@
+﻿type,held_out_run,held_out_account,held_out_mean,dummy_mean_min,dummy_mean_max,mean_within,mean_gap_to_range,held_out_variance,dummy_variance_min,dummy_variance_max,variance_within
+fast,기존 실측,macro-fast-02,2.6440526315789477,2.95,3.35,False,0.3059473684210525,0.079076891966759,0.0137,0.2919,True
+jitter,기존 실측,macro-jitter-01,4.339052631578948,4.68,5.32,False,0.3409473684210518,0.057053418282548445,0.0782,0.3484,False
+fast,새 실측,macro-fast-11,3.123052631578947,2.59,3.16,True,0.0,0.1592004709141274,0.0407,0.1167,False
+fast,새 실측,macro-fast-12,3.0396315789473682,2.59,3.25,True,0.0,0.06331096952908587,0.0254,0.3426,True
+jitter,새 실측,macro-jitter-11,4.769578947368421,4.25,5.32,True,0.0,0.1452783490304709,0.0231,0.3484,True
+jitter,새 실측,macro-jitter-12,5.101894736842105,4.25,5.0,False,0.10189473684210526,0.21707840997229913,0.0231,0.22,True

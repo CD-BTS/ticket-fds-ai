@@ -1,0 +1,96 @@
+{
+  "version": "v2",
+  "method": "account-hierarchical",
+  "seed": 42,
+  "rng": "numpy.random.default_rng",
+  "numpy": "2.4.6",
+  "pandas": "3.1.1",
+  "run_ids": [
+    "20261122-continuous",
+    "20261123-remeasure"
+  ],
+  "split": {
+    "fast": 44,
+    "jitter": 43
+  },
+  "original_path": "ml_experiment/data/fairticket_synthetic_features.csv",
+  "original_sha256": "2e1e27c1ebd434676e8079c7e4a65763be3f4bb2b4a8fe3e788897729fabf416",
+  "dataset_path": "experiments/issue16-booking-interval/dummy_adjusted/v2/fairticket_synthetic_features_adjusted.csv",
+  "dataset_sha256": "426a0967dc59c0fca80f9408820f3454d772c027eac71bc4faee095f514af4a7",
+  "changed_columns": [
+    "scenario",
+    "avg_booking_interval",
+    "booking_interval_variance"
+  ],
+  "pool_by_type": {
+    "fast": 59,
+    "jitter": 57
+  },
+  "pool_mean_by_type": {
+    "fast": 2.9298813559322032,
+    "jitter": 4.7368421052631575
+  },
+  "pool_variance_population_by_type": {
+    "fast": 0.14034478253375465,
+    "jitter": 0.23732725577100647
+  },
+  "n_intervals_min": 15,
+  "n_intervals_max": 48,
+  "adjusted_mean_range": {
+    "fast": [
+      2.54,
+      3.24
+    ],
+    "jitter": [
+      4.25,
+      5.18
+    ]
+  },
+  "spearman_original": -0.10578308449375644,
+  "spearman_adjusted_by_type": {
+    "fast": 0.5774143642235479,
+    "jitter": 0.780831125770304
+  },
+  "checks": {
+    "rows_original": 1000,
+    "rows_adjusted": 1000,
+    "columns_identical": true,
+    "dtypes_identical": true,
+    "other_columns_identical": true,
+    "non_macro_rows_identical": true,
+    "labels_identical": true,
+    "label_ratio_original": 0.199,
+    "label_ratio_adjusted": 0.199,
+    "other_scenario_counts_identical": true,
+    "macro_rows": 87,
+    "macro_scenario_remaining": 0,
+    "type_counts": {
+      "fast": 44,
+      "jitter": 43
+    },
+    "type_counts_match_split": true,
+    "type_rows_all_anomaly": true,
+    "macro_rows_changed_mean": 87,
+    "macro_rows_changed_variance": 87,
+    "macro_rows_skipped_booking_count_lt_2": [],
+    "floor_applied_mean": 0,
+    "floor_applied_variance": 0,
+    "all_passed": true
+  },
+  "min_account_intervals": 5,
+  "compare_version": "v1",
+  "pool_by_run_and_type": {
+    "20261122-continuous/fast": 21,
+    "20261122-continuous/jitter": 19,
+    "20261123-remeasure/fast": 38,
+    "20261123-remeasure/jitter": 38
+  },
+  "rows_per_real_account": {
+    "20261123-remeasure/macro-fast-12": 14,
+    "20261123-remeasure/macro-fast-11": 15,
+    "20261123-remeasure/macro-jitter-11": 14,
+    "20261122-continuous/macro-fast-02": 15,
+    "20261123-remeasure/macro-jitter-12": 14,
+    "20261122-continuous/macro-jitter-01": 15
+  }
+}
