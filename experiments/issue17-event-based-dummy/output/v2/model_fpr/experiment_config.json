@@ -1,0 +1,106 @@
+{
+  "script": "scripts/tune_if_v2_fpr.py",
+  "dataset": {
+    "path": "experiments/issue17-event-based-dummy/data/v2/fairticket_event_based_features.csv",
+    "sha256": "b39aa53337d2992ab8226e8cada80ea76a6276195a4c0d16811bb87d52d4b180"
+  },
+  "datasets_unchanged_after_run": true,
+  "features": [
+    "avg_booking_interval",
+    "booking_interval_variance",
+    "cancel_rate",
+    "card_reuse_count",
+    "ip_booking_density",
+    "booking_count"
+  ],
+  "target_fpr": 0.05,
+  "split": {
+    "test": 300,
+    "train": 490,
+    "validation": 210,
+    "random_state": 42,
+    "train_normal": 393,
+    "validation_normal": 168,
+    "validation_allowed_false_positives": 8
+  },
+  "search_space": {
+    "preprocessing": [
+      "분리 없음 · 결측 그대로",
+      "분리 없음 · 결측 중앙값",
+      "분리 없음 · 결측 중앙값 · log1p",
+      "시도 2건 미만 분리 · 결측 중앙값 · log1p"
+    ],
+    "training": [
+      "혼합",
+      "혼합 (크기 맞춤)",
+      "정상만"
+    ]
+  },
+  "threshold_rule": "validation 정상 계정의 오탐률이 target 이하가 되는 가장 낮은 점수. test 에는 같은 모델·같은 임계값",
+  "selection": {
+    "criterion": "validation Recall (모델 seed 10개 평균), 동률이면 F1",
+    "selected": [
+      "분리 없음 · 결측 중앙값 · log1p",
+      "정상만"
+    ],
+    "selected_within_mixed_training": "분리 없음 · 결측 중앙값 · log1p"
+  },
+  "model_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "nested_selection_model_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "python": "3.11.2"
+  },
+  "models_saved": false
+}
