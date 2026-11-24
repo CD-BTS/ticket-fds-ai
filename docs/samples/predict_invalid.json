@@ -6,7 +6,6 @@
     "bookingCount": 6,
     "cancelCount": 1,
     "cancelRate": 1.7,
-    "avgBookingInterval": 80000,
-    "shortIntervalBookingCount": 0
+    "avgBookingInterval": 80000
   }
 }

@@ -1,0 +1,91 @@
+{
+  "bundle": {
+    "path": "models/behavior_model.joblib",
+    "sha256": "7c9fcafb7b8e6e5180295fe90904d8bb5baa828b4b013036544d24d2a58955d5",
+    "model_version": "fds-if-v4.0.0",
+    "trained_at": "2026-11-24T06:47:10.574874+00:00",
+    "feature_definition_version": "fds-features-v2",
+    "training_data_sha256": "5c367a5b0fb2d6a5e3ae37c68037cc1de500d5e53ca12f52afa657722997a1be",
+    "raw_threshold": 0.5188149554589429,
+    "normalization": {
+      "method": "threshold_anchored_piecewise_linear",
+      "low": 0.3636158540814233,
+      "threshold": 0.5188149554589429,
+      "high": 0.7012622341470274,
+      "formula": "s < threshold: 0.5*(s-low)/(threshold-low); s >= threshold: 0.5+0.5*(s-threshold)/(high-threshold); clip to [0, 1]",
+      "anchors": "low/high = 학습(train) 계정 원시 점수의 최솟값/최댓값, threshold = validation 정상 계정으로 정한 원시 임계값"
+    }
+  },
+  "accounts_scored": 30000,
+  "datasets": 30,
+  "is_anomaly_equals_raw_ge_threshold": true,
+  "is_anomaly_equals_score_ge_0_5": true,
+  "score_is_non_decreasing_in_raw": true,
+  "score_is_strictly_increasing_inside_low_high (반올림 전)": true,
+  "share_clipped_to_0 (raw <= low)": 0.0038666666666666667,
+  "share_clipped_to_1 (raw >= high)": 0.0006,
+  "distinct_raw_scores": 5372,
+  "distinct_scores_after_rounding": 5342,
+  "raw_score_range": [
+    0.3636158540814233,
+    0.7080791912342211
+  ],
+  "closest_raw_below_threshold": 0.5188149554589427,
+  "closest_raw_at_or_above_threshold": 0.518815381843285,
+  "normal_accounts_at_or_above_policy_cut": {
+    "D1": {
+      "0.40": 0.13570536828963795,
+      "0.70": 0.007365792759051186,
+      "0.85": 0.00012484394506866417
+    },
+    "D2": {
+      "0.40": 0.13807740324594256,
+      "0.70": 0.005867665418227216,
+      "0.85": 0.00012484394506866417
+    },
+    "D3": {
+      "0.40": 0.1474406991260924,
+      "0.70": 0.005493133583021223,
+      "0.85": 0.00012484394506866417
+    }
+  },
+  "anomaly_accounts_at_or_above_policy_cut": {
+    "D1": {
+      "0.40": 0.8567839195979899,
+      "0.70": 0.4040201005025126,
+      "0.85": 0.16834170854271358
+    },
+    "D2": {
+      "0.40": 0.8567839195979899,
+      "0.70": 0.4040201005025126,
+      "0.85": 0.16834170854271358
+    },
+    "D3": {
+      "0.40": 0.8567839195979899,
+      "0.70": 0.4040201005025126,
+      "0.85": 0.16834170854271358
+    }
+  },
+  "normal_score_quantiles": {
+    "p05": 0.008795,
+    "p25": 0.036772,
+    "p50": 0.168408,
+    "p75": 0.298604,
+    "p95": 0.516169
+  },
+  "anomaly_score_quantiles": {
+    "p05": 0.13401,
+    "p25": 0.540722,
+    "p50": 0.6655960000000001,
+    "p75": 0.787375,
+    "p95": 0.932651
+  },
+  "holdout_of_training_csv (seed 2026 의 test 300계정, 참고)": {
+    "precision": 0.8269230769230769,
+    "recall": 0.7166666666666667,
+    "f1": 0.7678571428571429,
+    "fpr": 0.0375,
+    "roc_auc": 0.9334027777777778
+  },
+  "note": "합성 데이터에서의 값이다. 실제 운영 성능이 아니다. 정책 기준(0.40/0.70/0.85)은 기록만 하고 바꾸지 않았다."
+}

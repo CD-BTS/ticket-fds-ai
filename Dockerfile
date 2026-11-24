@@ -1,15 +1,16 @@
 # ---------------------------------------------------------------
-# BTS AI 이상 행동 탐지 서버 이미지
-#   1) deps    : 파이썬 패키지 설치 (학습/서빙 공통)
-#   2) trainer : 합성 데이터 생성 + 모델 학습  → models/behavior_model.joblib
+# BTS AI 이상 행동 탐지 서버 이미지 (최종 6개 Feature 모델)
+#   1) deps    : 파이썬 패키지 설치 (학습/서빙 공통, 버전 고정)
+#   2) trainer : 저장소의 학습용 Feature 표로 모델 학습 → models/behavior_model.joblib
 #   3) runtime : 서빙에 필요한 코드와 학습된 모델만 담은 최종 이미지
 #
-# 모델을 이미지 안에서 학습하므로 학습 환경과 서빙 환경의 scikit-learn 버전이
-# 항상 같고, 저장소를 받자마자 `docker compose up --build` 만으로 실행할 수 있다.
-# (models/ 와 data/ 는 .gitignore 대상이라 저장소에 없다.)
+# 모델 파일(models/)은 git 에 없다. 이미지 안에서 train_fds_model.py 로 만든다.
+# 학습 데이터(ml_experiment/data/fds_v4_training_features.csv), 학습 스크립트, 패키지 버전이 같으므로
+# 로컬에서 `python train_fds_model.py` 로 만든 모델과 같은 모델이 나온다.
+# 이전 MVP 학습 경로(main.py + train_model.py)는 이 이미지에서 쓰지 않는다.
 # ---------------------------------------------------------------
 
-FROM python:3.13-slim AS deps
+FROM python:3.11-slim AS deps
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
@@ -24,8 +25,9 @@ RUN pip install -r requirements.txt
 
 FROM deps AS trainer
 
-COPY main.py train_model.py preprocessing.py inference.py ./
-RUN python main.py && python train_model.py
+COPY train_fds_model.py preprocessing.py inference.py ./
+COPY ml_experiment/data/fds_v4_training_features.csv ml_experiment/data/fds_v4_training_features.meta.json ./ml_experiment/data/
+RUN python train_fds_model.py
 
 
 FROM deps AS runtime

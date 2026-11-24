@@ -1,3 +1,6 @@
+# [이전 MVP 버전] 이 파일은 현재 실행 경로에서 쓰지 않는다.
+# 현재 서빙 모델(6개 Feature)은 train_fds_model.py 가 만들고, Docker 이미지도 그 스크립트를 쓴다.
+# 기록 보존을 위해 남겨 둔 파일이다. train_model.py 가 만든 결과와 비교하는 스크립트다.
 """저장된 학습 결과와 실행 중인 API의 응답이 사용자 전원에서 같은지 비교한다.
 
 학습 때 계산한 점수(data/user_predictions.csv)와, 같은 Feature를 POST /predict/batch로

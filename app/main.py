@@ -34,7 +34,11 @@ DEFAULT_MODEL_PATH = Path(__file__).resolve().parent.parent / "models" / "behavi
 async def lifespan(app: FastAPI):
     # 모델이 없거나 깨져 있으면 서버가 뜨지 않게 해서, 요청 때 500이 나는 것을 막는다.
     model_path = Path(os.getenv("MODEL_PATH", DEFAULT_MODEL_PATH))
-    bundle = set_inference_threads(load_bundle(model_path))
+    try:
+        bundle = set_inference_threads(load_bundle(model_path))
+    except (FileNotFoundError, ValueError) as error:
+        logger.error("모델을 불러오지 못해 서버를 시작하지 않습니다: %s", error)
+        raise
     app.state.bundle = bundle
     logger.info(
         "모델 로드 완료: %s (features=%s)", bundle["model_version"], bundle["feature_columns"]
@@ -44,8 +48,8 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="BTS AI 이상 행동 탐지 API",
-    description="사용자 행동 Feature를 받아 이상도 점수(0~1)를 반환합니다. "
-    "점수는 암표상일 확률이 아니라 학습 사용자 대비 행동 패턴의 특이성입니다.",
+    description="사용자 행동 Feature 6개를 받아 원시 이상 점수, 0~1 정규화 점수, 탐지 여부를 반환합니다. "
+    "점수는 매크로·암표상일 확률이 아닙니다. 정규화 점수 0.5가 모델의 탐지 임계값입니다.",
     version="1.0.0",
     lifespan=lifespan,
 )
@@ -80,7 +84,12 @@ def health(request: Request):
         "status": "ok",
         "modelVersion": bundle["model_version"],
         "features": bundle["feature_columns"],
+        "featureDefinitionVersion": bundle["feature_definition_version"],
         "anomalyThreshold": bundle["anomaly_threshold"],
+        "rawThreshold": bundle["raw_threshold"],
+        "scoreNormalization": bundle["normalization"],
+        "minBookingCount": bundle["min_booking_count"],
+        "trainingDataVersion": bundle["training"].get("data_version"),
         "trainedAt": bundle["trained_at"],
     }
 

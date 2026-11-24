@@ -21,9 +21,8 @@ def post_raw(client, raw, path="/predict"):
 
 def jackson_body(user_id="12345", calculated_at='"2026-10-15T01:23:45.123456Z"', features=None):
     default_features = (
-        '{"bookingCount":6,"cancelCount":1,"cancelRate":0.17,'
-        '"avgBookingInterval":80000.0,"shortIntervalBookingCount":0,'
-        '"attendanceRate":null,"avgBookingDuration":null}'
+        '{"bookingCount":6,"avgBookingInterval":80000.0,"bookingIntervalVariance":1.25E8,'
+        '"cancelRate":0.17,"cardReuseCount":1,"ipBookingDensity":2}'
     )
     return (
         '{"userId":%s,"calculatedAt":%s,"windowDays":30,"features":%s}'
@@ -56,9 +55,8 @@ def test_long_user_id_as_number(client):
 
 def test_exponent_and_integral_doubles(client):
     features = (
-        '{"bookingCount":6.0,"cancelCount":1.0,"cancelRate":1.0E-4,'
-        '"avgBookingInterval":8.0E4,"shortIntervalBookingCount":0.0,'
-        '"attendanceRate":0.9,"avgBookingDuration":1.2E2}'
+        '{"bookingCount":6.0,"avgBookingInterval":8.0E4,"bookingIntervalVariance":1.2E2,'
+        '"cancelRate":1.0E-4,"cardReuseCount":1.0,"ipBookingDensity":2.0}'
     )
     response = post_raw(client, jackson_body(features=features))
     assert response.status_code == 200, response.text
@@ -66,26 +64,27 @@ def test_exponent_and_integral_doubles(client):
 
 def test_all_nullable_features_explicit_null(client):
     features = (
-        '{"bookingCount":6,"cancelCount":1,"cancelRate":null,'
-        '"avgBookingInterval":null,"shortIntervalBookingCount":0,'
-        '"attendanceRate":null,"avgBookingDuration":null}'
+        '{"bookingCount":6,"avgBookingInterval":null,"bookingIntervalVariance":null,'
+        '"cancelRate":null,"cardReuseCount":1,"ipBookingDensity":1}'
     )
     assert post_raw(client, jackson_body(features=features)).status_code == 200
 
 
 def test_non_null_fields_omitted_by_non_null_inclusion(client):
     # @JsonInclude(NON_NULL) 설정이면 null인 필드가 아예 빠진다. 허용 필드는 통과해야 한다.
-    features = '{"bookingCount":6,"cancelCount":1,"shortIntervalBookingCount":0}'
+    features = '{"bookingCount":6,"cardReuseCount":1,"ipBookingDensity":1}'
     assert post_raw(client, jackson_body(features=features)).status_code == 200
 
 
-def test_unknown_fields_are_ignored(client):
-    raw = (
-        '{"userId":"u1","calculatedAt":"2026-10-15T01:23:45Z","windowDays":30,"requestId":"abc",'
-        '"features":{"bookingCount":6,"cancelCount":1,"cancelRate":0.17,"avgBookingInterval":80000.0,'
-        '"shortIntervalBookingCount":0,"bookingBurstCount":3}}'
-    )
-    assert post_raw(client, raw).status_code == 200
+def test_unknown_top_level_field_is_ignored_but_unknown_feature_is_rejected(client):
+    body = '{"userId":"u1","calculatedAt":"2026-10-15T01:23:45Z","windowDays":30,"requestId":"abc","features":%s}'
+    known = '{"bookingCount":6,"cancelRate":0.17,"avgBookingInterval":80000.0}'
+    assert post_raw(client, body % known).status_code == 200
+    # 이전 MVP 필드(cancelCount, shortIntervalBookingCount)를 보내면 조용히 무시하지 않고 알려준다
+    legacy = '{"bookingCount":6,"cancelCount":1,"cancelRate":0.17,"avgBookingInterval":80000.0,"shortIntervalBookingCount":0}'
+    response = post_raw(client, body % legacy)
+    assert response.status_code == 422
+    assert any("cancelCount" in message and "shortIntervalBookingCount" in message for message in response.json()["errors"])
 
 
 def test_non_ascii_user_id(client):
@@ -98,7 +97,7 @@ def test_response_is_valid_utf8_json_with_expected_content_type(client):
     response = post_raw(client, jackson_body())
     assert response.headers["content-type"].startswith("application/json")
     assert set(json.loads(response.content)) == {
-        "userId", "status", "anomalyScore", "modelVersion", "assessedAt"
+        "userId", "status", "rawAnomalyScore", "anomalyScore", "isAnomaly", "modelVersion", "assessedAt"
     }
 
 

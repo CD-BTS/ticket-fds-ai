@@ -1,0 +1,110 @@
+{
+  "data_version": "v4-mixed-seed2026",
+  "file": "fds_v4_training_features.csv",
+  "sha256": "5c367a5b0fb2d6a5e3ae37c68037cc1de500d5e53ca12f52afa657722997a1be",
+  "rows": 1000,
+  "content": "합성 데이터만. 실측 원본, 계정 ID, 개인정보 없음 (row_id 는 행 번호)",
+  "feature_definition_version": "fds-features-v2",
+  "features_in_model_order": [
+    "avg_booking_interval",
+    "booking_interval_variance",
+    "cancel_rate",
+    "card_reuse_count",
+    "ip_booking_density",
+    "booking_count"
+  ],
+  "generation": {
+    "generator": "experiments/issue17-event-based-dummy/scripts/generate_events_v4.py (수정 없음)",
+    "extractor": "experiments/issue14-real-validation/scripts/extract_features.py (BTS FeatureAggregationService 재현) + extract_v4.interval_definitions",
+    "config": "experiments/issue17-event-based-dummy/config/scenarios_v4.json",
+    "config_sha256": "3fc5a460b30b252d27fe01eea523e03ca4d7cac8b654a6fef43218a6fed64f5a",
+    "base_config_sha256": "e2c435500f3adc3bd1cd3c2af27300b6875ac19048223cde4cf2d787bd3a4c48",
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false
+    },
+    "generation_seed": 2026,
+    "assumptions": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "composition": "Mixed: 계정을 시나리오별로 3등분해 D1·D2·D3 에서 하나씩. 한 계정은 한 번만 들어간다",
+    "mixed_assignment_seed": 2026,
+    "accounts_by_source": {
+      "D1": 332,
+      "D2": 333,
+      "D3": 335
+    }
+  },
+  "split": {
+    "unit": "계정",
+    "seed": 42,
+    "test_size": 0.3,
+    "validation_size_of_rest": 0.3,
+    "stratify": "test 는 is_anomaly, train/validation 은 scenario",
+    "rows": {
+      "test": 300,
+      "train": 490,
+      "validation": 210
+    },
+    "anomaly_share": {
+      "test": 0.2,
+      "train": 0.197959,
+      "validation": 0.2
+    },
+    "train_by_source": {
+      "D1": 167,
+      "D2": 161,
+      "D3": 162
+    }
+  },
+  "null_share": {
+    "avg_booking_interval": 0.202,
+    "booking_interval_variance": 0.7,
+    "cancel_rate": 0.037,
+    "card_reuse_count": 0.0,
+    "ip_booking_density": 0.0,
+    "booking_count": 0.0
+  },
+  "versions": {
+    "python": "3.11.2",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1"
+  },
+  "seeds_never_used_before": {
+    "final_training": 2026,
+    "independent_validation": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "used_in_issue17": [
+      42,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

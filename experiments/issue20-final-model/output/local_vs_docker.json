@@ -1,0 +1,22 @@
+{
+  "inputs": 13,
+  "model_version_threshold_normalization_identical": true,
+  "raw_scores_identical": true,
+  "max_abs_raw_score_difference": 0.0,
+  "normalized_scores_identical": true,
+  "decisions_identical": true,
+  "local": {
+    "rawThreshold": 0.5188149554589429,
+    "method": "threshold_anchored_piecewise_linear",
+    "low": 0.3636158540814233,
+    "threshold": 0.5188149554589429,
+    "high": 0.7012622341470274
+  },
+  "docker": {
+    "rawThreshold": 0.5188149554589429,
+    "method": "threshold_anchored_piecewise_linear",
+    "low": 0.3636158540814233,
+    "threshold": 0.5188149554589429,
+    "high": 0.7012622341470274
+  }
+}

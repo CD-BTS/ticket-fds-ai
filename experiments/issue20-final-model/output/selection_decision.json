@@ -1,0 +1,382 @@
+{
+  "rule": [
+    "1. 세 평가 분포 중 가장 낮은 F1(생성 seed 평균)이 가장 높은 후보",
+    "2. 그 값이 최고와 0.01 이내인 후보끼리는 최악 분포의 정상 오탐률이 낮은 쪽",
+    "3. 그래도 같으면(소수 셋째 자리) Mixed"
+  ],
+  "best_worst_f1": 0.766385692706119,
+  "within_tie_of_best": [
+    "D1",
+    "D2",
+    "D3",
+    "Mixed"
+  ],
+  "worst_fpr_of_tied": {
+    "D1": 0.0526,
+    "D2": 0.0542,
+    "D3": 0.0569,
+    "Mixed": 0.05
+  },
+  "chosen": "Mixed",
+  "data_reused": "experiments/issue17-event-based-dummy/data/v4/_runs (base, 생성 seed 0~9)",
+  "generation_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "model_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_fits": 120,
+  "new_datasets_generated": 0,
+  "checks_all_seeds": {
+    "same_accounts_and_labels_in_D1_D2_D3": true,
+    "anomaly_rows_identical_in_D1_D2_D3": true,
+    "train_validation_test_disjoint": true,
+    "every_candidate_has_same_train_accounts": true,
+    "every_candidate_has_same_train_anomaly_share": true,
+    "no_account_repeated_within_a_candidate": true
+  },
+  "checks_by_seed": [
+    {
+      "generation_seed": 0,
+      "same_accounts_and_labels_in_D1_D2_D3": true,
+      "anomaly_rows_identical_in_D1_D2_D3": true,
+      "train_validation_test_disjoint": true,
+      "accounts_train_validation_test": [
+        490,
+        210,
+        300
+      ],
+      "D1_train_accounts": 490,
+      "D1_train_accounts_unique": true,
+      "D1_train_anomaly_share": 0.19795918367346937,
+      "D2_train_accounts": 490,
+      "D2_train_accounts_unique": true,
+      "D2_train_anomaly_share": 0.19795918367346937,
+      "D3_train_accounts": 490,
+      "D3_train_accounts_unique": true,
+      "D3_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_accounts": 490,
+      "Mixed_train_accounts_unique": true,
+      "Mixed_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_by_source": {
+        "D1": 169,
+        "D2": 161,
+        "D3": 160
+      },
+      "Mixed_train_anomaly_by_source": {
+        "D1": 29,
+        "D2": 33,
+        "D3": 35
+      }
+    },
+    {
+      "generation_seed": 1,
+      "same_accounts_and_labels_in_D1_D2_D3": true,
+      "anomaly_rows_identical_in_D1_D2_D3": true,
+      "train_validation_test_disjoint": true,
+      "accounts_train_validation_test": [
+        490,
+        210,
+        300
+      ],
+      "D1_train_accounts": 490,
+      "D1_train_accounts_unique": true,
+      "D1_train_anomaly_share": 0.19795918367346937,
+      "D2_train_accounts": 490,
+      "D2_train_accounts_unique": true,
+      "D2_train_anomaly_share": 0.19795918367346937,
+      "D3_train_accounts": 490,
+      "D3_train_accounts_unique": true,
+      "D3_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_accounts": 490,
+      "Mixed_train_accounts_unique": true,
+      "Mixed_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_by_source": {
+        "D1": 149,
+        "D2": 177,
+        "D3": 164
+      },
+      "Mixed_train_anomaly_by_source": {
+        "D1": 24,
+        "D2": 38,
+        "D3": 35
+      }
+    },
+    {
+      "generation_seed": 2,
+      "same_accounts_and_labels_in_D1_D2_D3": true,
+      "anomaly_rows_identical_in_D1_D2_D3": true,
+      "train_validation_test_disjoint": true,
+      "accounts_train_validation_test": [
+        490,
+        210,
+        300
+      ],
+      "D1_train_accounts": 490,
+      "D1_train_accounts_unique": true,
+      "D1_train_anomaly_share": 0.19795918367346937,
+      "D2_train_accounts": 490,
+      "D2_train_accounts_unique": true,
+      "D2_train_anomaly_share": 0.19795918367346937,
+      "D3_train_accounts": 490,
+      "D3_train_accounts_unique": true,
+      "D3_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_accounts": 490,
+      "Mixed_train_accounts_unique": true,
+      "Mixed_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_by_source": {
+        "D1": 176,
+        "D2": 161,
+        "D3": 153
+      },
+      "Mixed_train_anomaly_by_source": {
+        "D1": 32,
+        "D2": 33,
+        "D3": 32
+      }
+    },
+    {
+      "generation_seed": 3,
+      "same_accounts_and_labels_in_D1_D2_D3": true,
+      "anomaly_rows_identical_in_D1_D2_D3": true,
+      "train_validation_test_disjoint": true,
+      "accounts_train_validation_test": [
+        490,
+        210,
+        300
+      ],
+      "D1_train_accounts": 490,
+      "D1_train_accounts_unique": true,
+      "D1_train_anomaly_share": 0.19795918367346937,
+      "D2_train_accounts": 490,
+      "D2_train_accounts_unique": true,
+      "D2_train_anomaly_share": 0.19795918367346937,
+      "D3_train_accounts": 490,
+      "D3_train_accounts_unique": true,
+      "D3_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_accounts": 490,
+      "Mixed_train_accounts_unique": true,
+      "Mixed_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_by_source": {
+        "D1": 156,
+        "D2": 172,
+        "D3": 162
+      },
+      "Mixed_train_anomaly_by_source": {
+        "D1": 29,
+        "D2": 38,
+        "D3": 30
+      }
+    },
+    {
+      "generation_seed": 4,
+      "same_accounts_and_labels_in_D1_D2_D3": true,
+      "anomaly_rows_identical_in_D1_D2_D3": true,
+      "train_validation_test_disjoint": true,
+      "accounts_train_validation_test": [
+        490,
+        210,
+        300
+      ],
+      "D1_train_accounts": 490,
+      "D1_train_accounts_unique": true,
+      "D1_train_anomaly_share": 0.19795918367346937,
+      "D2_train_accounts": 490,
+      "D2_train_accounts_unique": true,
+      "D2_train_anomaly_share": 0.19795918367346937,
+      "D3_train_accounts": 490,
+      "D3_train_accounts_unique": true,
+      "D3_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_accounts": 490,
+      "Mixed_train_accounts_unique": true,
+      "Mixed_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_by_source": {
+        "D1": 157,
+        "D2": 180,
+        "D3": 153
+      },
+      "Mixed_train_anomaly_by_source": {
+        "D1": 31,
+        "D2": 35,
+        "D3": 31
+      }
+    },
+    {
+      "generation_seed": 5,
+      "same_accounts_and_labels_in_D1_D2_D3": true,
+      "anomaly_rows_identical_in_D1_D2_D3": true,
+      "train_validation_test_disjoint": true,
+      "accounts_train_validation_test": [
+        490,
+        210,
+        300
+      ],
+      "D1_train_accounts": 490,
+      "D1_train_accounts_unique": true,
+      "D1_train_anomaly_share": 0.19795918367346937,
+      "D2_train_accounts": 490,
+      "D2_train_accounts_unique": true,
+      "D2_train_anomaly_share": 0.19795918367346937,
+      "D3_train_accounts": 490,
+      "D3_train_accounts_unique": true,
+      "D3_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_accounts": 490,
+      "Mixed_train_accounts_unique": true,
+      "Mixed_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_by_source": {
+        "D1": 167,
+        "D2": 167,
+        "D3": 156
+      },
+      "Mixed_train_anomaly_by_source": {
+        "D1": 36,
+        "D2": 31,
+        "D3": 30
+      }
+    },
+    {
+      "generation_seed": 6,
+      "same_accounts_and_labels_in_D1_D2_D3": true,
+      "anomaly_rows_identical_in_D1_D2_D3": true,
+      "train_validation_test_disjoint": true,
+      "accounts_train_validation_test": [
+        490,
+        210,
+        300
+      ],
+      "D1_train_accounts": 490,
+      "D1_train_accounts_unique": true,
+      "D1_train_anomaly_share": 0.19795918367346937,
+      "D2_train_accounts": 490,
+      "D2_train_accounts_unique": true,
+      "D2_train_anomaly_share": 0.19795918367346937,
+      "D3_train_accounts": 490,
+      "D3_train_accounts_unique": true,
+      "D3_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_accounts": 490,
+      "Mixed_train_accounts_unique": true,
+      "Mixed_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_by_source": {
+        "D1": 168,
+        "D2": 154,
+        "D3": 168
+      },
+      "Mixed_train_anomaly_by_source": {
+        "D1": 33,
+        "D2": 29,
+        "D3": 35
+      }
+    },
+    {
+      "generation_seed": 7,
+      "same_accounts_and_labels_in_D1_D2_D3": true,
+      "anomaly_rows_identical_in_D1_D2_D3": true,
+      "train_validation_test_disjoint": true,
+      "accounts_train_validation_test": [
+        490,
+        210,
+        300
+      ],
+      "D1_train_accounts": 490,
+      "D1_train_accounts_unique": true,
+      "D1_train_anomaly_share": 0.19795918367346937,
+      "D2_train_accounts": 490,
+      "D2_train_accounts_unique": true,
+      "D2_train_anomaly_share": 0.19795918367346937,
+      "D3_train_accounts": 490,
+      "D3_train_accounts_unique": true,
+      "D3_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_accounts": 490,
+      "Mixed_train_accounts_unique": true,
+      "Mixed_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_by_source": {
+        "D1": 162,
+        "D2": 169,
+        "D3": 159
+      },
+      "Mixed_train_anomaly_by_source": {
+        "D1": 34,
+        "D2": 33,
+        "D3": 30
+      }
+    },
+    {
+      "generation_seed": 8,
+      "same_accounts_and_labels_in_D1_D2_D3": true,
+      "anomaly_rows_identical_in_D1_D2_D3": true,
+      "train_validation_test_disjoint": true,
+      "accounts_train_validation_test": [
+        490,
+        210,
+        300
+      ],
+      "D1_train_accounts": 490,
+      "D1_train_accounts_unique": true,
+      "D1_train_anomaly_share": 0.19795918367346937,
+      "D2_train_accounts": 490,
+      "D2_train_accounts_unique": true,
+      "D2_train_anomaly_share": 0.19795918367346937,
+      "D3_train_accounts": 490,
+      "D3_train_accounts_unique": true,
+      "D3_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_accounts": 490,
+      "Mixed_train_accounts_unique": true,
+      "Mixed_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_by_source": {
+        "D1": 169,
+        "D2": 166,
+        "D3": 155
+      },
+      "Mixed_train_anomaly_by_source": {
+        "D1": 35,
+        "D2": 31,
+        "D3": 31
+      }
+    },
+    {
+      "generation_seed": 9,
+      "same_accounts_and_labels_in_D1_D2_D3": true,
+      "anomaly_rows_identical_in_D1_D2_D3": true,
+      "train_validation_test_disjoint": true,
+      "accounts_train_validation_test": [
+        490,
+        210,
+        300
+      ],
+      "D1_train_accounts": 490,
+      "D1_train_accounts_unique": true,
+      "D1_train_anomaly_share": 0.19795918367346937,
+      "D2_train_accounts": 490,
+      "D2_train_accounts_unique": true,
+      "D2_train_anomaly_share": 0.19795918367346937,
+      "D3_train_accounts": 490,
+      "D3_train_accounts_unique": true,
+      "D3_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_accounts": 490,
+      "Mixed_train_accounts_unique": true,
+      "Mixed_train_anomaly_share": 0.19795918367346937,
+      "Mixed_train_by_source": {
+        "D1": 168,
+        "D2": 154,
+        "D3": 168
+      },
+      "Mixed_train_anomaly_by_source": {
+        "D1": 32,
+        "D2": 33,
+        "D3": 32
+      }
+    }
+  ],
+  "note": "선정에 쓴 데이터(생성 seed 0~9)는 독립 검증(생성 seed 100~109)에 쓰지 않는다. D1·D2·D3 는 가정이며 실제 분포가 아니다."
+}

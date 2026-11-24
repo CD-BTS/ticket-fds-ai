@@ -1,3 +1,6 @@
+# [이전 MVP 버전] 이 파일은 현재 실행 경로에서 쓰지 않는다.
+# 현재 서빙 모델(6개 Feature)은 train_fds_model.py 가 만들고, Docker 이미지도 그 스크립트를 쓴다.
+# 기록 보존을 위해 남겨 둔 파일이다. Feature 를 직접 뽑는 원본 더미 생성기다. 이후 실험은 이벤트 기반 데이터(experiments/issue17-event-based-dummy)를 쓴다.
 import numpy as np
 import pandas as pd
 import os

@@ -1,3 +1,6 @@
+# [이전 MVP 버전] 이 파일은 현재 실행 경로에서 쓰지 않는다.
+# 현재 서빙 모델(6개 Feature)은 train_fds_model.py 가 만들고, Docker 이미지도 그 스크립트를 쓴다.
+# 기록 보존을 위해 남겨 둔 파일이다. 이전 MVP Feature 계산의 정답 샘플을 만든다.
 """Feature 계산 정답 샘플(golden)을 만든다.
 
 백엔드(Spring)가 Feature를 Java/SQL로 다시 구현할 때, 같은 이벤트를 넣어서 같은 값이 나오는지

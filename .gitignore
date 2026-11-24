@@ -3,7 +3,13 @@
 __pycache__/
 
 data/
+# ml_experiment/data 는 아래에 적은 파일만 올린다 (폴더가 제외되면 파일 예외가 적용되지 않으므로 폴더를 먼저 푼다)
+!ml_experiment/data/
+ml_experiment/data/*
 !ml_experiment/data/fairticket_synthetic_features.csv
+# 최종 FDS 모델의 학습용 Feature 표 (합성 데이터). train_fds_model.py 와 Docker 빌드가 읽는다
+!ml_experiment/data/fds_v4_training_features.csv
+!ml_experiment/data/fds_v4_training_features.meta.json
 
 models/
 !ml_experiment/models/best_isolation_forest.joblib
