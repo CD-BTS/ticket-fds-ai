@@ -1,0 +1,596 @@
+[
+  {
+    "assumption": "D1",
+    "seed": 100,
+    "accounts": 1000,
+    "events": 36338,
+    "attempts": 5548,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 100,
+    "accounts": 1000,
+    "events": 36101,
+    "attempts": 5521,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 100,
+    "accounts": 1000,
+    "events": 36304,
+    "attempts": 5554,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  },
+  {
+    "assumption": "D1",
+    "seed": 101,
+    "accounts": 1000,
+    "events": 36714,
+    "attempts": 5651,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 101,
+    "accounts": 1000,
+    "events": 36418,
+    "attempts": 5615,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 101,
+    "accounts": 1000,
+    "events": 36263,
+    "attempts": 5586,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  },
+  {
+    "assumption": "D1",
+    "seed": 102,
+    "accounts": 1000,
+    "events": 36529,
+    "attempts": 5623,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 102,
+    "accounts": 1000,
+    "events": 35965,
+    "attempts": 5546,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 102,
+    "accounts": 1000,
+    "events": 35809,
+    "attempts": 5526,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  },
+  {
+    "assumption": "D1",
+    "seed": 103,
+    "accounts": 1000,
+    "events": 35869,
+    "attempts": 5469,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 103,
+    "accounts": 1000,
+    "events": 35412,
+    "attempts": 5416,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 103,
+    "accounts": 1000,
+    "events": 35467,
+    "attempts": 5433,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  },
+  {
+    "assumption": "D1",
+    "seed": 104,
+    "accounts": 1000,
+    "events": 38298,
+    "attempts": 5833,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 104,
+    "accounts": 1000,
+    "events": 37347,
+    "attempts": 5705,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 104,
+    "accounts": 1000,
+    "events": 37275,
+    "attempts": 5700,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  },
+  {
+    "assumption": "D1",
+    "seed": 105,
+    "accounts": 1000,
+    "events": 35842,
+    "attempts": 5488,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 105,
+    "accounts": 1000,
+    "events": 35337,
+    "attempts": 5429,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 105,
+    "accounts": 1000,
+    "events": 35207,
+    "attempts": 5421,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  },
+  {
+    "assumption": "D1",
+    "seed": 106,
+    "accounts": 1000,
+    "events": 36079,
+    "attempts": 5525,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 106,
+    "accounts": 1000,
+    "events": 35854,
+    "attempts": 5494,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 106,
+    "accounts": 1000,
+    "events": 35432,
+    "attempts": 5439,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  },
+  {
+    "assumption": "D1",
+    "seed": 107,
+    "accounts": 1000,
+    "events": 37161,
+    "attempts": 5694,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 107,
+    "accounts": 1000,
+    "events": 36816,
+    "attempts": 5654,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 107,
+    "accounts": 1000,
+    "events": 36677,
+    "attempts": 5637,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  },
+  {
+    "assumption": "D1",
+    "seed": 108,
+    "accounts": 1000,
+    "events": 36949,
+    "attempts": 5679,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 108,
+    "accounts": 1000,
+    "events": 36540,
+    "attempts": 5625,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 108,
+    "accounts": 1000,
+    "events": 36319,
+    "attempts": 5597,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  },
+  {
+    "assumption": "D1",
+    "seed": 109,
+    "accounts": 1000,
+    "events": 38447,
+    "attempts": 5893,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 109,
+    "accounts": 1000,
+    "events": 38121,
+    "attempts": 5853,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 109,
+    "accounts": 1000,
+    "events": 37857,
+    "attempts": 5813,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  },
+  {
+    "assumption": "D1",
+    "seed": 2026,
+    "accounts": 1000,
+    "events": 37614,
+    "attempts": 5778,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D1"
+    }
+  },
+  {
+    "assumption": "D2",
+    "seed": 2026,
+    "accounts": 1000,
+    "events": 37071,
+    "attempts": 5710,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D2"
+    }
+  },
+  {
+    "assumption": "D3",
+    "seed": 2026,
+    "accounts": 1000,
+    "events": 37046,
+    "attempts": 5706,
+    "params": {
+      "within_sigma": 0.3,
+      "goal_lambda": 1.0,
+      "retry_wait": "by_speed",
+      "switch_prob": 0.25,
+      "macro_delay": "three_points",
+      "queue_wait_s": 0,
+      "rules_off": [],
+      "skill": false,
+      "speed_dist": "D3"
+    }
+  }
+]

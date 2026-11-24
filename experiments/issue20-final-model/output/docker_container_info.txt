@@ -1,0 +1,146 @@
+10001
+3.11.18 1.9.1 2.4.6 3.1.1
+app
+inference.py
+models
+preprocessing.py
+requirements.txt
+behavior_model.joblib
+behavior_model.meta.json
+{
+  "feature_columns": [
+    "avg_booking_interval",
+    "booking_interval_variance",
+    "cancel_rate",
+    "card_reuse_count",
+    "ip_booking_density",
+    "booking_count"
+  ],
+  "preprocess": {
+    "imputation": "median",
+    "imputation_values": {
+      "avg_booking_interval": 129609.0824,
+      "booking_interval_variance": 53762765505.0,
+      "cancel_rate": 0.0,
+      "card_reuse_count": 1.0,
+      "ip_booking_density": 1.0,
+      "booking_count": 3.0
+    },
+    "log1p_columns": [
+      "avg_booking_interval",
+      "booking_interval_variance",
+      "booking_count"
+    ],
+    "scaling": "none",
+    "fitted_on": "train split"
+  },
+  "score_method": "-score_samples",
+  "anomaly_threshold": 0.5,
+  "model_version": "fds-if-v4.0.0",
+  "min_booking_count": 1,
+  "raw_threshold": 0.5188149554589429,
+  "feature_definition_version": "fds-features-v2",
+  "normalization": {
+    "method": "threshold_anchored_piecewise_linear",
+    "low": 0.3636158540814233,
+    "threshold": 0.5188149554589429,
+    "high": 0.7012622341470274,
+    "formula": "s < threshold: 0.5*(s-low)/(threshold-low); s >= threshold: 0.5+0.5*(s-threshold)/(high-threshold); clip to [0, 1]",
+    "anchors": "low/high = 학습(train) 계정 원시 점수의 최솟값/최댓값, threshold = validation 정상 계정으로 정한 원시 임계값"
+  },
+  "training": {
+    "data_version": "v4-mixed-seed2026",
+    "data_file": "fds_v4_training_features.csv",
+    "data_sha256": "5c367a5b0fb2d6a5e3ae37c68037cc1de500d5e53ca12f52afa657722997a1be",
+    "data_generation": {
+      "generator": "experiments/issue17-event-based-dummy/scripts/generate_events_v4.py (수정 없음)",
+      "extractor": "experiments/issue14-real-validation/scripts/extract_features.py (BTS FeatureAggregationService 재현) + extract_v4.interval_definitions",
+      "config": "experiments/issue17-event-based-dummy/config/scenarios_v4.json",
+      "config_sha256": "3fc5a460b30b252d27fe01eea523e03ca4d7cac8b654a6fef43218a6fed64f5a",
+      "base_config_sha256": "e2c435500f3adc3bd1cd3c2af27300b6875ac19048223cde4cf2d787bd3a4c48",
+      "params": {
+        "within_sigma": 0.3,
+        "goal_lambda": 1.0,
+        "retry_wait": "by_speed",
+        "switch_prob": 0.25,
+        "macro_delay": "three_points",
+        "queue_wait_s": 0,
+        "rules_off": [],
+        "skill": false
+      },
+      "generation_seed": 2026,
+      "assumptions": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "composition": "Mixed: 계정을 시나리오별로 3등분해 D1·D2·D3 에서 하나씩. 한 계정은 한 번만 들어간다",
+      "mixed_assignment_seed": 2026,
+      "accounts_by_source": {
+        "D1": 332,
+        "D2": 333,
+        "D3": 335
+      }
+    },
+    "split": {
+      "unit": "계정",
+      "seed": 42,
+      "test_size": 0.3,
+      "validation_size_of_rest": 0.3,
+      "stratify": "test 는 is_anomaly, train/validation 은 scenario",
+      "rows": {
+        "test": 300,
+        "train": 490,
+        "validation": 210
+      },
+      "anomaly_share": {
+        "test": 0.2,
+        "train": 0.197959,
+        "validation": 0.2
+      },
+      "train_by_source": {
+        "D1": 167,
+        "D2": 161,
+        "D3": 162
+      }
+    },
+    "rows": {
+      "train": 490,
+      "validation": 210,
+      "validation_normal": 168
+    },
+    "train_anomaly_share": 0.19795918367346937,
+    "model": {
+      "type": "IsolationForest",
+      "n_estimators": 100,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "random_state": 42
+    },
+    "threshold_rule": "validation 정상 계정 오탐률 <= 0.05",
+    "target_fpr": 0.05,
+    "validation_metrics": {
+      "precision": 0.813953488372093,
+      "recall": 0.8333333333333334,
+      "f1": 0.8235294117647058,
+      "fpr": 0.047619047619047616,
+      "TP": 35,
+      "FP": 8,
+      "FN": 7,
+      "TN": 160
+    },
+    "min_intervals_for_variance": 5,
+    "versions": {
+      "python": "3.11.18",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.4.6",
+      "pandas": "3.1.1",
+      "joblib": "1.6.0"
+    },
+    "note": "합성 데이터로 학습했다. 지표는 합성 데이터 안의 값이고 실제 운영 성능이 아니다."
+  },
+  "schema_version": 2,
+  "trained_at": "2026-11-24T06:58:53.441737+00:00",
+  "sklearn_version": "1.9.1",
+  "python_version": "3.11.18"
+}

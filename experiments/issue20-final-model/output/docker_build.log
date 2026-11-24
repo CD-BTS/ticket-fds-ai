@@ -1,0 +1,361 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 2.19kB 0.0s done
+#1 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 3.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context:
+#3 transferring context: 198B 0.1s done
+#3 DONE 0.3s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [deps 1/4] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535
+#5 resolve docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535 0.1s done
+#5 DONE 0.3s
+
+#4 [internal] load build context
+#4 transferring context: 105.67kB 0.1s done
+#4 DONE 0.2s
+
+#5 [deps 1/4] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535
+#5 sha256:bbe7053e6def9842d628414346e26f25e499463adb6ca48c0c8932e036e44000 0B / 249B 0.2s
+#5 sha256:bbe7053e6def9842d628414346e26f25e499463adb6ca48c0c8932e036e44000 249B / 249B 0.3s done
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 0B / 14.46MB 0.2s
+#5 sha256:53daecf7856e9b7235583f1ec326387aae7d29af3d5cd2efc20246259ab817cc 0B / 1.29MB 0.2s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 0B / 29.86MB 0.2s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 1.05MB / 14.46MB 1.1s
+#5 sha256:53daecf7856e9b7235583f1ec326387aae7d29af3d5cd2efc20246259ab817cc 1.05MB / 1.29MB 1.5s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 2.10MB / 14.46MB 2.0s
+#5 sha256:53daecf7856e9b7235583f1ec326387aae7d29af3d5cd2efc20246259ab817cc 1.29MB / 1.29MB 1.8s done
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 3.15MB / 14.46MB 2.4s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 2.10MB / 29.86MB 2.4s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 4.19MB / 14.46MB 2.9s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 5.24MB / 14.46MB 3.5s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 4.19MB / 29.86MB 3.9s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 6.29MB / 14.46MB 4.2s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 7.34MB / 14.46MB 5.0s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 8.39MB / 14.46MB 5.6s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 6.29MB / 29.86MB 5.4s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 9.44MB / 14.46MB 6.3s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 8.39MB / 29.86MB 6.6s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 10.49MB / 14.46MB 6.9s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 11.53MB / 14.46MB 7.5s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 10.49MB / 29.86MB 7.8s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 12.58MB / 14.46MB 8.3s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 13.63MB / 14.46MB 8.9s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 12.58MB / 29.86MB 9.0s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 14.46MB / 14.46MB 9.3s
+#5 sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 14.46MB / 14.46MB 9.4s done
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 14.68MB / 29.86MB 9.9s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 16.78MB / 29.86MB 10.7s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 18.87MB / 29.86MB 11.3s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 20.97MB / 29.86MB 11.9s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 23.07MB / 29.86MB 12.5s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 25.17MB / 29.86MB 12.9s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 27.26MB / 29.86MB 13.5s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 29.36MB / 29.86MB 14.0s
+#5 sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 29.86MB / 29.86MB 14.2s done
+#5 extracting sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41
+#5 extracting sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41 1.6s done
+#5 extracting sha256:53daecf7856e9b7235583f1ec326387aae7d29af3d5cd2efc20246259ab817cc
+#5 extracting sha256:53daecf7856e9b7235583f1ec326387aae7d29af3d5cd2efc20246259ab817cc 0.2s done
+#5 DONE 16.3s
+
+#5 [deps 1/4] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535
+#5 extracting sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d
+#5 extracting sha256:7efbce397249e9202b070b8e638baff71160948c640b9a44f2226419a71f410d 1.0s done
+#5 DONE 17.3s
+
+#5 [deps 1/4] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535
+#5 extracting sha256:bbe7053e6def9842d628414346e26f25e499463adb6ca48c0c8932e036e44000 0.0s done
+#5 DONE 17.4s
+
+#6 [deps 2/4] WORKDIR /app
+#6 DONE 1.3s
+
+#7 [deps 3/4] COPY requirements.txt .
+#7 DONE 0.1s
+
+#8 [deps 4/4] RUN pip install -r requirements.txt
+#8 4.072 Collecting scikit-learn==1.9.1 (from -r requirements.txt (line 5))
+#8 4.138   Downloading scikit_learn-1.9.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.3 kB)
+#8 4.692 Collecting numpy==2.4.6 (from -r requirements.txt (line 6))
+#8 4.740   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 5.142 Collecting scipy==1.17.1 (from -r requirements.txt (line 7))
+#8 5.170   Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 5.198      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.7 MB/s eta 0:00:00
+#8 5.581 Collecting pandas==3.1.1 (from -r requirements.txt (line 8))
+#8 5.601   Downloading pandas-3.1.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+#8 5.646 Collecting joblib==1.6.0 (from -r requirements.txt (line 9))
+#8 5.662   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+#8 5.844 Collecting fastapi==0.165.0 (from -r requirements.txt (line 10))
+#8 5.865   Downloading fastapi-0.165.0-py3-none-any.whl.metadata (27 kB)
+#8 5.930 Collecting uvicorn==0.54.0 (from -r requirements.txt (line 11))
+#8 5.939   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+#8 6.080 Collecting narwhals>=2.0.1 (from scikit-learn==1.9.1->-r requirements.txt (line 5))
+#8 6.105   Downloading narwhals-2.29.0-py3-none-any.whl.metadata (15 kB)
+#8 6.133 Collecting threadpoolctl>=3.5.0 (from scikit-learn==1.9.1->-r requirements.txt (line 5))
+#8 6.165   Downloading threadpoolctl-3.8.0-py3-none-any.whl.metadata (29 kB)
+#8 6.330 Collecting python-dateutil>=2.9.0 (from pandas==3.1.1->-r requirements.txt (line 8))
+#8 6.344   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#8 6.400 Collecting cloudpickle>=3.0 (from joblib==1.6.0->-r requirements.txt (line 9))
+#8 6.412   Downloading cloudpickle-3.1.3-py3-none-any.whl.metadata (7.1 kB)
+#8 6.541 Collecting starlette>=1.6.0 (from fastapi==0.165.0->-r requirements.txt (line 10))
+#8 6.555   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+#8 6.623 Collecting anyio>=4.1.0 (from fastapi==0.165.0->-r requirements.txt (line 10))
+#8 6.639   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+#8 6.918 Collecting pydantic>=2.9.0 (from fastapi==0.165.0->-r requirements.txt (line 10))
+#8 6.942   Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+#8 6.987      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.0/144.0 kB 3.5 MB/s eta 0:00:00
+#8 7.048 Collecting typing-extensions>=4.8.0 (from fastapi==0.165.0->-r requirements.txt (line 10))
+#8 7.058   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#8 7.085 Collecting typing-inspection>=0.4.2 (from fastapi==0.165.0->-r requirements.txt (line 10))
+#8 7.104   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+#8 7.143 Collecting annotated-doc>=0.0.2 (from fastapi==0.165.0->-r requirements.txt (line 10))
+#8 7.161   Downloading annotated_doc-0.0.7-py3-none-any.whl.metadata (6.4 kB)
+#8 7.213 Collecting opentelemetry-api>=1.44.0 (from fastapi==0.165.0->-r requirements.txt (line 10))
+#8 7.224   Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+#8 7.280 Collecting click>=7.0 (from uvicorn==0.54.0->-r requirements.txt (line 11))
+#8 7.310   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+#8 7.336 Collecting h11>=0.8 (from uvicorn==0.54.0->-r requirements.txt (line 11))
+#8 7.351   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#8 7.404 Collecting idna>=2.8 (from anyio>=4.1.0->fastapi==0.165.0->-r requirements.txt (line 10))
+#8 7.419   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#8 7.505 Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi==0.165.0->-r requirements.txt (line 10))
+#8 7.540   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#8 9.404 Collecting pydantic-core==2.50.5 (from pydantic>=2.9.0->fastapi==0.165.0->-r requirements.txt (line 10))
+#8 9.433   Downloading pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+#8 9.489 Collecting tzdata (from python-dateutil>=2.9.0->pandas==3.1.1->-r requirements.txt (line 8))
+#8 9.500   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 9.573 Downloading scikit_learn-1.9.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.3 MB)
+#8 12.20    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 3.5 MB/s eta 0:00:00
+#8 12.22 Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 17.09    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 3.6 MB/s eta 0:00:00
+#8 17.10 Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 24.28    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 6.6 MB/s eta 0:00:00
+#8 24.30 Downloading pandas-3.1.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.4 MB)
+#8 26.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 7.0 MB/s eta 0:00:00
+#8 26.14 Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+#8 26.21    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 306.1/306.1 kB 4.9 MB/s eta 0:00:00
+#8 26.24 Downloading fastapi-0.165.0-py3-none-any.whl (159 kB)
+#8 26.28    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.5/159.5 kB 4.3 MB/s eta 0:00:00
+#8 26.30 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+#8 26.33    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.4/87.4 kB 4.0 MB/s eta 0:00:00
+#8 26.34 Downloading annotated_doc-0.0.7-py3-none-any.whl (5.3 kB)
+#8 26.36 Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+#8 26.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.5/134.5 kB 4.8 MB/s eta 0:00:00
+#8 26.41 Downloading click-8.5.1-py3-none-any.whl (126 kB)
+#8 26.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.2/126.2 kB 11.8 MB/s eta 0:00:00
+#8 26.44 Downloading cloudpickle-3.1.3-py3-none-any.whl (22 kB)
+#8 26.45 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#8 26.47 Downloading narwhals-2.29.0-py3-none-any.whl (501 kB)
+#8 26.53    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 501.7/501.7 kB 8.8 MB/s eta 0:00:00
+#8 26.54 Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+#8 26.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 6.6 MB/s eta 0:00:00
+#8 26.58 Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+#8 26.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 494.9/494.9 kB 7.5 MB/s eta 0:00:00
+#8 26.66 Downloading pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+#8 27.07    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 5.6 MB/s eta 0:00:00
+#8 27.08 Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+#8 27.11    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.9/92.9 kB 2.9 MB/s eta 0:00:00
+#8 27.14 Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+#8 27.16    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.6/80.6 kB 4.8 MB/s eta 0:00:00
+#8 27.18 Downloading threadpoolctl-3.8.0-py3-none-any.whl (32 kB)
+#8 27.21 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#8 27.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 6.0 MB/s eta 0:00:00
+#8 27.24 Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+#8 27.25 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#8 27.28 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#8 27.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 9.3 MB/s eta 0:00:00
+#8 27.30 Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+#8 27.35    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.2/348.2 kB 7.2 MB/s eta 0:00:00
+#8 27.97 Installing collected packages: tzdata, typing-extensions, threadpoolctl, numpy, narwhals, idna, h11, cloudpickle, click, annotated-types, annotated-doc, uvicorn, typing-inspection, scipy, python-dateutil, pydantic-core, opentelemetry-api, joblib, anyio, starlette, scikit-learn, pydantic, pandas, fastapi
+#8 56.15 Successfully installed annotated-doc-0.0.7 annotated-types-0.8.0 anyio-4.16.0 click-8.5.1 cloudpickle-3.1.3 fastapi-0.165.0 h11-0.16.0 idna-3.20 joblib-1.6.0 narwhals-2.29.0 numpy-2.4.6 opentelemetry-api-1.45.2 pandas-3.1.1 pydantic-2.14.4 pydantic-core-2.50.5 python-dateutil-4.0.0 scikit-learn-1.9.1 scipy-1.17.1 starlette-1.10.0 threadpoolctl-3.8.0 typing-extensions-4.16.0 typing-inspection-0.4.5 tzdata-2026.6 uvicorn-0.54.0
+#8 56.15 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 DONE 59.5s
+
+#9 [trainer 1/3] COPY train_fds_model.py preprocessing.py inference.py ./
+#9 DONE 0.2s
+
+#10 [runtime 1/4] RUN useradd --system --create-home --uid 10001 app
+#10 ...
+
+#11 [trainer 2/3] COPY ml_experiment/data/fds_v4_training_features.csv ml_experiment/data/fds_v4_training_features.meta.json ./ml_experiment/data/
+#11 DONE 0.1s
+
+#12 [trainer 3/3] RUN python train_fds_model.py
+#12 ...
+
+#10 [runtime 1/4] RUN useradd --system --create-home --uid 10001 app
+#10 0.669 useradd warning: app's uid 10001 is greater than SYS_UID_MAX 999
+#10 DONE 0.7s
+
+#13 [runtime 2/4] COPY --chown=app:app app/ ./app/
+#13 DONE 0.1s
+
+#14 [runtime 3/4] COPY --chown=app:app preprocessing.py inference.py ./
+#14 DONE 0.1s
+
+#12 [trainer 3/3] RUN python train_fds_model.py
+#12 3.997 {
+#12 3.997   "feature_columns": [
+#12 3.997     "avg_booking_interval",
+#12 3.997     "booking_interval_variance",
+#12 3.997     "cancel_rate",
+#12 3.997     "card_reuse_count",
+#12 3.997     "ip_booking_density",
+#12 3.997     "booking_count"
+#12 3.997   ],
+#12 3.997   "preprocess": {
+#12 3.997     "imputation": "median",
+#12 3.997     "imputation_values": {
+#12 3.997       "avg_booking_interval": 129609.0824,
+#12 3.997       "booking_interval_variance": 53762765505.0,
+#12 3.997       "cancel_rate": 0.0,
+#12 3.997       "card_reuse_count": 1.0,
+#12 3.997       "ip_booking_density": 1.0,
+#12 3.997       "booking_count": 3.0
+#12 3.997     },
+#12 3.997     "log1p_columns": [
+#12 3.997       "avg_booking_interval",
+#12 3.997       "booking_interval_variance",
+#12 3.997       "booking_count"
+#12 3.997     ],
+#12 3.997     "scaling": "none",
+#12 3.997     "fitted_on": "train split"
+#12 3.997   },
+#12 3.997   "score_method": "-score_samples",
+#12 3.997   "anomaly_threshold": 0.5,
+#12 3.997   "model_version": "fds-if-v4.0.0",
+#12 3.997   "min_booking_count": 1,
+#12 3.997   "raw_threshold": 0.5188149554589429,
+#12 3.997   "feature_definition_version": "fds-features-v2",
+#12 3.997   "normalization": {
+#12 3.997     "method": "threshold_anchored_piecewise_linear",
+#12 3.997     "low": 0.3636158540814233,
+#12 3.997     "threshold": 0.5188149554589429,
+#12 3.997     "high": 0.7012622341470274,
+#12 3.997     "formula": "s < threshold: 0.5*(s-low)/(threshold-low); s >= threshold: 0.5+0.5*(s-threshold)/(high-threshold); clip to [0, 1]",
+#12 3.997     "anchors": "low/high = 학습(train) 계정 원시 점수의 최솟값/최댓값, threshold = validation 정상 계정으로 정한 원시 임계값"
+#12 3.997   },
+#12 3.997   "training": {
+#12 3.997     "data_version": "v4-mixed-seed2026",
+#12 3.997     "data_file": "fds_v4_training_features.csv",
+#12 3.997     "data_sha256": "5c367a5b0fb2d6a5e3ae37c68037cc1de500d5e53ca12f52afa657722997a1be",
+#12 3.997     "data_generation": {
+#12 3.997       "generator": "experiments/issue17-event-based-dummy/scripts/generate_events_v4.py (수정 없음)",
+#12 3.997       "extractor": "experiments/issue14-real-validation/scripts/extract_features.py (BTS FeatureAggregationService 재현) + extract_v4.interval_definitions",
+#12 3.997       "config": "experiments/issue17-event-based-dummy/config/scenarios_v4.json",
+#12 3.997       "config_sha256": "3fc5a460b30b252d27fe01eea523e03ca4d7cac8b654a6fef43218a6fed64f5a",
+#12 3.997       "base_config_sha256": "e2c435500f3adc3bd1cd3c2af27300b6875ac19048223cde4cf2d787bd3a4c48",
+#12 3.997       "params": {
+#12 3.997         "within_sigma": 0.3,
+#12 3.997         "goal_lambda": 1.0,
+#12 3.997         "retry_wait": "by_speed",
+#12 3.997         "switch_prob": 0.25,
+#12 3.997         "macro_delay": "three_points",
+#12 3.997         "queue_wait_s": 0,
+#12 3.997         "rules_off": [],
+#12 3.997         "skill": false
+#12 3.997       },
+#12 3.997       "generation_seed": 2026,
+#12 3.997       "assumptions": [
+#12 3.997         "D1",
+#12 3.997         "D2",
+#12 3.997         "D3"
+#12 3.997       ],
+#12 3.997       "composition": "Mixed: 계정을 시나리오별로 3등분해 D1·D2·D3 에서 하나씩. 한 계정은 한 번만 들어간다",
+#12 3.997       "mixed_assignment_seed": 2026,
+#12 3.997       "accounts_by_source": {
+#12 3.997         "D1": 332,
+#12 3.997         "D2": 333,
+#12 3.997         "D3": 335
+#12 3.997       }
+#12 3.997     },
+#12 3.997     "split": {
+#12 3.997       "unit": "계정",
+#12 3.997       "seed": 42,
+#12 3.997       "test_size": 0.3,
+#12 3.997       "validation_size_of_rest": 0.3,
+#12 3.997       "stratify": "test 는 is_anomaly, train/validation 은 scenario",
+#12 3.997       "rows": {
+#12 3.997         "test": 300,
+#12 3.997         "train": 490,
+#12 3.997         "validation": 210
+#12 3.997       },
+#12 3.997       "anomaly_share": {
+#12 3.997         "test": 0.2,
+#12 3.997         "train": 0.197959,
+#12 3.997         "validation": 0.2
+#12 3.997       },
+#12 3.997       "train_by_source": {
+#12 3.997         "D1": 167,
+#12 3.997         "D2": 161,
+#12 3.997         "D3": 162
+#12 3.997       }
+#12 3.997     },
+#12 3.997     "rows": {
+#12 3.997       "train": 490,
+#12 3.997       "validation": 210,
+#12 3.997       "validation_normal": 168
+#12 3.997     },
+#12 3.997     "train_anomaly_share": 0.19795918367346937,
+#12 3.997     "model": {
+#12 3.997       "type": "IsolationForest",
+#12 3.997       "n_estimators": 100,
+#12 3.997       "contamination": "auto",
+#12 3.997       "max_samples": "auto",
+#12 3.997       "random_state": 42
+#12 3.997     },
+#12 3.997     "threshold_rule": "validation 정상 계정 오탐률 <= 0.05",
+#12 3.997     "target_fpr": 0.05,
+#12 3.997     "validation_metrics": {
+#12 3.997       "precision": 0.813953488372093,
+#12 3.997       "recall": 0.8333333333333334,
+#12 3.997       "f1": 0.8235294117647058,
+#12 3.997       "fpr": 0.047619047619047616,
+#12 3.997       "TP": 35,
+#12 3.997       "FP": 8,
+#12 3.997       "FN": 7,
+#12 3.997       "TN": 160
+#12 3.997     },
+#12 3.997     "min_intervals_for_variance": 5,
+#12 3.997     "versions": {
+#12 3.997       "python": "3.11.18",
+#12 3.997       "scikit-learn": "1.9.1",
+#12 3.997       "numpy": "2.4.6",
+#12 3.997       "pandas": "3.1.1",
+#12 3.997       "joblib": "1.6.0"
+#12 3.997     },
+#12 3.997     "note": "합성 데이터로 학습했다. 지표는 합성 데이터 안의 값이고 실제 운영 성능이 아니다."
+#12 3.997   },
+#12 3.997   "schema_version": 2,
+#12 3.997   "trained_at": "2026-11-24T06:58:53.441737+00:00",
+#12 3.997   "sklearn_version": "1.9.1",
+#12 3.997   "python_version": "3.11.18"
+#12 3.997 }
+#12 3.997 
+#12 3.997 저장: /app/models/behavior_model.joblib
+#12 DONE 4.3s
+
+#15 [runtime 4/4] COPY --from=trainer --chown=app:app /app/models ./models
+#15 DONE 0.1s
+
+#16 exporting to image
+#16 exporting layers
+#16 exporting layers 24.6s done
+#16 exporting manifest sha256:07778f6a77ebd48340eae1f8292cf31f25f35da5b0bffc86248129da8492c24c 0.0s done
+#16 exporting config sha256:280cb736a15bbe7ec4c7881e013af157ee05d3e3cdc1eff65828dfccfff7a9eb 0.0s done
+#16 exporting attestation manifest sha256:6c0ed6ee6b80d54f5d88cd22a864a60d614a9d449c9273f784631645c048b701 0.0s done
+#16 exporting manifest list sha256:15d46bdc2078cfa0153a68c1e6adeb56b902588999cfb567dd1b0a9a26952646 0.0s done
+#16 naming to docker.io/library/ticket-fds-ai:issue20 0.0s done
+#16 unpacking to docker.io/library/ticket-fds-ai:issue20
+#16 unpacking to docker.io/library/ticket-fds-ai:issue20 17.3s done
+#16 DONE 42.7s

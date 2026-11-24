@@ -1,0 +1,177 @@
+{
+  "modelVersion": "fds-if-v4.0.0",
+  "featureDefinitionVersion": "fds-features-v2",
+  "rawThreshold": 0.5188149554589429,
+  "scoreNormalization": {
+    "method": "threshold_anchored_piecewise_linear",
+    "low": 0.3636158540814233,
+    "threshold": 0.5188149554589429,
+    "high": 0.7012622341470274
+  },
+  "results": [
+    {
+      "features": {
+        "bookingCount": 1,
+        "avgBookingInterval": null,
+        "bookingIntervalVariance": null,
+        "cancelRate": null,
+        "cardReuseCount": 1,
+        "ipBookingDensity": 1
+      },
+      "rawAnomalyScore": 0.3663457565675844,
+      "anomalyScore": 0.008795,
+      "isAnomaly": false
+    },
+    {
+      "features": {
+        "bookingCount": 2,
+        "avgBookingInterval": 86400.0,
+        "bookingIntervalVariance": null,
+        "cancelRate": 0.0,
+        "cardReuseCount": 1,
+        "ipBookingDensity": 1
+      },
+      "rawAnomalyScore": 0.3827896117841172,
+      "anomalyScore": 0.061771,
+      "isAnomaly": false
+    },
+    {
+      "features": {
+        "bookingCount": 3,
+        "avgBookingInterval": 250000.0,
+        "bookingIntervalVariance": null,
+        "cancelRate": 0.0,
+        "cardReuseCount": 1,
+        "ipBookingDensity": 2
+      },
+      "rawAnomalyScore": 0.37574861800405074,
+      "anomalyScore": 0.039088,
+      "isAnomaly": false
+    },
+    {
+      "features": {
+        "bookingCount": 4,
+        "avgBookingInterval": 9.7,
+        "bookingIntervalVariance": null,
+        "cancelRate": 0.0,
+        "cardReuseCount": 1,
+        "ipBookingDensity": 1
+      },
+      "rawAnomalyScore": 0.4306937453482648,
+      "anomalyScore": 0.216103,
+      "isAnomaly": false
+    },
+    {
+      "features": {
+        "bookingCount": 5,
+        "avgBookingInterval": 61.4,
+        "bookingIntervalVariance": null,
+        "cancelRate": 0.25,
+        "cardReuseCount": 1,
+        "ipBookingDensity": 5
+      },
+      "rawAnomalyScore": 0.525568671973423,
+      "anomalyScore": 0.518509,
+      "isAnomaly": true
+    },
+    {
+      "features": {
+        "bookingCount": 7,
+        "avgBookingInterval": 8.3,
+        "bookingIntervalVariance": 5.02,
+        "cancelRate": 0.0,
+        "cardReuseCount": 1,
+        "ipBookingDensity": 1
+      },
+      "rawAnomalyScore": 0.5652004137653399,
+      "anomalyScore": 0.62712,
+      "isAnomaly": true
+    },
+    {
+      "features": {
+        "bookingCount": 8,
+        "avgBookingInterval": 120000.0,
+        "bookingIntervalVariance": 31000000000.0,
+        "cancelRate": 0.6,
+        "cardReuseCount": 1,
+        "ipBookingDensity": 1
+      },
+      "rawAnomalyScore": 0.46071183366113533,
+      "anomalyScore": 0.312811,
+      "isAnomaly": false
+    },
+    {
+      "features": {
+        "bookingCount": 12,
+        "avgBookingInterval": 4.6,
+        "bookingIntervalVariance": 0.12,
+        "cancelRate": 0.2,
+        "cardReuseCount": 2,
+        "ipBookingDensity": 2
+      },
+      "rawAnomalyScore": 0.6092888970768001,
+      "anomalyScore": 0.747945,
+      "isAnomaly": true
+    },
+    {
+      "features": {
+        "bookingCount": 20,
+        "avgBookingInterval": 4.0,
+        "bookingIntervalVariance": 1.0,
+        "cancelRate": 1.0,
+        "cardReuseCount": 1,
+        "ipBookingDensity": 1
+      },
+      "rawAnomalyScore": 0.5714710901169855,
+      "anomalyScore": 0.644305,
+      "isAnomaly": true
+    },
+    {
+      "features": {
+        "bookingCount": 25,
+        "avgBookingInterval": 2.9,
+        "bookingIntervalVariance": 0.03,
+        "cancelRate": 0.3,
+        "cardReuseCount": 1,
+        "ipBookingDensity": 3
+      },
+      "rawAnomalyScore": 0.5869592187148387,
+      "anomalyScore": 0.686751,
+      "isAnomaly": true
+    },
+    {
+      "features": {
+        "bookingCount": 6,
+        "avgBookingInterval": 13.0,
+        "bookingIntervalVariance": 1.4,
+        "cancelRate": 0.5,
+        "cardReuseCount": 7,
+        "ipBookingDensity": 9
+      },
+      "rawAnomalyScore": 0.6902031526053353,
+      "anomalyScore": 0.969692,
+      "isAnomaly": true
+    },
+    {
+      "features": {
+        "bookingCount": 4
+      },
+      "rawAnomalyScore": 0.36308299314162057,
+      "anomalyScore": 0.0,
+      "isAnomaly": false
+    },
+    {
+      "features": {
+        "bookingCount": 30,
+        "avgBookingInterval": 3.0,
+        "bookingIntervalVariance": 0.05,
+        "cancelRate": 0.9,
+        "cardReuseCount": 6,
+        "ipBookingDensity": 8
+      },
+      "rawAnomalyScore": 0.7135102994786559,
+      "anomalyScore": 1.0,
+      "isAnomaly": true
+    }
+  ]
+}
