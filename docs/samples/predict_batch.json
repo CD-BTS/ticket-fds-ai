@@ -4,25 +4,25 @@
       "userId": "normal_user",
       "calculatedAt": "2026-10-08T15:00:00+09:00",
       "windowDays": 30,
-      "features": {"bookingCount": 6, "cancelCount": 1, "cancelRate": 0.17, "avgBookingInterval": 80000, "shortIntervalBookingCount": 0, "attendanceRate": null, "avgBookingDuration": null}
+      "features": {"bookingCount": 3, "avgBookingInterval": 250000, "bookingIntervalVariance": null, "cancelRate": 0.0, "cardReuseCount": 1, "ipBookingDensity": 1}
     },
     {
       "userId": "suspicious_user",
       "calculatedAt": "2026-10-08T15:00:00+09:00",
       "windowDays": 30,
-      "features": {"bookingCount": 29, "cancelCount": 9, "cancelRate": 0.31, "avgBookingInterval": 190, "shortIntervalBookingCount": 19, "attendanceRate": 0.7, "avgBookingDuration": 30}
+      "features": {"bookingCount": 30, "avgBookingInterval": 3.0, "bookingIntervalVariance": 0.05, "cancelRate": 0.9, "cardReuseCount": 6, "ipBookingDensity": 8}
     },
     {
-      "userId": "new_user",
+      "userId": "no_attempt_user",
       "calculatedAt": "2026-10-08T15:00:00+09:00",
       "windowDays": 30,
-      "features": {"bookingCount": 1, "cancelCount": 0, "cancelRate": 0.0, "avgBookingInterval": null, "shortIntervalBookingCount": 0, "attendanceRate": null, "avgBookingDuration": 60}
+      "features": {"bookingCount": 0, "avgBookingInterval": null, "bookingIntervalVariance": null, "cancelRate": null, "cardReuseCount": 1, "ipBookingDensity": 1}
     },
     {
       "userId": "invalid_user",
       "calculatedAt": "2026-10-08T15:00:00+09:00",
       "windowDays": 30,
-      "features": {"bookingCount": 6, "cancelCount": 1, "cancelRate": 9, "avgBookingInterval": 80000, "shortIntervalBookingCount": 0}
+      "features": {"bookingCount": 6, "cancelRate": 9, "avgBookingInterval": 80000, "cardReuseCount": 1, "ipBookingDensity": 1}
     }
   ]
 }
