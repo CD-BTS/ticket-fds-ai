@@ -1,0 +1,4 @@
+__pycache__/
+
+# v4 민감도 분석의 조건별 계정 표 (sweep_v4.py 로 다시 만들 수 있다)
+data/v4/_runs/

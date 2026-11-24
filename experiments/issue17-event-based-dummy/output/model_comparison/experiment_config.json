@@ -1,0 +1,94 @@
+{
+  "script": "scripts/compare_if.py",
+  "reference_training_script": "ml_experiment/train_and_evaluate_if.py (수정하지 않음)",
+  "reused_from": "experiments/issue16-booking-interval/scripts/compare_if_models.py (fit_and_score, metrics, CONFIGS, seed)",
+  "datasets": {
+    "원본": {
+      "path": "ml_experiment/data/fairticket_synthetic_features.csv",
+      "sha256": "2e1e27c1ebd434676e8079c7e4a65763be3f4bb2b4a8fe3e788897729fabf416",
+      "unchanged_after_run": true
+    },
+    "#16 v2": {
+      "path": "experiments/issue16-booking-interval/dummy_adjusted/v2/fairticket_synthetic_features_adjusted.csv",
+      "sha256": "426a0967dc59c0fca80f9408820f3454d772c027eac71bc4faee095f514af4a7",
+      "unchanged_after_run": true
+    },
+    "이벤트 기반": {
+      "path": "experiments/issue17-event-based-dummy/data/single_session/fairticket_event_based_features.csv",
+      "sha256": "f430317a01c8e5b28fb4043443232364ffa5c5bec3c06bba13a3112b69e209b2",
+      "unchanged_after_run": true
+    },
+    "이벤트 기반(다회 세션)": {
+      "path": "experiments/issue17-event-based-dummy/data/multi_session/fairticket_event_based_features.csv",
+      "sha256": "2628dc1fdac16f2b87575d9e24bf12d4c8b2e7e01b251f67e9f219b92235f7fe",
+      "unchanged_after_run": true
+    }
+  },
+  "primary": {
+    "features": [
+      "avg_booking_interval",
+      "booking_interval_variance",
+      "cancel_rate",
+      "card_reuse_count",
+      "ip_booking_density",
+      "booking_count"
+    ],
+    "contamination": 0.2
+  },
+  "preprocessing": "없음 (결측도 그대로)",
+  "split": {
+    "test_size": 0.3,
+    "random_state": 42,
+    "stratify": "is_anomaly",
+    "train": 700,
+    "test": 300,
+    "test_anomalies": 60
+  },
+  "model": {
+    "class": "sklearn.ensemble.IsolationForest",
+    "n_estimators": 100,
+    "random_state": 42
+  },
+  "model_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "generation_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "original_generator_seed42_reproduces_committed_dataset": true,
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "python": "3.11.2"
+  },
+  "models_saved": false
+}

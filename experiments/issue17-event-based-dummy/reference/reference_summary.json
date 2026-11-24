@@ -1,0 +1,47 @@
+{
+  "source_runs": [
+    "20261122-continuous",
+    "20261123-remeasure"
+  ],
+  "source": "issue16-booking-interval/runs/<run>/raw_events.csv (BTS behavior_event 내보내기)",
+  "accounts": {
+    "fast": [
+      "macro-fast-02",
+      "macro-fast-11",
+      "macro-fast-12"
+    ],
+    "jitter": [
+      "macro-jitter-01",
+      "macro-jitter-11",
+      "macro-jitter-12"
+    ]
+  },
+  "attempts": 120,
+  "intervals": 114,
+  "intervals_match_issue16_v2_pool": true,
+  "median_ms_by_mode": {
+    "fast": {
+      "queue_ms": 170.0,
+      "pre_seat_ms": 121.0,
+      "seat_ms": 524.0,
+      "hold_to_payment_ms": 94.0,
+      "hold_to_booking_ms": 1408.0,
+      "completed_ms": 24.0,
+      "gap_to_next_ms": 2898.0
+    },
+    "jitter": {
+      "queue_ms": 143.0,
+      "pre_seat_ms": 110.0,
+      "seat_ms": 1076.0,
+      "hold_to_payment_ms": 91.0,
+      "hold_to_booking_ms": 1678.0,
+      "completed_ms": 23.0,
+      "gap_to_next_ms": 4656.0
+    }
+  },
+  "accounts_without_payment_stage_event": [
+    "macro-fast-02",
+    "macro-jitter-01"
+  ],
+  "environment_note": "격리 E2E 환경(대기열 없음, 좌석 경쟁 없음, 시연용 결제 지연 1.2초). 모든 시도가 예매 완료까지 갔다."
+}
