@@ -5,7 +5,12 @@ __pycache__
 .pytest_cache
 *.py[cod]
 data/
+models/
 tests/
+experiments/
+docs/
+scripts/
 experiment_*.py
 main.py
 train_model.py
+pack_bundle.py

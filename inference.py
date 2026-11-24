@@ -16,6 +16,7 @@ import pandas as pd
 import sklearn
 
 from preprocessing import (
+    FEATURE_SPECS,
     PayloadValidationError,
     is_valid_user_id,
     payload_to_frame,
@@ -24,7 +25,7 @@ from preprocessing import (
 
 logger = logging.getLogger(__name__)
 
-BUNDLE_SCHEMA_VERSION = 1
+BUNDLE_SCHEMA_VERSION = 2  # 2: 원시 임계값, Feature 정의 버전, 정규화·학습 정보 추가 (최종 6개 Feature 모델)
 
 REQUIRED_KEYS = {
     "model",
@@ -33,6 +34,8 @@ REQUIRED_KEYS = {
     "model_version",
     "min_booking_count",
     "anomaly_threshold",
+    "raw_threshold",
+    "feature_definition_version",
     "schema_version",
 }
 
@@ -55,7 +58,14 @@ def build_bundle(
     anomaly_threshold,
     model_version,
     min_booking_count,
+    raw_threshold=None,
+    feature_definition_version=None,
+    normalization=None,
+    training=None,
 ):
+    """raw_threshold: 원시 점수 기준 탐지 임계값 (판정은 원시 점수 >= raw_threshold).
+    anomaly_threshold: 같은 판정을 정규화 점수로 적은 값. 이전 MVP 스크립트는 raw_threshold 없이 호출하며,
+    그렇게 만든 번들은 load_bundle 이 받지 않는다 (train_fds_model.py 로 다시 만들어야 한다)."""
     return {
         "model": model,
         "normalizer": normalizer,
@@ -65,6 +75,10 @@ def build_bundle(
         "anomaly_threshold": float(anomaly_threshold),
         "model_version": model_version,
         "min_booking_count": int(min_booking_count),
+        "raw_threshold": None if raw_threshold is None else float(raw_threshold),
+        "feature_definition_version": feature_definition_version,
+        "normalization": dict(normalization or {}),
+        "training": dict(training or {}),
         "schema_version": BUNDLE_SCHEMA_VERSION,
         "trained_at": datetime.now(timezone.utc).isoformat(),
         "sklearn_version": sklearn.__version__,
@@ -99,24 +113,32 @@ def load_bundle(path):
     path = Path(path)
     if not path.exists():
         raise FileNotFoundError(
-            f"모델 파일이 없습니다: {path} (train_model.py를 먼저 실행하세요)"
+            f"모델 파일이 없습니다: {path} (python train_fds_model.py 로 만들거나 MODEL_PATH 를 확인하세요)"
         )
 
     bundle = joblib.load(path)
 
     if not isinstance(bundle, dict):
         raise ValueError(
-            "지원하지 않는 모델 파일 형식입니다. train_model.py로 다시 학습해 주세요."
+            "지원하지 않는 모델 파일 형식입니다. python train_fds_model.py 로 다시 만들어 주세요."
+        )
+
+    if bundle.get("schema_version") != BUNDLE_SCHEMA_VERSION:
+        raise ValueError(
+            f"번들 스키마 버전이 다릅니다: 파일 {bundle.get('schema_version')}, "
+            f"코드 {BUNDLE_SCHEMA_VERSION}. 이전 버전(MVP) 번들이면 python train_fds_model.py 로 다시 만들어 주세요."
         )
 
     missing = REQUIRED_KEYS - set(bundle)
     if missing:
         raise ValueError(f"모델 번들에 필요한 항목이 없습니다: {sorted(missing)}")
 
-    if bundle["schema_version"] != BUNDLE_SCHEMA_VERSION:
+    if bundle["raw_threshold"] is None:
+        raise ValueError("모델 번들에 원시 점수 임계값(raw_threshold)이 없습니다.")
+
+    if list(bundle["feature_columns"]) != list(FEATURE_SPECS):
         raise ValueError(
-            f"번들 스키마 버전이 다릅니다: 파일 {bundle['schema_version']}, "
-            f"코드 {BUNDLE_SCHEMA_VERSION}"
+            f"번들의 Feature 구성이 서버의 Feature 스펙과 다릅니다: {bundle['feature_columns']} / {list(FEATURE_SPECS)}"
         )
 
     trained_with = bundle.get("sklearn_version")
@@ -145,12 +167,18 @@ def set_inference_threads(bundle, n_jobs=1):
 # 2. 예측 (POST /predict, 명세 7)
 # ========================================
 
-def _result(user_id, status, score, bundle, assessed_at, errors=None):
+SCORE_DECIMALS = 6
+_BELOW_HALF = 0.5 - 10 ** -SCORE_DECIMALS  # 반올림이 임계값 아래의 점수를 0.5 로 올리지 않게 한다
+
+
+def _result(user_id, status, score, bundle, assessed_at, errors=None, raw_score=None, is_anomaly=None):
     result = {
         # 요청에서 숫자로 와도 응답은 항상 문자열로 통일한다.
         "userId": None if user_id is None else str(user_id),
         "status": status,
+        "rawAnomalyScore": raw_score,
         "anomalyScore": score,
+        "isAnomaly": is_anomaly,
         "modelVersion": bundle["model_version"],
         "assessedAt": assessed_at,
     }
@@ -163,7 +191,8 @@ def assess_batch(payloads, bundle):
     """요청 여러 건을 한 번에 예측한다. 결과 순서는 입력 순서와 같다.
 
     - 형식 오류가 있는 건은 전체를 실패시키지 않고 status="INVALID"와 errors를 담는다.
-    - 최소 데이터 기준 미달은 status="INSUFFICIENT_DATA", anomalyScore=None.
+    - 최소 데이터 기준 미달(bookingCount < min_booking_count)은 status="INSUFFICIENT_DATA" 이고
+      rawAnomalyScore, anomalyScore, isAnomaly 가 모두 None 이다. 정상 판정이나 점수 0 이 아니라 "판정하지 않음" 이다.
     """
     assessed_at = datetime.now(timezone.utc).isoformat()
     results = [None] * len(payloads)
@@ -190,11 +219,16 @@ def assess_batch(payloads, bundle):
 
     if rows:
         X = pd.concat(rows, ignore_index=True)
-        scores = bundle["normalizer"].transform(raw_anomaly_score(bundle["model"], X))
-        for position, score in zip(row_positions, scores):
+        raw_scores = raw_anomaly_score(bundle["model"], X)
+        scores = bundle["normalizer"].transform(raw_scores)
+        for position, raw, score in zip(row_positions, raw_scores, scores):
+            # 판정은 반올림하지 않은 원시 점수와 원시 임계값으로 한다. 정규화 점수는 표시용으로만 반올림한다.
+            is_anomaly = bool(raw >= bundle["raw_threshold"])
+            score = round(float(score), SCORE_DECIMALS)
+            score = max(score, 0.5) if is_anomaly else min(score, _BELOW_HALF)
             results[position] = _result(
-                payloads[position]["userId"], "OK", round(float(score), 4),
-                bundle, assessed_at,
+                payloads[position]["userId"], "OK", score, bundle, assessed_at,
+                raw_score=float(raw), is_anomaly=is_anomaly,
             )
 
     return results

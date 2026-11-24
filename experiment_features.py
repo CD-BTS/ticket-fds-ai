@@ -1,3 +1,6 @@
+# [이전 MVP 버전] 이 파일은 현재 실행 경로에서 쓰지 않는다.
+# 현재 서빙 모델(6개 Feature)은 train_fds_model.py 가 만들고, Docker 이미지도 그 스크립트를 쓴다.
+# 기록 보존을 위해 남겨 둔 파일이다. 이전 MVP Feature 조합 실험이다.
 """Feature 조합 × 결측치 대체 방식별 이상치 민감도 실험.
 
 A. 단일 Feature: 각 Feature 하나만 썼을 때 얼마나 구분하는지

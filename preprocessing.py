@@ -31,11 +31,11 @@ WINDOW_DAYS = 30
 FEATURE_SPECS = {
     "avg_booking_interval": dict(
         camel="avgBookingInterval", integer=False, min=0, max=None,
-        nullable=True, log=True,        # 예매 2건 미만이면 null 허용
+        nullable=True, log=True,        # 시도 2건 미만(간격 없음)이면 null
     ),
     "booking_interval_variance": dict(
         camel="bookingIntervalVariance", integer=False, min=0, max=None,
-        nullable=True, log=True,        # 예매 2건 미만이면 null 허용
+        nullable=True, log=True,        # Feature 정의 v2: 간격 5개 미만(시도 6건 미만)이면 null
     ),
     "cancel_rate": dict(
         camel="cancelRate", integer=False, min=0, max=1,
@@ -43,11 +43,11 @@ FEATURE_SPECS = {
     ),
     "card_reuse_count": dict(
         camel="cardReuseCount", integer=True, min=1, max=None,
-        nullable=False, log=False,      # 기본값 1 (자기 자신)
+        nullable=False, log=False, default=1,   # 생략하면 1 (자기 자신). null 은 허용하지 않는다
     ),
     "ip_booking_density": dict(
         camel="ipBookingDensity", integer=True, min=1, max=None,
-        nullable=False, log=False,      # 기본값 1
+        nullable=False, log=False, default=1,   # 생략하면 1. null 은 허용하지 않는다
     ),
     "booking_count": dict(
         camel="bookingCount", integer=True, min=0, max=None,
@@ -110,9 +110,17 @@ def validate_payload(payload):
         errors.append("features는 필수이며 객체여야 합니다.")
         return errors
 
+    # 알 수 없는 Feature 이름은 조용히 버리지 않고 거절한다 (이전 MVP 필드나 오타를 호출자가 바로 알 수 있게).
+    unknown = sorted(str(key) for key in features if key not in CAMEL_TO_SNAKE)
+    if unknown:
+        errors.append(
+            f"features에 알 수 없는 Feature가 있습니다: {', '.join(unknown)} (허용: {', '.join(CAMEL_TO_SNAKE)})"
+        )
+
     for name, spec in FEATURE_SPECS.items():
         camel = spec["camel"]
-        value = features.get(camel)
+        # 키를 생략하면 기본값이 있는 Feature(카드·IP)는 기본값으로 본다. 단건과 배치가 같은 규칙을 쓴다.
+        value = features.get(camel, spec.get("default"))
 
         if value is None:
             if not spec["nullable"]:
@@ -144,6 +152,9 @@ def payload_to_frame(payload, feature_columns):
         for key, value in payload["features"].items()
         if key in CAMEL_TO_SNAKE
     }
+    for name, spec in FEATURE_SPECS.items():
+        if "default" in spec and spec["camel"] not in payload["features"]:
+            snake[name] = spec["default"]
     frame = pd.DataFrame([snake]).reindex(columns=feature_columns)
     return frame.apply(pd.to_numeric, errors="coerce")
 
@@ -243,3 +254,42 @@ class ScoreNormalizer:
             normalized = raw_scores
 
         return np.clip(normalized, 0.0, 1.0)
+
+
+class ThresholdAnchoredNormalizer:
+    """탐지 임계값을 0.5에 고정하는 구간 선형 정규화 (최종 6개 Feature 모델에서 사용).
+
+        s <  threshold : 0.5 * (s - low) / (threshold - low)
+        s >= threshold : 0.5 + 0.5 * (s - threshold) / (high - threshold)
+        결과는 [0, 1]로 자른다 (s <= low 는 0, s >= high 는 1).
+
+    - s 는 Isolation Forest 원시 이상 점수(-score_samples, 높을수록 이상)다.
+    - threshold 는 validation 정상 계정으로 정한 원시 점수 임계값이다. 판정은 s >= threshold 이다.
+    - low, high 는 학습(train) 계정 원시 점수의 최솟값과 최댓값이다. 다른 데이터로 다시 계산하지 않는다.
+    - anomalyScore >= 0.5 는 s >= threshold 와 정확히 같은 뜻이다 (경계에서 부동소수점 오차가 판정을 바꾸지 않도록 보정한다).
+    - 구간 안에서는 순증가, 구간 밖에서는 0 또는 1로 잘리므로 전체로는 단조 비감소다 (잘린 값끼리는 같은 점수가 된다).
+    - 이 점수는 매크로일 확률이 아니다. 임계값 대비 위치를 0~1로 옮긴 값이다.
+    """
+
+    BELOW = float(np.nextafter(0.5, 0.0))  # 0.5 바로 아래의 값
+
+    def __init__(self, low, threshold, high):
+        low, threshold, high = float(low), float(threshold), float(high)
+        if not (np.isfinite([low, threshold, high]).all() and low < threshold < high):
+            raise ValueError(f"low < threshold < high 여야 합니다: {low}, {threshold}, {high}")
+        self.low, self.threshold, self.high = low, threshold, high
+        self.method = "threshold_anchored_piecewise_linear"
+
+    def transform(self, raw_scores):
+        s = np.asarray(raw_scores, dtype=float)
+        below = 0.5 * (s - self.low) / (self.threshold - self.low)
+        above = 0.5 + 0.5 * (s - self.threshold) / (self.high - self.threshold)
+        flagged = s >= self.threshold
+        out = np.where(flagged, np.maximum(above, 0.5), np.minimum(below, self.BELOW))
+        return np.clip(out, 0.0, 1.0)
+
+    def describe(self):
+        return {"method": self.method, "low": self.low, "threshold": self.threshold, "high": self.high,
+                "formula": "s < threshold: 0.5*(s-low)/(threshold-low); s >= threshold: 0.5+0.5*(s-threshold)/(high-threshold); clip to [0, 1]",
+                "anchors": "low/high = 학습(train) 계정 원시 점수의 최솟값/최댓값, threshold = validation 정상 계정으로 정한 원시 임계값"}
+

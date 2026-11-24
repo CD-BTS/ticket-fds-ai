@@ -1,4 +1,7 @@
-"""Feature 계산 정답 샘플(docs/samples/golden) 검증.
+"""[이전 MVP Feature] Feature 계산 정답 샘플(docs/samples/golden) 검증.
+
+이 파일은 이전 MVP 파이프라인(main.py 의 7개 Feature 계산)을 검증한다. 현재 서빙 모델(6개 Feature)과는 무관하다.
+현재 Feature 계산은 BTS 백엔드(FeatureAggregationService)가 하고, 그 재현과 검증은 experiments/issue14-real-validation 에 있다.
 
 HAND 표는 코드가 아니라 사람이 이벤트를 보고 직접 계산한 값이다 (계산 과정은 주석).
 main.py의 계산이 이 값과 다르면 계산 규칙이 바뀐 것이므로, 백엔드(Spring) 구현과의
@@ -73,8 +76,9 @@ def test_expected_features_file_matches_hand_calculation():
         assert_row(expected.loc[user], values, user)
 
 
+@pytest.mark.skip(reason="이전 MVP Feature(cancelCount 등) 요청이다. 현재 API는 6개 Feature만 받는다 (tests/test_api.py 가 대신한다)")
 def test_golden_features_through_api(client):
-    """정답 샘플의 Feature를 그대로 API에 보냈을 때의 상태 (백엔드가 보낼 값과 같은 형태)."""
+    """[이전 MVP] 정답 샘플의 Feature를 그대로 API에 보냈을 때의 상태. 현재 실행 경로와 무관해 건너뛴다."""
     expected = pd.read_csv(GOLDEN / "expected_features.csv", na_values=["null"])
     camel = {
         "booking_count": "bookingCount", "cancel_count": "cancelCount", "cancel_rate": "cancelRate",
