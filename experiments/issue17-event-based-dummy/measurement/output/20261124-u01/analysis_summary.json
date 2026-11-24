@@ -1,0 +1,34 @@
+{
+  "runs": [
+    "20261124-u01"
+  ],
+  "name": "20261124-u01",
+  "calculated_at_utc": "2026-11-23T15:43:11.073000",
+  "participants": [
+    "u01"
+  ],
+  "accounts": 3,
+  "attempts": 18,
+  "attempts_by_experiment": {
+    "A": 2,
+    "B": 8,
+    "C": 8
+  },
+  "feature_extractor": "issue14-real-validation/scripts/extract_features.py (BTS FeatureAggregationService 재현, import, 수정 없음)",
+  "session_code": "issue17 scripts/extract_session_features.py 의 attempt_table · assign_sessions · session_table · aggregate",
+  "consistency_checks": {
+    "booking_count_equals_distinct_attempts": true,
+    "avg_booking_interval_equals_mean_start_gap": true,
+    "interval_null_iff_fewer_than_2_attempts": true
+  },
+  "card_env_distorted": true,
+  "ip_env_distorted": true,
+  "not_measurable": [
+    "결제 실패 (이벤트 없음)",
+    "세션·브라우저 식별자 (이벤트에 없음)",
+    "탭 닫기·뒤로 가기 (이벤트 없음. 종료 이벤트 없는 시도로만 보인다)",
+    "좌석을 클릭한 시각 (서버에는 선점 요청 시각만 남는다)"
+  ],
+  "datasets_generated": false,
+  "models_trained": false
+}

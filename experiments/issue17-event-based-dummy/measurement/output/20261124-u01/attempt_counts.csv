@@ -1,0 +1,4 @@
+﻿participant,experiment,external_user_id,attempts,concerts,completed,abandoned_seat_selection,abandoned_payment,abandoned_other,hold_expired,open_no_terminal_event,attempts_with_hold_rejection,hold_rejections,cancelled_later,gaps_same_concert_30min,gaps_30min_only,first_start_utc,last_start_utc
+u01,A,u01-a-01,2,2,2,0,0,0,0,0,0,0,0,0,1,2026-11-23 15:34:16.810,2026-11-23 15:34:31.888
+u01,B,u01-b-01,8,2,8,0,0,0,0,0,0,0,0,5,7,2026-11-23 15:34:50.510,2026-11-23 15:36:27.179
+u01,C,u01-c-01,8,3,7,0,0,0,1,0,0,0,0,3,7,2026-11-23 15:35:06.244,2026-11-23 15:43:05.170

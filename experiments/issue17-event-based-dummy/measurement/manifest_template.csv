@@ -1,0 +1,2 @@
+account,participant,person,experiment,sub_case,started_local,ended_local,browser,site_familiarity,hold_duration,notes
+u01-a-01,u01,,A,,,,,,PT5M,person 열에는 실제로 수행한 사람을 구분하는 값(p01 p02 ...)을 적는다. 한 사람이 여러 번호의 계정을 썼으면 같은 값을 적는다
