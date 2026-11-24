@@ -1,0 +1,298 @@
+﻿source,macro_run_mode,kind,external_user_id,attempt,concert,start,completed,gap,same_concert,in_session_concert,in_session_gap_only,start_to_booking,seat,hold_to_booking,previous_done_to_start
+#14 count,시도마다 프로세스 재실행,사람,human-01,21a57ec0-4497-4af4-8000-d4d0af3c72e7,c1,2026-11-19 11:17:56.018,True,,False,False,False,30.563,7.383,21.599,
+#14 count,시도마다 프로세스 재실행,사람,human-01,bfc893a4-2534-4621-a539-462fbb51d609,c2,2026-11-19 11:19:02.205,True,66.187,False,False,True,10.442,1.9,8.38,35.597
+#14 count,시도마다 프로세스 재실행,사람,human-01,74b7c6a5-4764-4ad2-9c8e-f082c78cae75,c3,2026-11-19 11:19:53.748,True,51.543,False,False,True,9.56,1.813,7.52,41.084
+#14 count,시도마다 프로세스 재실행,사람,human-02,6584fefb-51cc-45ba-b647-0be98bad8b00,c1,2026-11-19 11:53:48.013,True,,False,False,False,8.132,2.159,5.429,
+#14 count,시도마다 프로세스 재실행,사람,human-02,72f5a67c-6f73-445f-b8fa-8099b3261e15,c2,2026-11-19 11:53:58.701,True,10.688,False,False,True,7.689,1.5350000000000001,5.702,2.534
+#14 count,시도마다 프로세스 재실행,사람,human-02,3f3f5977-ad92-4dd1-9cef-1f066e044803,c3,2026-11-19 11:54:08.964,True,10.263,False,False,True,5.868,1.195,4.457,2.558
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-01,b212f6dd-b32b-4b35-9b6c-ebbec82be646,c1,2026-11-19 11:25:52.634,True,,False,False,False,2.625,0.57,1.476,
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-01,a7d5a294-885b-4060-9440-17b809112a1e,c2,2026-11-19 11:25:57.825,True,5.191,False,False,True,2.212,0.546,1.482,2.54
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-01,cb352d45-5f3b-49a0-bde9-bc5b5b7728a4,c3,2026-11-19 11:26:02.482,True,4.657,False,False,True,2.125,0.532,1.421,2.42
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,e9eb8d62-772b-4b52-89cf-013a37a3347f,c1,2026-11-19 12:08:20.958,True,,False,False,False,2.729,0.56,1.449,
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,a8c13cfe-58ef-4db4-af7e-3cb57c1ae271,c1,2026-11-19 12:08:26.599,True,5.641,True,True,True,2.16,0.536,1.432,2.883
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,abfb6be5-488d-4fa5-8fd0-d09152c9dcce,c1,2026-11-19 12:09:04.760,True,38.161,True,True,True,2.18,0.528,1.445,34.538
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,a390a0a9-ca7b-4809-b446-1806470701f4,c1,2026-11-19 12:09:09.610,True,4.85,True,True,True,2.141,0.471,1.441,2.652
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,3dc88ff1-968d-4237-825e-930ecde214da,c1,2026-11-19 12:09:15.551,True,5.941,True,True,True,2.198,0.572,1.416,3.771
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,2b1900c8-bfd9-4e82-9e18-7c350e03bf42,c1,2026-11-19 12:09:21.478,True,5.927,True,True,True,2.204,0.458,1.475,3.716
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,c55a0193-ad77-4615-b9ea-3755b8d0d17f,c1,2026-11-19 12:09:26.755,True,5.277,True,True,True,2.185,0.499,1.409,3.058
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,7719c320-0a69-4aa8-85e8-f9cbedbd7694,c1,2026-11-19 12:09:32.474,True,5.719,True,True,True,2.147,0.509,1.412,3.523
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,7a1d3828-2a83-46c1-b958-e154a8817c75,c1,2026-11-19 12:09:37.681,True,5.207,True,True,True,2.155,0.453,1.407,3.052
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,bfaa849b-c48b-4959-9d87-5bc36e1c88ae,c1,2026-11-19 12:09:43.554,True,5.873,True,True,True,2.194,0.529,1.454,3.7039999999999997
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,edf4777f-cdb4-41c3-8114-6af753578302,c1,2026-11-19 12:09:49.399,True,5.845,True,True,True,2.428,0.697,1.509,3.634
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,8b739be9-16f7-4b05-bdce-aa70691f2c2e,c1,2026-11-19 12:09:55.332,True,5.933,True,True,True,2.277,0.6,1.414,3.479
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,80a855a1-e0ab-4abf-991c-0563f86057cc,c1,2026-11-19 12:10:01.552,True,6.22,True,True,True,2.7439999999999998,0.903,1.449,3.933
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,a2afedb8-b923-4aa7-92e4-74caa8a99c1c,c1,2026-11-19 12:10:07.662,True,6.11,True,True,True,2.184,0.516,1.432,3.357
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,4a161680-6f36-4e9b-8845-14d1e546d82b,c1,2026-11-19 12:10:14.132,True,6.47,True,True,True,2.217,0.499,1.449,4.269
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,5270a1a0-f61d-46a3-9be4-7d0356777a80,c1,2026-11-19 12:10:19.755,True,5.623,True,True,True,2.335,0.532,1.491,3.382
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,e3ebc96c-0af5-4fd5-a824-38783281c405,c1,2026-11-19 12:10:27.628,True,7.873,True,True,True,1.814,0.288,1.389,5.521
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,4c06af64-3f90-4137-a051-8957857e47f2,c1,2026-11-19 12:10:33.095,True,5.467,True,True,True,2.121,0.513,1.3980000000000001,3.636
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,fac880cc-ae3d-4721-836a-9660ce606af5,c1,2026-11-19 12:10:38.164,True,5.069,True,True,True,2.118,0.496,1.42,2.9379999999999997
+#14 count,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,358975b7-72ae-42dc-b5d6-ed1857b0c7b8,c1,2026-11-19 12:10:43.576,True,5.412,True,True,True,2.1,0.492,1.418,3.278
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,b09a046a-897d-4ece-8988-8722d4d1b658,c1,2026-11-19 12:15:43.856,True,,False,False,False,13.533,2.774,10.512,
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,8435bf3d-8c55-4cb8-893b-19a69cbf8d30,c1,2026-11-19 12:16:08.571,True,24.715,True,True,True,11.853,2.173,9.522,11.161
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,57d22756-2675-4c87-b27a-725d7d7214ad,c1,2026-11-19 12:16:30.279,True,21.708,True,True,True,14.881,3.862,10.834,9.842
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,060e6203-98e3-4130-9d2f-ee8792a6cfa8,c1,2026-11-19 12:16:55.898,True,25.619,True,True,True,11.64,2.949,8.57,10.727
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,fa19fd18-2978-4781-adce-de6ad4403fef,c1,2026-11-19 12:17:16.906,True,21.008,True,True,True,13.674,3.36,10.166,9.333
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,2abc909f-4cd8-4760-b0af-1a40efb26a37,c1,2026-11-19 12:17:42.566,True,25.66,True,True,True,11.374,2.695,8.493,11.975999999999999
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,67c0e68d-42f6-47d9-913a-c3bc863a2865,c1,2026-11-19 12:18:04.700,True,22.134,True,True,True,14.692,4.219,10.357,10.749
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,ba7113ef-1c0a-44f2-8769-6d0b0932ec04,c1,2026-11-19 12:18:28.895,True,24.195,True,True,True,9.409,2.308,6.985,9.475
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,e750e7b0-1eb2-43fc-92af-c74b8310c68d,c1,2026-11-19 12:18:47.752,True,18.857,True,True,True,10.769,2.274,8.183,9.437
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,33717107-eb32-440a-ae47-3f679560209f,c1,2026-11-19 12:19:10.503,True,22.751,True,True,True,12.754,3.306,9.305,11.973
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,fe7cb82c-f334-4cb4-a8a5-fcb5207d2a16,c1,2026-11-19 12:19:35.067,True,24.564,True,True,True,10.889,2.411,8.353,11.8
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,2e1207df-6a98-447c-9a69-3c4ac91ea3c2,c1,2026-11-19 12:19:56.303,True,21.236,True,True,True,12.469,3.372,8.984,10.338
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,d8976fa6-f8ba-45e9-a9a9-001b52dd211b,c1,2026-11-19 12:20:20.137,True,23.834,True,True,True,12.761,3.761,8.877,11.355
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,18e3cf5f-f00b-4d66-b3e8-ef3962fc2216,c1,2026-11-19 12:20:43.869,True,23.732,True,True,True,13.148,3.476,9.546,10.957
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,772d80ae-ad74-462b-a7b6-213cb9396790,c1,2026-11-19 12:21:08.367,True,24.498,True,True,True,13.618,4.7219999999999995,8.78,11.337
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,046b0e0d-0936-4bd9-bdfa-abb0c6d768d6,c1,2026-11-19 12:21:32.451,True,24.084,True,True,True,12.165,3.886,8.103,10.457
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,bee78b89-7982-4236-83a3-dc4933505801,c1,2026-11-19 12:21:55.858,True,23.407,True,True,True,12.8,2.949,9.667,11.223
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,05a57fbe-04b8-4a80-b167-cdbe28517e93,c1,2026-11-19 12:22:22.856,True,26.998,True,True,True,13.942,4.38,9.407,14.19
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,0f46a811-8feb-4109-a714-c06dcea96bb4,c1,2026-11-19 12:22:48.476,True,25.62,True,True,True,12.523,3.103,9.296,11.661
+#14 count,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,00214825-8ef3-41cf-a843-ad599fc5e1aa,c1,2026-11-19 12:23:13.151,True,24.675,True,True,True,13.053,3.029,9.867,12.141
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,9f85e5e3-cf70-4f1e-88e3-658a7dfa5741,c1,2026-11-19 12:12:09.821,True,,False,False,False,4.886,1.029,3.48,
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,2efc09f4-dd21-4a2d-b79b-577f5f811e3c,c1,2026-11-19 12:12:19.333,True,9.512,True,True,True,4.051,0.987,2.899,4.6129999999999995
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,23f49d2f-e0c2-42b6-b82a-ed82d8c6f371,c1,2026-11-19 12:12:27.633,True,8.3,True,True,True,4.009,0.821,3.045,4.224
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,cf035eb4-0da1-4994-91d1-a25fa11961ed,c1,2026-11-19 12:12:36.198,True,8.565,True,True,True,4.069,1.011,2.915,4.5440000000000005
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,64561fb8-af95-4a34-a6bb-a73121065f82,c1,2026-11-19 12:12:44.262,True,8.064,True,True,True,3.588,0.856,2.599,3.982
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,5a12183e-2e38-4b63-af03-c791cfce30ae,c1,2026-11-19 12:12:52.098,True,7.836,True,True,True,4.713,1.062,3.452,4.237
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,9e3da0fd-c585-4c81-9dbe-04d69f3c7213,c1,2026-11-19 12:13:00.927,True,8.829,True,True,True,4.095,0.601,3.3609999999999998,4.096
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,fafea514-8b18-4c77-bd1a-7643bdf51ea1,c1,2026-11-19 12:13:09.776,True,8.849,True,True,True,4.168,0.999,3.04,4.742
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,9d7b7ebd-a6c4-4772-9a6a-893ade8c03b5,c1,2026-11-19 12:13:17.459,True,7.683,True,True,True,4.292,0.982,3.198,3.5060000000000002
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,499a759b-981d-48e4-8859-ef06b7e800ab,c1,2026-11-19 12:13:25.780,True,8.321,True,True,True,4.038,0.897,2.992,4.019
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,72013a2a-df8d-47e0-b391-fcf1e8ede0ee,c1,2026-11-19 12:13:33.543,True,7.763,True,True,True,4.154,0.96,3.024,3.714
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,2c5b3952-6982-4648-a448-976997c3f537,c1,2026-11-19 12:13:41.749,True,8.206,True,True,True,4.566,0.889,3.543,4.041
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,43be24ba-7574-44ab-9823-f48c0ad28c57,c1,2026-11-19 12:13:50.493,True,8.744,True,True,True,4.699,0.879,3.536,4.162
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,48477072-1662-4109-958b-57bedf08bd6b,c1,2026-11-19 12:13:59.559,True,9.066,True,True,True,4.907,1.215,3.569,4.357
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,fb58df79-fc18-4ac5-88b9-87f6bd5b306f,c1,2026-11-19 12:14:08.911,True,9.352,True,True,True,4.753,1.063,3.575,4.435
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,10f1bff6-59da-4966-973d-ec0b33096e2f,c1,2026-11-19 12:14:17.755,True,8.844,True,True,True,4.656,0.988,3.503,4.081
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,e7ce71c5-7210-4f97-8d14-fde4efc2928a,c1,2026-11-19 12:14:27.077,True,9.322,True,True,True,3.995,0.962,2.893,4.647
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,51b733d2-542b-4d74-ab39-885c4e0cedf2,c1,2026-11-19 12:14:35.351,True,8.274000000000001,True,True,True,4.298,0.811,3.364,4.256
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,d0587e5e-4aa9-4301-ba36-2e3f81e5ec0d,c1,2026-11-19 12:14:44.169,True,8.818,True,True,True,4.124,0.988,3.012,4.511
+#14 count,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,4032afd2-ac63-4c84-845b-d8182a6a9305,c1,2026-11-19 12:14:52.556,True,8.387,True,True,True,4.175,0.787,3.228,4.25
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-01,546bc117-c94c-482b-aa0a-d5aacd26bbef,c1,2026-11-22 14:24:21.180,True,,False,False,False,2.659,0.771,1.456,
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-01,aba688eb-5421-4ab1-ad93-073d17d5877e,c1,2026-11-22 14:24:28.159,True,6.979,True,True,True,2.4699999999999998,0.727,1.44,4.284
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-01,2bd0db69-36dd-43de-b885-c7418c351174,c1,2026-11-22 14:24:34.611,True,6.452,True,True,True,2.142,0.474,1.369,3.964
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,b84c7bd9-7b9d-48bb-9f98-609e500623e4,c1,2026-11-22 14:24:40.320,True,,False,False,False,2.106,0.449,1.349,
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,3be85447-c2bb-4545-8745-3499474ee746,c1,2026-11-22 14:24:46.116,True,5.796,True,True,True,2.196,0.51,1.4,3.666
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,db62a352-7b25-4c97-9f93-79dd8599d359,c1,2026-11-22 14:24:51.794,True,5.678,True,True,True,2.1310000000000002,0.527,1.367,3.464
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,75f9184d-699d-4fd8-aeca-4607438a083e,c1,2026-11-22 14:24:57.248,True,5.454,True,True,True,2.121,0.516,1.347,3.311
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,f9e32cad-731a-4b39-964d-871269130aec,c1,2026-11-22 14:25:02.891,True,5.643,True,True,True,2.2720000000000002,0.629,1.418,3.507
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,87160160-9d5a-4c9b-b97d-4b3ba0c69dd9,c1,2026-11-22 14:25:08.748,True,5.857,True,True,True,2.197,0.487,1.43,3.574
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,b2d5e616-a195-421f-af9c-17eaf8979ded,c1,2026-11-22 14:25:14.581,True,5.833,True,True,True,2.557,0.663,1.449,3.623
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,2b5561ac-b67b-4597-8cb5-9789bd363e60,c1,2026-11-22 14:25:20.785,True,6.204,True,True,True,2.082,0.498,1.334,3.629
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,8a5f37a4-0b0c-4e1b-b612-68bfed0ba3fa,c1,2026-11-22 14:25:26.853,True,6.068,True,True,True,2.222,0.446,1.4769999999999999,3.976
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,052fd6e3-e33c-4abf-b870-ac10690309f5,c1,2026-11-22 14:25:32.382,True,5.529,True,True,True,2.146,0.507,1.37,3.293
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,e3b51ab6-6d49-48b7-b504-da309653be38,c1,2026-11-22 14:25:38.633,True,6.251,True,True,True,2.195,0.502,1.374,4.093
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,d75e7b3d-3dff-4a13-8f81-40ead7c8debe,c1,2026-11-22 14:25:45.021,True,6.388,True,True,True,2.073,0.447,1.345,4.18
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,849c8a0f-deee-420b-9964-7549ffcc53d7,c1,2026-11-22 14:25:50.413,True,5.392,True,True,True,2.051,0.427,1.345,3.307
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,11e9ff5a-7a92-4f7b-9d60-352452491424,c1,2026-11-22 14:25:56.593,True,6.18,True,True,True,2.059,0.448,1.324,4.116
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,4fd6146e-2c6f-4ef0-84b5-f3c2ed7c4f0a,c1,2026-11-22 14:26:02.119,True,5.526,True,True,True,2.078,0.469,1.317,3.453
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,4430338a-d497-481c-a2ff-0d706f12324b,c1,2026-11-22 14:26:08.025,True,5.906,True,True,True,2.079,0.461,1.328,3.814
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,02a4e5d8-7ac2-4f7a-88a5-44c2572eb0d6,c1,2026-11-22 14:26:13.725,True,5.7,True,True,True,2.427,0.67,1.343,3.61
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,73890e9a-4496-4fb6-afe6-770adc698bf3,c1,2026-11-22 14:26:19.839,True,6.114,True,True,True,2.181,0.564,1.375,3.676
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,435f6063-14d2-4d9d-a7df-faa43d44b838,c1,2026-11-22 14:26:25.892,True,6.053,True,True,True,2.072,0.54,1.321,3.862
+#16 20261122-main,시도마다 프로세스 재실행,매크로 fast,macro-fast-02,a8304024-d057-45ea-8ef5-441489970693,c1,2026-11-22 14:26:31.166,True,5.274,True,True,True,2.034,0.477,1.32,3.175
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,68656781-c0ce-497c-80fa-bbaf67cbbf9e,c1,2026-11-22 14:29:28.894,True,,False,False,False,5.72,2.532,2.999,
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,86e2add0-1bfd-4348-a7ce-4e20b3a21f48,c1,2026-11-22 14:29:46.060,True,17.166,True,True,True,7.608,4.648,2.703,11.433
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,d41cdb29-6f35-4f37-9c8d-9ea5b9790ae6,c1,2026-11-22 14:30:05.733,True,19.673000000000002,True,True,True,6.618,2.864,3.388,12.04
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,60cc8e1c-f3b9-4834-b50c-a308cac079c1,c1,2026-11-22 14:30:24.920,True,19.187,True,True,True,5.14,2.6959999999999997,2.184,12.557
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,24fc781c-f0d5-4ca8-9753-18bcc9c0af26,c1,2026-11-22 14:30:42.208,True,17.288,True,True,True,6.987,3.121,3.7,12.135
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,ba3782a7-a644-492c-9b7b-fd602109dda1,c1,2026-11-22 14:31:00.652,True,18.444,True,True,True,7.369,3.585,3.606,11.439
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,ae369206-ad40-4d9e-9b7b-634cbdf02e61,c1,2026-11-22 14:31:18.154,True,17.502,True,True,True,6.176,2.463,3.566,10.12
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,95da2e5e-0ac1-454d-a14c-cae4ef81b0ea,c1,2026-11-22 14:31:36.263,True,18.109,True,True,True,6.898,4.037,2.713,11.91
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,0d81863c-b29f-4d43-a7f2-9e2fda30283e,c1,2026-11-22 14:31:53.919,True,17.656,True,True,True,5.923,3.136,2.628,10.737
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,85e0e065-9eda-483a-9c2c-d1b9470c16cb,c1,2026-11-22 14:32:11.449,True,17.53,True,True,True,7.416,3.396,3.854,11.591
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,2c866641-821a-4437-ab86-5a574d2082be,c1,2026-11-22 14:32:31.509,True,20.06,True,True,True,7.709,4.091,3.433,12.633
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,9232c6bb-436d-4767-9eed-564b23548ea8,c1,2026-11-22 14:32:49.664,True,18.155,True,True,True,5.361,2.865,2.336,10.433
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,649bfadc-e95d-4557-8ddb-5f4ca197ac38,c1,2026-11-22 14:33:07.905,True,18.241,True,True,True,7.066,3.523,3.382,12.864
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,d2d84ca1-d7df-4fea-8415-dbb1b6810a5a,c1,2026-11-22 14:33:26.671,True,18.766,True,True,True,6.585,3.73,2.693,11.685
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,71afbce8-3a6f-4c51-8806-6651bc6132bc,c1,2026-11-22 14:33:44.886,True,18.215,True,True,True,5.781,3.411,2.222,11.596
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,81b71f57-f571-470e-8abd-0814cca5b029,c1,2026-11-22 14:34:02.016,True,17.13,True,True,True,6.263,3.755,2.347,11.332
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,d6b8b4c3-5a36-4011-9f25-522a21a91f76,c1,2026-11-22 14:34:20.613,True,18.597,True,True,True,7.098,3.501,3.395,12.322
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,38c5a7a9-d836-4e84-bb87-673a3cd47e24,c1,2026-11-22 14:34:39.971,True,19.358,True,True,True,8.085,4.062,3.864,12.244
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,67f6d1e4-b68f-4b90-9c1c-e2fad976c4e6,c1,2026-11-22 14:35:01.877,True,21.906,True,True,True,6.208,2.393,3.661,13.809
+#16 20261122-main,시도마다 프로세스 재실행,매크로 human 프로필,macro-human-01,b431daf1-547c-4c91-8a0e-e9f3d5ad657d,c1,2026-11-22 14:35:21.982,True,20.105,True,True,True,8.212,4.233,3.843,13.882
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,e0ebc3fa-eec7-4016-a51d-826017fce78e,c1,2026-11-22 14:26:38.720,True,,False,False,False,2.545,0.596,1.783,
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,bdbee260-8f69-4052-b459-fb8f8191e0eb,c1,2026-11-22 14:26:46.671,True,7.951,True,True,True,2.637,0.989,1.468,5.391
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,fed3109e-f4b2-4697-9ddf-435ac240c155,c1,2026-11-22 14:26:54.274,True,7.603,True,True,True,2.614,0.91,1.542,4.951
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,03d62971-d052-4f6a-aae5-27b20ed5167b,c1,2026-11-22 14:27:02.634,True,8.36,True,True,True,2.801,0.935,1.713,5.734
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,9a1d1e26-2210-44af-ba5b-c9ea500333db,c1,2026-11-22 14:27:10.981,True,8.347,True,True,True,2.501,0.685,1.671,5.525
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,018b3735-f402-44d6-97db-2cb9cae59411,c1,2026-11-22 14:27:19.174,True,8.193,True,True,True,2.7119999999999997,1.015,1.5390000000000001,5.673
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,e27cec2d-72f1-4279-94ed-193d577f5eb1,c1,2026-11-22 14:27:27.058,True,7.884,True,True,True,2.8609999999999998,1.221,1.482,5.16
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,26272102-9c81-4a09-8ca0-df95d1428812,c1,2026-11-22 14:27:34.881,True,7.823,True,True,True,3.08,1.194,1.704,4.946
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,03074069-60b8-4291-a890-e48ac2af308a,c1,2026-11-22 14:27:42.896,True,8.015,True,True,True,2.481,0.876,1.461,4.924
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,a468e6bf-f719-4ce1-bb0d-673a693e869d,c1,2026-11-22 14:27:50.947,True,8.051,True,True,True,2.7439999999999998,1.054,1.5350000000000001,5.554
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,820f8b50-1f47-4b29-990a-b9ae4a7819a8,c1,2026-11-22 14:27:58.746,True,7.799,True,True,True,2.678,0.928,1.599,5.044
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,9e2b3cc5-6de5-41c5-9ccd-bda2213d6934,c1,2026-11-22 14:28:06.588,True,7.842,True,True,True,2.711,0.971,1.532,5.145
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,53d3ef1e-102a-41d8-8ca2-996f0c709550,c1,2026-11-22 14:28:14.566,True,7.978,True,True,True,2.613,1.008,1.441,5.253
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,52b1dd7d-1909-43eb-9656-6c67c6ca8306,c1,2026-11-22 14:28:22.229,True,7.663,True,True,True,2.775,0.853,1.772,5.039
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,358244ed-0614-465d-a646-f929944b6d10,c1,2026-11-22 14:28:30.926,True,8.697,True,True,True,2.613,1.032,1.447,5.91
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,7e11f324-f3fd-4483-b51c-7a6724e94219,c1,2026-11-22 14:28:38.935,True,8.009,True,True,True,2.444,0.771,1.5110000000000001,5.381
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,6fa5eef4-6d36-45a6-813f-6d6437755865,c1,2026-11-22 14:28:46.506,True,7.571,True,True,True,3.108,1.191,1.714,5.113
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,b6e69e73-dbb4-4ce7-b0c7-a5c208a697d1,c1,2026-11-22 14:28:54.582,True,8.076,True,True,True,3.037,1.144,1.6909999999999998,4.9559999999999995
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,ff1c73f9-c879-4b51-9a7b-d444ccbafaee,c1,2026-11-22 14:29:02.890,True,8.308,True,True,True,3.284,1.31,1.796,5.26
+#16 20261122-main,시도마다 프로세스 재실행,매크로 jitter,macro-jitter-01,9f13fe7f-f209-4518-ab91-8eff951625b7,c1,2026-11-22 14:29:11.249,True,8.359,True,True,True,2.868,1.059,1.639,5.059
+#16 20261122-main,시도마다 프로세스 재실행,기타 (시험·수동 계정),pilot-fast-01,ff964c98-2885-47e6-9d58-bc549dfe8212,c1,2026-11-22 14:22:42.915,True,,False,False,False,4.957,0.755,1.44,
+#16 20261122-main,시도마다 프로세스 재실행,기타 (시험·수동 계정),pilot-fast-01,1bbcb525-15ed-4a7b-b906-87b79ef3f990,c1,2026-11-22 14:22:52.172,True,9.257,True,True,True,2.385,0.549,1.501,4.277
+#16 20261122-main,시도마다 프로세스 재실행,기타 (시험·수동 계정),pilot-fast-01,cebd4c1d-83fc-43df-909e-8c42e5d5f919,c1,2026-11-22 14:22:59.280,True,7.108,True,True,True,2.129,0.517,1.334,4.6899999999999995
+#16 20261122-main,시도마다 프로세스 재실행,기타 (시험·수동 계정),pilot-human-01,4233f0a8-a5cf-439b-a48e-7b91e8f5ec31,c1,2026-11-22 14:23:30.486,True,,False,False,False,6.852,3.116,3.5,
+#16 20261122-main,시도마다 프로세스 재실행,기타 (시험·수동 계정),pilot-human-01,e678fbad-c55e-4ebc-949d-3fff092c5629,c1,2026-11-22 14:23:49.880,True,19.394,True,True,True,6.46,3.79,2.4939999999999998,12.527
+#16 20261122-main,시도마다 프로세스 재실행,기타 (시험·수동 계정),pilot-jitter-01,d7e45a84-f6c9-4232-9e63-970dedf35ebe,c1,2026-11-22 14:23:07.913,True,,False,False,False,2.794,0.818,1.6600000000000001,
+#16 20261122-main,시도마다 프로세스 재실행,기타 (시험·수동 계정),pilot-jitter-01,7ac49986-2be7-4beb-ae49-1cd97d9271b7,c1,2026-11-22 14:23:16.569,True,8.656,True,True,True,3.078,1.125,1.75,5.833
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-01,1636ee55-954c-4996-a7e0-5e3973cc6ae2,c1,2026-11-22 14:49:42.981,True,,False,False,False,2.229,0.522,1.383,
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-01,9b006a54-3240-44ea-8ff4-5f64e8641fc4,c1,2026-11-22 14:49:45.809,True,2.828,True,True,True,2.113,0.508,1.3679999999999999,0.571
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-01,364532fd-f111-4e6d-8a21-3302355e3d2e,c1,2026-11-22 14:49:48.516,True,2.707,True,True,True,2.06,0.558,1.324,0.573
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,c369fa86-586d-425a-ad14-b1340c2b1ef9,c1,2026-11-22 14:49:54.244,True,,False,False,False,2.657,0.723,1.431,
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,2e085683-0130-4687-894b-1117e0349ca7,c1,2026-11-22 14:49:57.551,True,3.307,True,True,True,2.091,0.448,1.355,0.616
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,c01d63cf-b3da-4a21-94b6-b83a334d711f,c1,2026-11-22 14:50:00.255,True,2.7039999999999997,True,True,True,2.08,0.446,1.334,0.593
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,42e9f3a4-acac-4817-9d8a-417c7c3a8be1,c1,2026-11-22 14:50:02.729,True,2.474,True,True,True,1.7850000000000001,0.298,1.314,0.378
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,b2165ed4-6c04-4e13-9cd0-2241649960e9,c1,2026-11-22 14:50:05.083,True,2.354,True,True,True,2.076,0.545,1.337,0.552
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,cfb93c22-cf4f-4e04-a573-ee5c8422bd32,c1,2026-11-22 14:50:07.764,True,2.681,True,True,True,2.096,0.42,1.361,0.575
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,bebbcefe-f24d-4834-a491-a577a87f715e,c1,2026-11-22 14:50:10.750,True,2.9859999999999998,True,True,True,2.477,0.768,1.366,0.852
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,6bda30b6-2098-4b7b-93cb-b40105efc7e2,c1,2026-11-22 14:50:13.939,True,3.189,True,True,True,2.294,0.561,1.451,0.674
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,e526bbd8-942b-4f0b-a77c-512a0da6f592,c1,2026-11-22 14:50:17.053,True,3.114,True,True,True,2.011,0.46,1.316,0.787
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,a70fd330-0e71-438b-97b9-0118c78c8cb9,c1,2026-11-22 14:50:19.462,True,2.409,True,True,True,2.075,0.557,1.328,0.385
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,7e5c5bab-c621-400a-bc44-16bfc91f65ff,c1,2026-11-22 14:50:21.947,True,2.485,True,True,True,2.091,0.475,1.336,0.395
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,47e07a7a-6dea-4c7e-a482-3b6af36dc2de,c1,2026-11-22 14:50:24.462,True,2.515,True,True,True,2.193,0.492,1.3599999999999999,0.407
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,6b88bd8d-3f2f-402d-abc2-881b8db4b0ab,c1,2026-11-22 14:50:27.067,True,2.605,True,True,True,1.822,0.355,1.305,0.402
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,afe3c8b9-5901-429f-a601-a38702257540,c1,2026-11-22 14:50:29.465,True,2.398,True,True,True,2.22,0.445,1.384,0.558
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,4112e281-bed1-4628-a824-f8be0e700b1d,c1,2026-11-22 14:50:32.094,True,2.629,True,True,True,2.054,0.459,1.332,0.386
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,15c44dcd-d8cb-487d-98c8-16178f81786d,c1,2026-11-22 14:50:34.598,True,2.504,True,True,True,2.113,0.435,1.399,0.432
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,696baf33-5e43-4cb1-b223-1177f6ad6be8,c1,2026-11-22 14:50:37.150,True,2.552,True,True,True,2.014,0.493,1.296,0.415
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,f89082b2-237c-4f39-9352-068c34aacd44,c1,2026-11-22 14:50:39.564,True,2.414,True,True,True,2.039,0.486,1.35,0.382
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,6cc7bbd6-1a1e-422b-b058-f5fc8ded9d25,c1,2026-11-22 14:50:42.002,True,2.438,True,True,True,2.025,0.506,1.301,0.375
+#16 20261122-continuous,연속 실행,매크로 fast,macro-fast-02,db10f7af-e2f3-4175-9c87-ef0b8e05d5d8,c1,2026-11-22 14:50:44.481,True,2.479,True,True,True,1.9969999999999999,0.511,1.292,0.438
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,3a335bad-737f-4a9b-b54a-c9151116d051,c1,2026-11-22 14:52:31.929,True,,False,False,False,6.598,3.553,2.848,
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,170432e4-7735-4517-9964-9974180b2b9a,c1,2026-11-22 14:52:44.952,True,13.023,True,True,True,5.508,3.036,2.27,6.409
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,cb9ea38a-ca93-4f11-94a0-1e025f91dbc9,c1,2026-11-22 14:52:57.007,True,12.055,True,True,True,6.79,2.9370000000000003,3.71,6.526
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,5f53be65-0ac5-4017-9f23-8e4c6b6ca6e5,c1,2026-11-22 14:53:08.986,True,11.979,True,True,True,7.6899999999999995,4.434,3.101,5.169
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,2f09459c-90b7-4944-b44a-695737164ec9,c1,2026-11-22 14:53:22.718,True,13.732,True,True,True,7.594,4.41,2.892,6.011
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,52697761-8555-4f32-9da0-950e632d51c4,c1,2026-11-22 14:53:35.251,True,12.533,True,True,True,5.364,2.443,2.763,4.906
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,9f7ea285-cbc3-4dae-9c5a-2f5f03dc6f75,c1,2026-11-22 14:53:45.311,True,10.06,True,True,True,7.185,3.543,3.488,4.667
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,35e56668-2591-4180-a0e9-efb631f09151,c1,2026-11-22 14:53:58.457,True,13.146,True,True,True,6.763,3.116,3.468,5.945
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,48203a0a-7094-47ea-9e2e-933e6fd79b30,c1,2026-11-22 14:54:11.953,True,13.496,True,True,True,7.135,3.762,3.223,6.702
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,4d63cde8-0802-47f3-a94b-fde04ea560b8,c1,2026-11-22 14:54:25.308,True,13.355,True,True,True,5.877,3.299,2.393,6.208
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,8761b2e5-207b-40ff-a27f-7ae9df5894a5,c1,2026-11-22 14:54:37.919,True,12.611,True,True,True,7.295,3.148,3.695,6.721
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,cd0f53f8-9325-4069-a584-652370d5f6c7,c1,2026-11-22 14:54:51.247,True,13.328,True,True,True,6.732,3.5949999999999998,2.909,6.014
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,6904a8ef-4a7b-45cd-929b-ad64f2a32bbb,c1,2026-11-22 14:55:03.901,True,12.654,True,True,True,7.292,3.511,3.644,5.911
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,0aba6ddd-a621-449c-a86a-b7ce39c127cf,c1,2026-11-22 14:55:17.212,True,13.311,True,True,True,6.078,2.778,3.173,6.008
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,a03579cf-8970-4519-9ee2-7ab2a1084cdd,c1,2026-11-22 14:55:29.690,True,12.478,True,True,True,5.443,2.642,2.668,6.3870000000000005
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,eadbefc8-1a24-4efc-93ac-d2cc7b1a5b23,c1,2026-11-22 14:55:40.130,True,10.44,True,True,True,7.17,3.463,3.583,4.975
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,7d8b4f3d-d930-4be3-a282-d5b7e0c106c5,c1,2026-11-22 14:55:55.198,True,15.068,True,True,True,7.486,3.884,3.463,7.884
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,34c0b538-4fa9-4e9c-9bc6-30d7e1183a9b,c1,2026-11-22 14:56:09.615,True,14.417,True,True,True,7.142,3.575,3.442,6.92
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,11a11fb9-1bc2-4b66-a362-fe9234e2389c,c1,2026-11-22 14:56:22.303,True,12.688,True,True,True,7.023,4.045,2.849,5.531
+#16 20261122-continuous,연속 실행,매크로 human 프로필,macro-human-01,23039f40-53b8-49c9-8c95-b766460ebe03,c1,2026-11-22 14:56:35.760,True,13.457,True,True,True,7.015,3.348,3.536,6.416
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,4404dafa-7847-4bf1-835a-6e380e145907,c1,2026-11-22 14:50:52.344,True,,False,False,False,2.925,0.826,1.748,
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,012b4796-361d-42ed-b3ed-709358893810,c1,2026-11-22 14:50:56.649,True,4.305,True,True,True,2.584,0.806,1.5110000000000001,1.358
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,217ea803-8328-4962-9e62-c287c3db5491,c1,2026-11-22 14:51:00.924,True,4.275,True,True,True,2.809,1.024,1.5310000000000001,1.6680000000000001
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,f2e7ef28-910b-40b2-b8a7-97de23c6b1c8,c1,2026-11-22 14:51:05.404,True,4.48,True,True,True,3.208,1.096,1.774,1.658
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,b91304fb-775a-406c-910a-3f4845d0fe73,c1,2026-11-22 14:51:09.978,True,4.574,True,True,True,2.669,0.964,1.55,1.354
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,79a83630-1d37-417c-ba85-c6ff655a44ff,c1,2026-11-22 14:51:13.921,True,3.943,True,True,True,2.9370000000000003,0.964,1.81,1.264
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,35da1a6e-7bf5-4b22-955d-fa57bf6d1015,c1,2026-11-22 14:51:18.739,True,4.818,True,True,True,2.57,0.684,1.742,1.867
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,e20a7d56-e88e-420d-937f-e2cae580b535,c1,2026-11-22 14:51:22.648,True,3.909,True,True,True,2.871,1.009,1.697,1.318
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,cb5e9925-ba3d-4704-aa3c-3ec160e57456,c1,2026-11-22 14:51:27.094,True,4.446,True,True,True,2.827,0.869,1.666,1.554
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,94c4ed2d-22ad-450c-b682-b8ff89d3ed91,c1,2026-11-22 14:51:31.198,True,4.104,True,True,True,2.911,0.966,1.774,1.266
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,4bdb93e2-4985-402d-bdbd-220c3c364ad9,c1,2026-11-22 14:51:35.817,True,4.619,True,True,True,2.77,1.077,1.55,1.697
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,5f517fb3-5f2e-48d6-a217-86207eaeb8e2,c1,2026-11-22 14:51:40.303,True,4.486,True,True,True,3.077,0.975,1.8090000000000002,1.705
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,5d728ab0-4d28-4603-b095-1f6d0ac43aef,c1,2026-11-22 14:51:44.473,True,4.17,True,True,True,3.098,1.021,1.7029999999999998,1.082
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,303fd1ab-bf15-45de-aa57-1b9ef25b1ca2,c1,2026-11-22 14:51:49.129,True,4.656,True,True,True,2.836,1.074,1.617,1.545
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,f2b91892-fdc1-4442-8fa5-48c39890c92e,c1,2026-11-22 14:51:53.667,True,4.538,True,True,True,3.01,1.2389999999999999,1.587,1.687
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,4f2b2e02-ff61-434b-a57d-14caddee7047,c1,2026-11-22 14:51:57.942,True,4.275,True,True,True,3.015,1.284,1.544,1.245
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,cf9a4f5b-50be-433b-abc4-647c39bb6fba,c1,2026-11-22 14:52:02.199,True,4.257,True,True,True,2.701,0.733,1.851,1.23
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,be1ff4fd-050f-4286-b2b0-0464df7ab2b9,c1,2026-11-22 14:52:06.345,True,4.146,True,True,True,2.709,1.002,1.436,1.424
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,10bc5bf2-0985-4336-a4f9-32237efb0d76,c1,2026-11-22 14:52:10.668,True,4.323,True,True,True,2.7359999999999998,0.95,1.624,1.604
+#16 20261122-continuous,연속 실행,매크로 jitter,macro-jitter-01,690a330e-8e3b-40f6-92a6-4a914b979172,c1,2026-11-22 14:52:14.786,True,4.118,True,True,True,3.351,1.293,1.8679999999999999,1.3639999999999999
+#16 20261122-continuous,연속 실행,기타 (시험·수동 계정),probe-8392,ab624c34-2b2b-4fe4-babb-56809ee99aa4,c1,2026-11-22 14:48:32.003,True,,False,False,False,2.344,0.699,1.366,
+#16 20261122-continuous,연속 실행,기타 (시험·수동 계정),smoke-fast-01,795af5fc-3959-4975-977a-45639eba575d,c1,2026-11-22 14:46:57.978,True,,False,False,False,3.745,0.614,1.397,
+#16 20261122-continuous,연속 실행,기타 (시험·수동 계정),smoke-fast-02,75d4dbba-7456-4bec-aa46-46f1dc1274aa,c1,2026-11-22 14:49:14.053,True,,False,False,False,2.493,0.616,1.425,
+#16 20261122-continuous,연속 실행,기타 (시험·수동 계정),smoke-fast-02,b2141588-ea76-4834-b7ed-b606dcc60705,c1,2026-11-22 14:49:16.957,True,2.904,True,True,True,2.052,0.521,1.31,0.383
+#16 20261122-continuous,연속 실행,기타 (시험·수동 계정),smoke-fast-02,d35092e5-46b7-432f-886c-0facac151d4a,c1,2026-11-22 14:49:19.436,True,2.479,True,True,True,2.085,0.521,1.3559999999999999,0.41
+#16 20261122-continuous,연속 실행,기타 (시험·수동 계정),smoke-fast-02,30d16ad5-a9e5-4280-9ff1-0e682138b7a9,c1,2026-11-22 14:49:22.155,True,2.719,True,True,True,2.033,0.478,1.325,0.614
+#16 20261122-continuous,연속 실행,기타 (시험·수동 계정),smoke-once-01,33f597ae-3a33-446e-9c58-ab0e6b4e13a1,c1,2026-11-22 14:49:27.625,True,,False,False,False,2.452,0.636,1.4060000000000001,
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,a9b8606a-7be1-49c5-8838-a5a94c7d506c,c1,2026-11-22 16:42:09.573,True,,False,False,False,3.271,1.101,1.4809999999999999,
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,53d04300-2126-440e-a280-ecaf9c1a0183,c1,2026-11-22 16:42:14.043,True,4.47,True,True,True,2.5460000000000003,0.744,1.41,1.147
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,96ee2cb3-7ff9-48db-9145-6eccf998e648,c1,2026-11-22 16:42:17.689,True,3.646,True,True,True,2.309,0.581,1.44,1.078
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,782066d7-336c-4454-89bb-fb7e4c808161,c1,2026-11-22 16:42:20.711,True,3.022,True,True,True,2.698,0.773,1.558,0.681
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,be76cc35-e649-4293-91ea-ff2dd2175f0e,c1,2026-11-22 16:42:24.099,True,3.388,True,True,True,2.2560000000000002,0.533,1.412,0.668
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,faa6ce82-b60d-4152-881d-910874065e65,c1,2026-11-22 16:42:27.022,True,2.923,True,True,True,2.336,0.505,1.5430000000000001,0.643
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,d8e1d6af-4f12-4723-bf2c-5a1f39b560c9,c1,2026-11-22 16:42:29.994,True,2.972,True,True,True,2.2560000000000002,0.522,1.42,0.612
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,bacdea2a-92c5-4e79-8e4f-4696898d9214,c1,2026-11-22 16:42:32.930,True,2.936,True,True,True,2.153,0.496,1.408,0.643
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,739374c7-575f-4462-b8f8-20f228d7c953,c1,2026-11-22 16:42:35.726,True,2.7960000000000003,True,True,True,2.213,0.485,1.413,0.621
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,47c923c0-5d11-4338-9711-d8065d6f0c4b,c1,2026-11-22 16:42:38.525,True,2.799,True,True,True,2.324,0.567,1.5,0.548
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,867f643b-2b88-4ebe-bcde-02ff4676eda2,c1,2026-11-22 16:42:41.869,True,3.344,True,True,True,2.332,0.559,1.46,0.929
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,da06c5c5-fa2b-4edd-b357-0e60058e1175,c1,2026-11-22 16:42:44.867,True,2.998,True,True,True,2.205,0.556,1.397,0.633
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,bb242750-0888-4304-8633-762798cc962e,c1,2026-11-22 16:42:47.772,True,2.9050000000000002,True,True,True,2.24,0.536,1.437,0.677
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,dd40a3ff-6c4a-46f0-bfd9-1cd486e409e4,c1,2026-11-22 16:42:51.136,True,3.364,True,True,True,2.393,0.552,1.545,1.096
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,21b28a7b-0fae-4e6f-a926-a6577d7084ad,c1,2026-11-22 16:42:54.108,True,2.972,True,True,True,2.204,0.564,1.397,0.557
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,c8036c15-ecd2-45c7-9951-19dc04187a02,c1,2026-11-22 16:42:56.876,True,2.768,True,True,True,2.224,0.55,1.412,0.541
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,f12b64fa-7252-4f9a-be46-dee11dab52ee,c1,2026-11-22 16:42:59.751,True,2.875,True,True,True,2.709,0.771,1.5510000000000002,0.626
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,ec54912b-f055-4630-8836-42a7309f31dc,c1,2026-11-22 16:43:03.097,True,3.346,True,True,True,2.402,0.592,1.464,0.608
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,29b85fa8-b010-4bb8-83c2-0b3ccde59d2c,c1,2026-11-22 16:43:06.112,True,3.015,True,True,True,2.203,0.503,1.403,0.591
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-11,c190e432-e5f4-4f2e-9783-ff3203276273,c1,2026-11-22 16:43:08.911,True,2.799,True,True,True,2.193,0.481,1.41,0.57
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,e2d00b05-6e97-4c61-9f7f-1b81ed026aad,c1,2026-11-22 16:43:15.496,True,,False,False,False,2.642,0.637,1.466,
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,447e1ff5-4e31-482e-8735-c26fcffa71b3,c1,2026-11-22 16:43:19.014,True,3.518,True,True,True,2.441,0.52,1.556,0.841
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,3d114b0a-2348-41fc-9cee-ee458d17ee08,c1,2026-11-22 16:43:22.078,True,3.064,True,True,True,2.285,0.49,1.446,0.593
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,04ed60ac-0f1f-4c09-b3d7-8a59d6bbde37,c1,2026-11-22 16:43:25.591,True,3.513,True,True,True,2.228,0.493,1.416,1.203
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,1c4f8bab-1d0f-4a19-ac11-666bcd216805,c1,2026-11-22 16:43:28.399,True,2.808,True,True,True,2.278,0.59,1.429,0.559
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,4fd85b8b-6d8e-4acd-95a2-53dc6efa69af,c1,2026-11-22 16:43:31.316,True,2.917,True,True,True,2.233,0.52,1.383,0.609
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,940ceaf8-9844-4dba-99e4-8451156fdc40,c1,2026-11-22 16:43:34.185,True,2.8689999999999998,True,True,True,2.172,0.483,1.385,0.595
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,e3d226c6-66b2-42fb-9132-82b62d7bbf91,c1,2026-11-22 16:43:37.211,True,3.026,True,True,True,2.18,0.411,1.393,0.833
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,95a1bcff-3888-4eb1-89cc-e22fc8849ae4,c1,2026-11-22 16:43:40.031,True,2.82,True,True,True,2.234,0.512,1.4060000000000001,0.617
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,8accf3b4-a7a7-4223-83f2-d74239e1069f,c1,2026-11-22 16:43:42.864,True,2.833,True,True,True,2.258,0.555,1.411,0.576
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,53d34b4c-f2ff-4cb3-a81d-1204b5960210,c1,2026-11-22 16:43:45.743,True,2.879,True,True,True,2.249,0.503,1.415,0.599
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,c2c5dc8a-fbb2-4b44-8f92-b777ae49e8fb,c1,2026-11-22 16:43:48.641,True,2.898,True,True,True,2.22,0.573,1.411,0.627
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,6c24e5a6-8258-4aa8-a262-d44360a09b5f,c1,2026-11-22 16:43:51.918,True,3.277,True,True,True,2.287,0.593,1.397,1.017
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,ce366da4-e87f-4241-9dbf-4f29c77f6d39,c1,2026-11-22 16:43:54.849,True,2.931,True,True,True,2.219,0.544,1.433,0.62
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,00f4f4f2-8d3e-4677-84a1-40552265d112,c1,2026-11-22 16:43:57.664,True,2.815,True,True,True,2.201,0.527,1.395,0.575
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,846cf1d2-1722-44c3-82ae-e869a6ab73d6,c1,2026-11-22 16:44:01.008,True,3.344,True,True,True,2.336,0.565,1.408,1.12
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,d1c212c5-9f8f-4e85-84e4-892187b1ed16,c1,2026-11-22 16:44:03.975,True,2.967,True,True,True,2.226,0.563,1.416,0.61
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,6a76b55f-984a-4e97-b380-476290cd2df4,c1,2026-11-22 16:44:06.839,True,2.864,True,True,True,2.253,0.577,1.407,0.609
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,20903653-5bb2-45da-a710-c76d260a7c05,c1,2026-11-22 16:44:09.718,True,2.879,True,True,True,2.443,0.502,1.6019999999999999,0.594
+#16 20261123-remeasure,연속 실행,매크로 fast,macro-fast-12,b3f878c5-0ce6-409d-a4cc-9fbf02c6d1d1,c1,2026-11-22 16:44:13.249,True,3.531,True,True,True,2.302,0.633,1.3900000000000001,1.055
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,712554b8-6c14-40c5-9ff4-7e0b9866b30d,c1,2026-11-22 16:44:22.408,True,,False,False,False,3.328,1.066,1.866,
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,e73a8413-382b-4fa0-89d6-53e3ac077f0b,c1,2026-11-22 16:44:27.265,True,4.857,True,True,True,2.794,0.982,1.494,1.5070000000000001
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,8b4a9517-c374-4e40-97c4-2fb3d8bac00b,c1,2026-11-22 16:44:32.312,True,5.047,True,True,True,3.173,0.974,1.901,2.221
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,0460f66f-d6b8-4842-9e3e-d75e70b6d471,c1,2026-11-22 16:44:37.352,True,5.04,True,True,True,3.25,1.125,1.679,1.8479999999999999
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,a35b3982-d4d8-432b-95f2-d5886feddd27,c1,2026-11-22 16:44:42.542,True,5.19,True,True,True,2.798,0.942,1.568,1.909
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,c1c84900-d15c-447d-9849-1e1b49cc9506,c1,2026-11-22 16:44:46.481,True,3.939,True,True,True,3.105,1.097,1.7530000000000001,1.116
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,fa0db759-db7a-45fe-8258-031bd472b473,c1,2026-11-22 16:44:50.965,True,4.484,True,True,True,3.246,1.186,1.795,1.3519999999999999
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,1ac1d68d-ce22-4745-a422-e867a24b2eac,c1,2026-11-22 16:44:55.545,True,4.58,True,True,True,3.208,1.44,1.5550000000000002,1.305
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,0c597083-f633-4cd1-91e8-95e7a34c3e88,c1,2026-11-22 16:45:00.725,True,5.18,True,True,True,3.51,1.44,1.79,1.95
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,af57d63e-de54-485a-87ef-4c25ffc031c7,c1,2026-11-22 16:45:05.938,True,5.213,True,True,True,2.864,0.964,1.653,1.675
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,f7fadb88-47b6-43a5-b176-e9f041f9e501,c1,2026-11-22 16:45:09.978,True,4.04,True,True,True,2.917,0.98,1.601,1.151
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,d43473e9-4896-4607-b403-8b5a1065ac20,c1,2026-11-22 16:45:14.773,True,4.795,True,True,True,3.1189999999999998,1.079,1.788,1.85
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,ee3af686-7f02-4a0e-9ea2-9db37bc00c3a,c1,2026-11-22 16:45:18.938,True,4.165,True,True,True,3.304,1.162,1.8599999999999999,1.024
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,7ad416bc-8488-4961-934f-7d85d7f3fdfc,c1,2026-11-22 16:45:23.538,True,4.6,True,True,True,2.932,1.056,1.646,1.266
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,2ec18b88-bbcb-48d7-aa91-9c95034450a7,c1,2026-11-22 16:45:28.340,True,4.802,True,True,True,2.936,0.841,1.8319999999999999,1.847
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,c7f19e40-acae-4c58-8abf-03c667045eef,c1,2026-11-22 16:45:33.064,True,4.724,True,True,True,3.13,1.202,1.678,1.7570000000000001
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,cca1284d-c667-414e-9c22-94c3fc370a7a,c1,2026-11-22 16:45:37.986,True,4.922,True,True,True,3.271,1.42,1.552,1.768
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,c9db4cca-a2c1-4289-b555-77776c0b423b,c1,2026-11-22 16:45:42.864,True,4.878,True,True,True,3.382,1.214,1.909,1.584
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,3a1e766c-8057-4a33-8c7f-d1a536668a1b,c1,2026-11-22 16:45:48.161,True,5.297,True,True,True,3.121,1.094,1.7770000000000001,1.885
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-11,eccec771-942f-4a29-87ba-b76da2b26919,c1,2026-11-22 16:45:53.030,True,4.869,True,True,True,3.1189999999999998,1.31,1.571,1.7189999999999999
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,01036db8-09df-4598-acdf-5d9fe7e0ab02,c1,2026-11-22 16:46:03.057,True,,False,False,False,3.452,1.326,1.6720000000000002,
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,03b9df58-4c94-49b9-a44c-34bfac29a33a,c1,2026-11-22 16:46:08.063,True,5.006,True,True,True,3.449,1.414,1.737,1.518
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,6982d2f1-477b-4dc2-99fb-ad57b23dd92f,c1,2026-11-22 16:46:13.277,True,5.214,True,True,True,3.15,1.029,1.883,1.741
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,d0bf8e06-7470-4e0f-8668-cdbeb68eaebd,c1,2026-11-22 16:46:18.727,True,5.45,True,True,True,2.95,1.13,1.546,2.265
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,6f4469e2-b977-4c69-866d-d44cb822ece9,c1,2026-11-22 16:46:23.135,True,4.408,True,True,True,3.424,1.351,1.825,1.44
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,cb19475d-95de-4cea-9b83-6e54348c37f0,c1,2026-11-22 16:46:28.771,True,5.636,True,True,True,3.426,1.332,1.835,2.16
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,dc0bc592-fd4e-4b03-8147-945fd618648f,c1,2026-11-22 16:46:33.796,True,5.025,True,True,True,3.091,1.225,1.6360000000000001,1.5699999999999998
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,62ebe1e1-fa1a-4fd7-b451-069dbae1a1cc,c1,2026-11-22 16:46:39.000,True,5.204,True,True,True,3.333,1.35,1.748,2.079
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,60c02775-7c74-4a3d-a424-67e30fb394ff,c1,2026-11-22 16:46:44.660,True,5.66,True,True,True,3.106,1.052,1.786,2.298
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,a95f1c9c-f610-4d06-983d-b0d5db1b9fb8,c1,2026-11-22 16:46:49.266,True,4.606,True,True,True,2.903,0.985,1.688,1.478
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,1b327f70-c48f-4228-9a69-325a7ebb7b57,c1,2026-11-22 16:46:54.563,True,5.297,True,True,True,3.169,1.308,1.615,2.365
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,54222348-b122-49ce-b329-e57c3a7edf9d,c1,2026-11-22 16:46:59.536,True,4.973,True,True,True,3.224,1.095,1.8239999999999998,1.778
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,d57be261-ab48-423a-8219-9edb918bfbe5,c1,2026-11-22 16:47:04.571,True,5.035,True,True,True,2.839,0.967,1.5899999999999999,1.788
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,cbdf2176-abea-475a-8691-2f56e91dd351,c1,2026-11-22 16:47:09.956,True,5.385,True,True,True,3.052,0.945,1.767,2.476
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,b357b8de-8b31-4d91-a876-4f298d533047,c1,2026-11-22 16:47:14.586,True,4.63,True,True,True,2.8040000000000003,1.039,1.534,1.557
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,6990b2ef-68e8-48a2-a639-4b6e7e119c42,c1,2026-11-22 16:47:19.203,True,4.617,True,True,True,3.068,1.139,1.666,1.786
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,0db90e44-23f7-44aa-9636-83bf0b76c2e1,c1,2026-11-22 16:47:24.474,True,5.271,True,True,True,3.742,1.392,1.647,2.165
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,a7110018-683d-44f8-b1e7-7659de7ebe53,c1,2026-11-22 16:47:30.795,True,6.321,True,True,True,2.8529999999999998,1.109,1.461,2.555
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,091d0053-53c3-41f4-b43d-25a8fdc952da,c1,2026-11-22 16:47:35.286,True,4.491,True,True,True,3.061,1.172,1.6600000000000001,1.611
+#16 20261123-remeasure,연속 실행,매크로 jitter,macro-jitter-12,f5c4c8bd-70e9-4531-868d-ee63032713a9,c1,2026-11-22 16:47:39.993,True,4.707,True,True,True,3.011,1.042,1.615,1.617
+#16 20261123-remeasure,연속 실행,기타 (시험·수동 계정),pilot-fast-93,5b43ff82-7346-433a-b712-8bca3e05f7b6,c1,2026-11-22 16:41:19.505,True,,False,False,False,4.674,1.9220000000000002,1.619,
+#16 20261123-remeasure,연속 실행,기타 (시험·수동 계정),pilot-fast-93,5f0bb6a4-8b39-431b-9a9b-8360fe9c8eca,c1,2026-11-22 16:41:25.296,True,5.791,True,True,True,2.525,0.679,1.409,1.053
+#16 20261123-remeasure,연속 실행,기타 (시험·수동 계정),pilot-jitter-93,68618ee7-4df8-47f5-986b-e70b0e8b6263,c1,2026-11-22 16:41:34.339,True,,False,False,False,3.468,1.229,1.8199999999999998,
+#16 20261123-remeasure,연속 실행,기타 (시험·수동 계정),pilot-jitter-93,ba70c801-6130-4b38-aca9-6f7b816dab86,c1,2026-11-22 16:41:39.661,True,5.322,True,True,True,3.402,1.314,1.689,1.826
+#16 20261123-remeasure,연속 실행,기타 (시험·수동 계정),seoyeon,d8264fe0-a08e-4b05-b540-df20442acff3,c1,2026-11-22 15:56:17.444,False,,False,False,False,,,,
+#16 20261123-remeasure,연속 실행,기타 (시험·수동 계정),shot02,a171260e-4d5b-4824-9445-ceb790332686,c1,2026-11-22 15:59:22.393,False,,False,False,False,,,,
+#16 20261123-remeasure,연속 실행,기타 (시험·수동 계정),shot02,a6db9a70-f6d1-4e60-97d6-1dd97aa225fa,c1,2026-11-22 16:01:06.840,False,104.447,True,True,True,,,,
+#16 20261123-remeasure,연속 실행,기타 (시험·수동 계정),shot02,be6f1fc5-6cfd-435d-b57d-270e0d9667c6,c1,2026-11-22 16:01:30.169,False,23.329,True,True,True,,,,

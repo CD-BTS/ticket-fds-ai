@@ -1,0 +1,162 @@
+{
+  "script": "scripts/evaluate_v3.py",
+  "datasets": {
+    "v2": {
+      "path": "data/v2/fairticket_event_based_features.csv",
+      "sha256": "b39aa53337d2992ab8226e8cada80ea76a6276195a4c0d16811bb87d52d4b180"
+    },
+    "v3": {
+      "path": "data/v3/fairticket_event_based_features.csv",
+      "sha256": "fd28f6dc4568d927d50d333b26bfdecb0a6346004f48996cf5afba0ef2eac789"
+    }
+  },
+  "datasets_unchanged_after_run": true,
+  "features": [
+    "avg_booking_interval",
+    "booking_interval_variance",
+    "cancel_rate",
+    "card_reuse_count",
+    "ip_booking_density",
+    "booking_count"
+  ],
+  "model": {
+    "class": "sklearn.ensemble.IsolationForest",
+    "n_estimators": 100,
+    "max_samples": "auto"
+  },
+  "fixed_setting": {
+    "preprocessing": "없음 (결측 그대로)",
+    "contamination": 0.2,
+    "train": 700,
+    "test": 300
+  },
+  "fpr5_protocol": {
+    "target_fpr": 0.05,
+    "train": 490,
+    "validation": 210,
+    "test": 300,
+    "threshold": "validation 정상 계정의 오탐률이 target 이하가 되는 가장 낮은 점수. test 에는 같은 모델·같은 임계값"
+  },
+  "settings": [
+    {
+      "name": "기존 모델 (결측 그대로, 혼합)",
+      "preprocessing": "분리 없음 · 결측 그대로",
+      "uses_labels_for_training_data": false
+    },
+    {
+      "name": "전처리 개선 (혼합)",
+      "preprocessing": "분리 없음 · 결측 중앙값 · log1p",
+      "uses_labels_for_training_data": false
+    },
+    {
+      "name": "정상만 학습 (레이블 사용, 상한)",
+      "preprocessing": "분리 없음 · 결측 중앙값 · log1p",
+      "uses_labels_for_training_data": true
+    },
+    {
+      "name": "저위험: Credit 규칙 통과",
+      "preprocessing": "분리 없음 · 결측 중앙값 · log1p",
+      "uses_labels_for_training_data": false
+    },
+    {
+      "name": "저위험: Credit + 기준 후보 통과",
+      "preprocessing": "분리 없음 · 결측 중앙값 · log1p",
+      "uses_labels_for_training_data": false
+    },
+    {
+      "name": "저위험: IF 자기 정제 (상위 10% 제외)",
+      "preprocessing": "분리 없음 · 결측 중앙값 · log1p",
+      "uses_labels_for_training_data": false
+    },
+    {
+      "name": "저위험: IF 자기 정제 (상위 20% 제외)",
+      "preprocessing": "분리 없음 · 결측 중앙값 · log1p",
+      "uses_labels_for_training_data": false
+    },
+    {
+      "name": "저위험: IF 자기 정제 (상위 30% 제외)",
+      "preprocessing": "분리 없음 · 결측 중앙값 · log1p",
+      "uses_labels_for_training_data": false
+    }
+  ],
+  "credit_rules_used": [
+    "간격 분산 < 1.0초² 이고 시도 5건 이상",
+    "카드 공유 4계정 이상",
+    "IP 공유 5계정 이상"
+  ],
+  "credit_candidates_added_in_wide": [
+    "평균 간격 < 10초",
+    "취소율 ≥ 50%"
+  ],
+  "model_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "generation_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "purity_shares": [
+    0.0,
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "python": "3.11.2"
+  },
+  "models_saved": false
+}

@@ -1,0 +1,192 @@
+{
+  "script": "scripts/evaluate_session.py",
+  "datasets": {
+    "기존 (30일 전체)": {
+      "path": "data/v3/fairticket_event_based_features.csv",
+      "sha256": "fd28f6dc4568d927d50d333b26bfdecb0a6346004f48996cf5afba0ef2eac789"
+    },
+    "세션: 모든 간격": {
+      "path": "data/v3_session/fairticket_event_based_features_pooled.csv",
+      "sha256": "30edbb867a61a4b4df018836fb0ab1126c450898ba6693192504d3c3f3cc70af"
+    },
+    "세션 평균의 중앙값": {
+      "path": "data/v3_session/fairticket_event_based_features_median.csv",
+      "sha256": "7735362da5c8329bce86463891b0d4cab20122c76805894e6c557da25568d327"
+    },
+    "세션 평균의 최솟값": {
+      "path": "data/v3_session/fairticket_event_based_features_min.csv",
+      "sha256": "3d4233f2794f16829ade47f87dc4794c83fba5b24d49fb21e903516d46f3985b"
+    },
+    "최근 세션": {
+      "path": "data/v3_session/fairticket_event_based_features_latest.csv",
+      "sha256": "8e586db68c2cbc16bc6204f391917d760524691df23ca4b464081ee087db7b09"
+    }
+  },
+  "datasets_unchanged_after_run": true,
+  "features": [
+    "avg_booking_interval",
+    "booking_interval_variance",
+    "cancel_rate",
+    "card_reuse_count",
+    "ip_booking_density",
+    "booking_count"
+  ],
+  "changed_features": [
+    "avg_booking_interval",
+    "booking_interval_variance"
+  ],
+  "baseline": {
+    "training": "혼합 (레이블 미사용)",
+    "preprocessing": "결측 중앙값 대체 + log1p",
+    "n_estimators": 100,
+    "max_samples": 256
+  },
+  "split": {
+    "train": 490,
+    "validation": 210,
+    "test": 300,
+    "random_state": 42
+  },
+  "threshold": "validation 정상 계정의 오탐률이 0.05 이하가 되는 가장 낮은 점수. test 에는 같은 모델·같은 임계값",
+  "search_space": {
+    "features": [
+      "기존 (30일 전체)",
+      "세션: 모든 간격",
+      "세션 평균의 중앙값",
+      "세션 평균의 최솟값",
+      "최근 세션"
+    ],
+    "n_estimators": [
+      100,
+      200,
+      300
+    ],
+    "max_samples": [
+      64,
+      128,
+      256
+    ]
+  },
+  "selection": {
+    "criterion": "validation Recall (모델 seed 10개 평균), 동률이면 F1",
+    "selected_features": "기존 (30일 전체)",
+    "selected_n_estimators": 100,
+    "selected_max_samples": 128,
+    "selected_within_existing_features": [
+      100,
+      128
+    ],
+    "best_session_aggregation": "세션: 모든 간격",
+    "best_session_tree_setting": [
+      300,
+      64
+    ],
+    "best_tree_setting_per_features": {
+      "기존 (30일 전체)": [
+        100,
+        128
+      ],
+      "세션: 모든 간격": [
+        300,
+        64
+      ],
+      "세션 평균의 중앙값": [
+        300,
+        64
+      ],
+      "세션 평균의 최솟값": [
+        300,
+        64
+      ],
+      "최근 세션": [
+        300,
+        64
+      ]
+    }
+  },
+  "supplementary_training_compositions": [
+    {
+      "name": "혼합",
+      "uses_labels": false
+    },
+    {
+      "name": "저위험: Credit 규칙 통과",
+      "uses_labels": false
+    },
+    {
+      "name": "저위험: Credit + 기준 후보 통과",
+      "uses_labels": false
+    },
+    {
+      "name": "저위험: IF 자기 정제 (상위 20% 제외)",
+      "uses_labels": false
+    },
+    {
+      "name": "정상만 (레이블 사용, 상한)",
+      "uses_labels": true
+    }
+  ],
+  "model_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "generation_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "python": "3.11.2"
+  },
+  "models_saved": false
+}

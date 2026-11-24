@@ -1,0 +1,14 @@
+{
+  "datasets": {
+    "이벤트 기반 v2": {
+      "path": "data/v2/fairticket_event_based_features.csv",
+      "sha256": "b39aa53337d2992ab8226e8cada80ea76a6276195a4c0d16811bb87d52d4b180"
+    },
+    "이벤트 기반 v3": {
+      "path": "data/v3/fairticket_event_based_features.csv",
+      "sha256": "fd28f6dc4568d927d50d333b26bfdecb0a6346004f48996cf5afba0ef2eac789"
+    }
+  },
+  "datasets_unchanged_after_run": true,
+  "min_gaps_for_account_mean": 5
+}

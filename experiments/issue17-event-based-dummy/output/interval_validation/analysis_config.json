@@ -1,0 +1,40 @@
+{
+  "script": "scripts/analyze_interval_validation.py",
+  "read_only": true,
+  "sources": [
+    {
+      "name": "#14 count",
+      "path": "issue14-real-validation/data/count/events.csv",
+      "macro_run_mode": "시도마다 프로세스 재실행"
+    },
+    {
+      "name": "#16 20261122-main",
+      "path": "issue16-booking-interval/runs/20261122-main/raw_events.csv",
+      "macro_run_mode": "시도마다 프로세스 재실행"
+    },
+    {
+      "name": "#16 20261122-continuous",
+      "path": "issue16-booking-interval/runs/20261122-continuous/raw_events.csv",
+      "macro_run_mode": "연속 실행"
+    },
+    {
+      "name": "#16 20261123-remeasure",
+      "path": "issue16-booking-interval/runs/20261123-remeasure/raw_events.csv",
+      "macro_run_mode": "연속 실행"
+    }
+  ],
+  "session_gap_seconds": 1800,
+  "inputs_sha256": {
+    "issue17-event-based-dummy\\data\\v3\\events.csv": "fce437033dbcfe1f5edac67f5b643e6713d9cdd1d95d09b031678d1b27911b76",
+    "issue17-event-based-dummy\\data\\v3\\fairticket_event_based_features.csv": "fd28f6dc4568d927d50d333b26bfdecb0a6346004f48996cf5afba0ef2eac789",
+    "issue17-event-based-dummy\\data\\v3_session\\session_features_all.csv": "48a0a08dd72c232c864a8f3e92229a00ed7200a8cd0c533ee8194f7bb6247db0",
+    "issue17-event-based-dummy\\config\\scenarios_v3.json": "e2c435500f3adc3bd1cd3c2af27300b6875ac19048223cde4cf2d787bd3a4c48",
+    "issue14-real-validation\\data\\count\\events.csv": "a852ee91dd5d8a758f0d2d811b484647bf51cadf22a5214eec20a54543baffde",
+    "issue16-booking-interval\\runs\\20261122-main\\raw_events.csv": "ef63e6146d813306e0600397b4b73db6b9a2d7793a79f0ec6666dd7b13cbb53a",
+    "issue16-booking-interval\\runs\\20261122-continuous\\raw_events.csv": "26ebc72723700419b1764c2a7cdcc4b0c3750a82cadee970de2974cf4d63950c",
+    "issue16-booking-interval\\runs\\20261123-remeasure\\raw_events.csv": "539f82f8de4eff8aab3d539c1dfa7d8cc59631637728bc3ef1ff6e848e8ac97f"
+  },
+  "inputs_unchanged_after_run": true,
+  "datasets_generated": false,
+  "models_trained": false
+}
