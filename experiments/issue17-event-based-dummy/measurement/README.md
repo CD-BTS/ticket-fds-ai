@@ -264,7 +264,7 @@ cd <작업 폴더>\demo-ticketing\e2e
 
 | 출력 (`measurement\output\<이름>\`) | 내용 |
 |---|---|
-| `attempt_counts.csv` | 참가자·실험·계정별 시도 수, 결과별 건수, 선점 거절 수, 간격 수 |
+| `attempt_counts.csv` (git 제외: `data/_analysis/<이름>/`) | 참가자·실험·계정별 시도 수, 결과별 건수, 선점 거절 수, 간격 수 |
 | `stage_times_by_experiment.csv`, `stage_times_by_participant.csv` | 단계별 소요 시간의 건수, 평균, 중앙값, 표준편차, 최소, 5·25·75·95%, 최대 |
 | `gap_summary.csv` | 연속 시도 간격. 세션 정의 두 가지: **같은 공연 안**(공연+30분), **활동 세션**(30분만) |
 | `retry_gap_by_previous_outcome.csv` | 앞 시도의 결과(완료, 좌석 이탈, 결제 이탈, 만료, 선점 거절 여부)별 재시도 간격 |

@@ -61,7 +61,7 @@
 
 ### 1.3 계정별 이벤트와 실제로 수행된 시나리오
 
-출처: `attempt_counts.csv`, `account_summary.csv`
+출처: `attempt_counts.csv`, `account_summary.csv` (계정 단위 표라 git 에 올리지 않는다: `measurement/data/_analysis/`)
 
 | 수집 | 계정 | 이벤트 (시도 / 예매) | 시도 | 완료 | 좌석 이탈 | 결제 이탈 | 선점 만료 | 선점 거절 | 예매한 공연 |
 |---|---|---|---|---|---|---|---|---|---|
@@ -148,7 +148,7 @@
 
 ### 2.2 계정별 (같은 사람의 반복 측정)
 
-출처: `account_summary.csv`, `stage_times_by_account.csv`
+출처: `account_summary.csv`, `stage_times_by_account.csv` (계정 단위 표라 git 에 올리지 않는다: `measurement/data/_analysis/`)
 
 | 계정 | 시도 / 완료 | 예매 1건: 중앙값 (범위) | 좌석 선택 중앙값 | 결제 중앙값 | 간격: 같은 공연 안 (수, 중앙값) | 간격: 활동 세션 (수, 중앙값, 범위) | 완료 → 다음 시작 중앙값 |
 |---|---|---|---|---|---|---|---|
@@ -678,7 +678,7 @@ v4 의 학습·평가 데이터는 전부 합성이다. 실측은 그 바깥에�
 | 추가 수집 원본 (이전 수집 포함 309건) | `measurement/data/20261124-add/` | 제외 |
 | 이전 수집 원본 (132건, 변경 없음) | `measurement/data/20261124-u01/` | 제외 |
 | 시도 1행, 간격 1행, 계정별 Feature, 완료 순서별 시간 | `measurement/data/_analysis/20261124-all/` | 제외 |
-| 집계표 13개, 그래프 2장 | `measurement/output/20261124-all/` | 내용을 본 뒤 결정 |
+| 집계표 9개, 그래프 2장 (계정 단위 표 4개는 위의 git 제외 폴더에 있다) | `measurement/output/20261124-all/` | 포함 |
 | 이전 수집만의 분석 결과 (변경 없음) | `measurement/output/20261124-u01/` | |
 
 ```powershell

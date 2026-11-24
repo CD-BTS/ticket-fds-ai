@@ -34,6 +34,7 @@ from compare_if_models import GRID, INK, MUTED, save, style  # noqa: E402
 from generate_events import load_config, sha256  # noqa: E402
 
 OUT = EXP / "output" / "interval_validation"
+PRIVATE = EXP / "data" / "interval_validation"  # 실측 계정·시도 단위의 표 (data/ 는 git 제외)
 ISSUE14, ISSUE16 = EXP.parent / "issue14-real-validation", EXP.parent / "issue16-booking-interval"
 RELAUNCH, CONTINUOUS = "시도마다 프로세스 재실행", "연속 실행"
 SOURCES = [  # (이름, 파일, 매크로의 실행 방식)
@@ -122,8 +123,9 @@ def main():
                  EXP / "data" / "v3_session" / "session_features_all.csv", EXP / "config" / "scenarios_v3.json"] + [path for _, path, _ in SOURCES]
     before = {str(path.relative_to(EXP.parent)): sha256(path) for path in protected}
 
-    def csv(frame, name):
-        frame.to_csv(OUT / name, index=False, encoding="utf-8-sig")
+    def csv(frame, name, folder=OUT):
+        folder.mkdir(parents=True, exist_ok=True)
+        frame.to_csv(folder / name, index=False, encoding="utf-8-sig")
 
     packs = [read_real(*source) for source in SOURCES]
     real = pd.concat([pack[0] for pack in packs], ignore_index=True)
@@ -138,9 +140,9 @@ def main():
                      "gaps_concert_30min": len(concert), "gaps_30min_only": len(gap_only), "gaps_across_concerts": int((part["in_session_gap_only"] & ~part["same_concert"]).sum()),
                      **{f"concert30_{k}": v for k, v in describe(concert).items() if k != "n"}, **{f"gap30_{k}": v for k, v in describe(gap_only).items() if k != "n"}})
     accounts_table = pd.DataFrame(rows)
-    csv(accounts_table, "measured_accounts.csv")
+    csv(accounts_table, "measured_accounts.csv", PRIVATE)
     csv(real[["source", "macro_run_mode", "kind", "external_user_id", "attempt", "concert", "start", "completed", "gap", "same_concert", "in_session_concert",
-              "in_session_gap_only", "start_to_booking", "seat", "hold_to_booking", "previous_done_to_start"]], "measured_attempts.csv")
+              "in_session_gap_only", "start_to_booking", "seat", "hold_to_booking", "previous_done_to_start"]], "measured_attempts.csv", PRIVATE)
 
     # ---- 2) 실측: 종류 × 실행 방식 × 세션 정의별 간격 분포 ----
     rows = []
@@ -235,7 +237,7 @@ def main():
                      "share_of_v3_normal_gaps_below": float((normal_gaps < value).mean()),
                      "share_of_v3_anomaly_account_means_above": float((anomaly_means > value).mean())})
     position = pd.DataFrame(rows)
-    csv(position, "measured_position_in_v3.csv")
+    csv(position, "measured_position_in_v3.csv", PRIVATE)
 
     # ---- 7) 30일 분산이 실제로 나타내는 것 ----
     features = pd.read_csv(EXP / "data" / "v3_session" / "session_features_all.csv")

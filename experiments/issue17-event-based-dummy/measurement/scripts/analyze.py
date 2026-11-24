@@ -235,7 +235,7 @@ def main():
                    attempts_with_hold_rejection=("hold_rejections", lambda v: int((v > 0).sum())), hold_rejections=("hold_rejections", "sum"),
                    cancelled_later=("cancelled_later", "sum"), gaps_same_concert_30min=("in_session_concert", "sum"), gaps_30min_only=("in_session_gap_only", "sum"),
                    first_start_utc=("start", "min"), last_start_utc=("start", "max")).reset_index())
-    csv(counts, public, "attempt_counts.csv")
+    csv(counts, private, "attempt_counts.csv")  # 계정 단위 표: git 에 올리지 않는다
 
     # ---- 2) 단계별 소요 시간 ----
     label = attempts.assign(experiment_name=attempts["experiment"].map(EXPERIMENTS))
@@ -259,7 +259,7 @@ def main():
     # 한 참가자의 시도 여러 건은 독립 표본이 아니다. 참가자(계정)마다 중앙값을 하나씩 내고, 그 값들을 나란히 본다.
     keys = ["wave", "participant", "experiment", "external_user_id"]
     stage_by_account = summarize(label, keys, DURATIONS)
-    csv(stage_by_account, public, "stage_times_by_account.csv")
+    csv(stage_by_account, private, "stage_times_by_account.csv")  # 계정 단위 표: git 에 올리지 않는다
     csv(summarize(label, ["wave", "experiment_name"], DURATIONS), public, "stage_times_by_wave.csv")
     rows = []
     for key, part in label.groupby(keys, sort=False):
@@ -278,7 +278,7 @@ def main():
                      "account_started_utc": part["start"].min(), "account_last_event_utc": part["t_last_event"].max()})
     by_account = pd.DataFrame(rows).sort_values("account_started_utc").reset_index(drop=True)
     by_account["seconds_since_previous_account_ended"] = (by_account["account_started_utc"] - by_account["account_last_event_utc"].shift()).dt.total_seconds()
-    csv(by_account, public, "account_summary.csv")
+    csv(by_account, private, "account_summary.csv")  # 계정 단위 표: git 에 올리지 않는다
     # 참가자 단위: 계정별 중앙값의 분포 (표본 수 = 참가자·계정 수)
     rows = []
     for experiment, part in by_account.groupby("experiment", sort=False):
@@ -290,7 +290,7 @@ def main():
                          "min": values.min(), "median": values.median(), "max": values.max(), "max_over_min": values.max() / values.min() if len(values) and values.min() > 0 else np.nan,
                          "values": " / ".join(f"{a}: {v:.2f}" for a, v in zip(part.loc[part[column].notna(), "external_user_id"], values))})
     between = pd.DataFrame(rows)
-    csv(between, public, "between_account_summary.csv")
+    csv(between, private, "between_account_summary.csv")  # 계정 단위 표: git 에 올리지 않는다
     order_rows = []
     for account, part in label.sort_values("start").groupby("external_user_id", sort=False):
         done = part[part["outcome"] == "completed"].reset_index(drop=True)

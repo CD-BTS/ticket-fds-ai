@@ -417,15 +417,15 @@ v3 에서 한 세션 안의 간격은 `시도 1건의 소요 시간 + 다음 시
 
 | 내용 | 파일 (`output/interval_validation/`) |
 |---|---|
-| 실측 계정별 시도 수·간격 수 | `measured_accounts.csv` |
-| 실측 시도 1행 (간격, 단계 시간) | `measured_attempts.csv` |
+| 실측 계정별 시도 수·간격 수 | `measured_accounts.csv` (git 제외: `data/interval_validation/`) |
+| 실측 시도 1행 (간격, 단계 시간) | `measured_attempts.csv` (git 제외: `data/interval_validation/`) |
 | 실측 간격 분포 (종류 × 실행 방식 × 세션 정의) | `measured_gap_summary.csv` |
 | 실측 시도의 구성 | `measured_stage_times.csv` |
 | 이벤트 시각 확인 | `timestamp_check.csv` |
 | v3 세션 안 간격 (시나리오별, 도구 프로필별) | `synthetic_gap_summary.csv`, `synthetic_gap_by_tool_profile.csv` |
 | v3 시도의 구성 | `synthetic_stage_times.csv` |
 | 생성 파라미터와 근거 | `generation_parameters.csv` |
-| 실측 값이 v3 분포에서 차지하는 위치 | `measured_position_in_v3.csv` |
+| 실측 값이 v3 분포에서 차지하는 위치 | `measured_position_in_v3.csv` (git 제외: `data/interval_validation/`) |
 | 30일 분산이 나타내는 것 | `variance_30d_meaning.csv` |
 | 그래프 2장 | `figures/` |
 | 입력 파일의 해시 (실행 전후 동일) | `analysis_config.json` |
