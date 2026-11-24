@@ -1,0 +1,694 @@
+﻿dataset,group_type,group,feature_a,feature_b,spearman
+A 원본,전체,전체,avg_booking_interval,booking_interval_variance,0.6162116590951231
+A 원본,전체,전체,avg_booking_interval,cancel_rate,-0.3936969618736921
+A 원본,전체,전체,avg_booking_interval,card_reuse_count,-0.4402696372642128
+A 원본,전체,전체,avg_booking_interval,ip_booking_density,-0.12830411010298326
+A 원본,전체,전체,avg_booking_interval,booking_count,-0.5737672237788756
+A 원본,전체,전체,avg_booking_interval,seat_selection_latency,0.6238879152712211
+A 원본,전체,전체,booking_interval_variance,cancel_rate,-0.3866238566046312
+A 원본,전체,전체,booking_interval_variance,card_reuse_count,-0.4360893573607668
+A 원본,전체,전체,booking_interval_variance,ip_booking_density,-0.17977085581942973
+A 원본,전체,전체,booking_interval_variance,booking_count,-0.5738074882328705
+A 원본,전체,전체,booking_interval_variance,seat_selection_latency,0.5805901363366838
+A 원본,전체,전체,cancel_rate,card_reuse_count,0.35175856963087565
+A 원본,전체,전체,cancel_rate,ip_booking_density,0.05677741089255498
+A 원본,전체,전체,cancel_rate,booking_count,0.40673257428078324
+A 원본,전체,전체,cancel_rate,seat_selection_latency,-0.40394956105171687
+A 원본,전체,전체,card_reuse_count,ip_booking_density,0.3742527694311142
+A 원본,전체,전체,card_reuse_count,booking_count,0.4499784722701838
+A 원본,전체,전체,card_reuse_count,seat_selection_latency,-0.421057942748687
+A 원본,전체,전체,ip_booking_density,booking_count,0.14926786230280434
+A 원본,전체,전체,ip_booking_density,seat_selection_latency,-0.03539654759243047
+A 원본,전체,전체,booking_count,seat_selection_latency,-0.5615743934796248
+A 원본,레이블,정상,avg_booking_interval,booking_interval_variance,0.2573907326821211
+A 원본,레이블,정상,avg_booking_interval,cancel_rate,-0.012862028095367644
+A 원본,레이블,정상,avg_booking_interval,card_reuse_count,
+A 원본,레이블,정상,avg_booking_interval,ip_booking_density,0.059360056777107276
+A 원본,레이블,정상,avg_booking_interval,booking_count,-0.17293437657982358
+A 원본,레이블,정상,avg_booking_interval,seat_selection_latency,0.2796804348533894
+A 원본,레이블,정상,booking_interval_variance,cancel_rate,0.0007931721534932615
+A 원본,레이블,정상,booking_interval_variance,card_reuse_count,
+A 원본,레이블,정상,booking_interval_variance,ip_booking_density,-0.0306717701549782
+A 원본,레이블,정상,booking_interval_variance,booking_count,-0.17423375816675735
+A 원본,레이블,정상,booking_interval_variance,seat_selection_latency,0.19708379581672744
+A 원본,레이블,정상,cancel_rate,card_reuse_count,
+A 원본,레이블,정상,cancel_rate,ip_booking_density,-0.11634062374102976
+A 원본,레이블,정상,cancel_rate,booking_count,0.01792901193517304
+A 원본,레이블,정상,cancel_rate,seat_selection_latency,-0.03702852794438661
+A 원본,레이블,정상,card_reuse_count,ip_booking_density,
+A 원본,레이블,정상,card_reuse_count,booking_count,
+A 원본,레이블,정상,card_reuse_count,seat_selection_latency,
+A 원본,레이블,정상,ip_booking_density,booking_count,-0.035569159257531596
+A 원본,레이블,정상,ip_booking_density,seat_selection_latency,0.19504909745575402
+A 원본,레이블,정상,booking_count,seat_selection_latency,-0.1580403458866673
+A 원본,레이블,이상,avg_booking_interval,booking_interval_variance,0.7764903521708916
+A 원본,레이블,이상,avg_booking_interval,cancel_rate,0.6435643884388301
+A 원본,레이블,이상,avg_booking_interval,card_reuse_count,0.37368397835223
+A 원본,레이블,이상,avg_booking_interval,ip_booking_density,0.3829045320229174
+A 원본,레이블,이상,avg_booking_interval,booking_count,-0.5361277534928889
+A 원본,레이블,이상,avg_booking_interval,seat_selection_latency,0.645668469903156
+A 원본,레이블,이상,booking_interval_variance,cancel_rate,0.6041578393766381
+A 원본,레이블,이상,booking_interval_variance,card_reuse_count,0.41212653176696057
+A 원본,레이블,이상,booking_interval_variance,ip_booking_density,0.436069589329782
+A 원본,레이블,이상,booking_interval_variance,booking_count,-0.5428600730226122
+A 원본,레이블,이상,booking_interval_variance,seat_selection_latency,0.64952726437402
+A 원본,레이블,이상,cancel_rate,card_reuse_count,-0.1338880663783971
+A 원본,레이블,이상,cancel_rate,ip_booking_density,-0.045919225908221215
+A 원본,레이블,이상,cancel_rate,booking_count,-0.4568020774333807
+A 원본,레이블,이상,cancel_rate,seat_selection_latency,0.4426556624019461
+A 원본,레이블,이상,card_reuse_count,ip_booking_density,0.7247203914074333
+A 원본,레이블,이상,card_reuse_count,booking_count,-0.20873529393534074
+A 원본,레이블,이상,card_reuse_count,seat_selection_latency,0.4661619021339294
+A 원본,레이블,이상,ip_booking_density,booking_count,-0.21369570879538272
+A 원본,레이블,이상,ip_booking_density,seat_selection_latency,0.4454959119425474
+A 원본,레이블,이상,booking_count,seat_selection_latency,-0.4567855796704848
+A 원본,시나리오,normal,avg_booking_interval,booking_interval_variance,0.006217858594047798
+A 원본,시나리오,normal,avg_booking_interval,cancel_rate,0.020242823033405685
+A 원본,시나리오,normal,avg_booking_interval,card_reuse_count,
+A 원본,시나리오,normal,avg_booking_interval,ip_booking_density,0.0007405616344090866
+A 원본,시나리오,normal,avg_booking_interval,booking_count,0.021745069508275584
+A 원본,시나리오,normal,avg_booking_interval,seat_selection_latency,-0.03636531078619752
+A 원본,시나리오,normal,booking_interval_variance,cancel_rate,0.07143832803013797
+A 원본,시나리오,normal,booking_interval_variance,card_reuse_count,
+A 원본,시나리오,normal,booking_interval_variance,ip_booking_density,-0.003640047517738993
+A 원본,시나리오,normal,booking_interval_variance,booking_count,-0.03910847193683426
+A 원본,시나리오,normal,booking_interval_variance,seat_selection_latency,-0.03402955841562164
+A 원본,시나리오,normal,cancel_rate,card_reuse_count,
+A 원본,시나리오,normal,cancel_rate,ip_booking_density,-0.0376431676419295
+A 원본,시나리오,normal,cancel_rate,booking_count,-0.03242044282535194
+A 원본,시나리오,normal,cancel_rate,seat_selection_latency,6.698443278095806e-05
+A 원본,시나리오,normal,card_reuse_count,ip_booking_density,
+A 원본,시나리오,normal,card_reuse_count,booking_count,
+A 원본,시나리오,normal,card_reuse_count,seat_selection_latency,
+A 원본,시나리오,normal,ip_booking_density,booking_count,-0.032436026532002206
+A 원본,시나리오,normal,ip_booking_density,seat_selection_latency,-0.02094911179385548
+A 원본,시나리오,normal,booking_count,seat_selection_latency,-0.009331135489110595
+A 원본,시나리오,fast_normal,avg_booking_interval,booking_interval_variance,0.0737922146590507
+A 원본,시나리오,fast_normal,avg_booking_interval,cancel_rate,-0.10802656797362528
+A 원본,시나리오,fast_normal,avg_booking_interval,card_reuse_count,
+A 원본,시나리오,fast_normal,avg_booking_interval,ip_booking_density,
+A 원본,시나리오,fast_normal,avg_booking_interval,booking_count,0.0925916020587181
+A 원본,시나리오,fast_normal,avg_booking_interval,seat_selection_latency,-0.046965726412908686
+A 원본,시나리오,fast_normal,booking_interval_variance,cancel_rate,0.028659610535950907
+A 원본,시나리오,fast_normal,booking_interval_variance,card_reuse_count,
+A 원본,시나리오,fast_normal,booking_interval_variance,ip_booking_density,
+A 원본,시나리오,fast_normal,booking_interval_variance,booking_count,0.08717404022872254
+A 원본,시나리오,fast_normal,booking_interval_variance,seat_selection_latency,-0.037138872696540266
+A 원본,시나리오,fast_normal,cancel_rate,card_reuse_count,
+A 원본,시나리오,fast_normal,cancel_rate,ip_booking_density,
+A 원본,시나리오,fast_normal,cancel_rate,booking_count,-0.048424452478979856
+A 원본,시나리오,fast_normal,cancel_rate,seat_selection_latency,0.09976734542052448
+A 원본,시나리오,fast_normal,card_reuse_count,ip_booking_density,
+A 원본,시나리오,fast_normal,card_reuse_count,booking_count,
+A 원본,시나리오,fast_normal,card_reuse_count,seat_selection_latency,
+A 원본,시나리오,fast_normal,ip_booking_density,booking_count,
+A 원본,시나리오,fast_normal,ip_booking_density,seat_selection_latency,
+A 원본,시나리오,fast_normal,booking_count,seat_selection_latency,0.01593904905983156
+A 원본,시나리오,shared_ip,avg_booking_interval,booking_interval_variance,0.0900301828782642
+A 원본,시나리오,shared_ip,avg_booking_interval,cancel_rate,-0.02847430730251472
+A 원본,시나리오,shared_ip,avg_booking_interval,card_reuse_count,
+A 원본,시나리오,shared_ip,avg_booking_interval,ip_booking_density,0.0418890204564196
+A 원본,시나리오,shared_ip,avg_booking_interval,booking_count,-0.002378245544446218
+A 원본,시나리오,shared_ip,avg_booking_interval,seat_selection_latency,-0.017568892646217443
+A 원본,시나리오,shared_ip,booking_interval_variance,cancel_rate,-0.023596293299190527
+A 원본,시나리오,shared_ip,booking_interval_variance,card_reuse_count,
+A 원본,시나리오,shared_ip,booking_interval_variance,ip_booking_density,0.17985881224623604
+A 원본,시나리오,shared_ip,booking_interval_variance,booking_count,0.08123940530982911
+A 원본,시나리오,shared_ip,booking_interval_variance,seat_selection_latency,-0.12330656905191223
+A 원본,시나리오,shared_ip,cancel_rate,card_reuse_count,
+A 원본,시나리오,shared_ip,cancel_rate,ip_booking_density,-0.2536325896026617
+A 원본,시나리오,shared_ip,cancel_rate,booking_count,-0.060210049302478454
+A 원본,시나리오,shared_ip,cancel_rate,seat_selection_latency,-0.17576331361348635
+A 원본,시나리오,shared_ip,card_reuse_count,ip_booking_density,
+A 원본,시나리오,shared_ip,card_reuse_count,booking_count,
+A 원본,시나리오,shared_ip,card_reuse_count,seat_selection_latency,
+A 원본,시나리오,shared_ip,ip_booking_density,booking_count,0.2799499484481555
+A 원본,시나리오,shared_ip,ip_booking_density,seat_selection_latency,-0.03257339428493583
+A 원본,시나리오,shared_ip,booking_count,seat_selection_latency,0.09225416212529637
+A 원본,시나리오,frequent_cancel,avg_booking_interval,booking_interval_variance,-0.1554979337168787
+A 원본,시나리오,frequent_cancel,avg_booking_interval,cancel_rate,-0.33927558544688435
+A 원본,시나리오,frequent_cancel,avg_booking_interval,card_reuse_count,
+A 원본,시나리오,frequent_cancel,avg_booking_interval,ip_booking_density,
+A 원본,시나리오,frequent_cancel,avg_booking_interval,booking_count,-0.08747882235684593
+A 원본,시나리오,frequent_cancel,avg_booking_interval,seat_selection_latency,-0.04902357993679605
+A 원본,시나리오,frequent_cancel,booking_interval_variance,cancel_rate,0.20281986873024876
+A 원본,시나리오,frequent_cancel,booking_interval_variance,card_reuse_count,
+A 원본,시나리오,frequent_cancel,booking_interval_variance,ip_booking_density,
+A 원본,시나리오,frequent_cancel,booking_interval_variance,booking_count,-0.00024641921790660823
+A 원본,시나리오,frequent_cancel,booking_interval_variance,seat_selection_latency,0.20800583421116603
+A 원본,시나리오,frequent_cancel,cancel_rate,card_reuse_count,
+A 원본,시나리오,frequent_cancel,cancel_rate,ip_booking_density,
+A 원본,시나리오,frequent_cancel,cancel_rate,booking_count,-0.06661532857408642
+A 원본,시나리오,frequent_cancel,cancel_rate,seat_selection_latency,0.130702536261243
+A 원본,시나리오,frequent_cancel,card_reuse_count,ip_booking_density,
+A 원본,시나리오,frequent_cancel,card_reuse_count,booking_count,
+A 원본,시나리오,frequent_cancel,card_reuse_count,seat_selection_latency,
+A 원본,시나리오,frequent_cancel,ip_booking_density,booking_count,
+A 원본,시나리오,frequent_cancel,ip_booking_density,seat_selection_latency,
+A 원본,시나리오,frequent_cancel,booking_count,seat_selection_latency,0.1137635389335508
+A 원본,시나리오,fast,avg_booking_interval,booking_interval_variance,-0.1318573048597084
+A 원본,시나리오,fast,avg_booking_interval,cancel_rate,0.12121000377210626
+A 원본,시나리오,fast,avg_booking_interval,card_reuse_count,-0.17728730571636275
+A 원본,시나리오,fast,avg_booking_interval,ip_booking_density,-0.159013187835225
+A 원본,시나리오,fast,avg_booking_interval,booking_count,-0.030136214735436487
+A 원본,시나리오,fast,avg_booking_interval,seat_selection_latency,0.02480330278865687
+A 원본,시나리오,fast,booking_interval_variance,cancel_rate,0.0613107822410148
+A 원본,시나리오,fast,booking_interval_variance,card_reuse_count,-0.24340885320524874
+A 원본,시나리오,fast,booking_interval_variance,ip_booking_density,-0.12065367650637271
+A 원본,시나리오,fast,booking_interval_variance,booking_count,-0.05022221198719351
+A 원본,시나리오,fast,booking_interval_variance,seat_selection_latency,-0.04485349796360497
+A 원본,시나리오,fast,cancel_rate,card_reuse_count,-0.2326702273285466
+A 원본,시나리오,fast,cancel_rate,ip_booking_density,-0.17660681898620306
+A 원본,시나리오,fast,cancel_rate,booking_count,0.07674405427256537
+A 원본,시나리오,fast,cancel_rate,seat_selection_latency,-0.07680103660749342
+A 원본,시나리오,fast,card_reuse_count,ip_booking_density,0.045963350221779484
+A 원본,시나리오,fast,card_reuse_count,booking_count,0.02149695496299559
+A 원본,시나리오,fast,card_reuse_count,seat_selection_latency,0.12179458281227044
+A 원본,시나리오,fast,ip_booking_density,booking_count,0.012604780499836236
+A 원본,시나리오,fast,ip_booking_density,seat_selection_latency,-0.24865522753416316
+A 원본,시나리오,fast,booking_count,seat_selection_latency,-0.00381180961005543
+A 원본,시나리오,jitter,avg_booking_interval,booking_interval_variance,-0.06280518558252665
+A 원본,시나리오,jitter,avg_booking_interval,cancel_rate,-0.04415446914619994
+A 원본,시나리오,jitter,avg_booking_interval,card_reuse_count,0.14748858472314566
+A 원본,시나리오,jitter,avg_booking_interval,ip_booking_density,-0.056367420594920045
+A 원본,시나리오,jitter,avg_booking_interval,booking_count,0.06380964531015383
+A 원본,시나리오,jitter,avg_booking_interval,seat_selection_latency,0.09578792536892036
+A 원본,시나리오,jitter,booking_interval_variance,cancel_rate,0.062974289318865
+A 원본,시나리오,jitter,booking_interval_variance,card_reuse_count,-0.14339724740304663
+A 원본,시나리오,jitter,booking_interval_variance,ip_booking_density,-0.03600064189969807
+A 원본,시나리오,jitter,booking_interval_variance,booking_count,0.09271032986640965
+A 원본,시나리오,jitter,booking_interval_variance,seat_selection_latency,-0.1863293136394026
+A 원본,시나리오,jitter,cancel_rate,card_reuse_count,0.13396827576102108
+A 원본,시나리오,jitter,cancel_rate,ip_booking_density,0.19259867852740828
+A 원본,시나리오,jitter,cancel_rate,booking_count,0.23254080564372948
+A 원본,시나리오,jitter,cancel_rate,seat_selection_latency,0.3803013841866478
+A 원본,시나리오,jitter,card_reuse_count,ip_booking_density,-0.006010789966443936
+A 원본,시나리오,jitter,card_reuse_count,booking_count,0.0
+A 원본,시나리오,jitter,card_reuse_count,seat_selection_latency,0.1000309282653052
+A 원본,시나리오,jitter,ip_booking_density,booking_count,-0.08897346251283299
+A 원본,시나리오,jitter,ip_booking_density,seat_selection_latency,0.32847478758929566
+A 원본,시나리오,jitter,booking_count,seat_selection_latency,-0.11463699772694082
+A 원본,시나리오,multi_account,avg_booking_interval,booking_interval_variance,-0.07631839780252868
+A 원본,시나리오,multi_account,avg_booking_interval,cancel_rate,0.019993848058432278
+A 원본,시나리오,multi_account,avg_booking_interval,card_reuse_count,0.18717503829407384
+A 원본,시나리오,multi_account,avg_booking_interval,ip_booking_density,0.048926929520643085
+A 원본,시나리오,multi_account,avg_booking_interval,booking_count,0.01739824219605991
+A 원본,시나리오,multi_account,avg_booking_interval,seat_selection_latency,0.049500043606323874
+A 원본,시나리오,multi_account,booking_interval_variance,cancel_rate,-0.20157211209842787
+A 원본,시나리오,multi_account,booking_interval_variance,card_reuse_count,-0.009125864015135064
+A 원본,시나리오,multi_account,booking_interval_variance,ip_booking_density,-0.20911518071675783
+A 원본,시나리오,multi_account,booking_interval_variance,booking_count,0.10569113839273532
+A 원본,시나리오,multi_account,booking_interval_variance,seat_selection_latency,-0.07947767130065371
+A 원본,시나리오,multi_account,cancel_rate,card_reuse_count,0.1608698819412181
+A 원본,시나리오,multi_account,cancel_rate,ip_booking_density,0.2505708008290141
+A 원본,시나리오,multi_account,cancel_rate,booking_count,-0.09892443242478964
+A 원본,시나리오,multi_account,cancel_rate,seat_selection_latency,-0.01640829342981238
+A 원본,시나리오,multi_account,card_reuse_count,ip_booking_density,-0.05153312456246726
+A 원본,시나리오,multi_account,card_reuse_count,booking_count,-0.1344323507673213
+A 원본,시나리오,multi_account,card_reuse_count,seat_selection_latency,0.1860250231228081
+A 원본,시나리오,multi_account,ip_booking_density,booking_count,-0.07383649257369898
+A 원본,시나리오,multi_account,ip_booking_density,seat_selection_latency,0.2604553121716992
+A 원본,시나리오,multi_account,booking_count,seat_selection_latency,-0.16327876368034855
+A 원본,시나리오,hold_cancel,avg_booking_interval,booking_interval_variance,-0.010971358286621546
+A 원본,시나리오,hold_cancel,avg_booking_interval,cancel_rate,0.09161909975615284
+A 원본,시나리오,hold_cancel,avg_booking_interval,card_reuse_count,
+A 원본,시나리오,hold_cancel,avg_booking_interval,ip_booking_density,-0.0393023662484434
+A 원본,시나리오,hold_cancel,avg_booking_interval,booking_count,0.038785353981138616
+A 원본,시나리오,hold_cancel,avg_booking_interval,seat_selection_latency,0.04818473995548445
+A 원본,시나리오,hold_cancel,booking_interval_variance,cancel_rate,0.1985713798623787
+A 원본,시나리오,hold_cancel,booking_interval_variance,card_reuse_count,
+A 원본,시나리오,hold_cancel,booking_interval_variance,ip_booking_density,-0.13361891109484592
+A 원본,시나리오,hold_cancel,booking_interval_variance,booking_count,-0.2169294971848455
+A 원본,시나리오,hold_cancel,booking_interval_variance,seat_selection_latency,0.11523210743496175
+A 원본,시나리오,hold_cancel,cancel_rate,card_reuse_count,
+A 원본,시나리오,hold_cancel,cancel_rate,ip_booking_density,-0.0561443184603495
+A 원본,시나리오,hold_cancel,cancel_rate,booking_count,-0.08003597537897288
+A 원본,시나리오,hold_cancel,cancel_rate,seat_selection_latency,0.04840529247201659
+A 원본,시나리오,hold_cancel,card_reuse_count,ip_booking_density,
+A 원본,시나리오,hold_cancel,card_reuse_count,booking_count,
+A 원본,시나리오,hold_cancel,card_reuse_count,seat_selection_latency,
+A 원본,시나리오,hold_cancel,ip_booking_density,booking_count,0.16666350767920948
+A 원본,시나리오,hold_cancel,ip_booking_density,seat_selection_latency,-0.1257847709793037
+A 원본,시나리오,hold_cancel,booking_count,seat_selection_latency,0.048424042748729974
+이벤트 기반 v1 (B),전체,전체,avg_booking_interval,booking_interval_variance,0.699699291908789
+이벤트 기반 v1 (B),전체,전체,avg_booking_interval,cancel_rate,-0.43295658131540743
+이벤트 기반 v1 (B),전체,전체,avg_booking_interval,card_reuse_count,-0.37385623414191194
+이벤트 기반 v1 (B),전체,전체,avg_booking_interval,ip_booking_density,-0.06366715531578941
+이벤트 기반 v1 (B),전체,전체,avg_booking_interval,booking_count,-0.5288325120803834
+이벤트 기반 v1 (B),전체,전체,avg_booking_interval,seat_selection_latency,0.9258664419860979
+이벤트 기반 v1 (B),전체,전체,booking_interval_variance,cancel_rate,-0.2339098935396956
+이벤트 기반 v1 (B),전체,전체,booking_interval_variance,card_reuse_count,-0.2792999154976734
+이벤트 기반 v1 (B),전체,전체,booking_interval_variance,ip_booking_density,-0.022609918204690625
+이벤트 기반 v1 (B),전체,전체,booking_interval_variance,booking_count,-0.0908382670786064
+이벤트 기반 v1 (B),전체,전체,booking_interval_variance,seat_selection_latency,0.6217253368678312
+이벤트 기반 v1 (B),전체,전체,cancel_rate,card_reuse_count,0.3116792706060235
+이벤트 기반 v1 (B),전체,전체,cancel_rate,ip_booking_density,0.0915073308305271
+이벤트 기반 v1 (B),전체,전체,cancel_rate,booking_count,0.4487936035689564
+이벤트 기반 v1 (B),전체,전체,cancel_rate,seat_selection_latency,-0.4167081294162824
+이벤트 기반 v1 (B),전체,전체,card_reuse_count,ip_booking_density,0.4350794925231289
+이벤트 기반 v1 (B),전체,전체,card_reuse_count,booking_count,0.36690545899146665
+이벤트 기반 v1 (B),전체,전체,card_reuse_count,seat_selection_latency,-0.36477737300840696
+이벤트 기반 v1 (B),전체,전체,ip_booking_density,booking_count,0.16740277616079235
+이벤트 기반 v1 (B),전체,전체,ip_booking_density,seat_selection_latency,-0.054438502761780236
+이벤트 기반 v1 (B),전체,전체,booking_count,seat_selection_latency,-0.5360272519162529
+이벤트 기반 v1 (B),레이블,정상,avg_booking_interval,booking_interval_variance,0.6373555824500813
+이벤트 기반 v1 (B),레이블,정상,avg_booking_interval,cancel_rate,-0.08298118311761651
+이벤트 기반 v1 (B),레이블,정상,avg_booking_interval,card_reuse_count,
+이벤트 기반 v1 (B),레이블,정상,avg_booking_interval,ip_booking_density,0.18915005946789137
+이벤트 기반 v1 (B),레이블,정상,avg_booking_interval,booking_count,-0.06270254119241545
+이벤트 기반 v1 (B),레이블,정상,avg_booking_interval,seat_selection_latency,0.8545679648311159
+이벤트 기반 v1 (B),레이블,정상,booking_interval_variance,cancel_rate,0.04116434589684351
+이벤트 기반 v1 (B),레이블,정상,booking_interval_variance,card_reuse_count,
+이벤트 기반 v1 (B),레이블,정상,booking_interval_variance,ip_booking_density,0.17558596650802888
+이벤트 기반 v1 (B),레이블,정상,booking_interval_variance,booking_count,0.4009985669121467
+이벤트 기반 v1 (B),레이블,정상,booking_interval_variance,seat_selection_latency,0.49613709488589985
+이벤트 기반 v1 (B),레이블,정상,cancel_rate,card_reuse_count,
+이벤트 기반 v1 (B),레이블,정상,cancel_rate,ip_booking_density,-0.07085423042391092
+이벤트 기반 v1 (B),레이블,정상,cancel_rate,booking_count,0.14058493500794825
+이벤트 기반 v1 (B),레이블,정상,cancel_rate,seat_selection_latency,-0.056105189327213124
+이벤트 기반 v1 (B),레이블,정상,card_reuse_count,ip_booking_density,
+이벤트 기반 v1 (B),레이블,정상,card_reuse_count,booking_count,
+이벤트 기반 v1 (B),레이블,정상,card_reuse_count,seat_selection_latency,
+이벤트 기반 v1 (B),레이블,정상,ip_booking_density,booking_count,-0.004304145784222892
+이벤트 기반 v1 (B),레이블,정상,ip_booking_density,seat_selection_latency,0.19147778879113742
+이벤트 기반 v1 (B),레이블,정상,booking_count,seat_selection_latency,-0.10213850062501939
+이벤트 기반 v1 (B),레이블,이상,avg_booking_interval,booking_interval_variance,0.7341645607423458
+이벤트 기반 v1 (B),레이블,이상,avg_booking_interval,cancel_rate,0.3556222785874347
+이벤트 기반 v1 (B),레이블,이상,avg_booking_interval,card_reuse_count,0.33990435554342
+이벤트 기반 v1 (B),레이블,이상,avg_booking_interval,ip_booking_density,0.268129441861644
+이벤트 기반 v1 (B),레이블,이상,avg_booking_interval,booking_count,-0.37922704459480533
+이벤트 기반 v1 (B),레이블,이상,avg_booking_interval,seat_selection_latency,0.8622177439940519
+이벤트 기반 v1 (B),레이블,이상,booking_interval_variance,cancel_rate,0.7182958367344608
+이벤트 기반 v1 (B),레이블,이상,booking_interval_variance,card_reuse_count,0.23821481514560758
+이벤트 기반 v1 (B),레이블,이상,booking_interval_variance,ip_booking_density,0.16553549293004674
+이벤트 기반 v1 (B),레이블,이상,booking_interval_variance,booking_count,-0.521348892053524
+이벤트 기반 v1 (B),레이블,이상,booking_interval_variance,seat_selection_latency,0.42581258032244484
+이벤트 기반 v1 (B),레이블,이상,cancel_rate,card_reuse_count,-0.05593874942635681
+이벤트 기반 v1 (B),레이블,이상,cancel_rate,ip_booking_density,-0.0655581187995637
+이벤트 기반 v1 (B),레이블,이상,cancel_rate,booking_count,-0.49727200257955195
+이벤트 기반 v1 (B),레이블,이상,cancel_rate,seat_selection_latency,0.01791724788940989
+이벤트 기반 v1 (B),레이블,이상,card_reuse_count,ip_booking_density,0.7975788323429025
+이벤트 기반 v1 (B),레이블,이상,card_reuse_count,booking_count,-0.4176394356319702
+이벤트 기반 v1 (B),레이블,이상,card_reuse_count,seat_selection_latency,0.34126523985259977
+이벤트 기반 v1 (B),레이블,이상,ip_booking_density,booking_count,-0.39372619855470586
+이벤트 기반 v1 (B),레이블,이상,ip_booking_density,seat_selection_latency,0.27797265300441426
+이벤트 기반 v1 (B),레이블,이상,booking_count,seat_selection_latency,-0.17041344116252094
+이벤트 기반 v1 (B),시나리오,normal,avg_booking_interval,booking_interval_variance,0.5786546059834538
+이벤트 기반 v1 (B),시나리오,normal,avg_booking_interval,cancel_rate,-0.07538375308987427
+이벤트 기반 v1 (B),시나리오,normal,avg_booking_interval,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,normal,avg_booking_interval,ip_booking_density,-0.0025676026796848097
+이벤트 기반 v1 (B),시나리오,normal,avg_booking_interval,booking_count,0.11917562312638925
+이벤트 기반 v1 (B),시나리오,normal,avg_booking_interval,seat_selection_latency,0.7621394524940477
+이벤트 기반 v1 (B),시나리오,normal,booking_interval_variance,cancel_rate,0.040005947771729736
+이벤트 기반 v1 (B),시나리오,normal,booking_interval_variance,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,normal,booking_interval_variance,ip_booking_density,-0.027764984646525593
+이벤트 기반 v1 (B),시나리오,normal,booking_interval_variance,booking_count,0.5805780071632676
+이벤트 기반 v1 (B),시나리오,normal,booking_interval_variance,seat_selection_latency,0.3711403749981236
+이벤트 기반 v1 (B),시나리오,normal,cancel_rate,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,normal,cancel_rate,ip_booking_density,-0.009303299950652624
+이벤트 기반 v1 (B),시나리오,normal,cancel_rate,booking_count,0.11307858020136233
+이벤트 기반 v1 (B),시나리오,normal,cancel_rate,seat_selection_latency,-0.028559187095250214
+이벤트 기반 v1 (B),시나리오,normal,card_reuse_count,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,normal,card_reuse_count,booking_count,
+이벤트 기반 v1 (B),시나리오,normal,card_reuse_count,seat_selection_latency,
+이벤트 기반 v1 (B),시나리오,normal,ip_booking_density,booking_count,0.01304592908678886
+이벤트 기반 v1 (B),시나리오,normal,ip_booking_density,seat_selection_latency,0.0066919351292539925
+이벤트 기반 v1 (B),시나리오,normal,booking_count,seat_selection_latency,0.10440159734513572
+이벤트 기반 v1 (B),시나리오,fast_normal,avg_booking_interval,booking_interval_variance,0.4052019979485497
+이벤트 기반 v1 (B),시나리오,fast_normal,avg_booking_interval,cancel_rate,0.003105722198717496
+이벤트 기반 v1 (B),시나리오,fast_normal,avg_booking_interval,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,fast_normal,avg_booking_interval,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,fast_normal,avg_booking_interval,booking_count,0.009509494874111395
+이벤트 기반 v1 (B),시나리오,fast_normal,avg_booking_interval,seat_selection_latency,0.7558915010750671
+이벤트 기반 v1 (B),시나리오,fast_normal,booking_interval_variance,cancel_rate,-0.03253309932749259
+이벤트 기반 v1 (B),시나리오,fast_normal,booking_interval_variance,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,fast_normal,booking_interval_variance,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,fast_normal,booking_interval_variance,booking_count,0.3671090860682958
+이벤트 기반 v1 (B),시나리오,fast_normal,booking_interval_variance,seat_selection_latency,0.18995120548234934
+이벤트 기반 v1 (B),시나리오,fast_normal,cancel_rate,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,fast_normal,cancel_rate,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,fast_normal,cancel_rate,booking_count,-0.05144285109413324
+이벤트 기반 v1 (B),시나리오,fast_normal,cancel_rate,seat_selection_latency,-0.015239096716779595
+이벤트 기반 v1 (B),시나리오,fast_normal,card_reuse_count,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,fast_normal,card_reuse_count,booking_count,
+이벤트 기반 v1 (B),시나리오,fast_normal,card_reuse_count,seat_selection_latency,
+이벤트 기반 v1 (B),시나리오,fast_normal,ip_booking_density,booking_count,
+이벤트 기반 v1 (B),시나리오,fast_normal,ip_booking_density,seat_selection_latency,
+이벤트 기반 v1 (B),시나리오,fast_normal,booking_count,seat_selection_latency,0.021960872914358325
+이벤트 기반 v1 (B),시나리오,shared_ip,avg_booking_interval,booking_interval_variance,0.7727121994189768
+이벤트 기반 v1 (B),시나리오,shared_ip,avg_booking_interval,cancel_rate,-0.007837064186215274
+이벤트 기반 v1 (B),시나리오,shared_ip,avg_booking_interval,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,shared_ip,avg_booking_interval,ip_booking_density,-0.11948879869819674
+이벤트 기반 v1 (B),시나리오,shared_ip,avg_booking_interval,booking_count,0.1214831255250661
+이벤트 기반 v1 (B),시나리오,shared_ip,avg_booking_interval,seat_selection_latency,0.7771934780984311
+이벤트 기반 v1 (B),시나리오,shared_ip,booking_interval_variance,cancel_rate,0.08551418427074257
+이벤트 기반 v1 (B),시나리오,shared_ip,booking_interval_variance,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,shared_ip,booking_interval_variance,ip_booking_density,-0.019302116757033846
+이벤트 기반 v1 (B),시나리오,shared_ip,booking_interval_variance,booking_count,0.3272434548136495
+이벤트 기반 v1 (B),시나리오,shared_ip,booking_interval_variance,seat_selection_latency,0.5114404334635042
+이벤트 기반 v1 (B),시나리오,shared_ip,cancel_rate,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,shared_ip,cancel_rate,ip_booking_density,0.0335081270517969
+이벤트 기반 v1 (B),시나리오,shared_ip,cancel_rate,booking_count,0.11273582703835419
+이벤트 기반 v1 (B),시나리오,shared_ip,cancel_rate,seat_selection_latency,0.11273518101922365
+이벤트 기반 v1 (B),시나리오,shared_ip,card_reuse_count,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,shared_ip,card_reuse_count,booking_count,
+이벤트 기반 v1 (B),시나리오,shared_ip,card_reuse_count,seat_selection_latency,
+이벤트 기반 v1 (B),시나리오,shared_ip,ip_booking_density,booking_count,0.05170113792026993
+이벤트 기반 v1 (B),시나리오,shared_ip,ip_booking_density,seat_selection_latency,-0.16078994721150885
+이벤트 기반 v1 (B),시나리오,shared_ip,booking_count,seat_selection_latency,0.19557918175702751
+이벤트 기반 v1 (B),시나리오,frequent_cancel,avg_booking_interval,booking_interval_variance,0.8074710315209465
+이벤트 기반 v1 (B),시나리오,frequent_cancel,avg_booking_interval,cancel_rate,-0.2803710732401314
+이벤트 기반 v1 (B),시나리오,frequent_cancel,avg_booking_interval,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,avg_booking_interval,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,avg_booking_interval,booking_count,0.22321097101969764
+이벤트 기반 v1 (B),시나리오,frequent_cancel,avg_booking_interval,seat_selection_latency,0.8381006401426141
+이벤트 기반 v1 (B),시나리오,frequent_cancel,booking_interval_variance,cancel_rate,-0.3360028554523024
+이벤트 기반 v1 (B),시나리오,frequent_cancel,booking_interval_variance,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,booking_interval_variance,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,booking_interval_variance,booking_count,0.44071977358313497
+이벤트 기반 v1 (B),시나리오,frequent_cancel,booking_interval_variance,seat_selection_latency,0.7142857142857143
+이벤트 기반 v1 (B),시나리오,frequent_cancel,cancel_rate,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,cancel_rate,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,cancel_rate,booking_count,-0.22435657102002468
+이벤트 기반 v1 (B),시나리오,frequent_cancel,cancel_rate,seat_selection_latency,-0.26283763967105245
+이벤트 기반 v1 (B),시나리오,frequent_cancel,card_reuse_count,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,card_reuse_count,booking_count,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,card_reuse_count,seat_selection_latency,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,ip_booking_density,booking_count,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,ip_booking_density,seat_selection_latency,
+이벤트 기반 v1 (B),시나리오,frequent_cancel,booking_count,seat_selection_latency,0.13701732319535678
+이벤트 기반 v1 (B),시나리오,fast,avg_booking_interval,booking_interval_variance,0.5695142409896072
+이벤트 기반 v1 (B),시나리오,fast,avg_booking_interval,cancel_rate,0.021623343616618475
+이벤트 기반 v1 (B),시나리오,fast,avg_booking_interval,card_reuse_count,-0.18808821936712988
+이벤트 기반 v1 (B),시나리오,fast,avg_booking_interval,ip_booking_density,-0.024881130798054464
+이벤트 기반 v1 (B),시나리오,fast,avg_booking_interval,booking_count,-0.021087213720095976
+이벤트 기반 v1 (B),시나리오,fast,avg_booking_interval,seat_selection_latency,0.8848267649527226
+이벤트 기반 v1 (B),시나리오,fast,booking_interval_variance,cancel_rate,-0.01952422937800818
+이벤트 기반 v1 (B),시나리오,fast,booking_interval_variance,card_reuse_count,-0.2647904814905689
+이벤트 기반 v1 (B),시나리오,fast,booking_interval_variance,ip_booking_density,-0.2830083891840299
+이벤트 기반 v1 (B),시나리오,fast,booking_interval_variance,booking_count,0.29219781674188106
+이벤트 기반 v1 (B),시나리오,fast,booking_interval_variance,seat_selection_latency,0.49660948255467435
+이벤트 기반 v1 (B),시나리오,fast,cancel_rate,card_reuse_count,-0.20503520881386567
+이벤트 기반 v1 (B),시나리오,fast,cancel_rate,ip_booking_density,-0.22007530160444164
+이벤트 기반 v1 (B),시나리오,fast,cancel_rate,booking_count,-0.15565452374106875
+이벤트 기반 v1 (B),시나리오,fast,cancel_rate,seat_selection_latency,0.07599619604835522
+이벤트 기반 v1 (B),시나리오,fast,card_reuse_count,ip_booking_density,0.23749848410867183
+이벤트 기반 v1 (B),시나리오,fast,card_reuse_count,booking_count,0.06843679827391735
+이벤트 기반 v1 (B),시나리오,fast,card_reuse_count,seat_selection_latency,-0.17134046023872485
+이벤트 기반 v1 (B),시나리오,fast,ip_booking_density,booking_count,-0.3320759407250325
+이벤트 기반 v1 (B),시나리오,fast,ip_booking_density,seat_selection_latency,-0.07009540542008823
+이벤트 기반 v1 (B),시나리오,fast,booking_count,seat_selection_latency,-0.026333514437317608
+이벤트 기반 v1 (B),시나리오,jitter,avg_booking_interval,booking_interval_variance,0.769550612382129
+이벤트 기반 v1 (B),시나리오,jitter,avg_booking_interval,cancel_rate,-0.08167970815250344
+이벤트 기반 v1 (B),시나리오,jitter,avg_booking_interval,card_reuse_count,-0.016866462113646122
+이벤트 기반 v1 (B),시나리오,jitter,avg_booking_interval,ip_booking_density,-0.20113377994681672
+이벤트 기반 v1 (B),시나리오,jitter,avg_booking_interval,booking_count,0.0630814658226575
+이벤트 기반 v1 (B),시나리오,jitter,avg_booking_interval,seat_selection_latency,0.90496970070931
+이벤트 기반 v1 (B),시나리오,jitter,booking_interval_variance,cancel_rate,0.0691218213641344
+이벤트 기반 v1 (B),시나리오,jitter,booking_interval_variance,card_reuse_count,-0.1781813922224283
+이벤트 기반 v1 (B),시나리오,jitter,booking_interval_variance,ip_booking_density,-0.24088897947803464
+이벤트 기반 v1 (B),시나리오,jitter,booking_interval_variance,booking_count,0.04935754842113168
+이벤트 기반 v1 (B),시나리오,jitter,booking_interval_variance,seat_selection_latency,0.7143462743418573
+이벤트 기반 v1 (B),시나리오,jitter,cancel_rate,card_reuse_count,0.0626350210245964
+이벤트 기반 v1 (B),시나리오,jitter,cancel_rate,ip_booking_density,-0.1222846874962684
+이벤트 기반 v1 (B),시나리오,jitter,cancel_rate,booking_count,-0.05981775832617078
+이벤트 기반 v1 (B),시나리오,jitter,cancel_rate,seat_selection_latency,-0.17420931625884617
+이벤트 기반 v1 (B),시나리오,jitter,card_reuse_count,ip_booking_density,0.3922215804845646
+이벤트 기반 v1 (B),시나리오,jitter,card_reuse_count,booking_count,-0.12534111187963193
+이벤트 기반 v1 (B),시나리오,jitter,card_reuse_count,seat_selection_latency,0.11578274543256403
+이벤트 기반 v1 (B),시나리오,jitter,ip_booking_density,booking_count,-0.17249452400791437
+이벤트 기반 v1 (B),시나리오,jitter,ip_booking_density,seat_selection_latency,-0.24561376548597313
+이벤트 기반 v1 (B),시나리오,jitter,booking_count,seat_selection_latency,0.07613677054102858
+이벤트 기반 v1 (B),시나리오,multi_account,avg_booking_interval,booking_interval_variance,0.7404559285229664
+이벤트 기반 v1 (B),시나리오,multi_account,avg_booking_interval,cancel_rate,-0.09589112892267217
+이벤트 기반 v1 (B),시나리오,multi_account,avg_booking_interval,card_reuse_count,0.11330570977359793
+이벤트 기반 v1 (B),시나리오,multi_account,avg_booking_interval,ip_booking_density,-0.13545212070933602
+이벤트 기반 v1 (B),시나리오,multi_account,avg_booking_interval,booking_count,-0.10413833630712484
+이벤트 기반 v1 (B),시나리오,multi_account,avg_booking_interval,seat_selection_latency,0.9674199449690564
+이벤트 기반 v1 (B),시나리오,multi_account,booking_interval_variance,cancel_rate,0.02609216505526697
+이벤트 기반 v1 (B),시나리오,multi_account,booking_interval_variance,card_reuse_count,0.1440639927186984
+이벤트 기반 v1 (B),시나리오,multi_account,booking_interval_variance,ip_booking_density,-0.21613482980128332
+이벤트 기반 v1 (B),시나리오,multi_account,booking_interval_variance,booking_count,0.05833468005266299
+이벤트 기반 v1 (B),시나리오,multi_account,booking_interval_variance,seat_selection_latency,0.7082934765086902
+이벤트 기반 v1 (B),시나리오,multi_account,cancel_rate,card_reuse_count,-0.3252625284948781
+이벤트 기반 v1 (B),시나리오,multi_account,cancel_rate,ip_booking_density,-0.014139553627280298
+이벤트 기반 v1 (B),시나리오,multi_account,cancel_rate,booking_count,-0.15196341917756026
+이벤트 기반 v1 (B),시나리오,multi_account,cancel_rate,seat_selection_latency,-0.046298040721184944
+이벤트 기반 v1 (B),시나리오,multi_account,card_reuse_count,ip_booking_density,-0.12216358340961678
+이벤트 기반 v1 (B),시나리오,multi_account,card_reuse_count,booking_count,0.007835255703343164
+이벤트 기반 v1 (B),시나리오,multi_account,card_reuse_count,seat_selection_latency,0.05115743098984884
+이벤트 기반 v1 (B),시나리오,multi_account,ip_booking_density,booking_count,0.1661840554268512
+이벤트 기반 v1 (B),시나리오,multi_account,ip_booking_density,seat_selection_latency,-0.16294130913199711
+이벤트 기반 v1 (B),시나리오,multi_account,booking_count,seat_selection_latency,-0.08040793099107371
+이벤트 기반 v1 (B),시나리오,hold_cancel,avg_booking_interval,booking_interval_variance,0.7437027927375836
+이벤트 기반 v1 (B),시나리오,hold_cancel,avg_booking_interval,cancel_rate,-0.12662330250616222
+이벤트 기반 v1 (B),시나리오,hold_cancel,avg_booking_interval,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,hold_cancel,avg_booking_interval,ip_booking_density,0.0574515844016274
+이벤트 기반 v1 (B),시나리오,hold_cancel,avg_booking_interval,booking_count,0.20048696319156598
+이벤트 기반 v1 (B),시나리오,hold_cancel,avg_booking_interval,seat_selection_latency,0.945840665933427
+이벤트 기반 v1 (B),시나리오,hold_cancel,booking_interval_variance,cancel_rate,-0.008381998339071271
+이벤트 기반 v1 (B),시나리오,hold_cancel,booking_interval_variance,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,hold_cancel,booking_interval_variance,ip_booking_density,0.0684976248985076
+이벤트 기반 v1 (B),시나리오,hold_cancel,booking_interval_variance,booking_count,0.21772773798287356
+이벤트 기반 v1 (B),시나리오,hold_cancel,booking_interval_variance,seat_selection_latency,0.8076108447791706
+이벤트 기반 v1 (B),시나리오,hold_cancel,cancel_rate,card_reuse_count,
+이벤트 기반 v1 (B),시나리오,hold_cancel,cancel_rate,ip_booking_density,0.18298619819098777
+이벤트 기반 v1 (B),시나리오,hold_cancel,cancel_rate,booking_count,-0.25697015421767294
+이벤트 기반 v1 (B),시나리오,hold_cancel,cancel_rate,seat_selection_latency,-0.0610939057822245
+이벤트 기반 v1 (B),시나리오,hold_cancel,card_reuse_count,ip_booking_density,
+이벤트 기반 v1 (B),시나리오,hold_cancel,card_reuse_count,booking_count,
+이벤트 기반 v1 (B),시나리오,hold_cancel,card_reuse_count,seat_selection_latency,
+이벤트 기반 v1 (B),시나리오,hold_cancel,ip_booking_density,booking_count,0.006644147537887123
+이벤트 기반 v1 (B),시나리오,hold_cancel,ip_booking_density,seat_selection_latency,0.09063080971849717
+이벤트 기반 v1 (B),시나리오,hold_cancel,booking_count,seat_selection_latency,0.1687431300404192
+이벤트 기반 v2 (C),전체,전체,avg_booking_interval,booking_interval_variance,0.7045031240442705
+이벤트 기반 v2 (C),전체,전체,avg_booking_interval,cancel_rate,-0.426197037630274
+이벤트 기반 v2 (C),전체,전체,avg_booking_interval,card_reuse_count,-0.3563025728680964
+이벤트 기반 v2 (C),전체,전체,avg_booking_interval,ip_booking_density,-0.02518696162404418
+이벤트 기반 v2 (C),전체,전체,avg_booking_interval,booking_count,-0.5358826182482589
+이벤트 기반 v2 (C),전체,전체,avg_booking_interval,seat_selection_latency,0.9300646333429935
+이벤트 기반 v2 (C),전체,전체,booking_interval_variance,cancel_rate,-0.22374468396139643
+이벤트 기반 v2 (C),전체,전체,booking_interval_variance,card_reuse_count,-0.27366162457892085
+이벤트 기반 v2 (C),전체,전체,booking_interval_variance,ip_booking_density,0.002376583511684002
+이벤트 기반 v2 (C),전체,전체,booking_interval_variance,booking_count,-0.10295435987641957
+이벤트 기반 v2 (C),전체,전체,booking_interval_variance,seat_selection_latency,0.6334460927195757
+이벤트 기반 v2 (C),전체,전체,cancel_rate,card_reuse_count,0.31769270809973016
+이벤트 기반 v2 (C),전체,전체,cancel_rate,ip_booking_density,0.0808920250478605
+이벤트 기반 v2 (C),전체,전체,cancel_rate,booking_count,0.44058028921319575
+이벤트 기반 v2 (C),전체,전체,cancel_rate,seat_selection_latency,-0.4078516371591668
+이벤트 기반 v2 (C),전체,전체,card_reuse_count,ip_booking_density,0.4367427722188637
+이벤트 기반 v2 (C),전체,전체,card_reuse_count,booking_count,0.36690545899146665
+이벤트 기반 v2 (C),전체,전체,card_reuse_count,seat_selection_latency,-0.3601865787014819
+이벤트 기반 v2 (C),전체,전체,ip_booking_density,booking_count,0.14957578864858853
+이벤트 기반 v2 (C),전체,전체,ip_booking_density,seat_selection_latency,-0.03375414203906498
+이벤트 기반 v2 (C),전체,전체,booking_count,seat_selection_latency,-0.5365969214137316
+이벤트 기반 v2 (C),레이블,정상,avg_booking_interval,booking_interval_variance,0.6512073427301102
+이벤트 기반 v2 (C),레이블,정상,avg_booking_interval,cancel_rate,-0.08324030177982228
+이벤트 기반 v2 (C),레이블,정상,avg_booking_interval,card_reuse_count,
+이벤트 기반 v2 (C),레이블,정상,avg_booking_interval,ip_booking_density,0.20806410183970855
+이벤트 기반 v2 (C),레이블,정상,avg_booking_interval,booking_count,-0.07767152761982107
+이벤트 기반 v2 (C),레이블,정상,avg_booking_interval,seat_selection_latency,0.8619614321852356
+이벤트 기반 v2 (C),레이블,정상,booking_interval_variance,cancel_rate,0.04184833418981739
+이벤트 기반 v2 (C),레이블,정상,booking_interval_variance,card_reuse_count,
+이벤트 기반 v2 (C),레이블,정상,booking_interval_variance,ip_booking_density,0.1940297467836615
+이벤트 기반 v2 (C),레이블,정상,booking_interval_variance,booking_count,0.382442240403516
+이벤트 기반 v2 (C),레이블,정상,booking_interval_variance,seat_selection_latency,0.5184256700952199
+이벤트 기반 v2 (C),레이블,정상,cancel_rate,card_reuse_count,
+이벤트 기반 v2 (C),레이블,정상,cancel_rate,ip_booking_density,-0.07085423042391092
+이벤트 기반 v2 (C),레이블,정상,cancel_rate,booking_count,0.14058493500794825
+이벤트 기반 v2 (C),레이블,정상,cancel_rate,seat_selection_latency,-0.057129375632232915
+이벤트 기반 v2 (C),레이블,정상,card_reuse_count,ip_booking_density,
+이벤트 기반 v2 (C),레이블,정상,card_reuse_count,booking_count,
+이벤트 기반 v2 (C),레이블,정상,card_reuse_count,seat_selection_latency,
+이벤트 기반 v2 (C),레이블,정상,ip_booking_density,booking_count,-0.004304145784222892
+이벤트 기반 v2 (C),레이블,정상,ip_booking_density,seat_selection_latency,0.19063633314135983
+이벤트 기반 v2 (C),레이블,정상,booking_count,seat_selection_latency,-0.10301779871363316
+이벤트 기반 v2 (C),레이블,이상,avg_booking_interval,booking_interval_variance,0.5912044596800512
+이벤트 기반 v2 (C),레이블,이상,avg_booking_interval,cancel_rate,0.1795170977113983
+이벤트 기반 v2 (C),레이블,이상,avg_booking_interval,card_reuse_count,0.5510332474397329
+이벤트 기반 v2 (C),레이블,이상,avg_booking_interval,ip_booking_density,0.4559315188138504
+이벤트 기반 v2 (C),레이블,이상,avg_booking_interval,booking_count,-0.3622583863922299
+이벤트 기반 v2 (C),레이블,이상,avg_booking_interval,seat_selection_latency,0.9103901670913126
+이벤트 기반 v2 (C),레이블,이상,booking_interval_variance,cancel_rate,0.6824145908775644
+이벤트 기반 v2 (C),레이블,이상,booking_interval_variance,card_reuse_count,0.3009878223320352
+이벤트 기반 v2 (C),레이블,이상,booking_interval_variance,ip_booking_density,0.17771245531542976
+이벤트 기반 v2 (C),레이블,이상,booking_interval_variance,booking_count,-0.5201948449128121
+이벤트 기반 v2 (C),레이블,이상,booking_interval_variance,seat_selection_latency,0.3810148444762904
+이벤트 기반 v2 (C),레이블,이상,cancel_rate,card_reuse_count,-0.011874608001658266
+이벤트 기반 v2 (C),레이블,이상,cancel_rate,ip_booking_density,-0.05912053496873037
+이벤트 기반 v2 (C),레이블,이상,cancel_rate,booking_count,-0.5103563779823421
+이벤트 기반 v2 (C),레이블,이상,cancel_rate,seat_selection_latency,0.006487196391189724
+이벤트 기반 v2 (C),레이블,이상,card_reuse_count,ip_booking_density,0.8047593408089436
+이벤트 기반 v2 (C),레이블,이상,card_reuse_count,booking_count,-0.4176394356319702
+이벤트 기반 v2 (C),레이블,이상,card_reuse_count,seat_selection_latency,0.4153962084050068
+이벤트 기반 v2 (C),레이블,이상,ip_booking_density,booking_count,-0.37590987632502515
+이벤트 기반 v2 (C),레이블,이상,ip_booking_density,seat_selection_latency,0.3519207010715969
+이벤트 기반 v2 (C),레이블,이상,booking_count,seat_selection_latency,-0.19629150552898275
+이벤트 기반 v2 (C),시나리오,normal,avg_booking_interval,booking_interval_variance,0.5779348888208226
+이벤트 기반 v2 (C),시나리오,normal,avg_booking_interval,cancel_rate,-0.07554058301578696
+이벤트 기반 v2 (C),시나리오,normal,avg_booking_interval,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,normal,avg_booking_interval,ip_booking_density,-0.0021326535397529532
+이벤트 기반 v2 (C),시나리오,normal,avg_booking_interval,booking_count,0.11970150325715179
+이벤트 기반 v2 (C),시나리오,normal,avg_booking_interval,seat_selection_latency,0.7598904038623876
+이벤트 기반 v2 (C),시나리오,normal,booking_interval_variance,cancel_rate,0.03932366946517377
+이벤트 기반 v2 (C),시나리오,normal,booking_interval_variance,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,normal,booking_interval_variance,ip_booking_density,-0.028158415603055306
+이벤트 기반 v2 (C),시나리오,normal,booking_interval_variance,booking_count,0.5818611977873236
+이벤트 기반 v2 (C),시나리오,normal,booking_interval_variance,seat_selection_latency,0.37062795712913305
+이벤트 기반 v2 (C),시나리오,normal,cancel_rate,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,normal,cancel_rate,ip_booking_density,-0.009303299950652624
+이벤트 기반 v2 (C),시나리오,normal,cancel_rate,booking_count,0.11307858020136233
+이벤트 기반 v2 (C),시나리오,normal,cancel_rate,seat_selection_latency,-0.02856684160757357
+이벤트 기반 v2 (C),시나리오,normal,card_reuse_count,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,normal,card_reuse_count,booking_count,
+이벤트 기반 v2 (C),시나리오,normal,card_reuse_count,seat_selection_latency,
+이벤트 기반 v2 (C),시나리오,normal,ip_booking_density,booking_count,0.01304592908678886
+이벤트 기반 v2 (C),시나리오,normal,ip_booking_density,seat_selection_latency,0.006717673197130986
+이벤트 기반 v2 (C),시나리오,normal,booking_count,seat_selection_latency,0.10439073971452037
+이벤트 기반 v2 (C),시나리오,fast_normal,avg_booking_interval,booking_interval_variance,0.4591929970234042
+이벤트 기반 v2 (C),시나리오,fast_normal,avg_booking_interval,cancel_rate,0.008071885462205376
+이벤트 기반 v2 (C),시나리오,fast_normal,avg_booking_interval,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,fast_normal,avg_booking_interval,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,fast_normal,avg_booking_interval,booking_count,-0.007429265330722533
+이벤트 기반 v2 (C),시나리오,fast_normal,avg_booking_interval,seat_selection_latency,0.8612560135951447
+이벤트 기반 v2 (C),시나리오,fast_normal,booking_interval_variance,cancel_rate,-0.029268845654104227
+이벤트 기반 v2 (C),시나리오,fast_normal,booking_interval_variance,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,fast_normal,booking_interval_variance,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,fast_normal,booking_interval_variance,booking_count,0.38387799490176105
+이벤트 기반 v2 (C),시나리오,fast_normal,booking_interval_variance,seat_selection_latency,0.3690110314775568
+이벤트 기반 v2 (C),시나리오,fast_normal,cancel_rate,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,fast_normal,cancel_rate,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,fast_normal,cancel_rate,booking_count,-0.05144285109413324
+이벤트 기반 v2 (C),시나리오,fast_normal,cancel_rate,seat_selection_latency,-0.01613705014075425
+이벤트 기반 v2 (C),시나리오,fast_normal,card_reuse_count,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,fast_normal,card_reuse_count,booking_count,
+이벤트 기반 v2 (C),시나리오,fast_normal,card_reuse_count,seat_selection_latency,
+이벤트 기반 v2 (C),시나리오,fast_normal,ip_booking_density,booking_count,
+이벤트 기반 v2 (C),시나리오,fast_normal,ip_booking_density,seat_selection_latency,
+이벤트 기반 v2 (C),시나리오,fast_normal,booking_count,seat_selection_latency,0.021163738878869524
+이벤트 기반 v2 (C),시나리오,shared_ip,avg_booking_interval,booking_interval_variance,0.7688862242215854
+이벤트 기반 v2 (C),시나리오,shared_ip,avg_booking_interval,cancel_rate,-0.007537939598955149
+이벤트 기반 v2 (C),시나리오,shared_ip,avg_booking_interval,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,shared_ip,avg_booking_interval,ip_booking_density,-0.11904100593912605
+이벤트 기반 v2 (C),시나리오,shared_ip,avg_booking_interval,booking_count,0.1195870091067256
+이벤트 기반 v2 (C),시나리오,shared_ip,avg_booking_interval,seat_selection_latency,0.7729046905800008
+이벤트 기반 v2 (C),시나리오,shared_ip,booking_interval_variance,cancel_rate,0.08293535601572648
+이벤트 기반 v2 (C),시나리오,shared_ip,booking_interval_variance,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,shared_ip,booking_interval_variance,ip_booking_density,-0.01949563554434298
+이벤트 기반 v2 (C),시나리오,shared_ip,booking_interval_variance,booking_count,0.3246991293142292
+이벤트 기반 v2 (C),시나리오,shared_ip,booking_interval_variance,seat_selection_latency,0.5096971914872057
+이벤트 기반 v2 (C),시나리오,shared_ip,cancel_rate,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,shared_ip,cancel_rate,ip_booking_density,0.0335081270517969
+이벤트 기반 v2 (C),시나리오,shared_ip,cancel_rate,booking_count,0.11273582703835419
+이벤트 기반 v2 (C),시나리오,shared_ip,cancel_rate,seat_selection_latency,0.11269056470181073
+이벤트 기반 v2 (C),시나리오,shared_ip,card_reuse_count,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,shared_ip,card_reuse_count,booking_count,
+이벤트 기반 v2 (C),시나리오,shared_ip,card_reuse_count,seat_selection_latency,
+이벤트 기반 v2 (C),시나리오,shared_ip,ip_booking_density,booking_count,0.05170113792026993
+이벤트 기반 v2 (C),시나리오,shared_ip,ip_booking_density,seat_selection_latency,-0.16061976295162114
+이벤트 기반 v2 (C),시나리오,shared_ip,booking_count,seat_selection_latency,0.19600644401622366
+이벤트 기반 v2 (C),시나리오,frequent_cancel,avg_booking_interval,booking_interval_variance,0.8082813386273398
+이벤트 기반 v2 (C),시나리오,frequent_cancel,avg_booking_interval,cancel_rate,-0.2816000522286182
+이벤트 기반 v2 (C),시나리오,frequent_cancel,avg_booking_interval,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,avg_booking_interval,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,avg_booking_interval,booking_count,0.2210623278332807
+이벤트 기반 v2 (C),시나리오,frequent_cancel,avg_booking_interval,seat_selection_latency,0.8389109472490074
+이벤트 기반 v2 (C),시나리오,frequent_cancel,booking_interval_variance,cancel_rate,-0.329530232779605
+이벤트 기반 v2 (C),시나리오,frequent_cancel,booking_interval_variance,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,booking_interval_variance,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,booking_interval_variance,booking_count,0.44171145505378895
+이벤트 기반 v2 (C),시나리오,frequent_cancel,booking_interval_variance,seat_selection_latency,0.7204440482943035
+이벤트 기반 v2 (C),시나리오,frequent_cancel,cancel_rate,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,cancel_rate,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,cancel_rate,booking_count,-0.22435657102002468
+이벤트 기반 v2 (C),시나리오,frequent_cancel,cancel_rate,seat_selection_latency,-0.26283763967105245
+이벤트 기반 v2 (C),시나리오,frequent_cancel,card_reuse_count,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,card_reuse_count,booking_count,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,card_reuse_count,seat_selection_latency,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,ip_booking_density,booking_count,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,ip_booking_density,seat_selection_latency,
+이벤트 기반 v2 (C),시나리오,frequent_cancel,booking_count,seat_selection_latency,0.13701732319535678
+이벤트 기반 v2 (C),시나리오,fast,avg_booking_interval,booking_interval_variance,0.4273076646452221
+이벤트 기반 v2 (C),시나리오,fast,avg_booking_interval,cancel_rate,-0.06380653580303386
+이벤트 기반 v2 (C),시나리오,fast,avg_booking_interval,card_reuse_count,0.04485461415540885
+이벤트 기반 v2 (C),시나리오,fast,avg_booking_interval,ip_booking_density,-0.038737828607959914
+이벤트 기반 v2 (C),시나리오,fast,avg_booking_interval,booking_count,0.11764923018089576
+이벤트 기반 v2 (C),시나리오,fast,avg_booking_interval,seat_selection_latency,0.8972287219679862
+이벤트 기반 v2 (C),시나리오,fast,booking_interval_variance,cancel_rate,-0.18939874956479386
+이벤트 기반 v2 (C),시나리오,fast,booking_interval_variance,card_reuse_count,-0.07260384169902695
+이벤트 기반 v2 (C),시나리오,fast,booking_interval_variance,ip_booking_density,-0.0013831525944372897
+이벤트 기반 v2 (C),시나리오,fast,booking_interval_variance,booking_count,0.308219291234733
+이벤트 기반 v2 (C),시나리오,fast,booking_interval_variance,seat_selection_latency,0.4968932105501774
+이벤트 기반 v2 (C),시나리오,fast,cancel_rate,card_reuse_count,-0.21572172994142108
+이벤트 기반 v2 (C),시나리오,fast,cancel_rate,ip_booking_density,-0.2405273037200549
+이벤트 기반 v2 (C),시나리오,fast,cancel_rate,booking_count,-0.19469855296591657
+이벤트 기반 v2 (C),시나리오,fast,cancel_rate,seat_selection_latency,-0.04341846068507322
+이벤트 기반 v2 (C),시나리오,fast,card_reuse_count,ip_booking_density,0.23749848410867183
+이벤트 기반 v2 (C),시나리오,fast,card_reuse_count,booking_count,0.06843679827391735
+이벤트 기반 v2 (C),시나리오,fast,card_reuse_count,seat_selection_latency,-0.040670300311046646
+이벤트 기반 v2 (C),시나리오,fast,ip_booking_density,booking_count,-0.3320759407250325
+이벤트 기반 v2 (C),시나리오,fast,ip_booking_density,seat_selection_latency,-0.07648740613567143
+이벤트 기반 v2 (C),시나리오,fast,booking_count,seat_selection_latency,0.11839829172717796
+이벤트 기반 v2 (C),시나리오,jitter,avg_booking_interval,booking_interval_variance,0.3321879050053359
+이벤트 기반 v2 (C),시나리오,jitter,avg_booking_interval,cancel_rate,-0.05906344427722754
+이벤트 기반 v2 (C),시나리오,jitter,avg_booking_interval,card_reuse_count,0.09633245195143726
+이벤트 기반 v2 (C),시나리오,jitter,avg_booking_interval,ip_booking_density,0.037997558181588585
+이벤트 기반 v2 (C),시나리오,jitter,avg_booking_interval,booking_count,-0.07956910964055419
+이벤트 기반 v2 (C),시나리오,jitter,avg_booking_interval,seat_selection_latency,0.9639795908105763
+이벤트 기반 v2 (C),시나리오,jitter,booking_interval_variance,cancel_rate,0.014008457976811692
+이벤트 기반 v2 (C),시나리오,jitter,booking_interval_variance,card_reuse_count,0.009631790241926676
+이벤트 기반 v2 (C),시나리오,jitter,booking_interval_variance,ip_booking_density,-0.2590240966445201
+이벤트 기반 v2 (C),시나리오,jitter,booking_interval_variance,booking_count,0.11474362525840477
+이벤트 기반 v2 (C),시나리오,jitter,booking_interval_variance,seat_selection_latency,0.42386927953692854
+이벤트 기반 v2 (C),시나리오,jitter,cancel_rate,card_reuse_count,0.009632517636123382
+이벤트 기반 v2 (C),시나리오,jitter,cancel_rate,ip_booking_density,-0.1830138184874515
+이벤트 기반 v2 (C),시나리오,jitter,cancel_rate,booking_count,0.011187970372607298
+이벤트 기반 v2 (C),시나리오,jitter,cancel_rate,seat_selection_latency,-0.046600418226152136
+이벤트 기반 v2 (C),시나리오,jitter,card_reuse_count,ip_booking_density,0.3922215804845646
+이벤트 기반 v2 (C),시나리오,jitter,card_reuse_count,booking_count,-0.12534111187963193
+이벤트 기반 v2 (C),시나리오,jitter,card_reuse_count,seat_selection_latency,0.07230670898824298
+이벤트 기반 v2 (C),시나리오,jitter,ip_booking_density,booking_count,-0.17249452400791437
+이벤트 기반 v2 (C),시나리오,jitter,ip_booking_density,seat_selection_latency,-0.011460966661793383
+이벤트 기반 v2 (C),시나리오,jitter,booking_count,seat_selection_latency,-0.06041461771093962
+이벤트 기반 v2 (C),시나리오,multi_account,avg_booking_interval,booking_interval_variance,0.5184400341709992
+이벤트 기반 v2 (C),시나리오,multi_account,avg_booking_interval,cancel_rate,-0.11910259847844587
+이벤트 기반 v2 (C),시나리오,multi_account,avg_booking_interval,card_reuse_count,0.1505470906051767
+이벤트 기반 v2 (C),시나리오,multi_account,avg_booking_interval,ip_booking_density,-0.15507742037551686
+이벤트 기반 v2 (C),시나리오,multi_account,avg_booking_interval,booking_count,-0.12216898174262054
+이벤트 기반 v2 (C),시나리오,multi_account,avg_booking_interval,seat_selection_latency,0.955189727646362
+이벤트 기반 v2 (C),시나리오,multi_account,booking_interval_variance,cancel_rate,-0.025271441645926984
+이벤트 기반 v2 (C),시나리오,multi_account,booking_interval_variance,card_reuse_count,0.2281617108022243
+이벤트 기반 v2 (C),시나리오,multi_account,booking_interval_variance,ip_booking_density,-0.20198643905404823
+이벤트 기반 v2 (C),시나리오,multi_account,booking_interval_variance,booking_count,-0.005487095125470946
+이벤트 기반 v2 (C),시나리오,multi_account,booking_interval_variance,seat_selection_latency,0.5408824802238403
+이벤트 기반 v2 (C),시나리오,multi_account,cancel_rate,card_reuse_count,-0.3252625284948781
+이벤트 기반 v2 (C),시나리오,multi_account,cancel_rate,ip_booking_density,-0.014139553627280298
+이벤트 기반 v2 (C),시나리오,multi_account,cancel_rate,booking_count,-0.15196341917756026
+이벤트 기반 v2 (C),시나리오,multi_account,cancel_rate,seat_selection_latency,-0.0453628007229898
+이벤트 기반 v2 (C),시나리오,multi_account,card_reuse_count,ip_booking_density,-0.12216358340961678
+이벤트 기반 v2 (C),시나리오,multi_account,card_reuse_count,booking_count,0.007835255703343164
+이벤트 기반 v2 (C),시나리오,multi_account,card_reuse_count,seat_selection_latency,0.04984051560562957
+이벤트 기반 v2 (C),시나리오,multi_account,ip_booking_density,booking_count,0.1661840554268512
+이벤트 기반 v2 (C),시나리오,multi_account,ip_booking_density,seat_selection_latency,-0.16579852608216777
+이벤트 기반 v2 (C),시나리오,multi_account,booking_count,seat_selection_latency,-0.07938832122119886
+이벤트 기반 v2 (C),시나리오,hold_cancel,avg_booking_interval,booking_interval_variance,0.8189958649986542
+이벤트 기반 v2 (C),시나리오,hold_cancel,avg_booking_interval,cancel_rate,-0.036905809395446944
+이벤트 기반 v2 (C),시나리오,hold_cancel,avg_booking_interval,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,hold_cancel,avg_booking_interval,ip_booking_density,-0.0034586905267682236
+이벤트 기반 v2 (C),시나리오,hold_cancel,avg_booking_interval,booking_count,0.15336696013817017
+이벤트 기반 v2 (C),시나리오,hold_cancel,avg_booking_interval,seat_selection_latency,0.9352324863355094
+이벤트 기반 v2 (C),시나리오,hold_cancel,booking_interval_variance,cancel_rate,-0.006492990380945406
+이벤트 기반 v2 (C),시나리오,hold_cancel,booking_interval_variance,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,hold_cancel,booking_interval_variance,ip_booking_density,0.07378287614571463
+이벤트 기반 v2 (C),시나리오,hold_cancel,booking_interval_variance,booking_count,0.19467380977921184
+이벤트 기반 v2 (C),시나리오,hold_cancel,booking_interval_variance,seat_selection_latency,0.7250035280165568
+이벤트 기반 v2 (C),시나리오,hold_cancel,cancel_rate,card_reuse_count,
+이벤트 기반 v2 (C),시나리오,hold_cancel,cancel_rate,ip_booking_density,0.2517649555299206
+이벤트 기반 v2 (C),시나리오,hold_cancel,cancel_rate,booking_count,-0.33530417828713893
+이벤트 기반 v2 (C),시나리오,hold_cancel,cancel_rate,seat_selection_latency,0.051945728790182714
+이벤트 기반 v2 (C),시나리오,hold_cancel,card_reuse_count,ip_booking_density,
+이벤트 기반 v2 (C),시나리오,hold_cancel,card_reuse_count,booking_count,
+이벤트 기반 v2 (C),시나리오,hold_cancel,card_reuse_count,seat_selection_latency,
+이벤트 기반 v2 (C),시나리오,hold_cancel,ip_booking_density,booking_count,-0.04853210078769466
+이벤트 기반 v2 (C),시나리오,hold_cancel,ip_booking_density,seat_selection_latency,-0.016148837105494612
+이벤트 기반 v2 (C),시나리오,hold_cancel,booking_count,seat_selection_latency,0.1682692457336992

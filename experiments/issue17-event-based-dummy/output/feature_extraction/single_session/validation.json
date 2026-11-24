@@ -1,0 +1,44 @@
+{
+  "profile": "single_session",
+  "extractor": "experiments/issue14-real-validation/scripts/extract_features.py (import, 수정 없음)",
+  "bts_reference": "ticket-fds-admin feat/#40 @46f8c67 FeatureAggregationService.calculate",
+  "calculated_at_utc": "2026-11-23T00:00:00",
+  "events_total": 56910,
+  "events_in_window": 56910,
+  "checks": {
+    "independent_recompute_avg_booking_interval": true,
+    "independent_recompute_booking_interval_variance": true,
+    "independent_recompute_cancel_rate": true,
+    "independent_recompute_card_reuse_count": true,
+    "independent_recompute_ip_booking_density": true,
+    "independent_recompute_booking_count": true,
+    "booking_count_equals_generated_attempts": true,
+    "completed_bookings_equal_generated": true,
+    "cancelled_bookings_equal_generated": true,
+    "ip_booking_density_equals_sharing_groups": true,
+    "card_reuse_count_equals_sharing_groups": true,
+    "every_account_has_a_feature_row": true,
+    "all_events_inside_window": true,
+    "all_passed": true,
+    "issue14_bts_parity_tests_passed": true,
+    "issue14_bts_parity_tests_output_tail": "10개 통과"
+  },
+  "format": {
+    "columns_identical_to_original": true,
+    "dtypes_identical_to_original": true,
+    "rows": 1000,
+    "user_id_order_identical": true,
+    "is_anomaly_identical": true,
+    "scenario_identical_to_issue16_v2": true,
+    "anomaly_ratio": 0.199
+  },
+  "rounding": {
+    "avg_booking_interval": 2,
+    "booking_interval_variance": 4,
+    "seat_selection_latency": 2,
+    "cancel_rate": 4
+  },
+  "dataset_sha256": "f430317a01c8e5b28fb4043443232364ffa5c5bec3c06bba13a3112b69e209b2",
+  "events_sha256": "da37da3e218226efa482ff69135dc08ce606620a2b2e2b7851fa718794b3ae5c",
+  "existing_datasets_unchanged": true
+}

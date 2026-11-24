@@ -1,0 +1,82 @@
+{
+  "version": "v4",
+  "extends": "scenarios_v3.json",
+  "_readme": [
+    "이벤트 기반 더미데이터 v4 의 생성 설정. v3 설정(config/scenarios_v3.json, 수정하지 않음) 위에 아래 항목을 덮어쓴다. 생성기는 scripts/generate_events_v4.py 다.",
+    "설계 근거는 REPORT_MEASUREMENT_ADD.md 5절·6절·8절이다. 이 파일의 값은 분포 분석과 모델 평가를 돌리기 전에 정했고, 결과를 본 뒤에 바꾸지 않는다. 겹침이나 성능의 목표값은 없다.",
+    "basis: measured = #16 매크로 실측, measured_one_person = 2026-11-24 에 실측한 정상 사용자 1명(빠른 쪽 끝점으로만 사용), code = 데모/BTS 코드, inherited = v3 에서 물려받은 값(실측 근거 없음), assumption = 가정(실측 근거 없음).",
+    "D1·D2·D3 는 '정상 사용자들 사이의 속도 분포'에 대한 세 가지 가정이다. 어느 것도 실제 분포가 아니다. 결과는 가정별로 따로 보고한다."
+  ],
+  "normal_speed": {
+    "description": "정상 계정마다 속도 수준 s 를 하나 뽑는다. s = 1 이 느린 끝(v3 normal 의 단계 중앙값), s = 0.1 이 빠른 끝(실측한 1명). 단계 중앙값 = 빠른 끝 × (느린 끝 / 빠른 끝)^u, u = 1 + log10(s).",
+    "fast_end": {"file": "reference/measured_person_fast_end.json", "s": 0.1, "basis": "measured_one_person. 사람이 낼 수 있다고 확인된 속도. 이보다 빠른 정상 사용자는 만들지 않는다"},
+    "slow_end_stage_median_s": {"queue": 0.4, "pre_seat": 0.15, "seat": 20.0, "hold_to_payment": 1.5, "payment": 15.0, "basis": "inherited (v3 normal). 실측 없음"},
+    "completed_s": {"value": 0.03, "basis": "inherited"},
+    "distributions": {
+      "D1": {"label": "느린 쪽 중심", "rule": "ln s ~ Normal(0, 0.5), s < 0.1 이면 0.1", "meaning": "v3 와 같은 중심과 폭. 실측한 사람은 드문 예외다", "basis": "assumption"},
+      "D2": {"label": "로그 균등", "rule": "log10 s ~ Uniform(-1, 0)", "meaning": "어느 속도가 흔한지 모른다", "basis": "assumption"},
+      "D3": {"label": "빠른 쪽 중심", "rule": "ln s = ln 0.1 + |Normal(0, 0.5)|, s > 1 이면 1", "meaning": "실측한 사람이 흔한 유형이다", "basis": "assumption"}
+    },
+    "scenario_rule": {
+      "normal": "분포 그대로", "shared_ip": "분포 그대로", "frequent_cancel": "분포 그대로",
+      "fast_normal": "같은 분포에서 u ≤ 0.5 (s ≤ 0.316) 인 값만 (빠른 쪽 절반으로 제한)",
+      "basis": "assumption. v3 는 시나리오마다 단계 중앙값이 달랐다. v4 는 끝점을 하나로 두고 시나리오는 범위만 다르다"
+    },
+    "stage_floor_s": "v3 와 같다 (#16 매크로 실측의 단계 최솟값)"
+  },
+  "normal_session": {
+    "description": "정상 세션 = 완료하려는 예매 수(목표)를 먼저 정하고, 시도가 실패하면 다시 시도한다. v3 의 '시도 수를 먼저 뽑고 결과를 따로 뽑는' 방식을 바꾼다.",
+    "goal": {"rule": "세션마다 1 + Poisson(goal_lambda × 시나리오 비중 × 계정별 lognormal(평균 1, sigma 0.8))",
+             "scenario_weight": {"normal": 0.75, "fast_normal": 1.25, "shared_ip": 1.0, "frequent_cancel": 1.0},
+             "basis": "assumption. 시나리오 비중은 v3 의 lam 비율(3:5:4:4), sigma 는 v3 S3 의 값"},
+    "outcomes": "시도 1건의 결과 확률은 v3 의 시나리오별 값 그대로 (inherited)",
+    "retry_prob": {"value": 0.8, "basis": "assumption. 실패한 뒤 목표가 남아 있으면 이 확률로 다시 시도하고, 아니면 그 세션을 끝낸다"},
+    "max_attempts_per_session": {"value": 30, "basis": "assumption (안전 상한)"},
+    "post_rush_hazard_per_s": {"value": 0.001, "basis": "assumption. 오픈 중이 아닌(이미 열린) 공연의 좌석 경쟁. v3 의 가장 낮은 값"}
+  },
+  "idle_s": {
+    "description": "시도가 끝난 뒤 다음 시도를 시작하기까지의 대기. 앞 시도의 결과에 따라 다르다. 빠른 끝은 실측한 1명, 느린 끝은 가정.",
+    "fast_end": {"complete": 3.242, "abandon": 1.078, "expired": 6.761, "hold_rejected": 3.242,
+                 "basis": "measured_one_person (완료 32건, 이탈 3건의 중앙값, 만료 1건). hold_rejected 는 실측이 없어 완료 뒤와 같게 둔 assumption"},
+    "slow_end": {"complete": 20.0, "abandon": 20.0, "expired": 40.0, "hold_rejected": 20.0, "basis": "inherited (v3 normal 의 대기 20초) + assumption (만료 뒤 40초)"}
+  },
+  "macro": {
+    "human_profile_reference": {"file": "reference/macro_human_continuous_cycles.csv", "basis": "measured (#16 연속 실행 1계정 20건, 간격 10.1~15.1초). v3 의 #14 값 + 추정 대기를 교체"},
+    "pause_ms_profile_mean": {"fast": 10, "jitter": 360, "human": 1750, "basis": "code (demo-ticketing/macro/macro.js 의 pause 범위 [0,20] [120,600] [900,2600] 의 가운데)"},
+    "continuous_delay": {
+      "description": "macro_delay 가 three_points 가 아닐 때만 쓴다. jitter 시나리오의 계정과 multi_account 의 링이 pause 를 10~1750ms 에서 뽑는다. fast 시나리오는 그대로다.",
+      "level": "목표 평균 간격 = 세 프로필의 실측 평균 간격을 pause 에 대해 선형 보간 (시도 시간 = 고정 시간 + pause 횟수 × pause)",
+      "donor": "pause ≤ 20ms 면 fast, 아니면 jitter·human 중 log(pause) 가 가까운 프로필의 실측 시도를 목표 수준에 맞게 같은 비율로 늘이거나 줄인다",
+      "basis": "assumption (지연 설정의 분포). 세 점은 measured"
+    }
+  },
+  "queue_wait": {"description": "STARTED → QUEUE 통과 사이에 더하는 대기. 사람과 매크로에 같은 분포. 오픈 중인 공연의 시도에만 더한다 (이미 열린 다른 공연으로 옮긴 시도에는 없다).",
+                 "rule": "시도마다 queue_wait_s × lognormal(중앙값 1, sigma 0.5)", "sigma": 0.5, "basis": "assumption. 실측 환경은 0"},
+  "skill": {"description": "skill 이 true 일 때만: 정상 계정의 처음 k 건(k = 1~3)의 좌석 선택·결제 시간에 배율(1.2~3)을 곱한다.", "k": [1, 3], "multiplier": [1.2, 3.0],
+            "basis": "assumption. 익숙하지 않은 사용자의 실측은 없다"},
+  "event_fields": {"description": "실측 이벤트에 있는 필드 중 recordedAt, transitionId, (STARTED 의) clientOccurredAt 을 v4 이벤트에도 넣는다. 값은 occurredAt 과 같다 (실측 차이 0.02초).",
+                   "not_generated": ["BOOKING 의 performanceStartsAt / performanceEndsAt (Feature 계산에 쓰이지 않는다)"]},
+  "kept_from_v3": ["계정 목록·시나리오·레이블", "IP 묶음과 카드 공유", "fast·jitter 매크로의 실측 시도 복원추출과 계정 수준 효과", "hold_cancel", "선점 거절(S5)과 결제 입력 오류(S6)",
+                   "취소 성향과 취소 지연", "오픈 참여 횟수(S1)와 매크로 시도 수(S2)", "오픈 뒤 접속 시각", "이벤트 형식"],
+  "baseline": {
+    "within_sigma": 0.3, "goal_lambda": 1.0, "retry_wait": "by_speed", "switch_prob": 0.25, "macro_delay": "three_points", "queue_wait_s": 0, "rules_off": [], "skill": false,
+    "basis": {
+      "within_sigma": "measured_one_person (같은 공연 반복 간격의 변동계수 약 0.3)",
+      "goal_lambda": "assumption. 보고서의 두 끝(대부분 1건 / v3 수준) 사이의 값. 평가 전에 정했다",
+      "retry_wait": "빠른 끝 measured_one_person, 느린 끝 assumption. 계정의 속도 수준으로 그 사이를 보간",
+      "switch_prob": "assumption (0 / 0.25 / 0.5 의 가운데)", "macro_delay": "measured (세 프로필)", "queue_wait_s": "실측 환경과 같다",
+      "rules_off": "v3 의 S1·S2 를 켠 상태 (assumption)", "skill": "실측 없음. 기본 규칙에서 제외"
+    }
+  },
+  "sensitivity_axes": {
+    "_note": "S-A(정상 사용자 사이의 속도 분포)는 축이 아니라 D1·D2·D3 세 벌의 기준이다. 아래 축은 D 마다 한 번에 하나씩만 바꾼다.",
+    "S-B": {"param": "within_sigma", "values": [0.5], "label": "계정 안의 흔들림"},
+    "S-C": {"param": "goal_lambda", "values": [0.3, 2.0], "label": "목표 예매 수 (0.3 = 대부분 1건, 2.0 = v3 수준)"},
+    "S-D": {"param": "retry_wait", "values": ["measured_end", "same_as_completion"], "label": "재시도 대기 (measured_end = 모든 계정이 실측한 빠른 값, same_as_completion = v3 처럼 결과를 구분하지 않음)"},
+    "S-E": {"param": "switch_prob", "values": [0.0, 0.5], "label": "공연을 바꿀 확률"},
+    "S-F": {"param": "macro_delay", "values": ["loguniform", "slow_skewed"], "label": "매크로 지연 설정 (slow_skewed = log pause 가 Beta(2,1))"},
+    "S-G": {"param": "queue_wait_s", "values": [10, 60, 300], "label": "대기열 대기"},
+    "S-H": {"param": "rules_off", "values": [["S1"], ["S2"]], "label": "오픈 참여 횟수(S1) / 매크로 시도 수(S2)를 v2 의 값으로"},
+    "S-I": {"param": "skill", "values": [true], "label": "숙련도 (처음 몇 건이 느리다)"}
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "criterion": "축마다 max |간격 평균의 단일 Feature AUC − 기준| (경계 3 × 가정 3 × 그 축의 값, seed 10개 평균). 모델 성능은 보지 않는다",
+  "ranking": {
+    "S-G": 0.5086,
+    "S-H": 0.265,
+    "S-C": 0.073,
+    "S-I": 0.0353,
+    "S-F": 0.024,
+    "S-D": 0.0214,
+    "S-B": 0.0037,
+    "S-E": 0.0035
+  },
+  "chosen": [
+    "S-G",
+    "S-H"
+  ],
+  "combinations": [
+    {
+      "condition": "S-G=10&S-H=S1off",
+      "overrides": {
+        "queue_wait_s": 10,
+        "rules_off": [
+          "S1"
+        ]
+      }
+    },
+    {
+      "condition": "S-G=10&S-H=S2off",
+      "overrides": {
+        "queue_wait_s": 10,
+        "rules_off": [
+          "S2"
+        ]
+      }
+    },
+    {
+      "condition": "S-G=60&S-H=S1off",
+      "overrides": {
+        "queue_wait_s": 60,
+        "rules_off": [
+          "S1"
+        ]
+      }
+    },
+    {
+      "condition": "S-G=60&S-H=S2off",
+      "overrides": {
+        "queue_wait_s": 60,
+        "rules_off": [
+          "S2"
+        ]
+      }
+    },
+    {
+      "condition": "S-G=300&S-H=S1off",
+      "overrides": {
+        "queue_wait_s": 300,
+        "rules_off": [
+          "S1"
+        ]
+      }
+    },
+    {
+      "condition": "S-G=300&S-H=S2off",
+      "overrides": {
+        "queue_wait_s": 300,
+        "rules_off": [
+          "S2"
+        ]
+      }
+    }
+  ]
+}

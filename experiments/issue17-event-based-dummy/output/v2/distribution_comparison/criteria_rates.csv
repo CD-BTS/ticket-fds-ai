@@ -1,0 +1,757 @@
+﻿dataset,group_type,group,criterion,evaluable,not_evaluable,met,met_rate
+A 원본,전체,전체,avg_booking_interval < 3초 (후보),1000,0,101,0.101
+A 원본,전체,전체,avg_booking_interval < 5초 (후보),1000,0,129,0.129
+A 원본,전체,전체,avg_booking_interval < 10초 (후보),1000,0,199,0.199
+A 원본,전체,전체,booking_interval_variance < 0.5초² (후보),1000,0,87,0.087
+A 원본,전체,전체,booking_interval_variance < 1.0초² (후보),1000,0,105,0.105
+A 원본,전체,전체,booking_interval_variance < 2.0초² (후보),1000,0,166,0.166
+A 원본,전체,전체,[Credit] 분산 < 1.0초² · 시도 5건 이상,552,448,105,0.19021739130434784
+A 원본,전체,전체,seat_selection_latency < 0.5초 (후보),1000,0,61,0.061
+A 원본,전체,전체,seat_selection_latency < 1.0초 (후보),1000,0,141,0.141
+A 원본,전체,전체,seat_selection_latency < 3.0초 (후보),1000,0,367,0.367
+A 원본,전체,전체,[Credit] 좌석 선택 < 1.0초,1000,0,141,0.141
+A 원본,전체,전체,cancel_rate ≥ 30% (후보),1000,0,207,0.207
+A 원본,전체,전체,cancel_rate ≥ 50% (후보),1000,0,126,0.126
+A 원본,전체,전체,cancel_rate ≥ 70% (후보),1000,0,70,0.07
+A 원본,전체,전체,[Credit] card_reuse_count ≥ 4,1000,0,56,0.056
+A 원본,전체,전체,[Credit 약한 감점] card_reuse_count ≥ 2,1000,0,97,0.097
+A 원본,전체,전체,[Credit] ip_booking_density ≥ 5,1000,0,127,0.127
+A 원본,레이블,정상,avg_booking_interval < 3초 (후보),801,0,0,0.0
+A 원본,레이블,정상,avg_booking_interval < 5초 (후보),801,0,0,0.0
+A 원본,레이블,정상,avg_booking_interval < 10초 (후보),801,0,0,0.0
+A 원본,레이블,정상,booking_interval_variance < 0.5초² (후보),801,0,0,0.0
+A 원본,레이블,정상,booking_interval_variance < 1.0초² (후보),801,0,0,0.0
+A 원본,레이블,정상,booking_interval_variance < 2.0초² (후보),801,0,0,0.0
+A 원본,레이블,정상,[Credit] 분산 < 1.0초² · 시도 5건 이상,353,448,0,0.0
+A 원본,레이블,정상,seat_selection_latency < 0.5초 (후보),801,0,0,0.0
+A 원본,레이블,정상,seat_selection_latency < 1.0초 (후보),801,0,0,0.0
+A 원본,레이블,정상,seat_selection_latency < 3.0초 (후보),801,0,168,0.20973782771535582
+A 원본,레이블,정상,[Credit] 좌석 선택 < 1.0초,801,0,0,0.0
+A 원본,레이블,정상,cancel_rate ≥ 30% (후보),801,0,66,0.08239700374531835
+A 원본,레이블,정상,cancel_rate ≥ 50% (후보),801,0,43,0.05368289637952559
+A 원본,레이블,정상,cancel_rate ≥ 70% (후보),801,0,14,0.017478152309612985
+A 원본,레이블,정상,[Credit] card_reuse_count ≥ 4,801,0,0,0.0
+A 원본,레이블,정상,[Credit 약한 감점] card_reuse_count ≥ 2,801,0,0,0.0
+A 원본,레이블,정상,[Credit] ip_booking_density ≥ 5,801,0,71,0.08863920099875156
+A 원본,레이블,이상,avg_booking_interval < 3초 (후보),199,0,101,0.507537688442211
+A 원본,레이블,이상,avg_booking_interval < 5초 (후보),199,0,129,0.6482412060301508
+A 원본,레이블,이상,avg_booking_interval < 10초 (후보),199,0,199,1.0
+A 원본,레이블,이상,booking_interval_variance < 0.5초² (후보),199,0,87,0.4371859296482412
+A 원본,레이블,이상,booking_interval_variance < 1.0초² (후보),199,0,105,0.5276381909547738
+A 원본,레이블,이상,booking_interval_variance < 2.0초² (후보),199,0,166,0.8341708542713567
+A 원본,레이블,이상,[Credit] 분산 < 1.0초² · 시도 5건 이상,199,0,105,0.5276381909547738
+A 원본,레이블,이상,seat_selection_latency < 0.5초 (후보),199,0,61,0.3065326633165829
+A 원본,레이블,이상,seat_selection_latency < 1.0초 (후보),199,0,141,0.7085427135678392
+A 원본,레이블,이상,seat_selection_latency < 3.0초 (후보),199,0,199,1.0
+A 원본,레이블,이상,[Credit] 좌석 선택 < 1.0초,199,0,141,0.7085427135678392
+A 원본,레이블,이상,cancel_rate ≥ 30% (후보),199,0,141,0.7085427135678392
+A 원본,레이블,이상,cancel_rate ≥ 50% (후보),199,0,83,0.41708542713567837
+A 원본,레이블,이상,cancel_rate ≥ 70% (후보),199,0,56,0.2814070351758794
+A 원본,레이블,이상,[Credit] card_reuse_count ≥ 4,199,0,56,0.2814070351758794
+A 원본,레이블,이상,[Credit 약한 감점] card_reuse_count ≥ 2,199,0,97,0.48743718592964824
+A 원본,레이블,이상,[Credit] ip_booking_density ≥ 5,199,0,56,0.2814070351758794
+A 원본,시나리오,normal,avg_booking_interval < 3초 (후보),527,0,0,0.0
+A 원본,시나리오,normal,avg_booking_interval < 5초 (후보),527,0,0,0.0
+A 원본,시나리오,normal,avg_booking_interval < 10초 (후보),527,0,0,0.0
+A 원본,시나리오,normal,booking_interval_variance < 0.5초² (후보),527,0,0,0.0
+A 원본,시나리오,normal,booking_interval_variance < 1.0초² (후보),527,0,0,0.0
+A 원본,시나리오,normal,booking_interval_variance < 2.0초² (후보),527,0,0,0.0
+A 원본,시나리오,normal,[Credit] 분산 < 1.0초² · 시도 5건 이상,175,352,0,0.0
+A 원본,시나리오,normal,seat_selection_latency < 0.5초 (후보),527,0,0,0.0
+A 원본,시나리오,normal,seat_selection_latency < 1.0초 (후보),527,0,0,0.0
+A 원본,시나리오,normal,seat_selection_latency < 3.0초 (후보),527,0,34,0.06451612903225806
+A 원본,시나리오,normal,[Credit] 좌석 선택 < 1.0초,527,0,0,0.0
+A 원본,시나리오,normal,cancel_rate ≥ 30% (후보),527,0,14,0.026565464895635674
+A 원본,시나리오,normal,cancel_rate ≥ 50% (후보),527,0,1,0.0018975332068311196
+A 원본,시나리오,normal,cancel_rate ≥ 70% (후보),527,0,0,0.0
+A 원본,시나리오,normal,[Credit] card_reuse_count ≥ 4,527,0,0,0.0
+A 원본,시나리오,normal,[Credit 약한 감점] card_reuse_count ≥ 2,527,0,0,0.0
+A 원본,시나리오,normal,[Credit] ip_booking_density ≥ 5,527,0,0,0.0
+A 원본,시나리오,fast_normal,avg_booking_interval < 3초 (후보),122,0,0,0.0
+A 원본,시나리오,fast_normal,avg_booking_interval < 5초 (후보),122,0,0,0.0
+A 원본,시나리오,fast_normal,avg_booking_interval < 10초 (후보),122,0,0,0.0
+A 원본,시나리오,fast_normal,booking_interval_variance < 0.5초² (후보),122,0,0,0.0
+A 원본,시나리오,fast_normal,booking_interval_variance < 1.0초² (후보),122,0,0,0.0
+A 원본,시나리오,fast_normal,booking_interval_variance < 2.0초² (후보),122,0,0,0.0
+A 원본,시나리오,fast_normal,[Credit] 분산 < 1.0초² · 시도 5건 이상,91,31,0,0.0
+A 원본,시나리오,fast_normal,seat_selection_latency < 0.5초 (후보),122,0,0,0.0
+A 원본,시나리오,fast_normal,seat_selection_latency < 1.0초 (후보),122,0,0,0.0
+A 원본,시나리오,fast_normal,seat_selection_latency < 3.0초 (후보),122,0,121,0.9918032786885246
+A 원본,시나리오,fast_normal,[Credit] 좌석 선택 < 1.0초,122,0,0,0.0
+A 원본,시나리오,fast_normal,cancel_rate ≥ 30% (후보),122,0,6,0.04918032786885246
+A 원본,시나리오,fast_normal,cancel_rate ≥ 50% (후보),122,0,0,0.0
+A 원본,시나리오,fast_normal,cancel_rate ≥ 70% (후보),122,0,0,0.0
+A 원본,시나리오,fast_normal,[Credit] card_reuse_count ≥ 4,122,0,0,0.0
+A 원본,시나리오,fast_normal,[Credit 약한 감점] card_reuse_count ≥ 2,122,0,0,0.0
+A 원본,시나리오,fast_normal,[Credit] ip_booking_density ≥ 5,122,0,0,0.0
+A 원본,시나리오,shared_ip,avg_booking_interval < 3초 (후보),110,0,0,0.0
+A 원본,시나리오,shared_ip,avg_booking_interval < 5초 (후보),110,0,0,0.0
+A 원본,시나리오,shared_ip,avg_booking_interval < 10초 (후보),110,0,0,0.0
+A 원본,시나리오,shared_ip,booking_interval_variance < 0.5초² (후보),110,0,0,0.0
+A 원본,시나리오,shared_ip,booking_interval_variance < 1.0초² (후보),110,0,0,0.0
+A 원본,시나리오,shared_ip,booking_interval_variance < 2.0초² (후보),110,0,0,0.0
+A 원본,시나리오,shared_ip,[Credit] 분산 < 1.0초² · 시도 5건 이상,64,46,0,0.0
+A 원본,시나리오,shared_ip,seat_selection_latency < 0.5초 (후보),110,0,0,0.0
+A 원본,시나리오,shared_ip,seat_selection_latency < 1.0초 (후보),110,0,0,0.0
+A 원본,시나리오,shared_ip,seat_selection_latency < 3.0초 (후보),110,0,12,0.10909090909090909
+A 원본,시나리오,shared_ip,[Credit] 좌석 선택 < 1.0초,110,0,0,0.0
+A 원본,시나리오,shared_ip,cancel_rate ≥ 30% (후보),110,0,4,0.03636363636363636
+A 원본,시나리오,shared_ip,cancel_rate ≥ 50% (후보),110,0,0,0.0
+A 원본,시나리오,shared_ip,cancel_rate ≥ 70% (후보),110,0,0,0.0
+A 원본,시나리오,shared_ip,[Credit] card_reuse_count ≥ 4,110,0,0,0.0
+A 원본,시나리오,shared_ip,[Credit 약한 감점] card_reuse_count ≥ 2,110,0,0,0.0
+A 원본,시나리오,shared_ip,[Credit] ip_booking_density ≥ 5,110,0,71,0.6454545454545455
+A 원본,시나리오,frequent_cancel,avg_booking_interval < 3초 (후보),42,0,0,0.0
+A 원본,시나리오,frequent_cancel,avg_booking_interval < 5초 (후보),42,0,0,0.0
+A 원본,시나리오,frequent_cancel,avg_booking_interval < 10초 (후보),42,0,0,0.0
+A 원본,시나리오,frequent_cancel,booking_interval_variance < 0.5초² (후보),42,0,0,0.0
+A 원본,시나리오,frequent_cancel,booking_interval_variance < 1.0초² (후보),42,0,0,0.0
+A 원본,시나리오,frequent_cancel,booking_interval_variance < 2.0초² (후보),42,0,0,0.0
+A 원본,시나리오,frequent_cancel,[Credit] 분산 < 1.0초² · 시도 5건 이상,23,19,0,0.0
+A 원본,시나리오,frequent_cancel,seat_selection_latency < 0.5초 (후보),42,0,0,0.0
+A 원본,시나리오,frequent_cancel,seat_selection_latency < 1.0초 (후보),42,0,0,0.0
+A 원본,시나리오,frequent_cancel,seat_selection_latency < 3.0초 (후보),42,0,1,0.023809523809523808
+A 원본,시나리오,frequent_cancel,[Credit] 좌석 선택 < 1.0초,42,0,0,0.0
+A 원본,시나리오,frequent_cancel,cancel_rate ≥ 30% (후보),42,0,42,1.0
+A 원본,시나리오,frequent_cancel,cancel_rate ≥ 50% (후보),42,0,42,1.0
+A 원본,시나리오,frequent_cancel,cancel_rate ≥ 70% (후보),42,0,14,0.3333333333333333
+A 원본,시나리오,frequent_cancel,[Credit] card_reuse_count ≥ 4,42,0,0,0.0
+A 원본,시나리오,frequent_cancel,[Credit 약한 감점] card_reuse_count ≥ 2,42,0,0,0.0
+A 원본,시나리오,frequent_cancel,[Credit] ip_booking_density ≥ 5,42,0,0,0.0
+A 원본,시나리오,fast,avg_booking_interval < 3초 (후보),44,0,44,1.0
+A 원본,시나리오,fast,avg_booking_interval < 5초 (후보),44,0,44,1.0
+A 원본,시나리오,fast,avg_booking_interval < 10초 (후보),44,0,44,1.0
+A 원본,시나리오,fast,booking_interval_variance < 0.5초² (후보),44,0,44,1.0
+A 원본,시나리오,fast,booking_interval_variance < 1.0초² (후보),44,0,44,1.0
+A 원본,시나리오,fast,booking_interval_variance < 2.0초² (후보),44,0,44,1.0
+A 원본,시나리오,fast,[Credit] 분산 < 1.0초² · 시도 5건 이상,44,0,44,1.0
+A 원본,시나리오,fast,seat_selection_latency < 0.5초 (후보),44,0,26,0.5909090909090909
+A 원본,시나리오,fast,seat_selection_latency < 1.0초 (후보),44,0,44,1.0
+A 원본,시나리오,fast,seat_selection_latency < 3.0초 (후보),44,0,44,1.0
+A 원본,시나리오,fast,[Credit] 좌석 선택 < 1.0초,44,0,44,1.0
+A 원본,시나리오,fast,cancel_rate ≥ 30% (후보),44,0,17,0.38636363636363635
+A 원본,시나리오,fast,cancel_rate ≥ 50% (후보),44,0,0,0.0
+A 원본,시나리오,fast,cancel_rate ≥ 70% (후보),44,0,0,0.0
+A 원본,시나리오,fast,[Credit] card_reuse_count ≥ 4,44,0,0,0.0
+A 원본,시나리오,fast,[Credit 약한 감점] card_reuse_count ≥ 2,44,0,22,0.5
+A 원본,시나리오,fast,[Credit] ip_booking_density ≥ 5,44,0,0,0.0
+A 원본,시나리오,jitter,avg_booking_interval < 3초 (후보),43,0,43,1.0
+A 원본,시나리오,jitter,avg_booking_interval < 5초 (후보),43,0,43,1.0
+A 원본,시나리오,jitter,avg_booking_interval < 10초 (후보),43,0,43,1.0
+A 원본,시나리오,jitter,booking_interval_variance < 0.5초² (후보),43,0,43,1.0
+A 원본,시나리오,jitter,booking_interval_variance < 1.0초² (후보),43,0,43,1.0
+A 원본,시나리오,jitter,booking_interval_variance < 2.0초² (후보),43,0,43,1.0
+A 원본,시나리오,jitter,[Credit] 분산 < 1.0초² · 시도 5건 이상,43,0,43,1.0
+A 원본,시나리오,jitter,seat_selection_latency < 0.5초 (후보),43,0,25,0.5813953488372093
+A 원본,시나리오,jitter,seat_selection_latency < 1.0초 (후보),43,0,43,1.0
+A 원본,시나리오,jitter,seat_selection_latency < 3.0초 (후보),43,0,43,1.0
+A 원본,시나리오,jitter,[Credit] 좌석 선택 < 1.0초,43,0,43,1.0
+A 원본,시나리오,jitter,cancel_rate ≥ 30% (후보),43,0,12,0.27906976744186046
+A 원본,시나리오,jitter,cancel_rate ≥ 50% (후보),43,0,0,0.0
+A 원본,시나리오,jitter,cancel_rate ≥ 70% (후보),43,0,0,0.0
+A 원본,시나리오,jitter,[Credit] card_reuse_count ≥ 4,43,0,0,0.0
+A 원본,시나리오,jitter,[Credit 약한 감점] card_reuse_count ≥ 2,43,0,19,0.4418604651162791
+A 원본,시나리오,jitter,[Credit] ip_booking_density ≥ 5,43,0,0,0.0
+A 원본,시나리오,multi_account,avg_booking_interval < 3초 (후보),56,0,0,0.0
+A 원본,시나리오,multi_account,avg_booking_interval < 5초 (후보),56,0,15,0.26785714285714285
+A 원본,시나리오,multi_account,avg_booking_interval < 10초 (후보),56,0,56,1.0
+A 원본,시나리오,multi_account,booking_interval_variance < 0.5초² (후보),56,0,0,0.0
+A 원본,시나리오,multi_account,booking_interval_variance < 1.0초² (후보),56,0,0,0.0
+A 원본,시나리오,multi_account,booking_interval_variance < 2.0초² (후보),56,0,23,0.4107142857142857
+A 원본,시나리오,multi_account,[Credit] 분산 < 1.0초² · 시도 5건 이상,56,0,0,0.0
+A 원본,시나리오,multi_account,seat_selection_latency < 0.5초 (후보),56,0,0,0.0
+A 원본,시나리오,multi_account,seat_selection_latency < 1.0초 (후보),56,0,15,0.26785714285714285
+A 원본,시나리오,multi_account,seat_selection_latency < 3.0초 (후보),56,0,56,1.0
+A 원본,시나리오,multi_account,[Credit] 좌석 선택 < 1.0초,56,0,15,0.26785714285714285
+A 원본,시나리오,multi_account,cancel_rate ≥ 30% (후보),56,0,56,1.0
+A 원본,시나리오,multi_account,cancel_rate ≥ 50% (후보),56,0,27,0.48214285714285715
+A 원본,시나리오,multi_account,cancel_rate ≥ 70% (후보),56,0,0,0.0
+A 원본,시나리오,multi_account,[Credit] card_reuse_count ≥ 4,56,0,56,1.0
+A 원본,시나리오,multi_account,[Credit 약한 감점] card_reuse_count ≥ 2,56,0,56,1.0
+A 원본,시나리오,multi_account,[Credit] ip_booking_density ≥ 5,56,0,56,1.0
+A 원본,시나리오,hold_cancel,avg_booking_interval < 3초 (후보),56,0,14,0.25
+A 원본,시나리오,hold_cancel,avg_booking_interval < 5초 (후보),56,0,27,0.48214285714285715
+A 원본,시나리오,hold_cancel,avg_booking_interval < 10초 (후보),56,0,56,1.0
+A 원본,시나리오,hold_cancel,booking_interval_variance < 0.5초² (후보),56,0,0,0.0
+A 원본,시나리오,hold_cancel,booking_interval_variance < 1.0초² (후보),56,0,18,0.32142857142857145
+A 원본,시나리오,hold_cancel,booking_interval_variance < 2.0초² (후보),56,0,56,1.0
+A 원본,시나리오,hold_cancel,[Credit] 분산 < 1.0초² · 시도 5건 이상,56,0,18,0.32142857142857145
+A 원본,시나리오,hold_cancel,seat_selection_latency < 0.5초 (후보),56,0,10,0.17857142857142858
+A 원본,시나리오,hold_cancel,seat_selection_latency < 1.0초 (후보),56,0,39,0.6964285714285714
+A 원본,시나리오,hold_cancel,seat_selection_latency < 3.0초 (후보),56,0,56,1.0
+A 원본,시나리오,hold_cancel,[Credit] 좌석 선택 < 1.0초,56,0,39,0.6964285714285714
+A 원본,시나리오,hold_cancel,cancel_rate ≥ 30% (후보),56,0,56,1.0
+A 원본,시나리오,hold_cancel,cancel_rate ≥ 50% (후보),56,0,56,1.0
+A 원본,시나리오,hold_cancel,cancel_rate ≥ 70% (후보),56,0,56,1.0
+A 원본,시나리오,hold_cancel,[Credit] card_reuse_count ≥ 4,56,0,0,0.0
+A 원본,시나리오,hold_cancel,[Credit 약한 감점] card_reuse_count ≥ 2,56,0,0,0.0
+A 원본,시나리오,hold_cancel,[Credit] ip_booking_density ≥ 5,56,0,0,0.0
+이벤트 기반 v1 (B),전체,전체,avg_booking_interval < 3초 (후보),965,35,24,0.024870466321243522
+이벤트 기반 v1 (B),전체,전체,avg_booking_interval < 5초 (후보),965,35,119,0.12331606217616581
+이벤트 기반 v1 (B),전체,전체,avg_booking_interval < 10초 (후보),965,35,195,0.20207253886010362
+이벤트 기반 v1 (B),전체,전체,booking_interval_variance < 0.5초² (후보),965,35,194,0.20103626943005182
+이벤트 기반 v1 (B),전체,전체,booking_interval_variance < 1.0초² (후보),965,35,222,0.23005181347150258
+이벤트 기반 v1 (B),전체,전체,booking_interval_variance < 2.0초² (후보),965,35,269,0.2787564766839378
+이벤트 기반 v1 (B),전체,전체,[Credit] 분산 < 1.0초² · 시도 5건 이상,552,448,123,0.22282608695652173
+이벤트 기반 v1 (B),전체,전체,seat_selection_latency < 0.5초 (후보),991,9,15,0.015136226034308779
+이벤트 기반 v1 (B),전체,전체,seat_selection_latency < 1.0초 (후보),991,9,123,0.124117053481332
+이벤트 기반 v1 (B),전체,전체,seat_selection_latency < 3.0초 (후보),991,9,309,0.31180625630676084
+이벤트 기반 v1 (B),전체,전체,[Credit] 좌석 선택 < 1.0초,991,9,123,0.124117053481332
+이벤트 기반 v1 (B),전체,전체,cancel_rate ≥ 30% (후보),985,15,280,0.28426395939086296
+이벤트 기반 v1 (B),전체,전체,cancel_rate ≥ 50% (후보),985,15,167,0.16954314720812183
+이벤트 기반 v1 (B),전체,전체,cancel_rate ≥ 70% (후보),985,15,88,0.08934010152284264
+이벤트 기반 v1 (B),전체,전체,[Credit] card_reuse_count ≥ 4,1000,0,56,0.056
+이벤트 기반 v1 (B),전체,전체,[Credit 약한 감점] card_reuse_count ≥ 2,1000,0,74,0.074
+이벤트 기반 v1 (B),전체,전체,[Credit] ip_booking_density ≥ 5,1000,0,117,0.117
+이벤트 기반 v1 (B),전체,전체,recent_booking_count 1분 ≥ 5회 (후보),1000,0,206,0.206
+이벤트 기반 v1 (B),전체,전체,recent_booking_count 1분 ≥ 10회 (후보),1000,0,164,0.164
+이벤트 기반 v1 (B),전체,전체,recent_booking_count 1분 ≥ 20회 (후보),1000,0,42,0.042
+이벤트 기반 v1 (B),전체,전체,step_stay_time 좌석 < 정상 하위 5% (후보),1000,0,236,0.236
+이벤트 기반 v1 (B),전체,전체,step_stay_time 좌석 < 정상 하위 10% (후보),1000,0,279,0.279
+이벤트 기반 v1 (B),전체,전체,step_stay_time 결제 < 정상 하위 5% (후보),961,39,209,0.21748178980228927
+이벤트 기반 v1 (B),전체,전체,step_stay_time 결제 < 정상 하위 10% (후보),961,39,249,0.259105098855359
+이벤트 기반 v1 (B),레이블,정상,avg_booking_interval < 3초 (후보),766,35,0,0.0
+이벤트 기반 v1 (B),레이블,정상,avg_booking_interval < 5초 (후보),766,35,0,0.0
+이벤트 기반 v1 (B),레이블,정상,avg_booking_interval < 10초 (후보),766,35,0,0.0
+이벤트 기반 v1 (B),레이블,정상,booking_interval_variance < 0.5초² (후보),766,35,95,0.12402088772845953
+이벤트 기반 v1 (B),레이블,정상,booking_interval_variance < 1.0초² (후보),766,35,101,0.13185378590078328
+이벤트 기반 v1 (B),레이블,정상,booking_interval_variance < 2.0초² (후보),766,35,107,0.13968668407310705
+이벤트 기반 v1 (B),레이블,정상,[Credit] 분산 < 1.0초² · 시도 5건 이상,353,448,2,0.0056657223796034
+이벤트 기반 v1 (B),레이블,정상,seat_selection_latency < 0.5초 (후보),792,9,0,0.0
+이벤트 기반 v1 (B),레이블,정상,seat_selection_latency < 1.0초 (후보),792,9,0,0.0
+이벤트 기반 v1 (B),레이블,정상,seat_selection_latency < 3.0초 (후보),792,9,110,0.1388888888888889
+이벤트 기반 v1 (B),레이블,정상,[Credit] 좌석 선택 < 1.0초,792,9,0,0.0
+이벤트 기반 v1 (B),레이블,정상,cancel_rate ≥ 30% (후보),786,15,147,0.18702290076335878
+이벤트 기반 v1 (B),레이블,정상,cancel_rate ≥ 50% (후보),786,15,85,0.10814249363867684
+이벤트 기반 v1 (B),레이블,정상,cancel_rate ≥ 70% (후보),786,15,26,0.03307888040712468
+이벤트 기반 v1 (B),레이블,정상,[Credit] card_reuse_count ≥ 4,801,0,0,0.0
+이벤트 기반 v1 (B),레이블,정상,[Credit 약한 감점] card_reuse_count ≥ 2,801,0,0,0.0
+이벤트 기반 v1 (B),레이블,정상,[Credit] ip_booking_density ≥ 5,801,0,61,0.07615480649188515
+이벤트 기반 v1 (B),레이블,정상,recent_booking_count 1분 ≥ 5회 (후보),801,0,7,0.008739076154806492
+이벤트 기반 v1 (B),레이블,정상,recent_booking_count 1분 ≥ 10회 (후보),801,0,0,0.0
+이벤트 기반 v1 (B),레이블,정상,recent_booking_count 1분 ≥ 20회 (후보),801,0,0,0.0
+이벤트 기반 v1 (B),레이블,정상,step_stay_time 좌석 < 정상 하위 5% (후보),801,0,40,0.049937578027465665
+이벤트 기반 v1 (B),레이블,정상,step_stay_time 좌석 < 정상 하위 10% (후보),801,0,80,0.09987515605493133
+이벤트 기반 v1 (B),레이블,정상,step_stay_time 결제 < 정상 하위 5% (후보),792,9,40,0.050505050505050504
+이벤트 기반 v1 (B),레이블,정상,step_stay_time 결제 < 정상 하위 10% (후보),792,9,80,0.10101010101010101
+이벤트 기반 v1 (B),레이블,이상,avg_booking_interval < 3초 (후보),199,0,24,0.12060301507537688
+이벤트 기반 v1 (B),레이블,이상,avg_booking_interval < 5초 (후보),199,0,119,0.5979899497487438
+이벤트 기반 v1 (B),레이블,이상,avg_booking_interval < 10초 (후보),199,0,195,0.9798994974874372
+이벤트 기반 v1 (B),레이블,이상,booking_interval_variance < 0.5초² (후보),199,0,99,0.49748743718592964
+이벤트 기반 v1 (B),레이블,이상,booking_interval_variance < 1.0초² (후보),199,0,121,0.6080402010050251
+이벤트 기반 v1 (B),레이블,이상,booking_interval_variance < 2.0초² (후보),199,0,162,0.8140703517587939
+이벤트 기반 v1 (B),레이블,이상,[Credit] 분산 < 1.0초² · 시도 5건 이상,199,0,121,0.6080402010050251
+이벤트 기반 v1 (B),레이블,이상,seat_selection_latency < 0.5초 (후보),199,0,15,0.07537688442211055
+이벤트 기반 v1 (B),레이블,이상,seat_selection_latency < 1.0초 (후보),199,0,123,0.6180904522613065
+이벤트 기반 v1 (B),레이블,이상,seat_selection_latency < 3.0초 (후보),199,0,199,1.0
+이벤트 기반 v1 (B),레이블,이상,[Credit] 좌석 선택 < 1.0초,199,0,123,0.6180904522613065
+이벤트 기반 v1 (B),레이블,이상,cancel_rate ≥ 30% (후보),199,0,133,0.6683417085427136
+이벤트 기반 v1 (B),레이블,이상,cancel_rate ≥ 50% (후보),199,0,82,0.4120603015075377
+이벤트 기반 v1 (B),레이블,이상,cancel_rate ≥ 70% (후보),199,0,62,0.31155778894472363
+이벤트 기반 v1 (B),레이블,이상,[Credit] card_reuse_count ≥ 4,199,0,56,0.2814070351758794
+이벤트 기반 v1 (B),레이블,이상,[Credit 약한 감점] card_reuse_count ≥ 2,199,0,74,0.37185929648241206
+이벤트 기반 v1 (B),레이블,이상,[Credit] ip_booking_density ≥ 5,199,0,56,0.2814070351758794
+이벤트 기반 v1 (B),레이블,이상,recent_booking_count 1분 ≥ 5회 (후보),199,0,199,1.0
+이벤트 기반 v1 (B),레이블,이상,recent_booking_count 1분 ≥ 10회 (후보),199,0,164,0.8241206030150754
+이벤트 기반 v1 (B),레이블,이상,recent_booking_count 1분 ≥ 20회 (후보),199,0,42,0.21105527638190955
+이벤트 기반 v1 (B),레이블,이상,step_stay_time 좌석 < 정상 하위 5% (후보),199,0,196,0.9849246231155779
+이벤트 기반 v1 (B),레이블,이상,step_stay_time 좌석 < 정상 하위 10% (후보),199,0,199,1.0
+이벤트 기반 v1 (B),레이블,이상,step_stay_time 결제 < 정상 하위 5% (후보),169,30,169,1.0
+이벤트 기반 v1 (B),레이블,이상,step_stay_time 결제 < 정상 하위 10% (후보),169,30,169,1.0
+이벤트 기반 v1 (B),시나리오,normal,avg_booking_interval < 3초 (후보),497,30,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,avg_booking_interval < 5초 (후보),497,30,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,avg_booking_interval < 10초 (후보),497,30,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,booking_interval_variance < 0.5초² (후보),497,30,79,0.158953722334004
+이벤트 기반 v1 (B),시나리오,normal,booking_interval_variance < 1.0초² (후보),497,30,82,0.16498993963782696
+이벤트 기반 v1 (B),시나리오,normal,booking_interval_variance < 2.0초² (후보),497,30,83,0.16700201207243462
+이벤트 기반 v1 (B),시나리오,normal,[Credit] 분산 < 1.0초² · 시도 5건 이상,175,352,1,0.005714285714285714
+이벤트 기반 v1 (B),시나리오,normal,seat_selection_latency < 0.5초 (후보),519,8,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,seat_selection_latency < 1.0초 (후보),519,8,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,seat_selection_latency < 3.0초 (후보),519,8,2,0.0038535645472061657
+이벤트 기반 v1 (B),시나리오,normal,[Credit] 좌석 선택 < 1.0초,519,8,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,cancel_rate ≥ 30% (후보),514,13,73,0.14202334630350194
+이벤트 기반 v1 (B),시나리오,normal,cancel_rate ≥ 50% (후보),514,13,41,0.07976653696498054
+이벤트 기반 v1 (B),시나리오,normal,cancel_rate ≥ 70% (후보),514,13,11,0.021400778210116732
+이벤트 기반 v1 (B),시나리오,normal,[Credit] card_reuse_count ≥ 4,527,0,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,[Credit 약한 감점] card_reuse_count ≥ 2,527,0,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,[Credit] ip_booking_density ≥ 5,527,0,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,recent_booking_count 1분 ≥ 5회 (후보),527,0,2,0.003795066413662239
+이벤트 기반 v1 (B),시나리오,normal,recent_booking_count 1분 ≥ 10회 (후보),527,0,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,recent_booking_count 1분 ≥ 20회 (후보),527,0,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,step_stay_time 좌석 < 정상 하위 5% (후보),527,0,0,0.0
+이벤트 기반 v1 (B),시나리오,normal,step_stay_time 좌석 < 정상 하위 10% (후보),527,0,1,0.0018975332068311196
+이벤트 기반 v1 (B),시나리오,normal,step_stay_time 결제 < 정상 하위 5% (후보),519,8,19,0.036608863198458574
+이벤트 기반 v1 (B),시나리오,normal,step_stay_time 결제 < 정상 하위 10% (후보),519,8,36,0.06936416184971098
+이벤트 기반 v1 (B),시나리오,fast_normal,avg_booking_interval < 3초 (후보),122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,avg_booking_interval < 5초 (후보),122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,avg_booking_interval < 10초 (후보),122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,booking_interval_variance < 0.5초² (후보),122,0,9,0.07377049180327869
+이벤트 기반 v1 (B),시나리오,fast_normal,booking_interval_variance < 1.0초² (후보),122,0,11,0.09016393442622951
+이벤트 기반 v1 (B),시나리오,fast_normal,booking_interval_variance < 2.0초² (후보),122,0,13,0.10655737704918032
+이벤트 기반 v1 (B),시나리오,fast_normal,[Credit] 분산 < 1.0초² · 시도 5건 이상,84,38,1,0.011904761904761904
+이벤트 기반 v1 (B),시나리오,fast_normal,seat_selection_latency < 0.5초 (후보),122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,seat_selection_latency < 1.0초 (후보),122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,seat_selection_latency < 3.0초 (후보),122,0,108,0.8852459016393442
+이벤트 기반 v1 (B),시나리오,fast_normal,[Credit] 좌석 선택 < 1.0초,122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,cancel_rate ≥ 30% (후보),122,0,19,0.1557377049180328
+이벤트 기반 v1 (B),시나리오,fast_normal,cancel_rate ≥ 50% (후보),122,0,5,0.040983606557377046
+이벤트 기반 v1 (B),시나리오,fast_normal,cancel_rate ≥ 70% (후보),122,0,1,0.00819672131147541
+이벤트 기반 v1 (B),시나리오,fast_normal,[Credit] card_reuse_count ≥ 4,122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,[Credit 약한 감점] card_reuse_count ≥ 2,122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,[Credit] ip_booking_density ≥ 5,122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,recent_booking_count 1분 ≥ 5회 (후보),122,0,5,0.040983606557377046
+이벤트 기반 v1 (B),시나리오,fast_normal,recent_booking_count 1분 ≥ 10회 (후보),122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,recent_booking_count 1분 ≥ 20회 (후보),122,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast_normal,step_stay_time 좌석 < 정상 하위 5% (후보),122,0,40,0.32786885245901637
+이벤트 기반 v1 (B),시나리오,fast_normal,step_stay_time 좌석 < 정상 하위 10% (후보),122,0,79,0.6475409836065574
+이벤트 기반 v1 (B),시나리오,fast_normal,step_stay_time 결제 < 정상 하위 5% (후보),122,0,17,0.13934426229508196
+이벤트 기반 v1 (B),시나리오,fast_normal,step_stay_time 결제 < 정상 하위 10% (후보),122,0,34,0.2786885245901639
+이벤트 기반 v1 (B),시나리오,shared_ip,avg_booking_interval < 3초 (후보),105,5,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,avg_booking_interval < 5초 (후보),105,5,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,avg_booking_interval < 10초 (후보),105,5,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,booking_interval_variance < 0.5초² (후보),105,5,7,0.06666666666666667
+이벤트 기반 v1 (B),시나리오,shared_ip,booking_interval_variance < 1.0초² (후보),105,5,7,0.06666666666666667
+이벤트 기반 v1 (B),시나리오,shared_ip,booking_interval_variance < 2.0초² (후보),105,5,10,0.09523809523809523
+이벤트 기반 v1 (B),시나리오,shared_ip,[Credit] 분산 < 1.0초² · 시도 5건 이상,70,40,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,seat_selection_latency < 0.5초 (후보),109,1,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,seat_selection_latency < 1.0초 (후보),109,1,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,seat_selection_latency < 3.0초 (후보),109,1,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,[Credit] 좌석 선택 < 1.0초,109,1,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,cancel_rate ≥ 30% (후보),108,2,19,0.17592592592592593
+이벤트 기반 v1 (B),시나리오,shared_ip,cancel_rate ≥ 50% (후보),108,2,9,0.08333333333333333
+이벤트 기반 v1 (B),시나리오,shared_ip,cancel_rate ≥ 70% (후보),108,2,1,0.009259259259259259
+이벤트 기반 v1 (B),시나리오,shared_ip,[Credit] card_reuse_count ≥ 4,110,0,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,[Credit 약한 감점] card_reuse_count ≥ 2,110,0,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,[Credit] ip_booking_density ≥ 5,110,0,61,0.5545454545454546
+이벤트 기반 v1 (B),시나리오,shared_ip,recent_booking_count 1분 ≥ 5회 (후보),110,0,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,recent_booking_count 1분 ≥ 10회 (후보),110,0,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,recent_booking_count 1분 ≥ 20회 (후보),110,0,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,step_stay_time 좌석 < 정상 하위 5% (후보),110,0,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,step_stay_time 좌석 < 정상 하위 10% (후보),110,0,0,0.0
+이벤트 기반 v1 (B),시나리오,shared_ip,step_stay_time 결제 < 정상 하위 5% (후보),109,1,4,0.03669724770642202
+이벤트 기반 v1 (B),시나리오,shared_ip,step_stay_time 결제 < 정상 하위 10% (후보),109,1,9,0.08256880733944955
+이벤트 기반 v1 (B),시나리오,frequent_cancel,avg_booking_interval < 3초 (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,avg_booking_interval < 5초 (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,avg_booking_interval < 10초 (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,booking_interval_variance < 0.5초² (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,booking_interval_variance < 1.0초² (후보),42,0,1,0.023809523809523808
+이벤트 기반 v1 (B),시나리오,frequent_cancel,booking_interval_variance < 2.0초² (후보),42,0,1,0.023809523809523808
+이벤트 기반 v1 (B),시나리오,frequent_cancel,[Credit] 분산 < 1.0초² · 시도 5건 이상,24,18,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,seat_selection_latency < 0.5초 (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,seat_selection_latency < 1.0초 (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,seat_selection_latency < 3.0초 (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,[Credit] 좌석 선택 < 1.0초,42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,cancel_rate ≥ 30% (후보),42,0,36,0.8571428571428571
+이벤트 기반 v1 (B),시나리오,frequent_cancel,cancel_rate ≥ 50% (후보),42,0,30,0.7142857142857143
+이벤트 기반 v1 (B),시나리오,frequent_cancel,cancel_rate ≥ 70% (후보),42,0,13,0.30952380952380953
+이벤트 기반 v1 (B),시나리오,frequent_cancel,[Credit] card_reuse_count ≥ 4,42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,[Credit 약한 감점] card_reuse_count ≥ 2,42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,[Credit] ip_booking_density ≥ 5,42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,recent_booking_count 1분 ≥ 5회 (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,recent_booking_count 1분 ≥ 10회 (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,recent_booking_count 1분 ≥ 20회 (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,step_stay_time 좌석 < 정상 하위 5% (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,step_stay_time 좌석 < 정상 하위 10% (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,step_stay_time 결제 < 정상 하위 5% (후보),42,0,0,0.0
+이벤트 기반 v1 (B),시나리오,frequent_cancel,step_stay_time 결제 < 정상 하위 10% (후보),42,0,1,0.023809523809523808
+이벤트 기반 v1 (B),시나리오,fast,avg_booking_interval < 3초 (후보),44,0,20,0.45454545454545453
+이벤트 기반 v1 (B),시나리오,fast,avg_booking_interval < 5초 (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,avg_booking_interval < 10초 (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,booking_interval_variance < 0.5초² (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,booking_interval_variance < 1.0초² (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,booking_interval_variance < 2.0초² (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,[Credit] 분산 < 1.0초² · 시도 5건 이상,44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,seat_selection_latency < 0.5초 (후보),44,0,7,0.1590909090909091
+이벤트 기반 v1 (B),시나리오,fast,seat_selection_latency < 1.0초 (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,seat_selection_latency < 3.0초 (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,[Credit] 좌석 선택 < 1.0초,44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,cancel_rate ≥ 30% (후보),44,0,11,0.25
+이벤트 기반 v1 (B),시나리오,fast,cancel_rate ≥ 50% (후보),44,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast,cancel_rate ≥ 70% (후보),44,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast,[Credit] card_reuse_count ≥ 4,44,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast,[Credit 약한 감점] card_reuse_count ≥ 2,44,0,10,0.22727272727272727
+이벤트 기반 v1 (B),시나리오,fast,[Credit] ip_booking_density ≥ 5,44,0,0,0.0
+이벤트 기반 v1 (B),시나리오,fast,recent_booking_count 1분 ≥ 5회 (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,recent_booking_count 1분 ≥ 10회 (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,recent_booking_count 1분 ≥ 20회 (후보),44,0,39,0.8863636363636364
+이벤트 기반 v1 (B),시나리오,fast,step_stay_time 좌석 < 정상 하위 5% (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,step_stay_time 좌석 < 정상 하위 10% (후보),44,0,44,1.0
+이벤트 기반 v1 (B),시나리오,fast,step_stay_time 결제 < 정상 하위 5% (후보),29,15,29,1.0
+이벤트 기반 v1 (B),시나리오,fast,step_stay_time 결제 < 정상 하위 10% (후보),29,15,29,1.0
+이벤트 기반 v1 (B),시나리오,jitter,avg_booking_interval < 3초 (후보),43,0,0,0.0
+이벤트 기반 v1 (B),시나리오,jitter,avg_booking_interval < 5초 (후보),43,0,30,0.6976744186046512
+이벤트 기반 v1 (B),시나리오,jitter,avg_booking_interval < 10초 (후보),43,0,43,1.0
+이벤트 기반 v1 (B),시나리오,jitter,booking_interval_variance < 0.5초² (후보),43,0,43,1.0
+이벤트 기반 v1 (B),시나리오,jitter,booking_interval_variance < 1.0초² (후보),43,0,43,1.0
+이벤트 기반 v1 (B),시나리오,jitter,booking_interval_variance < 2.0초² (후보),43,0,43,1.0
+이벤트 기반 v1 (B),시나리오,jitter,[Credit] 분산 < 1.0초² · 시도 5건 이상,43,0,43,1.0
+이벤트 기반 v1 (B),시나리오,jitter,seat_selection_latency < 0.5초 (후보),43,0,0,0.0
+이벤트 기반 v1 (B),시나리오,jitter,seat_selection_latency < 1.0초 (후보),43,0,11,0.2558139534883721
+이벤트 기반 v1 (B),시나리오,jitter,seat_selection_latency < 3.0초 (후보),43,0,43,1.0
+이벤트 기반 v1 (B),시나리오,jitter,[Credit] 좌석 선택 < 1.0초,43,0,11,0.2558139534883721
+이벤트 기반 v1 (B),시나리오,jitter,cancel_rate ≥ 30% (후보),43,0,14,0.32558139534883723
+이벤트 기반 v1 (B),시나리오,jitter,cancel_rate ≥ 50% (후보),43,0,0,0.0
+이벤트 기반 v1 (B),시나리오,jitter,cancel_rate ≥ 70% (후보),43,0,0,0.0
+이벤트 기반 v1 (B),시나리오,jitter,[Credit] card_reuse_count ≥ 4,43,0,0,0.0
+이벤트 기반 v1 (B),시나리오,jitter,[Credit 약한 감점] card_reuse_count ≥ 2,43,0,8,0.18604651162790697
+이벤트 기반 v1 (B),시나리오,jitter,[Credit] ip_booking_density ≥ 5,43,0,0,0.0
+이벤트 기반 v1 (B),시나리오,jitter,recent_booking_count 1분 ≥ 5회 (후보),43,0,43,1.0
+이벤트 기반 v1 (B),시나리오,jitter,recent_booking_count 1분 ≥ 10회 (후보),43,0,43,1.0
+이벤트 기반 v1 (B),시나리오,jitter,recent_booking_count 1분 ≥ 20회 (후보),43,0,0,0.0
+이벤트 기반 v1 (B),시나리오,jitter,step_stay_time 좌석 < 정상 하위 5% (후보),43,0,43,1.0
+이벤트 기반 v1 (B),시나리오,jitter,step_stay_time 좌석 < 정상 하위 10% (후보),43,0,43,1.0
+이벤트 기반 v1 (B),시나리오,jitter,step_stay_time 결제 < 정상 하위 5% (후보),28,15,28,1.0
+이벤트 기반 v1 (B),시나리오,jitter,step_stay_time 결제 < 정상 하위 10% (후보),28,15,28,1.0
+이벤트 기반 v1 (B),시나리오,multi_account,avg_booking_interval < 3초 (후보),56,0,0,0.0
+이벤트 기반 v1 (B),시나리오,multi_account,avg_booking_interval < 5초 (후보),56,0,18,0.32142857142857145
+이벤트 기반 v1 (B),시나리오,multi_account,avg_booking_interval < 10초 (후보),56,0,53,0.9464285714285714
+이벤트 기반 v1 (B),시나리오,multi_account,booking_interval_variance < 0.5초² (후보),56,0,9,0.16071428571428573
+이벤트 기반 v1 (B),시나리오,multi_account,booking_interval_variance < 1.0초² (후보),56,0,20,0.35714285714285715
+이벤트 기반 v1 (B),시나리오,multi_account,booking_interval_variance < 2.0초² (후보),56,0,44,0.7857142857142857
+이벤트 기반 v1 (B),시나리오,multi_account,[Credit] 분산 < 1.0초² · 시도 5건 이상,56,0,20,0.35714285714285715
+이벤트 기반 v1 (B),시나리오,multi_account,seat_selection_latency < 0.5초 (후보),56,0,0,0.0
+이벤트 기반 v1 (B),시나리오,multi_account,seat_selection_latency < 1.0초 (후보),56,0,23,0.4107142857142857
+이벤트 기반 v1 (B),시나리오,multi_account,seat_selection_latency < 3.0초 (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,multi_account,[Credit] 좌석 선택 < 1.0초,56,0,23,0.4107142857142857
+이벤트 기반 v1 (B),시나리오,multi_account,cancel_rate ≥ 30% (후보),56,0,52,0.9285714285714286
+이벤트 기반 v1 (B),시나리오,multi_account,cancel_rate ≥ 50% (후보),56,0,26,0.4642857142857143
+이벤트 기반 v1 (B),시나리오,multi_account,cancel_rate ≥ 70% (후보),56,0,7,0.125
+이벤트 기반 v1 (B),시나리오,multi_account,[Credit] card_reuse_count ≥ 4,56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,multi_account,[Credit 약한 감점] card_reuse_count ≥ 2,56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,multi_account,[Credit] ip_booking_density ≥ 5,56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,multi_account,recent_booking_count 1분 ≥ 5회 (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,multi_account,recent_booking_count 1분 ≥ 10회 (후보),56,0,28,0.5
+이벤트 기반 v1 (B),시나리오,multi_account,recent_booking_count 1분 ≥ 20회 (후보),56,0,0,0.0
+이벤트 기반 v1 (B),시나리오,multi_account,step_stay_time 좌석 < 정상 하위 5% (후보),56,0,53,0.9464285714285714
+이벤트 기반 v1 (B),시나리오,multi_account,step_stay_time 좌석 < 정상 하위 10% (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,multi_account,step_stay_time 결제 < 정상 하위 5% (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,multi_account,step_stay_time 결제 < 정상 하위 10% (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,avg_booking_interval < 3초 (후보),56,0,4,0.07142857142857142
+이벤트 기반 v1 (B),시나리오,hold_cancel,avg_booking_interval < 5초 (후보),56,0,27,0.48214285714285715
+이벤트 기반 v1 (B),시나리오,hold_cancel,avg_booking_interval < 10초 (후보),56,0,55,0.9821428571428571
+이벤트 기반 v1 (B),시나리오,hold_cancel,booking_interval_variance < 0.5초² (후보),56,0,3,0.05357142857142857
+이벤트 기반 v1 (B),시나리오,hold_cancel,booking_interval_variance < 1.0초² (후보),56,0,14,0.25
+이벤트 기반 v1 (B),시나리오,hold_cancel,booking_interval_variance < 2.0초² (후보),56,0,31,0.5535714285714286
+이벤트 기반 v1 (B),시나리오,hold_cancel,[Credit] 분산 < 1.0초² · 시도 5건 이상,56,0,14,0.25
+이벤트 기반 v1 (B),시나리오,hold_cancel,seat_selection_latency < 0.5초 (후보),56,0,8,0.14285714285714285
+이벤트 기반 v1 (B),시나리오,hold_cancel,seat_selection_latency < 1.0초 (후보),56,0,45,0.8035714285714286
+이벤트 기반 v1 (B),시나리오,hold_cancel,seat_selection_latency < 3.0초 (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,[Credit] 좌석 선택 < 1.0초,56,0,45,0.8035714285714286
+이벤트 기반 v1 (B),시나리오,hold_cancel,cancel_rate ≥ 30% (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,cancel_rate ≥ 50% (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,cancel_rate ≥ 70% (후보),56,0,55,0.9821428571428571
+이벤트 기반 v1 (B),시나리오,hold_cancel,[Credit] card_reuse_count ≥ 4,56,0,0,0.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,[Credit 약한 감점] card_reuse_count ≥ 2,56,0,0,0.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,[Credit] ip_booking_density ≥ 5,56,0,0,0.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,recent_booking_count 1분 ≥ 5회 (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,recent_booking_count 1분 ≥ 10회 (후보),56,0,49,0.875
+이벤트 기반 v1 (B),시나리오,hold_cancel,recent_booking_count 1분 ≥ 20회 (후보),56,0,3,0.05357142857142857
+이벤트 기반 v1 (B),시나리오,hold_cancel,step_stay_time 좌석 < 정상 하위 5% (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,step_stay_time 좌석 < 정상 하위 10% (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,step_stay_time 결제 < 정상 하위 5% (후보),56,0,56,1.0
+이벤트 기반 v1 (B),시나리오,hold_cancel,step_stay_time 결제 < 정상 하위 10% (후보),56,0,56,1.0
+이벤트 기반 v2 (C),전체,전체,avg_booking_interval < 3초 (후보),965,35,34,0.035233160621761656
+이벤트 기반 v2 (C),전체,전체,avg_booking_interval < 5초 (후보),965,35,129,0.13367875647668392
+이벤트 기반 v2 (C),전체,전체,avg_booking_interval < 10초 (후보),965,35,210,0.21761658031088082
+이벤트 기반 v2 (C),전체,전체,booking_interval_variance < 0.5초² (후보),965,35,203,0.21036269430051813
+이벤트 기반 v2 (C),전체,전체,booking_interval_variance < 1.0초² (후보),965,35,245,0.2538860103626943
+이벤트 기반 v2 (C),전체,전체,booking_interval_variance < 2.0초² (후보),965,35,303,0.3139896373056995
+이벤트 기반 v2 (C),전체,전체,[Credit] 분산 < 1.0초² · 시도 5건 이상,552,448,145,0.26268115942028986
+이벤트 기반 v2 (C),전체,전체,seat_selection_latency < 0.5초 (후보),991,9,11,0.011099899091826439
+이벤트 기반 v2 (C),전체,전체,seat_selection_latency < 1.0초 (후보),991,9,124,0.12512613521695257
+이벤트 기반 v2 (C),전체,전체,seat_selection_latency < 3.0초 (후보),991,9,302,0.30474268415741673
+이벤트 기반 v2 (C),전체,전체,[Credit] 좌석 선택 < 1.0초,991,9,124,0.12512613521695257
+이벤트 기반 v2 (C),전체,전체,cancel_rate ≥ 30% (후보),979,21,275,0.2808988764044944
+이벤트 기반 v2 (C),전체,전체,cancel_rate ≥ 50% (후보),979,21,161,0.1644535240040858
+이벤트 기반 v2 (C),전체,전체,cancel_rate ≥ 70% (후보),979,21,80,0.08171603677221655
+이벤트 기반 v2 (C),전체,전체,[Credit] card_reuse_count ≥ 4,1000,0,56,0.056
+이벤트 기반 v2 (C),전체,전체,[Credit 약한 감점] card_reuse_count ≥ 2,1000,0,74,0.074
+이벤트 기반 v2 (C),전체,전체,[Credit] ip_booking_density ≥ 5,1000,0,117,0.117
+이벤트 기반 v2 (C),전체,전체,recent_booking_count 1분 ≥ 5회 (후보),1000,0,223,0.223
+이벤트 기반 v2 (C),전체,전체,recent_booking_count 1분 ≥ 10회 (후보),1000,0,169,0.169
+이벤트 기반 v2 (C),전체,전체,recent_booking_count 1분 ≥ 20회 (후보),1000,0,40,0.04
+이벤트 기반 v2 (C),전체,전체,step_stay_time 좌석 < 정상 하위 5% (후보),1000,0,238,0.238
+이벤트 기반 v2 (C),전체,전체,step_stay_time 좌석 < 정상 하위 10% (후보),1000,0,279,0.279
+이벤트 기반 v2 (C),전체,전체,step_stay_time 결제 < 정상 하위 5% (후보),955,45,203,0.21256544502617802
+이벤트 기반 v2 (C),전체,전체,step_stay_time 결제 < 정상 하위 10% (후보),955,45,243,0.2544502617801047
+이벤트 기반 v2 (C),레이블,정상,avg_booking_interval < 3초 (후보),766,35,0,0.0
+이벤트 기반 v2 (C),레이블,정상,avg_booking_interval < 5초 (후보),766,35,0,0.0
+이벤트 기반 v2 (C),레이블,정상,avg_booking_interval < 10초 (후보),766,35,12,0.015665796344647518
+이벤트 기반 v2 (C),레이블,정상,booking_interval_variance < 0.5초² (후보),766,35,99,0.12924281984334204
+이벤트 기반 v2 (C),레이블,정상,booking_interval_variance < 1.0초² (후보),766,35,104,0.13577023498694518
+이벤트 기반 v2 (C),레이블,정상,booking_interval_variance < 2.0초² (후보),766,35,116,0.1514360313315927
+이벤트 기반 v2 (C),레이블,정상,[Credit] 분산 < 1.0초² · 시도 5건 이상,353,448,4,0.0113314447592068
+이벤트 기반 v2 (C),레이블,정상,seat_selection_latency < 0.5초 (후보),792,9,0,0.0
+이벤트 기반 v2 (C),레이블,정상,seat_selection_latency < 1.0초 (후보),792,9,0,0.0
+이벤트 기반 v2 (C),레이블,정상,seat_selection_latency < 3.0초 (후보),792,9,103,0.13005050505050506
+이벤트 기반 v2 (C),레이블,정상,[Credit] 좌석 선택 < 1.0초,792,9,0,0.0
+이벤트 기반 v2 (C),레이블,정상,cancel_rate ≥ 30% (후보),786,15,147,0.18702290076335878
+이벤트 기반 v2 (C),레이블,정상,cancel_rate ≥ 50% (후보),786,15,85,0.10814249363867684
+이벤트 기반 v2 (C),레이블,정상,cancel_rate ≥ 70% (후보),786,15,26,0.03307888040712468
+이벤트 기반 v2 (C),레이블,정상,[Credit] card_reuse_count ≥ 4,801,0,0,0.0
+이벤트 기반 v2 (C),레이블,정상,[Credit 약한 감점] card_reuse_count ≥ 2,801,0,0,0.0
+이벤트 기반 v2 (C),레이블,정상,[Credit] ip_booking_density ≥ 5,801,0,61,0.07615480649188515
+이벤트 기반 v2 (C),레이블,정상,recent_booking_count 1분 ≥ 5회 (후보),801,0,24,0.0299625468164794
+이벤트 기반 v2 (C),레이블,정상,recent_booking_count 1분 ≥ 10회 (후보),801,0,0,0.0
+이벤트 기반 v2 (C),레이블,정상,recent_booking_count 1분 ≥ 20회 (후보),801,0,0,0.0
+이벤트 기반 v2 (C),레이블,정상,step_stay_time 좌석 < 정상 하위 5% (후보),801,0,40,0.049937578027465665
+이벤트 기반 v2 (C),레이블,정상,step_stay_time 좌석 < 정상 하위 10% (후보),801,0,80,0.09987515605493133
+이벤트 기반 v2 (C),레이블,정상,step_stay_time 결제 < 정상 하위 5% (후보),792,9,40,0.050505050505050504
+이벤트 기반 v2 (C),레이블,정상,step_stay_time 결제 < 정상 하위 10% (후보),792,9,80,0.10101010101010101
+이벤트 기반 v2 (C),레이블,이상,avg_booking_interval < 3초 (후보),199,0,34,0.1708542713567839
+이벤트 기반 v2 (C),레이블,이상,avg_booking_interval < 5초 (후보),199,0,129,0.6482412060301508
+이벤트 기반 v2 (C),레이블,이상,avg_booking_interval < 10초 (후보),199,0,198,0.9949748743718593
+이벤트 기반 v2 (C),레이블,이상,booking_interval_variance < 0.5초² (후보),199,0,104,0.5226130653266332
+이벤트 기반 v2 (C),레이블,이상,booking_interval_variance < 1.0초² (후보),199,0,141,0.7085427135678392
+이벤트 기반 v2 (C),레이블,이상,booking_interval_variance < 2.0초² (후보),199,0,187,0.9396984924623115
+이벤트 기반 v2 (C),레이블,이상,[Credit] 분산 < 1.0초² · 시도 5건 이상,199,0,141,0.7085427135678392
+이벤트 기반 v2 (C),레이블,이상,seat_selection_latency < 0.5초 (후보),199,0,11,0.05527638190954774
+이벤트 기반 v2 (C),레이블,이상,seat_selection_latency < 1.0초 (후보),199,0,124,0.6231155778894473
+이벤트 기반 v2 (C),레이블,이상,seat_selection_latency < 3.0초 (후보),199,0,199,1.0
+이벤트 기반 v2 (C),레이블,이상,[Credit] 좌석 선택 < 1.0초,199,0,124,0.6231155778894473
+이벤트 기반 v2 (C),레이블,이상,cancel_rate ≥ 30% (후보),193,6,128,0.6632124352331606
+이벤트 기반 v2 (C),레이블,이상,cancel_rate ≥ 50% (후보),193,6,76,0.39378238341968913
+이벤트 기반 v2 (C),레이블,이상,cancel_rate ≥ 70% (후보),193,6,54,0.27979274611398963
+이벤트 기반 v2 (C),레이블,이상,[Credit] card_reuse_count ≥ 4,199,0,56,0.2814070351758794
+이벤트 기반 v2 (C),레이블,이상,[Credit 약한 감점] card_reuse_count ≥ 2,199,0,74,0.37185929648241206
+이벤트 기반 v2 (C),레이블,이상,[Credit] ip_booking_density ≥ 5,199,0,56,0.2814070351758794
+이벤트 기반 v2 (C),레이블,이상,recent_booking_count 1분 ≥ 5회 (후보),199,0,199,1.0
+이벤트 기반 v2 (C),레이블,이상,recent_booking_count 1분 ≥ 10회 (후보),199,0,169,0.8492462311557789
+이벤트 기반 v2 (C),레이블,이상,recent_booking_count 1분 ≥ 20회 (후보),199,0,40,0.20100502512562815
+이벤트 기반 v2 (C),레이블,이상,step_stay_time 좌석 < 정상 하위 5% (후보),199,0,198,0.9949748743718593
+이벤트 기반 v2 (C),레이블,이상,step_stay_time 좌석 < 정상 하위 10% (후보),199,0,199,1.0
+이벤트 기반 v2 (C),레이블,이상,step_stay_time 결제 < 정상 하위 5% (후보),163,36,163,1.0
+이벤트 기반 v2 (C),레이블,이상,step_stay_time 결제 < 정상 하위 10% (후보),163,36,163,1.0
+이벤트 기반 v2 (C),시나리오,normal,avg_booking_interval < 3초 (후보),497,30,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,avg_booking_interval < 5초 (후보),497,30,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,avg_booking_interval < 10초 (후보),497,30,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,booking_interval_variance < 0.5초² (후보),497,30,82,0.16498993963782696
+이벤트 기반 v2 (C),시나리오,normal,booking_interval_variance < 1.0초² (후보),497,30,83,0.16700201207243462
+이벤트 기반 v2 (C),시나리오,normal,booking_interval_variance < 2.0초² (후보),497,30,85,0.1710261569416499
+이벤트 기반 v2 (C),시나리오,normal,[Credit] 분산 < 1.0초² · 시도 5건 이상,175,352,1,0.005714285714285714
+이벤트 기반 v2 (C),시나리오,normal,seat_selection_latency < 0.5초 (후보),519,8,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,seat_selection_latency < 1.0초 (후보),519,8,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,seat_selection_latency < 3.0초 (후보),519,8,2,0.0038535645472061657
+이벤트 기반 v2 (C),시나리오,normal,[Credit] 좌석 선택 < 1.0초,519,8,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,cancel_rate ≥ 30% (후보),514,13,73,0.14202334630350194
+이벤트 기반 v2 (C),시나리오,normal,cancel_rate ≥ 50% (후보),514,13,41,0.07976653696498054
+이벤트 기반 v2 (C),시나리오,normal,cancel_rate ≥ 70% (후보),514,13,11,0.021400778210116732
+이벤트 기반 v2 (C),시나리오,normal,[Credit] card_reuse_count ≥ 4,527,0,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,[Credit 약한 감점] card_reuse_count ≥ 2,527,0,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,[Credit] ip_booking_density ≥ 5,527,0,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,recent_booking_count 1분 ≥ 5회 (후보),527,0,1,0.0018975332068311196
+이벤트 기반 v2 (C),시나리오,normal,recent_booking_count 1분 ≥ 10회 (후보),527,0,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,recent_booking_count 1분 ≥ 20회 (후보),527,0,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,step_stay_time 좌석 < 정상 하위 5% (후보),527,0,0,0.0
+이벤트 기반 v2 (C),시나리오,normal,step_stay_time 좌석 < 정상 하위 10% (후보),527,0,1,0.0018975332068311196
+이벤트 기반 v2 (C),시나리오,normal,step_stay_time 결제 < 정상 하위 5% (후보),519,8,16,0.030828516377649325
+이벤트 기반 v2 (C),시나리오,normal,step_stay_time 결제 < 정상 하위 10% (후보),519,8,29,0.055876685934489405
+이벤트 기반 v2 (C),시나리오,fast_normal,avg_booking_interval < 3초 (후보),122,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast_normal,avg_booking_interval < 5초 (후보),122,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast_normal,avg_booking_interval < 10초 (후보),122,0,12,0.09836065573770492
+이벤트 기반 v2 (C),시나리오,fast_normal,booking_interval_variance < 0.5초² (후보),122,0,10,0.08196721311475409
+이벤트 기반 v2 (C),시나리오,fast_normal,booking_interval_variance < 1.0초² (후보),122,0,14,0.11475409836065574
+이벤트 기반 v2 (C),시나리오,fast_normal,booking_interval_variance < 2.0초² (후보),122,0,21,0.1721311475409836
+이벤트 기반 v2 (C),시나리오,fast_normal,[Credit] 분산 < 1.0초² · 시도 5건 이상,84,38,3,0.03571428571428571
+이벤트 기반 v2 (C),시나리오,fast_normal,seat_selection_latency < 0.5초 (후보),122,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast_normal,seat_selection_latency < 1.0초 (후보),122,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast_normal,seat_selection_latency < 3.0초 (후보),122,0,101,0.8278688524590164
+이벤트 기반 v2 (C),시나리오,fast_normal,[Credit] 좌석 선택 < 1.0초,122,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast_normal,cancel_rate ≥ 30% (후보),122,0,19,0.1557377049180328
+이벤트 기반 v2 (C),시나리오,fast_normal,cancel_rate ≥ 50% (후보),122,0,5,0.040983606557377046
+이벤트 기반 v2 (C),시나리오,fast_normal,cancel_rate ≥ 70% (후보),122,0,1,0.00819672131147541
+이벤트 기반 v2 (C),시나리오,fast_normal,[Credit] card_reuse_count ≥ 4,122,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast_normal,[Credit 약한 감점] card_reuse_count ≥ 2,122,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast_normal,[Credit] ip_booking_density ≥ 5,122,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast_normal,recent_booking_count 1분 ≥ 5회 (후보),122,0,23,0.1885245901639344
+이벤트 기반 v2 (C),시나리오,fast_normal,recent_booking_count 1분 ≥ 10회 (후보),122,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast_normal,recent_booking_count 1분 ≥ 20회 (후보),122,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast_normal,step_stay_time 좌석 < 정상 하위 5% (후보),122,0,40,0.32786885245901637
+이벤트 기반 v2 (C),시나리오,fast_normal,step_stay_time 좌석 < 정상 하위 10% (후보),122,0,79,0.6475409836065574
+이벤트 기반 v2 (C),시나리오,fast_normal,step_stay_time 결제 < 정상 하위 5% (후보),122,0,22,0.18032786885245902
+이벤트 기반 v2 (C),시나리오,fast_normal,step_stay_time 결제 < 정상 하위 10% (후보),122,0,44,0.36065573770491804
+이벤트 기반 v2 (C),시나리오,shared_ip,avg_booking_interval < 3초 (후보),105,5,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,avg_booking_interval < 5초 (후보),105,5,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,avg_booking_interval < 10초 (후보),105,5,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,booking_interval_variance < 0.5초² (후보),105,5,7,0.06666666666666667
+이벤트 기반 v2 (C),시나리오,shared_ip,booking_interval_variance < 1.0초² (후보),105,5,7,0.06666666666666667
+이벤트 기반 v2 (C),시나리오,shared_ip,booking_interval_variance < 2.0초² (후보),105,5,8,0.0761904761904762
+이벤트 기반 v2 (C),시나리오,shared_ip,[Credit] 분산 < 1.0초² · 시도 5건 이상,70,40,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,seat_selection_latency < 0.5초 (후보),109,1,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,seat_selection_latency < 1.0초 (후보),109,1,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,seat_selection_latency < 3.0초 (후보),109,1,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,[Credit] 좌석 선택 < 1.0초,109,1,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,cancel_rate ≥ 30% (후보),108,2,19,0.17592592592592593
+이벤트 기반 v2 (C),시나리오,shared_ip,cancel_rate ≥ 50% (후보),108,2,9,0.08333333333333333
+이벤트 기반 v2 (C),시나리오,shared_ip,cancel_rate ≥ 70% (후보),108,2,1,0.009259259259259259
+이벤트 기반 v2 (C),시나리오,shared_ip,[Credit] card_reuse_count ≥ 4,110,0,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,[Credit 약한 감점] card_reuse_count ≥ 2,110,0,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,[Credit] ip_booking_density ≥ 5,110,0,61,0.5545454545454546
+이벤트 기반 v2 (C),시나리오,shared_ip,recent_booking_count 1분 ≥ 5회 (후보),110,0,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,recent_booking_count 1분 ≥ 10회 (후보),110,0,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,recent_booking_count 1분 ≥ 20회 (후보),110,0,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,step_stay_time 좌석 < 정상 하위 5% (후보),110,0,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,step_stay_time 좌석 < 정상 하위 10% (후보),110,0,0,0.0
+이벤트 기반 v2 (C),시나리오,shared_ip,step_stay_time 결제 < 정상 하위 5% (후보),109,1,2,0.01834862385321101
+이벤트 기반 v2 (C),시나리오,shared_ip,step_stay_time 결제 < 정상 하위 10% (후보),109,1,7,0.06422018348623854
+이벤트 기반 v2 (C),시나리오,frequent_cancel,avg_booking_interval < 3초 (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,avg_booking_interval < 5초 (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,avg_booking_interval < 10초 (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,booking_interval_variance < 0.5초² (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,booking_interval_variance < 1.0초² (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,booking_interval_variance < 2.0초² (후보),42,0,2,0.047619047619047616
+이벤트 기반 v2 (C),시나리오,frequent_cancel,[Credit] 분산 < 1.0초² · 시도 5건 이상,24,18,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,seat_selection_latency < 0.5초 (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,seat_selection_latency < 1.0초 (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,seat_selection_latency < 3.0초 (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,[Credit] 좌석 선택 < 1.0초,42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,cancel_rate ≥ 30% (후보),42,0,36,0.8571428571428571
+이벤트 기반 v2 (C),시나리오,frequent_cancel,cancel_rate ≥ 50% (후보),42,0,30,0.7142857142857143
+이벤트 기반 v2 (C),시나리오,frequent_cancel,cancel_rate ≥ 70% (후보),42,0,13,0.30952380952380953
+이벤트 기반 v2 (C),시나리오,frequent_cancel,[Credit] card_reuse_count ≥ 4,42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,[Credit 약한 감점] card_reuse_count ≥ 2,42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,[Credit] ip_booking_density ≥ 5,42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,recent_booking_count 1분 ≥ 5회 (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,recent_booking_count 1분 ≥ 10회 (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,recent_booking_count 1분 ≥ 20회 (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,step_stay_time 좌석 < 정상 하위 5% (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,step_stay_time 좌석 < 정상 하위 10% (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,step_stay_time 결제 < 정상 하위 5% (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,frequent_cancel,step_stay_time 결제 < 정상 하위 10% (후보),42,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast,avg_booking_interval < 3초 (후보),44,0,27,0.6136363636363636
+이벤트 기반 v2 (C),시나리오,fast,avg_booking_interval < 5초 (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,avg_booking_interval < 10초 (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,booking_interval_variance < 0.5초² (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,booking_interval_variance < 1.0초² (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,booking_interval_variance < 2.0초² (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,[Credit] 분산 < 1.0초² · 시도 5건 이상,44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,seat_selection_latency < 0.5초 (후보),44,0,11,0.25
+이벤트 기반 v2 (C),시나리오,fast,seat_selection_latency < 1.0초 (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,seat_selection_latency < 3.0초 (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,[Credit] 좌석 선택 < 1.0초,44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,cancel_rate ≥ 30% (후보),44,0,10,0.22727272727272727
+이벤트 기반 v2 (C),시나리오,fast,cancel_rate ≥ 50% (후보),44,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast,cancel_rate ≥ 70% (후보),44,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast,[Credit] card_reuse_count ≥ 4,44,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast,[Credit 약한 감점] card_reuse_count ≥ 2,44,0,10,0.22727272727272727
+이벤트 기반 v2 (C),시나리오,fast,[Credit] ip_booking_density ≥ 5,44,0,0,0.0
+이벤트 기반 v2 (C),시나리오,fast,recent_booking_count 1분 ≥ 5회 (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,recent_booking_count 1분 ≥ 10회 (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,recent_booking_count 1분 ≥ 20회 (후보),44,0,35,0.7954545454545454
+이벤트 기반 v2 (C),시나리오,fast,step_stay_time 좌석 < 정상 하위 5% (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,step_stay_time 좌석 < 정상 하위 10% (후보),44,0,44,1.0
+이벤트 기반 v2 (C),시나리오,fast,step_stay_time 결제 < 정상 하위 5% (후보),29,15,29,1.0
+이벤트 기반 v2 (C),시나리오,fast,step_stay_time 결제 < 정상 하위 10% (후보),29,15,29,1.0
+이벤트 기반 v2 (C),시나리오,jitter,avg_booking_interval < 3초 (후보),43,0,0,0.0
+이벤트 기반 v2 (C),시나리오,jitter,avg_booking_interval < 5초 (후보),43,0,30,0.6976744186046512
+이벤트 기반 v2 (C),시나리오,jitter,avg_booking_interval < 10초 (후보),43,0,43,1.0
+이벤트 기반 v2 (C),시나리오,jitter,booking_interval_variance < 0.5초² (후보),43,0,43,1.0
+이벤트 기반 v2 (C),시나리오,jitter,booking_interval_variance < 1.0초² (후보),43,0,43,1.0
+이벤트 기반 v2 (C),시나리오,jitter,booking_interval_variance < 2.0초² (후보),43,0,43,1.0
+이벤트 기반 v2 (C),시나리오,jitter,[Credit] 분산 < 1.0초² · 시도 5건 이상,43,0,43,1.0
+이벤트 기반 v2 (C),시나리오,jitter,seat_selection_latency < 0.5초 (후보),43,0,0,0.0
+이벤트 기반 v2 (C),시나리오,jitter,seat_selection_latency < 1.0초 (후보),43,0,8,0.18604651162790697
+이벤트 기반 v2 (C),시나리오,jitter,seat_selection_latency < 3.0초 (후보),43,0,43,1.0
+이벤트 기반 v2 (C),시나리오,jitter,[Credit] 좌석 선택 < 1.0초,43,0,8,0.18604651162790697
+이벤트 기반 v2 (C),시나리오,jitter,cancel_rate ≥ 30% (후보),43,0,16,0.37209302325581395
+이벤트 기반 v2 (C),시나리오,jitter,cancel_rate ≥ 50% (후보),43,0,0,0.0
+이벤트 기반 v2 (C),시나리오,jitter,cancel_rate ≥ 70% (후보),43,0,0,0.0
+이벤트 기반 v2 (C),시나리오,jitter,[Credit] card_reuse_count ≥ 4,43,0,0,0.0
+이벤트 기반 v2 (C),시나리오,jitter,[Credit 약한 감점] card_reuse_count ≥ 2,43,0,8,0.18604651162790697
+이벤트 기반 v2 (C),시나리오,jitter,[Credit] ip_booking_density ≥ 5,43,0,0,0.0
+이벤트 기반 v2 (C),시나리오,jitter,recent_booking_count 1분 ≥ 5회 (후보),43,0,43,1.0
+이벤트 기반 v2 (C),시나리오,jitter,recent_booking_count 1분 ≥ 10회 (후보),43,0,43,1.0
+이벤트 기반 v2 (C),시나리오,jitter,recent_booking_count 1분 ≥ 20회 (후보),43,0,0,0.0
+이벤트 기반 v2 (C),시나리오,jitter,step_stay_time 좌석 < 정상 하위 5% (후보),43,0,43,1.0
+이벤트 기반 v2 (C),시나리오,jitter,step_stay_time 좌석 < 정상 하위 10% (후보),43,0,43,1.0
+이벤트 기반 v2 (C),시나리오,jitter,step_stay_time 결제 < 정상 하위 5% (후보),28,15,28,1.0
+이벤트 기반 v2 (C),시나리오,jitter,step_stay_time 결제 < 정상 하위 10% (후보),28,15,28,1.0
+이벤트 기반 v2 (C),시나리오,multi_account,avg_booking_interval < 3초 (후보),56,0,0,0.0
+이벤트 기반 v2 (C),시나리오,multi_account,avg_booking_interval < 5초 (후보),56,0,13,0.23214285714285715
+이벤트 기반 v2 (C),시나리오,multi_account,avg_booking_interval < 10초 (후보),56,0,55,0.9821428571428571
+이벤트 기반 v2 (C),시나리오,multi_account,booking_interval_variance < 0.5초² (후보),56,0,12,0.21428571428571427
+이벤트 기반 v2 (C),시나리오,multi_account,booking_interval_variance < 1.0초² (후보),56,0,27,0.48214285714285715
+이벤트 기반 v2 (C),시나리오,multi_account,booking_interval_variance < 2.0초² (후보),56,0,52,0.9285714285714286
+이벤트 기반 v2 (C),시나리오,multi_account,[Credit] 분산 < 1.0초² · 시도 5건 이상,56,0,27,0.48214285714285715
+이벤트 기반 v2 (C),시나리오,multi_account,seat_selection_latency < 0.5초 (후보),56,0,0,0.0
+이벤트 기반 v2 (C),시나리오,multi_account,seat_selection_latency < 1.0초 (후보),56,0,22,0.39285714285714285
+이벤트 기반 v2 (C),시나리오,multi_account,seat_selection_latency < 3.0초 (후보),56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,multi_account,[Credit] 좌석 선택 < 1.0초,56,0,22,0.39285714285714285
+이벤트 기반 v2 (C),시나리오,multi_account,cancel_rate ≥ 30% (후보),56,0,52,0.9285714285714286
+이벤트 기반 v2 (C),시나리오,multi_account,cancel_rate ≥ 50% (후보),56,0,26,0.4642857142857143
+이벤트 기반 v2 (C),시나리오,multi_account,cancel_rate ≥ 70% (후보),56,0,7,0.125
+이벤트 기반 v2 (C),시나리오,multi_account,[Credit] card_reuse_count ≥ 4,56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,multi_account,[Credit 약한 감점] card_reuse_count ≥ 2,56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,multi_account,[Credit] ip_booking_density ≥ 5,56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,multi_account,recent_booking_count 1분 ≥ 5회 (후보),56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,multi_account,recent_booking_count 1분 ≥ 10회 (후보),56,0,27,0.48214285714285715
+이벤트 기반 v2 (C),시나리오,multi_account,recent_booking_count 1분 ≥ 20회 (후보),56,0,0,0.0
+이벤트 기반 v2 (C),시나리오,multi_account,step_stay_time 좌석 < 정상 하위 5% (후보),56,0,55,0.9821428571428571
+이벤트 기반 v2 (C),시나리오,multi_account,step_stay_time 좌석 < 정상 하위 10% (후보),56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,multi_account,step_stay_time 결제 < 정상 하위 5% (후보),56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,multi_account,step_stay_time 결제 < 정상 하위 10% (후보),56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,avg_booking_interval < 3초 (후보),56,0,7,0.125
+이벤트 기반 v2 (C),시나리오,hold_cancel,avg_booking_interval < 5초 (후보),56,0,42,0.75
+이벤트 기반 v2 (C),시나리오,hold_cancel,avg_booking_interval < 10초 (후보),56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,booking_interval_variance < 0.5초² (후보),56,0,5,0.08928571428571429
+이벤트 기반 v2 (C),시나리오,hold_cancel,booking_interval_variance < 1.0초² (후보),56,0,27,0.48214285714285715
+이벤트 기반 v2 (C),시나리오,hold_cancel,booking_interval_variance < 2.0초² (후보),56,0,48,0.8571428571428571
+이벤트 기반 v2 (C),시나리오,hold_cancel,[Credit] 분산 < 1.0초² · 시도 5건 이상,56,0,27,0.48214285714285715
+이벤트 기반 v2 (C),시나리오,hold_cancel,seat_selection_latency < 0.5초 (후보),56,0,0,0.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,seat_selection_latency < 1.0초 (후보),56,0,50,0.8928571428571429
+이벤트 기반 v2 (C),시나리오,hold_cancel,seat_selection_latency < 3.0초 (후보),56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,[Credit] 좌석 선택 < 1.0초,56,0,50,0.8928571428571429
+이벤트 기반 v2 (C),시나리오,hold_cancel,cancel_rate ≥ 30% (후보),50,6,50,1.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,cancel_rate ≥ 50% (후보),50,6,50,1.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,cancel_rate ≥ 70% (후보),50,6,47,0.94
+이벤트 기반 v2 (C),시나리오,hold_cancel,[Credit] card_reuse_count ≥ 4,56,0,0,0.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,[Credit 약한 감점] card_reuse_count ≥ 2,56,0,0,0.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,[Credit] ip_booking_density ≥ 5,56,0,0,0.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,recent_booking_count 1분 ≥ 5회 (후보),56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,recent_booking_count 1분 ≥ 10회 (후보),56,0,55,0.9821428571428571
+이벤트 기반 v2 (C),시나리오,hold_cancel,recent_booking_count 1분 ≥ 20회 (후보),56,0,5,0.08928571428571429
+이벤트 기반 v2 (C),시나리오,hold_cancel,step_stay_time 좌석 < 정상 하위 5% (후보),56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,step_stay_time 좌석 < 정상 하위 10% (후보),56,0,56,1.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,step_stay_time 결제 < 정상 하위 5% (후보),50,6,50,1.0
+이벤트 기반 v2 (C),시나리오,hold_cancel,step_stay_time 결제 < 정상 하위 10% (후보),50,6,50,1.0
+실측,실측 계정,실측 fast,avg_booking_interval < 3초 (후보),3,0,1,0.3333333333333333
+실측,실측 계정,실측 fast,avg_booking_interval < 5초 (후보),3,0,3,1.0
+실측,실측 계정,실측 fast,avg_booking_interval < 10초 (후보),3,0,3,1.0
+실측,실측 계정,실측 fast,booking_interval_variance < 0.5초² (후보),3,0,3,1.0
+실측,실측 계정,실측 fast,booking_interval_variance < 1.0초² (후보),3,0,3,1.0
+실측,실측 계정,실측 fast,booking_interval_variance < 2.0초² (후보),3,0,3,1.0
+실측,실측 계정,실측 fast,[Credit] 분산 < 1.0초² · 시도 5건 이상,3,0,3,1.0
+실측,실측 계정,실측 fast,seat_selection_latency < 0.5초 (후보),3,0,1,0.3333333333333333
+실측,실측 계정,실측 fast,seat_selection_latency < 1.0초 (후보),3,0,3,1.0
+실측,실측 계정,실측 fast,seat_selection_latency < 3.0초 (후보),3,0,3,1.0
+실측,실측 계정,실측 fast,[Credit] 좌석 선택 < 1.0초,3,0,3,1.0
+실측,실측 계정,실측 fast,[Credit] card_reuse_count ≥ 4,3,0,0,0.0
+실측,실측 계정,실측 fast,[Credit 약한 감점] card_reuse_count ≥ 2,3,0,0,0.0
+실측,실측 계정,실측 fast,[Credit] ip_booking_density ≥ 5,3,0,0,0.0
+실측,실측 계정,실측 jitter,avg_booking_interval < 3초 (후보),3,0,0,0.0
+실측,실측 계정,실측 jitter,avg_booking_interval < 5초 (후보),3,0,2,0.6666666666666666
+실측,실측 계정,실측 jitter,avg_booking_interval < 10초 (후보),3,0,3,1.0
+실측,실측 계정,실측 jitter,booking_interval_variance < 0.5초² (후보),3,0,3,1.0
+실측,실측 계정,실측 jitter,booking_interval_variance < 1.0초² (후보),3,0,3,1.0
+실측,실측 계정,실측 jitter,booking_interval_variance < 2.0초² (후보),3,0,3,1.0
+실측,실측 계정,실측 jitter,[Credit] 분산 < 1.0초² · 시도 5건 이상,3,0,3,1.0
+실측,실측 계정,실측 jitter,seat_selection_latency < 0.5초 (후보),3,0,0,0.0
+실측,실측 계정,실측 jitter,seat_selection_latency < 1.0초 (후보),3,0,1,0.3333333333333333
+실측,실측 계정,실측 jitter,seat_selection_latency < 3.0초 (후보),3,0,3,1.0
+실측,실측 계정,실측 jitter,[Credit] 좌석 선택 < 1.0초,3,0,1,0.3333333333333333
+실측,실측 계정,실측 jitter,[Credit] card_reuse_count ≥ 4,3,0,0,0.0
+실측,실측 계정,실측 jitter,[Credit 약한 감점] card_reuse_count ≥ 2,3,0,0,0.0
+실측,실측 계정,실측 jitter,[Credit] ip_booking_density ≥ 5,3,0,0,0.0
+실측,실측 계정,실측 사람 (#14),avg_booking_interval < 3초 (후보),2,0,0,0.0
+실측,실측 계정,실측 사람 (#14),avg_booking_interval < 5초 (후보),2,0,0,0.0
+실측,실측 계정,실측 사람 (#14),avg_booking_interval < 10초 (후보),2,0,0,0.0
+실측,실측 계정,실측 사람 (#14),booking_interval_variance < 0.5초² (후보),2,0,1,0.5
+실측,실측 계정,실측 사람 (#14),booking_interval_variance < 1.0초² (후보),2,0,1,0.5
+실측,실측 계정,실측 사람 (#14),booking_interval_variance < 2.0초² (후보),2,0,1,0.5
+실측,실측 계정,실측 사람 (#14),seat_selection_latency < 0.5초 (후보),2,0,0,0.0
+실측,실측 계정,실측 사람 (#14),seat_selection_latency < 1.0초 (후보),2,0,0,0.0
+실측,실측 계정,실측 사람 (#14),seat_selection_latency < 3.0초 (후보),2,0,1,0.5
+실측,실측 계정,실측 사람 (#14),[Credit] 좌석 선택 < 1.0초,2,0,0,0.0
+실측,실측 계정,실측 사람 (#14),[Credit] card_reuse_count ≥ 4,2,0,0,0.0
+실측,실측 계정,실측 사람 (#14),[Credit 약한 감점] card_reuse_count ≥ 2,2,0,0,0.0
+실측,실측 계정,실측 사람 (#14),[Credit] ip_booking_density ≥ 5,2,0,0,0.0

@@ -1,0 +1,10 @@
+﻿scenario,accounts,interval_null (시도 1건),variance_zero_by_formula (시도 2건),cancel_rate_null (완료 예매 0건),card_ip_default_1 (완료 예매 0건),seat_latency_null (선점 성공 0건),any_model_input_null
+normal,527,91,116,36,36,26,102
+shared_ip,110,11,21,7,7,3,13
+fast_normal,122,9,12,1,1,1,9
+hold_cancel,56,0,0,6,6,0,6
+multi_account,56,6,6,4,4,4,8
+frequent_cancel,42,4,5,3,3,3,5
+fast,44,6,8,0,0,0,6
+jitter,43,7,6,0,0,0,7
+전체,1000,134,174,57,57,37,156

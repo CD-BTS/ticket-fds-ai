@@ -1,0 +1,12 @@
+# 정상 사용자 실측 원본과 계정·시도 단위의 표는 git 에 올리지 않는다 (#14, #16 과 같은 기준).
+# data/<run-id>/            내보낸 이벤트(raw_events.csv), users.csv, manifest.csv, 환경 기록
+# data/_analysis/<이름>/     시도 1행·간격 1행·계정 1행 표
+# data/_selftest/            스크립트 점검용 가짜 이벤트
+data/
+
+__pycache__/
+
+# output/<이름>/ 에는 집계표와 그래프만 저장한다 (참가자·실험 유형별 통계). 올릴지는 내용을 본 뒤 정한다.
+
+# 스크립트 점검용 가짜 이벤트의 분석 결과 (의미 없음)
+output/_selftest/

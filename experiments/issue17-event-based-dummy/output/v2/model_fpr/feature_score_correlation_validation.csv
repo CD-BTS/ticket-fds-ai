@@ -1,0 +1,25 @@
+﻿setting,group,feature,spearman_with_score
+기존 모델,정상,avg_booking_interval,0.40004924302462086
+기존 모델,정상,booking_interval_variance,0.39561524980326856
+기존 모델,정상,cancel_rate,0.38619028188580273
+기존 모델,정상,card_reuse_count,
+기존 모델,정상,ip_booking_density,0.2579671863952989
+기존 모델,정상,booking_count,0.19279556032947234
+기존 모델,이상,avg_booking_interval,0.44072603516732844
+기존 모델,이상,booking_interval_variance,0.3874078275666478
+기존 모델,이상,cancel_rate,0.11156511930491798
+기존 모델,이상,card_reuse_count,0.8310586608994609
+기존 모델,이상,ip_booking_density,0.609294226905314
+기존 모델,이상,booking_count,0.04586791564427463
+개선 모델,정상,avg_booking_interval,-0.11361135256533207
+개선 모델,정상,booking_interval_variance,-0.1569396034866806
+개선 모델,정상,cancel_rate,0.42609587064211185
+개선 모델,정상,card_reuse_count,
+개선 모델,정상,ip_booking_density,0.1718192424721111
+개선 모델,정상,booking_count,0.0809573201371817
+개선 모델,이상,avg_booking_interval,0.4557393370458939
+개선 모델,이상,booking_interval_variance,0.6014916187976757
+개선 모델,이상,cancel_rate,0.6404210793857158
+개선 모델,이상,card_reuse_count,0.6695335190373441
+개선 모델,이상,ip_booking_density,0.6691557071602595
+개선 모델,이상,booking_count,-0.5830023284710761

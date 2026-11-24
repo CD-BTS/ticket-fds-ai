@@ -1,0 +1,576 @@
+{
+  "version": "v2",
+  "_readme": [
+    "이벤트 기반 더미데이터의 생성 설정. 생성기(scripts/generate_events.py)는 이 파일의 값만 쓴다.",
+    "시간 단위는 초. 'lognormal' 은 중앙값(median_s)과 로그 표준편차(sigma)로 적는다.",
+    "basis 는 값의 근거다: measured = #16 실측, code = 데모/BTS 코드에서 확인한 값, inherited = 기존 더미 생성 코드의 분포를 그대로 가져온 값(실측 근거 없음), assumption = 이번에 새로 둔 임시 가정(실측 근거 없음).",
+    "v2: v1(config/scenarios.json)에서 changes_from_v1 에 적은 항목만 바꿨다. 나머지 값은 v1 과 같다.",
+    "basis 추가: weak_measured = #14 의 사람 1명(2계정 × 3회) 실측. 표본이 매우 작다."
+  ],
+  "seed": 42,
+  "service_id": "demo-ticketing",
+  "calculated_at_utc": "2026-11-23T00:00:00",
+  "window_days": 30,
+  "hold_duration_s": {
+    "value": 300,
+    "basis": "code",
+    "note": "demo-ticketing demo.hold-duration 기본값 PT5M"
+  },
+  "concert_opens": {
+    "basis": "assumption",
+    "note": "분석 기간 안의 티켓 오픈 4회. 계정은 오픈 시각 이후에 접속해 연속으로 예매를 시도한다.",
+    "items": [
+      {
+        "concertId": "c1",
+        "open_utc": "2026-10-27T11:00:00"
+      },
+      {
+        "concertId": "c2",
+        "open_utc": "2026-11-03T11:00:00"
+      },
+      {
+        "concertId": "c3",
+        "open_utc": "2026-11-10T11:00:00"
+      },
+      {
+        "concertId": "c4",
+        "open_utc": "2026-11-17T11:00:00"
+      }
+    ]
+  },
+  "profiles": {
+    "single_session": {
+      "extra_sessions_lambda": 0.0,
+      "basis": "assumption",
+      "note": "기본. 계정은 30일 동안 티켓 오픈 1회에만 참여한다. 기존 더미의 정상 사용자 평균 간격(약 60초)이 암묵적으로 전제하는 상황과 같다."
+    },
+    "multi_session": {
+      "extra_sessions_lambda": 1.0,
+      "basis": "assumption",
+      "note": "민감도 확인용. 참여 오픈 수 = 1 + Poisson(1) (시도 수와 오픈 수를 넘지 않음). 오픈 사이의 며칠짜리 간격이 예매 간격에 들어간다."
+    }
+  },
+  "cancel_delay": {
+    "basis": "assumption",
+    "note": "예매 완료부터 취소까지의 지연. 계산 시각 이후의 취소는 BTS 식에서 세지 않는다.",
+    "min_s": 60
+  },
+  "scenarios": {
+    "normal": {
+      "label": "정상 사용자",
+      "is_anomaly": 0,
+      "timing_source": "assumed",
+      "attempts": {
+        "dist": "poisson_plus1",
+        "lam": 3,
+        "basis": "inherited"
+      },
+      "account_pace_sigma": {
+        "value": 0.5,
+        "basis": "inherited",
+        "note": "기존 더미의 계정 간 lognormal sigma 0.5"
+      },
+      "within_sigma": {
+        "value": 0.5,
+        "basis": "assumption"
+      },
+      "stages_median_s": {
+        "queue": 0.4,
+        "pre_seat": 0.15,
+        "seat": 20.0,
+        "hold_to_payment": 1.5,
+        "payment": 15.0,
+        "completed": 0.03,
+        "idle": 20.0,
+        "basis": "seat 는 inherited(기존 더미 Exp(30)+1 의 중앙값 근처), 나머지는 assumption. 단계 중앙값의 합이 기존 더미의 평균 간격 중앙값(약 60초)과 비슷하도록 잡았다."
+      },
+      "outcomes": {
+        "complete": 0.8,
+        "abandon_seat": 0.12,
+        "abandon_payment": 0.05,
+        "hold_expired_wait": 0.03,
+        "basis": "assumption"
+      },
+      "cancel_propensity": {
+        "dist": "beta",
+        "a": 1,
+        "b": 9,
+        "basis": "inherited"
+      },
+      "cancel_delay": {
+        "median_s": 21600,
+        "sigma": 1.5
+      },
+      "arrival": {
+        "dist": "exponential",
+        "mean_s": 180,
+        "basis": "assumption"
+      },
+      "ip_group_size": {
+        "min": 1,
+        "max": 2,
+        "basis": "inherited",
+        "note": "가족 등 같은 IP 를 쓰는 2인 가구. 기존 더미의 ip 1~2 범위"
+      },
+      "card": {
+        "rule": "own",
+        "basis": "inherited"
+      }
+    },
+    "fast_normal": {
+      "label": "빠르게 예매하는 정상 사용자",
+      "is_anomaly": 0,
+      "timing_source": "assumed",
+      "attempts": {
+        "dist": "poisson_plus1",
+        "lam": 5,
+        "basis": "inherited"
+      },
+      "account_pace_sigma": {
+        "value": 0.35,
+        "basis": "weak_measured"
+      },
+      "within_sigma": {
+        "value": 0.35,
+        "basis": "assumption"
+      },
+      "stages_median_s": {
+        "queue": 0.3,
+        "pre_seat": 0.12,
+        "seat": 2.0,
+        "hold_to_payment": 0.8,
+        "payment": 7.0,
+        "completed": 0.03,
+        "idle": 6.0,
+        "basis": "seat 는 inherited, idle 은 weak_measured(#14 사람 계정의 대기 2.6초와 36~41초 사이), 나머지는 assumption"
+      },
+      "outcomes": {
+        "complete": 0.9,
+        "abandon_seat": 0.07,
+        "abandon_payment": 0.03,
+        "hold_expired_wait": 0.0,
+        "basis": "assumption"
+      },
+      "cancel_propensity": {
+        "dist": "beta",
+        "a": 1,
+        "b": 8,
+        "basis": "inherited"
+      },
+      "cancel_delay": {
+        "median_s": 21600,
+        "sigma": 1.5
+      },
+      "arrival": {
+        "dist": "exponential",
+        "mean_s": 60,
+        "basis": "assumption"
+      },
+      "ip_group_size": {
+        "min": 1,
+        "max": 1,
+        "basis": "inherited"
+      },
+      "card": {
+        "rule": "own",
+        "basis": "inherited"
+      }
+    },
+    "shared_ip": {
+      "label": "동일 IP 를 사용하는 정상 사용자",
+      "is_anomaly": 0,
+      "timing_source": "assumed",
+      "attempts": {
+        "dist": "poisson_plus1",
+        "lam": 4,
+        "basis": "inherited"
+      },
+      "account_pace_sigma": {
+        "value": 0.5,
+        "basis": "inherited"
+      },
+      "within_sigma": {
+        "value": 0.5,
+        "basis": "assumption"
+      },
+      "stages_median_s": {
+        "queue": 0.4,
+        "pre_seat": 0.15,
+        "seat": 15.0,
+        "hold_to_payment": 1.5,
+        "payment": 11.0,
+        "completed": 0.03,
+        "idle": 15.0,
+        "basis": "normal 의 값에 0.74 를 곱한 수준 (기존 더미가 normal 보다 exp(3.8-4.1) 배 빠르게 둔 것을 inherited)"
+      },
+      "outcomes": {
+        "complete": 0.8,
+        "abandon_seat": 0.12,
+        "abandon_payment": 0.05,
+        "hold_expired_wait": 0.03,
+        "basis": "assumption"
+      },
+      "cancel_propensity": {
+        "dist": "beta",
+        "a": 1,
+        "b": 9,
+        "basis": "inherited"
+      },
+      "cancel_delay": {
+        "median_s": 21600,
+        "sigma": 1.5
+      },
+      "arrival": {
+        "dist": "exponential",
+        "mean_s": 180,
+        "basis": "assumption"
+      },
+      "ip_group_size": {
+        "min": 4,
+        "max": 6,
+        "basis": "inherited",
+        "note": "PC방·기숙사처럼 한 IP 를 쓰는 4~6계정"
+      },
+      "card": {
+        "rule": "own",
+        "basis": "inherited"
+      }
+    },
+    "frequent_cancel": {
+      "label": "취소가 잦은 정상 사용자",
+      "is_anomaly": 0,
+      "timing_source": "assumed",
+      "attempts": {
+        "dist": "poisson_plus1",
+        "lam": 4,
+        "basis": "inherited"
+      },
+      "account_pace_sigma": {
+        "value": 0.5,
+        "basis": "inherited"
+      },
+      "within_sigma": {
+        "value": 0.5,
+        "basis": "assumption"
+      },
+      "stages_median_s": {
+        "queue": 0.4,
+        "pre_seat": 0.15,
+        "seat": 14.0,
+        "hold_to_payment": 1.5,
+        "payment": 14.0,
+        "completed": 0.03,
+        "idle": 19.0,
+        "basis": "seat 는 inherited(기존 더미 Exp(20)+1 의 중앙값 근처), 나머지는 assumption"
+      },
+      "outcomes": {
+        "complete": 0.85,
+        "abandon_seat": 0.1,
+        "abandon_payment": 0.05,
+        "hold_expired_wait": 0.0,
+        "basis": "assumption"
+      },
+      "cancel_propensity": {
+        "dist": "uniform",
+        "low": 0.5,
+        "high": 0.8,
+        "basis": "inherited"
+      },
+      "cancel_delay": {
+        "median_s": 21600,
+        "sigma": 1.5
+      },
+      "arrival": {
+        "dist": "exponential",
+        "mean_s": 180,
+        "basis": "assumption"
+      },
+      "ip_group_size": {
+        "min": 1,
+        "max": 1,
+        "basis": "inherited"
+      },
+      "card": {
+        "rule": "own",
+        "basis": "inherited"
+      }
+    },
+    "fast": {
+      "label": "빠른 반복 예매 매크로 (Fast)",
+      "is_anomaly": 1,
+      "timing_source": "measured",
+      "measured_mode": "fast",
+      "timing_note": {
+        "basis": "measured",
+        "note": "계정마다 #16 실측 계정 하나를 배정하고(#16 v2 와 같은 계층적 방식), 시도마다 그 계정의 실측 시도 1건(단계별 소요 시간 + 다음 시도까지의 간격)을 통째로 복원추출한다."
+      },
+      "attempts": {
+        "dist": "randint",
+        "low": 15,
+        "high": 50,
+        "basis": "inherited",
+        "note": "실측은 계정당 20회로 정해 놓고 돌린 것이라 시도 수의 근거가 되지 않는다"
+      },
+      "outcomes": {
+        "complete": 1.0,
+        "basis": "measured",
+        "note": "실측 123건 모두 예매 완료. 좌석 경쟁이 없는 격리 환경의 결과다"
+      },
+      "cancel_propensity": {
+        "dist": "uniform",
+        "low": 0.1,
+        "high": 0.4,
+        "basis": "inherited",
+        "note": "실측 매크로는 취소하지 않았다(취소 옵션을 끄고 돌림)"
+      },
+      "cancel_delay": {
+        "median_s": 86400,
+        "sigma": 1.0
+      },
+      "arrival": {
+        "dist": "uniform",
+        "low_s": 0,
+        "high_s": 3,
+        "basis": "assumption"
+      },
+      "ip_group_size": {
+        "min": 1,
+        "max": 3,
+        "basis": "inherited",
+        "note": "한 운영자가 같은 IP 에서 돌리는 매크로 계정 1~3개"
+      },
+      "card": {
+        "rule": "pair_within_group",
+        "pair_prob": 0.5,
+        "basis": "assumption",
+        "note": "기존 더미의 카드 1~2 범위를 '같은 운영자의 두 계정이 카드 한 장을 같이 쓴다'로 옮김"
+      },
+      "account_level": {
+        "method": "lognormal",
+        "pooled_log_sd_across_types": true,
+        "basis": "measured",
+        "note": "로그 평균과 로그 표준편차는 생성 시 reference/macro_attempt_cycles.csv 에서 계산한다 (값을 설정에 적어 두지 않는다)"
+      }
+    },
+    "jitter": {
+      "label": "랜덤 지연 매크로 (Jitter)",
+      "is_anomaly": 1,
+      "timing_source": "measured",
+      "measured_mode": "jitter",
+      "timing_note": {
+        "basis": "measured",
+        "note": "fast 와 같은 방식, Jitter 실측 계정 사용"
+      },
+      "attempts": {
+        "dist": "randint",
+        "low": 15,
+        "high": 50,
+        "basis": "inherited"
+      },
+      "outcomes": {
+        "complete": 1.0,
+        "basis": "measured"
+      },
+      "cancel_propensity": {
+        "dist": "uniform",
+        "low": 0.1,
+        "high": 0.4,
+        "basis": "inherited"
+      },
+      "cancel_delay": {
+        "median_s": 86400,
+        "sigma": 1.0
+      },
+      "arrival": {
+        "dist": "uniform",
+        "low_s": 0,
+        "high_s": 3,
+        "basis": "assumption"
+      },
+      "ip_group_size": {
+        "min": 1,
+        "max": 3,
+        "basis": "inherited"
+      },
+      "card": {
+        "rule": "pair_within_group",
+        "pair_prob": 0.5,
+        "basis": "assumption"
+      },
+      "account_level": {
+        "method": "lognormal",
+        "pooled_log_sd_across_types": true,
+        "basis": "measured",
+        "note": "로그 평균과 로그 표준편차는 생성 시 reference/macro_attempt_cycles.csv 에서 계산한다 (값을 설정에 적어 두지 않는다)"
+      }
+    },
+    "multi_account": {
+      "label": "다중 계정 매크로",
+      "is_anomaly": 1,
+      "timing_source": "assumed",
+      "attempts": {
+        "dist": "randint",
+        "low": 10,
+        "high": 25,
+        "basis": "inherited"
+      },
+      "account_pace_sigma": {
+        "value": 0.3,
+        "basis": "assumption"
+      },
+      "within_sigma": {
+        "value": 0.3,
+        "basis": "assumption"
+      },
+      "stages_median_s": {
+        "queue": 0.2,
+        "pre_seat": 0.15,
+        "seat": 1.1,
+        "hold_to_payment": 0.3,
+        "payment": 2.0,
+        "completed": 0.03,
+        "idle": 2.5,
+        "basis": "seat 는 inherited(기존 더미 0.5~2.0초), 나머지는 assumption. 합이 기존 더미의 3~10초 구간 안에 오도록 잡았다."
+      },
+      "outcomes": {
+        "complete": 0.9,
+        "abandon_seat": 0.1,
+        "abandon_payment": 0.0,
+        "hold_expired_wait": 0.0,
+        "basis": "assumption"
+      },
+      "cancel_propensity": {
+        "dist": "uniform",
+        "low": 0.3,
+        "high": 0.7,
+        "basis": "inherited"
+      },
+      "cancel_delay": {
+        "median_s": 86400,
+        "sigma": 1.0
+      },
+      "arrival": {
+        "dist": "uniform",
+        "low_s": 0,
+        "high_s": 30,
+        "basis": "assumption"
+      },
+      "ip_group_size": {
+        "min": 5,
+        "max": 11,
+        "basis": "inherited",
+        "note": "한 운영자의 계정 묶음(링). 같은 IP 를 쓴다"
+      },
+      "card": {
+        "rule": "shared_in_group",
+        "max_accounts_per_card": 7,
+        "basis": "inherited",
+        "note": "링 안에서 카드를 같이 쓴다. 8계정 이상이면 카드 2장으로 나눠 카드당 4~6계정 (기존 더미의 4~7 범위)"
+      }
+    },
+    "hold_cancel": {
+      "label": "선점 후 취소 반복 사용자",
+      "is_anomaly": 1,
+      "timing_source": "assumed",
+      "attempts": {
+        "dist": "randint",
+        "low": 10,
+        "high": 30,
+        "basis": "inherited"
+      },
+      "account_pace_sigma": {
+        "value": 0.3,
+        "basis": "assumption"
+      },
+      "within_sigma": {
+        "value": 0.3,
+        "basis": "assumption"
+      },
+      "stages_median_s": {
+        "queue": 0.2,
+        "pre_seat": 0.15,
+        "seat": 0.7,
+        "hold_to_payment": 0.3,
+        "payment": 1.6,
+        "completed": 0.03,
+        "idle": 2.5,
+        "basis": "seat 는 inherited(기존 더미 0.3~1.2초), payment 는 실측 매크로의 선점~예매 1.4~1.7초 수준, 나머지는 assumption"
+      },
+      "outcomes": {
+        "complete": {
+          "dist": "uniform",
+          "low": 0.05,
+          "high": 0.3
+        },
+        "hold_left": 1.0,
+        "basis": "assumption",
+        "note": "v2: 대부분 결제하지 않고 선점만 둔 채 다음 좌석으로 넘어간다(5분 뒤 만료). 계정별 5~30% 의 선점만 결제까지 진행하고 그 예매는 대부분 취소한다. 미결제 선점은 BOOKING·CANCEL 이벤트를 만들지 않는다."
+      },
+      "cancel_propensity": {
+        "dist": "uniform",
+        "low": 0.85,
+        "high": 1.0,
+        "basis": "inherited"
+      },
+      "cancel_delay": {
+        "median_s": 1200,
+        "sigma": 1.0
+      },
+      "arrival": {
+        "dist": "uniform",
+        "low_s": 0,
+        "high_s": 30,
+        "basis": "assumption"
+      },
+      "ip_group_size": {
+        "min": 1,
+        "max": 2,
+        "basis": "inherited"
+      },
+      "card": {
+        "rule": "own",
+        "basis": "inherited"
+      }
+    }
+  },
+  "changes_from_v1": [
+    {
+      "id": "C1",
+      "target": "fast, jitter",
+      "change": "account_level 추가: 계정의 평균 예매 간격 수준을 lognormal(유형별 실측 계정 평균의 로그 평균, 계정 간 로그 표준편차)에서 뽑고, 배정된 실측 계정의 시도(단계 시간·간격)를 그 수준에 맞게 같은 비율로 조정",
+      "reason": "v1 은 실측 3계정의 값 주변에만 모인다 (#16 Leave-One-Account-Out 에서 숨긴 계정의 평균이 범위에 든 것은 6개 중 3개). 계정 간 변동을 연속적으로 반영한다.",
+      "basis": "measured (계정 평균 6개에서 추정, 로그 표준편차는 두 유형을 합쳐 0.085). 시간 전체를 같은 비율로 조정하는 것은 assumption"
+    },
+    {
+      "id": "C2",
+      "target": "가정 시나리오 전체",
+      "change": "stage_floor_s 추가: 단계 시간 = 하한 + (중앙값 - 하한) × 변동",
+      "reason": "v1 의 hold_cancel 좌석 선택 최소 0.153초는 가장 빠른 실측 매크로(0.298초)보다 빠르고, 결제 단계도 결제 화면 지연(1.2초)보다 짧을 수 있었다.",
+      "basis": "measured (실측 매크로 120건의 단계별 최솟값) + code (PaymentPage.tsx PAY_DELAY_MS = 1200)"
+    },
+    {
+      "id": "C3",
+      "target": "hold_cancel",
+      "change": "결제 비율(outcomes.complete) uniform 0.4~0.9 → 0.05~0.3",
+      "reason": "시나리오 정의는 '선점 후 미입금 취소 반복'이다. 미결제 선점은 BOOKING·CANCEL 이벤트를 만들지 않으므로 cancel_rate 에 잡히지 않는다. v1 의 높은 결제 비율은 취소율을 기존 더미 수준(0.85~1.0)으로 유지하는 쪽의 가정이었다. 정의에 맞게 대부분 미결제로 둔다.",
+      "basis": "assumption (비율의 실측 근거 없음). 정의의 근거는 기존 생성 코드 주석과 Credit 문서의 '선점 후 미입금 자동 취소'"
+    },
+    {
+      "id": "C4",
+      "target": "fast_normal",
+      "change": "idle 중앙값 12초 → 6초, account_pace_sigma 0.25 → 0.35",
+      "reason": "#14 사람 계정의 평균 간격은 10.5초와 58.9초였다 (다음 시도까지의 대기 2.6초, 36~41초). v1 에서 10.5초는 fast_normal 의 최솟값(10.4초) 근처다. 실측된 빠른 정상 예매가 범위 안쪽에 오게 한다.",
+      "basis": "weak_measured"
+    }
+  ],
+  "stage_floor_s": {
+    "queue": 0.065,
+    "pre_seat": 0.052,
+    "seat": 0.298,
+    "hold_to_payment": 0.07,
+    "payment": 1.297,
+    "completed": 0.01,
+    "basis": "measured",
+    "note": "#16 실측 매크로 120건(reference/macro_attempt_cycles.csv)의 단계별 최솟값. 화면을 거치는 흐름에서 자동화 도구보다 빠른 단계 시간은 만들지 않는다. payment 는 결제 화면 지연 1.2초(code)를 포함한다."
+  }
+}

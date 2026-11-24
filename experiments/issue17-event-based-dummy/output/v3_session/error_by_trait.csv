@@ -1,0 +1,113 @@
+﻿setting,by,group,n_test,flag_rate
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,fast / 오픈 1회,3,0.6666666666666666
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,fast / 오픈 2회 이상,5,0.6300000000000001
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,fast_normal / 오픈 1회,27,0.03518518518518518
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,fast_normal / 오픈 2회 이상,18,0.04722222222222222
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,frequent_cancel / 오픈 1회,8,0.175
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,frequent_cancel / 오픈 2회 이상,1,0.0
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,hold_cancel / 오픈 1회,11,0.8181818181818182
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,hold_cancel / 오픈 2회 이상,9,0.9777777777777779
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,jitter / 오픈 1회,11,0.2772727272727273
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,jitter / 오픈 2회 이상,5,0.15
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,multi_account / 오픈 1회,8,0.875
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,multi_account / 오픈 2회 이상,8,1.0
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,normal / 오픈 1회,84,0.016666666666666666
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,normal / 오픈 2회 이상,67,0.020895522388059702
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,shared_ip / 오픈 1회,22,0.16818181818181818
+"기준 모델 (기존 Feature, 혼합)",scenario × opens,shared_ip / 오픈 2회 이상,13,0.28076923076923077
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × attempts,이상 / 10건 이상,32,0.7765625
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × attempts,이상 / 1건,6,0.5
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × attempts,이상 / 2~4건,12,0.5499999999999999
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × attempts,이상 / 5~9건,10,0.73
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × attempts,정상 / 10건 이상,20,0.17
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × attempts,정상 / 1건,32,0.035937500000000004
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × attempts,정상 / 2~4건,117,0.06153846153846154
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × attempts,정상 / 5~9건,71,0.022535211267605635
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × opens,이상 / 오픈 1회,33,0.6378787878787879
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × opens,이상 / 오픈 2회 이상,27,0.7666666666666666
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × opens,정상 / 오픈 1회,141,0.05283687943262411
+"기준 모델 (기존 Feature, 혼합)",is_anomaly × opens,정상 / 오픈 2회 이상,99,0.0595959595959596
+"세션 Feature, 혼합",scenario × opens,fast / 오픈 1회,3,0.6333333333333333
+"세션 Feature, 혼합",scenario × opens,fast / 오픈 2회 이상,5,0.53
+"세션 Feature, 혼합",scenario × opens,fast_normal / 오픈 1회,27,0.0
+"세션 Feature, 혼합",scenario × opens,fast_normal / 오픈 2회 이상,18,0.0
+"세션 Feature, 혼합",scenario × opens,frequent_cancel / 오픈 1회,8,0.018750000000000003
+"세션 Feature, 혼합",scenario × opens,frequent_cancel / 오픈 2회 이상,1,0.0
+"세션 Feature, 혼합",scenario × opens,hold_cancel / 오픈 1회,11,0.8136363636363636
+"세션 Feature, 혼합",scenario × opens,hold_cancel / 오픈 2회 이상,9,0.911111111111111
+"세션 Feature, 혼합",scenario × opens,jitter / 오픈 1회,11,0.22272727272727275
+"세션 Feature, 혼합",scenario × opens,jitter / 오픈 2회 이상,5,0.09
+"세션 Feature, 혼합",scenario × opens,multi_account / 오픈 1회,8,0.875
+"세션 Feature, 혼합",scenario × opens,multi_account / 오픈 2회 이상,8,1.0
+"세션 Feature, 혼합",scenario × opens,normal / 오픈 1회,84,0.027380952380952377
+"세션 Feature, 혼합",scenario × opens,normal / 오픈 2회 이상,67,0.03955223880597015
+"세션 Feature, 혼합",scenario × opens,shared_ip / 오픈 1회,22,0.18181818181818182
+"세션 Feature, 혼합",scenario × opens,shared_ip / 오픈 2회 이상,13,0.13076923076923078
+"세션 Feature, 혼합",is_anomaly × attempts,이상 / 10건 이상,32,0.7546875
+"세션 Feature, 혼합",is_anomaly × attempts,이상 / 1건,6,0.48333333333333334
+"세션 Feature, 혼합",is_anomaly × attempts,이상 / 2~4건,12,0.5
+"세션 Feature, 혼합",is_anomaly × attempts,이상 / 5~9건,10,0.655
+"세션 Feature, 혼합",is_anomaly × attempts,정상 / 10건 이상,20,0.2675
+"세션 Feature, 혼합",is_anomaly × attempts,정상 / 1건,32,0.0
+"세션 Feature, 혼합",is_anomaly × attempts,정상 / 2~4건,117,0.0452991452991453
+"세션 Feature, 혼합",is_anomaly × attempts,정상 / 5~9건,71,0.0021126760563380284
+"세션 Feature, 혼합",is_anomaly × opens,이상 / 오픈 1회,33,0.6151515151515152
+"세션 Feature, 혼합",is_anomaly × opens,이상 / 오픈 2회 이상,27,0.7148148148148148
+"세션 Feature, 혼합",is_anomaly × opens,정상 / 오픈 1회,141,0.04574468085106383
+"세션 Feature, 혼합",is_anomaly × opens,정상 / 오픈 2회 이상,99,0.04393939393939394
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,fast / 오픈 1회,3,0.6666666666666666
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,fast / 오픈 2회 이상,5,0.8
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,fast_normal / 오픈 1회,27,0.009259259259259259
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,fast_normal / 오픈 2회 이상,18,0.005555555555555556
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,frequent_cancel / 오픈 1회,8,0.03125
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,frequent_cancel / 오픈 2회 이상,1,0.0
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,hold_cancel / 오픈 1회,11,0.8636363636363636
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,hold_cancel / 오픈 2회 이상,9,0.5444444444444444
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,jitter / 오픈 1회,11,0.3227272727272727
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,jitter / 오픈 2회 이상,5,0.2
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,multi_account / 오픈 1회,8,0.875
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,multi_account / 오픈 2회 이상,8,1.0
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,normal / 오픈 1회,84,0.004166666666666667
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,normal / 오픈 2회 이상,67,0.011940298507462687
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,shared_ip / 오픈 1회,22,0.2840909090909091
+"기존 Feature, Credit 규칙 통과 학습",scenario × opens,shared_ip / 오픈 2회 이상,13,0.5615384615384615
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,이상 / 10건 이상,32,0.6859375
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,이상 / 1건,6,0.5
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,이상 / 2~4건,12,0.5833333333333334
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,이상 / 5~9건,10,0.8
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,정상 / 10건 이상,20,0.15
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,정상 / 1건,32,0.040625
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,정상 / 2~4건,117,0.06623931623931624
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,정상 / 5~9건,71,0.045774647887323945
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × opens,이상 / 오픈 1회,33,0.6681818181818182
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × opens,이상 / 오픈 2회 이상,27,0.6629629629629629
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × opens,정상 / 오픈 1회,141,0.05035460992907802
+"기존 Feature, Credit 규칙 통과 학습",is_anomaly × opens,정상 / 오픈 2회 이상,99,0.08282828282828282
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,fast / 오픈 1회,3,0.6666666666666666
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,fast / 오픈 2회 이상,5,0.82
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,fast_normal / 오픈 1회,27,0.0
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,fast_normal / 오픈 2회 이상,18,0.0
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,frequent_cancel / 오픈 1회,8,0.00625
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,frequent_cancel / 오픈 2회 이상,1,0.0
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,hold_cancel / 오픈 1회,11,0.8090909090909091
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,hold_cancel / 오픈 2회 이상,9,0.9611111111111111
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,jitter / 오픈 1회,11,0.3772727272727273
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,jitter / 오픈 2회 이상,5,0.32
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,multi_account / 오픈 1회,8,0.875
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,multi_account / 오픈 2회 이상,8,1.0
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,normal / 오픈 1회,84,0.008928571428571428
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,normal / 오픈 2회 이상,67,0.026119402985074626
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,shared_ip / 오픈 1회,22,0.2840909090909091
+"세션 Feature, Credit 규칙 통과 학습",scenario × opens,shared_ip / 오픈 2회 이상,13,0.29230769230769227
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,이상 / 10건 이상,32,0.8203125
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,이상 / 1건,6,0.5
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,이상 / 2~4건,12,0.5958333333333333
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,이상 / 5~9건,10,0.8
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,정상 / 10건 이상,20,0.2
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,정상 / 1건,32,0.0
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,정상 / 2~4건,117,0.05427350427350427
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × attempts,정상 / 5~9건,71,0.03169014084507042
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × opens,이상 / 오픈 1회,33,0.6681818181818182
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × opens,이상 / 오픈 2회 이상,27,0.8277777777777778
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × opens,정상 / 오픈 1회,141,0.049999999999999996
+"세션 Feature, Credit 규칙 통과 학습",is_anomaly × opens,정상 / 오픈 2회 이상,99,0.05606060606060606

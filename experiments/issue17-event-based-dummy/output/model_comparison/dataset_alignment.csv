@@ -1,0 +1,5 @@
+﻿dataset,rows,user_id_order_identical,is_anomaly_identical,columns_identical,rows_with_null_model_input
+원본,1000,True,True,True,0
+#16 v2,1000,True,True,True,0
+이벤트 기반,1000,True,True,True,40
+이벤트 기반(다회 세션),1000,True,True,True,39

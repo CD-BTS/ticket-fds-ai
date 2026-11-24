@@ -1,0 +1,9 @@
+﻿scenario,n,booking_count_lt_2,interval_null,cancel_rate_null,cancel_null_only (시도 2건 이상),any_null,booking_count_eq_2 (분산 0)
+normal,527,30,30,13,5,35,71
+fast_normal,122,0,0,0,0,0,4
+shared_ip,110,5,5,2,0,5,7
+frequent_cancel,42,0,0,0,0,0,0
+fast,44,0,0,0,0,0,0
+jitter,43,0,0,0,0,0,0
+multi_account,56,0,0,0,0,0,0
+hold_cancel,56,0,0,6,6,6,0

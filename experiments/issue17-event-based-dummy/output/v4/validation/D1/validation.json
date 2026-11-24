@@ -1,0 +1,183 @@
+{
+  "speed_assumption": "D1",
+  "extractor": "experiments/issue14-real-validation/scripts/extract_features.py (import, 수정 없음)",
+  "bts_reference": "ticket-fds-admin feat/#40 @46f8c67 FeatureAggregationService.calculate",
+  "calculated_at_utc": "2026-11-23T00:00:00",
+  "events": 36397,
+  "all_passed": true,
+  "feature_checks": {
+    "independent_recompute_avg_booking_interval": true,
+    "independent_recompute_booking_interval_variance": true,
+    "independent_recompute_cancel_rate": true,
+    "independent_recompute_card_reuse_count": true,
+    "independent_recompute_ip_booking_density": true,
+    "independent_recompute_booking_count": true,
+    "booking_count_equals_generated_attempts": true,
+    "completed_bookings_equal_generated": true,
+    "cancelled_bookings_equal_generated": true,
+    "ip_booking_density_equals_sharing_groups": true,
+    "card_reuse_count_equals_sharing_groups": true,
+    "every_account_has_a_feature_row": true,
+    "all_events_inside_window": true,
+    "all_passed": true
+  },
+  "event_consistency": {
+    "all_events_inside_30d_window": true,
+    "event_id_follows_time_order": true,
+    "external_event_id_unique": true,
+    "sequence_starts_at_1_and_is_contiguous": true,
+    "time_does_not_go_back_within_attempt": true,
+    "first_event_is_STARTED": true,
+    "one_account_per_attempt": true,
+    "transition_id_unique": true,
+    "every_attempt_ends_with_a_terminal_event": true,
+    "at_most_one_terminal_event_per_attempt": true,
+    "booking_id_unique": true,
+    "completed_attempts_equal_bookings": true,
+    "failed_attempts_have_no_booking": true,
+    "booking_is_between_hold_and_completed": true,
+    "cancel_refers_to_own_booking": true,
+    "cancel_is_after_booking": true,
+    "at_most_one_cancel_per_booking": true,
+    "next_attempt_starts_after_previous_ends": true,
+    "generated_outcome_matches_last_event": true
+  },
+  "attempt_endings": {
+    "completed": 3917,
+    "SEAT_HOLD/EXPIRED": 980,
+    "SEAT_SELECTION/ABANDONED": 429,
+    "PAYMENT/ABANDONED": 160,
+    "SEAT_HOLD/REJECTED": 110
+  },
+  "interval_definition_checks": {
+    "d30_mean_equals_bts_extractor": true,
+    "d30_variance_equals_bts_extractor": true,
+    "concert_mean_var_equals_v3_session_code": true,
+    "activity_mean_var_equals_v3_session_code": true
+  },
+  "structure_match_with_measured": {
+    "measured_event_kinds": 10,
+    "all_measured_kinds_exist_with_same_fields": true,
+    "all_measured_stage_sequences_exist": true,
+    "measured_stage_sequences": {
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/SUCCEEDED > PAYMENT/ENTERED > COMPLETED/SUCCEEDED": 41,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/SUCCEEDED > PAYMENT/ENTERED > PAYMENT/ABANDONED": 2,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/SUCCEEDED > PAYMENT/ENTERED > SEAT_HOLD/EXPIRED": 1,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_SELECTION/ABANDONED": 1
+    },
+    "synthetic_only_stage_sequences (실측에 없던 경우: 선점 거절, 결제 화면 없는 실측 매크로 시도 등)": {
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/SUCCEEDED > SEAT_HOLD/EXPIRED": 918,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/SUCCEEDED > COMPLETED/SUCCEEDED": 487,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/SUCCEEDED > PAYMENT/ENTERED > COMPLETED/SUCCEEDED": 298,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED": 52,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED": 39,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/SUCCEEDED > PAYMENT/ENTERED > COMPLETED/SUCCEEDED": 28,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/SUCCEEDED > PAYMENT/ENTERED > PAYMENT/ABANDONED": 24,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED": 13,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/SUCCEEDED > PAYMENT/ENTERED > SEAT_HOLD/EXPIRED": 9,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/SUCCEEDED > PAYMENT/ENTERED > COMPLETED/SUCCEEDED": 8,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED": 3,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED": 3,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/SUCCEEDED > SEAT_HOLD/EXPIRED": 3,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/SUCCEEDED > COMPLETED/SUCCEEDED": 2,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/SUCCEEDED > PAYMENT/ENTERED > PAYMENT/ABANDONED": 1,
+      "STARTED/ENTERED > QUEUE/SUCCEEDED > SEAT_SELECTION/ENTERED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/REJECTED > SEAT_HOLD/SUCCEEDED > PAYMENT/ENTERED > COMPLETED/SUCCEEDED": 1
+    },
+    "synthetic_only_event_kinds": [
+      "BOOKING_ATTEMPT/SEAT_HOLD/REJECTED/SERVER/SEAT_ALREADY_TAKEN",
+      "CANCEL"
+    ],
+    "by_event": [
+      {
+        "event": "BOOKING",
+        "in_synthetic": true,
+        "fields_missing_in_synthetic": [],
+        "fields_only_in_synthetic": [],
+        "fields_not_generated_on_purpose": [
+          "performanceEndsAt",
+          "performanceStartsAt"
+        ]
+      },
+      {
+        "event": "BOOKING_ATTEMPT/COMPLETED/SUCCEEDED/SERVER",
+        "in_synthetic": true,
+        "fields_missing_in_synthetic": [],
+        "fields_only_in_synthetic": [],
+        "fields_not_generated_on_purpose": []
+      },
+      {
+        "event": "BOOKING_ATTEMPT/PAYMENT/ABANDONED/CLIENT_REPORT/USER_CANCELLED",
+        "in_synthetic": true,
+        "fields_missing_in_synthetic": [],
+        "fields_only_in_synthetic": [],
+        "fields_not_generated_on_purpose": []
+      },
+      {
+        "event": "BOOKING_ATTEMPT/PAYMENT/ENTERED/CLIENT_REPORT",
+        "in_synthetic": true,
+        "fields_missing_in_synthetic": [],
+        "fields_only_in_synthetic": [],
+        "fields_not_generated_on_purpose": []
+      },
+      {
+        "event": "BOOKING_ATTEMPT/QUEUE/SUCCEEDED/SERVER",
+        "in_synthetic": true,
+        "fields_missing_in_synthetic": [],
+        "fields_only_in_synthetic": [],
+        "fields_not_generated_on_purpose": []
+      },
+      {
+        "event": "BOOKING_ATTEMPT/SEAT_HOLD/EXPIRED/SERVER/HOLD_EXPIRED",
+        "in_synthetic": true,
+        "fields_missing_in_synthetic": [],
+        "fields_only_in_synthetic": [],
+        "fields_not_generated_on_purpose": []
+      },
+      {
+        "event": "BOOKING_ATTEMPT/SEAT_HOLD/SUCCEEDED/SERVER",
+        "in_synthetic": true,
+        "fields_missing_in_synthetic": [],
+        "fields_only_in_synthetic": [],
+        "fields_not_generated_on_purpose": []
+      },
+      {
+        "event": "BOOKING_ATTEMPT/SEAT_SELECTION/ABANDONED/CLIENT_REPORT/USER_CANCELLED",
+        "in_synthetic": true,
+        "fields_missing_in_synthetic": [],
+        "fields_only_in_synthetic": [],
+        "fields_not_generated_on_purpose": []
+      },
+      {
+        "event": "BOOKING_ATTEMPT/SEAT_SELECTION/ENTERED/CLIENT_REPORT",
+        "in_synthetic": true,
+        "fields_missing_in_synthetic": [],
+        "fields_only_in_synthetic": [],
+        "fields_not_generated_on_purpose": []
+      },
+      {
+        "event": "BOOKING_ATTEMPT/STARTED/ENTERED/CLIENT_REPORT",
+        "in_synthetic": true,
+        "fields_missing_in_synthetic": [],
+        "fields_only_in_synthetic": [],
+        "fields_not_generated_on_purpose": []
+      }
+    ]
+  },
+  "model_input_null_accounts": 231,
+  "interval_null_share_by_boundary": {
+    "d30": {
+      "정상": 0.25218476903870163,
+      "이상": 0.09547738693467336
+    },
+    "concert": {
+      "정상": 0.3895131086142322,
+      "이상": 0.1507537688442211
+    },
+    "activity": {
+      "정상": 0.3445692883895131,
+      "이상": 0.1507537688442211
+    }
+  },
+  "dataset_sha256": "fa9dba1ad1bc266ce6b5aa435c5e6d5aa3f4b5430c2953c3bc1382e5e1c6cd96",
+  "events_sha256": "8cc710e1b4932492ee6f98718c83c4cb999fd3cd1f52aa3fd107d72d9b202f58"
+}

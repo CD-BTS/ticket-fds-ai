@@ -1,0 +1,9 @@
+﻿scenario,timing_source,used_in_v3,stage_medians_sum_s,idle_median_s,interval_at_medians_s,seat_median_s,payment_median_s,account_pace_log_sd,pace_basis,within_attempt_log_sd,within_basis,floor_sum_s,stage_basis
+normal,assumed,True,37.08,20.0,57.08,20.0,15.0,0.5,inherited,0.5,assumption,1.792,"seat 는 inherited(기존 더미 Exp(30)+1 의 중앙값 근처), 나머지는 assumption. 단계 중앙값의 합이 기존 더미의 평균 간격 중앙값(약 60초)과 비슷하도록 잡았다."
+fast_normal,assumed,True,10.249999999999998,6.0,16.25,2.0,7.0,0.35,weak_measured,0.35,assumption,1.792,"seat 는 inherited, idle 은 weak_measured(#14 사람 계정의 대기 2.6초와 36~41초 사이), 나머지는 assumption"
+shared_ip,assumed,True,28.080000000000002,15.0,43.08,15.0,11.0,0.5,inherited,0.5,assumption,1.792,normal 의 값에 0.74 를 곱한 수준 (기존 더미가 normal 보다 exp(3.8-4.1) 배 빠르게 둔 것을 inherited)
+frequent_cancel,assumed,True,30.080000000000002,19.0,49.08,14.0,14.0,0.5,inherited,0.5,assumption,1.792,"seat 는 inherited(기존 더미 Exp(20)+1 의 중앙값 근처), 나머지는 assumption"
+fast,measured,True,,,,,,,,,,,"실측 시도를 통째로 복원추출 (reference/macro_attempt_cycles.csv), 계정 수준은 실측 계정 평균 6개에서 추정"
+jitter,measured,True,,,,,,,,,,,"실측 시도를 통째로 복원추출 (reference/macro_attempt_cycles.csv), 계정 수준은 실측 계정 평균 6개에서 추정"
+multi_account,tool,False,3.78,2.5,6.279999999999999,1.1,2.0,0.3,assumption,0.3,assumption,1.792,"seat 는 inherited(기존 더미 0.5~2.0초), 나머지는 assumption. 합이 기존 더미의 3~10초 구간 안에 오도록 잡았다."
+hold_cancel,assumed,True,2.98,2.5,5.48,0.7,1.6,0.3,assumption,0.3,assumption,1.792,"seat 는 inherited(기존 더미 0.3~1.2초), payment 는 실측 매크로의 선점~예매 1.4~1.7초 수준, 나머지는 assumption"

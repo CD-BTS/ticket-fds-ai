@@ -1,0 +1,110 @@
+{
+  "script": "scripts/compare_if_v2.py",
+  "reference_training_script": "ml_experiment/train_and_evaluate_if.py (수정하지 않음)",
+  "datasets": {
+    "A 원본": {
+      "path": "ml_experiment/data/fairticket_synthetic_features.csv",
+      "sha256": "2e1e27c1ebd434676e8079c7e4a65763be3f4bb2b4a8fe3e788897729fabf416",
+      "unchanged_after_run": true
+    },
+    "B 이벤트 v1": {
+      "path": "experiments/issue17-event-based-dummy/data/single_session/fairticket_event_based_features.csv",
+      "sha256": "f430317a01c8e5b28fb4043443232364ffa5c5bec3c06bba13a3112b69e209b2",
+      "unchanged_after_run": true
+    },
+    "C 이벤트 v2": {
+      "path": "experiments/issue17-event-based-dummy/data/v2/fairticket_event_based_features.csv",
+      "sha256": "b39aa53337d2992ab8226e8cada80ea76a6276195a4c0d16811bb87d52d4b180",
+      "unchanged_after_run": true
+    }
+  },
+  "primary": {
+    "features": [
+      "avg_booking_interval",
+      "booking_interval_variance",
+      "cancel_rate",
+      "card_reuse_count",
+      "ip_booking_density",
+      "booking_count"
+    ],
+    "contamination": 0.2
+  },
+  "preprocessing": "없음 (결측도 그대로)",
+  "split": {
+    "test_size": 0.3,
+    "random_state": 42,
+    "stratify": "is_anomaly",
+    "train": 700,
+    "test": 300
+  },
+  "model": {
+    "class": "sklearn.ensemble.IsolationForest",
+    "n_estimators": 100,
+    "random_state": 42
+  },
+  "model_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "generation_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "generation_seed_results_for_A_and_B": "output/model_comparison/generation_seed_runs.csv (scripts/compare_if.py 의 결과)",
+  "insufficient_data_rule": "booking_count < 2 (docs/predict_feature_spec.md, train_model.py). pack_bundle.py 는 min_booking_count=1",
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "python": "3.11.2"
+  },
+  "models_saved": false
+}

@@ -1,0 +1,13 @@
+﻿mode,hidden_account,hidden_mean,synthetic_mean_min,synthetic_mean_max,mean_inside_range,mean_inside_90pct,method,synthetic_accounts,synthetic_mean_q05,synthetic_mean_q95,mean_distance_outside_range
+fast,macro-fast-02,2.6440526315789477,2.61,3.76,True,False,v2 방식 (REPORT_V2 의 결과),,,,
+fast,macro-fast-11,3.1230526315789473,2.28,3.58,True,True,v2 방식 (REPORT_V2 의 결과),,,,
+fast,macro-fast-12,3.0396315789473682,2.24,3.69,True,True,v2 방식 (REPORT_V2 의 결과),,,,
+jitter,macro-jitter-01,4.339052631578946,4.35,5.96,False,False,v2 방식 (REPORT_V2 의 결과),,,,
+jitter,macro-jitter-11,4.769578947368421,4.0,5.97,True,True,v2 방식 (REPORT_V2 의 결과),,,,
+jitter,macro-jitter-12,5.101894736842105,3.97,5.41,True,False,v2 방식 (REPORT_V2 의 결과),,,,
+fast,macro-fast-02,2.6440526315789477,2.699193548387097,3.681625,False,False,v3 방식,25.0,2.88027047146402,3.4841957957957956,0.05514091680814914
+fast,macro-fast-11,3.1230526315789473,2.3937096774193547,3.5395,True,True,v3 방식,25.0,2.620361042183623,3.3684654654654653,0.0
+fast,macro-fast-12,3.0396315789473682,2.451129032258065,3.483333333333334,True,True,v3 방식,25.0,2.5814571428571433,3.3767081081081085,0.0
+jitter,macro-jitter-01,4.339052631578946,4.218290322580645,5.901555555555556,True,False,v3 방식,25.0,4.546833846153846,5.703475,0.0
+jitter,macro-jitter-11,4.769578947368421,3.9737096774193548,5.883277777777779,True,True,v3 방식,25.0,4.30386267281106,5.659987500000001,0.0
+jitter,macro-jitter-12,5.101894736842105,3.9557096774193545,5.612777777777777,True,True,v3 방식,25.0,4.206743778801843,5.438012499999998,0.0
