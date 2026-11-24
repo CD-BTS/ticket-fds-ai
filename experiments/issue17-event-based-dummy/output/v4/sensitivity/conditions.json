@@ -1,0 +1,136 @@
+{
+  "config_sha256": "fdcc466ba79fa1d950585984793464895dbbbe5210903e8d7f4a74d9e901d986",
+  "generation_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "speed_assumptions": [
+    "D1",
+    "D2",
+    "D3"
+  ],
+  "one_at_a_time": [
+    {
+      "condition": "base",
+      "axis": "",
+      "overrides": {}
+    },
+    {
+      "condition": "S-B=0.5",
+      "axis": "S-B",
+      "overrides": {
+        "within_sigma": 0.5
+      }
+    },
+    {
+      "condition": "S-C=0.3",
+      "axis": "S-C",
+      "overrides": {
+        "goal_lambda": 0.3
+      }
+    },
+    {
+      "condition": "S-C=2.0",
+      "axis": "S-C",
+      "overrides": {
+        "goal_lambda": 2.0
+      }
+    },
+    {
+      "condition": "S-D=measured_end",
+      "axis": "S-D",
+      "overrides": {
+        "retry_wait": "measured_end"
+      }
+    },
+    {
+      "condition": "S-D=same_as_completion",
+      "axis": "S-D",
+      "overrides": {
+        "retry_wait": "same_as_completion"
+      }
+    },
+    {
+      "condition": "S-E=0.0",
+      "axis": "S-E",
+      "overrides": {
+        "switch_prob": 0.0
+      }
+    },
+    {
+      "condition": "S-E=0.5",
+      "axis": "S-E",
+      "overrides": {
+        "switch_prob": 0.5
+      }
+    },
+    {
+      "condition": "S-F=loguniform",
+      "axis": "S-F",
+      "overrides": {
+        "macro_delay": "loguniform"
+      }
+    },
+    {
+      "condition": "S-F=slow_skewed",
+      "axis": "S-F",
+      "overrides": {
+        "macro_delay": "slow_skewed"
+      }
+    },
+    {
+      "condition": "S-G=10",
+      "axis": "S-G",
+      "overrides": {
+        "queue_wait_s": 10
+      }
+    },
+    {
+      "condition": "S-G=60",
+      "axis": "S-G",
+      "overrides": {
+        "queue_wait_s": 60
+      }
+    },
+    {
+      "condition": "S-G=300",
+      "axis": "S-G",
+      "overrides": {
+        "queue_wait_s": 300
+      }
+    },
+    {
+      "condition": "S-H=S1off",
+      "axis": "S-H",
+      "overrides": {
+        "rules_off": [
+          "S1"
+        ]
+      }
+    },
+    {
+      "condition": "S-H=S2off",
+      "axis": "S-H",
+      "overrides": {
+        "rules_off": [
+          "S2"
+        ]
+      }
+    },
+    {
+      "condition": "S-I=true",
+      "axis": "S-I",
+      "overrides": {
+        "skill": true
+      }
+    }
+  ]
+}

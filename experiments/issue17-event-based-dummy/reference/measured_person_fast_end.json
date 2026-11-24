@@ -1,0 +1,44 @@
+{
+  "source": "measurement/data/_analysis/20261124-all/attempts.csv (git 제외). 집계값만 저장한다",
+  "people": 1,
+  "accounts": 8,
+  "attempts": 44,
+  "completed": 40,
+  "use": "정상 사용자 속도 범위의 빠른 쪽 끝점. 분포의 중심이나 표본으로 쓰지 않는다. 사용자 사이의 차이는 이 값으로 추정하지 않는다",
+  "stage_median_s": {
+    "queue": 0.086,
+    "pre_seat": 0.058,
+    "seat": 2.058,
+    "hold_to_payment": 0.048,
+    "payment": 2.425
+  },
+  "start_to_booking_median_s": 5.198,
+  "previous_end_to_next_start_s": {
+    "abandoned_payment": {
+      "n": 2,
+      "median": 0.979,
+      "min": 0.88,
+      "max": 1.078
+    },
+    "abandoned_seat_selection": {
+      "n": 1,
+      "median": 1.708,
+      "min": 1.708,
+      "max": 1.708
+    },
+    "completed": {
+      "n": 32,
+      "median": 3.242,
+      "min": 1.657,
+      "max": 95.351
+    },
+    "hold_expired": {
+      "n": 1,
+      "median": 6.761,
+      "min": 6.761,
+      "max": 6.761
+    }
+  },
+  "activity_gap_median_s": 8.749,
+  "environment": "격리 E2E (대기열 대기 0, 좌석 경쟁 없음, 결제는 저장된 수단 클릭 + 시연용 지연 1.2초). 사이트에 익숙한 사람"
+}
